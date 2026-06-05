@@ -126,10 +126,26 @@ Foi discutido criar um Google Drive com logos e artes dos clientes, linkado no r
 ## Entregáveis já produzidos
 
 ### Clincog
-- `clientes/clincog/entregas/landing-pages/jornada-pcn.html` — LP do evento Jornada PCN (25/06/2026, R$ 67)
-- `clientes/clincog/entregas/mockups/jornada-pcn-mockups.html` — 40 criativos estáticos e 20 storyboards de vídeo para a Jornada PCN
 
-Ambos os arquivos já foram revisados pela skill escrita-humanizada (zero travessões, linguagem humanizada).
+**Landing Page — Jornada PCN**
+- Arquivo: `clientes/clincog/entregas/landing-pages/jornada-pcn.html`
+- Evento ao vivo, 25/06/2026, R$ 67, Dra. Natalie Banaskiwitz
+- Cores: roxo `#7B2D8E`, verde menta `#A8E6CF`, marinho `#1A0A30`
+- Hero com duas fotos iguais lado a lado (Dra. Monica + Dra. Natalie)
+- Cards das professoras clicáveis com bio expansível
+- Seção "Para Quem É" com 4 cards de público
+- Copy Light (sem clichês, CTA específico, sem "Pare de sofrer")
+- Garantia incondicional de 7 dias
+- Zero travessões, linguagem humanizada
+
+**Mockups de Criativos — Jornada PCN**
+- Arquivo: `clientes/clincog/entregas/mockups/jornada-pcn-mockups.html`
+- Dashboard interativo com 3 abas: Visão Geral, Estáticos, Vídeos
+- 20 criativos estáticos (feed 1:1 + stories 9:16) com switch de formato
+- 20 storyboards de vídeo (gancho + corpo + CTA + notas de produção)
+- Distribuição de verba: R$ 10k (Meta Ads 70%, Google Ads 30%)
+- Timeline: 08/06 a 25/06/2026
+- Zero travessões, linguagem humanizada
 
 ### Curso Passei
 - Briefing completo com dados de pesquisa de público (Mai/Jun 2026, 200+ respondentes)
