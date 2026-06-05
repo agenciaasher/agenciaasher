@@ -7,7 +7,7 @@ Estrutura de projetos e entregáveis da Agência Asher.
 | Pessoa | Cargo | Responsabilidades |
 |--------|-------|-------------------|
 | Maicon | Dono / Estratégia | Direção, estratégia, aprovação de copies |
-| Wiliam | Coordenador / CS / Comercial | Distribuição de tarefas, CS com cliente, setor comercial |
+| Wiliam | Coordenador Geral | Elo entre clientes e setores. Recebe demandas, distribui tarefas, cobra prazos, faz CS, gerencia comercial digital |
 | Wenderson | Designer + Editor de Vídeo | Criativos, landing pages, reels, edição |
 | Júlio César | Gestor de Tráfego | Google Ads, Meta Ads, otimização, relatórios |
 | Annick | Social Media | Conteúdo, pautas, publicações, inteligência |

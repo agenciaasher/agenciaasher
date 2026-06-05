@@ -7,7 +7,7 @@
                 (Dono / Estrategia)
                       |
                     Wiliam
-          (Coordenador / CS / Comercial)
+             (Coordenador Geral)
                       |
         ┌─────────────┼─────────────┐
         |             |             |
@@ -74,12 +74,13 @@ Como a copy e feita via IA com skills do Claude Code:
 - Executa: publicacoes, stories, gestao de comunidade
 - Apoio: inteligencia de conteudo (temas, benchmarks, insights)
 
-**Coordenacao (Wiliam)**
-- Distribui todas as tarefas vindas de Maicon
-- Acompanha prazos e qualidade
-- Faz CS com os clientes (reunioes, alinhamentos)
+**Coordenacao Geral (Wiliam)**
+- Elo entre clientes e setores: recebe demandas e distribui para o time certo
+- Acompanha prazos, qualidade e entrega de todos os setores
+- Faz CS com os clientes (reunioes, alinhamentos, feedbacks)
 - Gerencia o setor comercial digital do cliente (scripts, funil, follow-up)
-- Reporta status para Maicon
+- Centraliza comunicacao: cliente nunca fala direto com o time, sempre via Wiliam
+- Reporta status para Maicon e escala decisoes estrategicas
 
 ## Clientes e Alocacao
 

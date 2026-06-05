@@ -17,7 +17,7 @@ Cada agente e um fluxo automatizado que combina varias skills.
 
 ---
 
-## Wiliam (Coordenador / CS / Comercial)
+## Wiliam (Coordenador Geral)
 
 | Skill | O que faz |
 |-------|-----------|
