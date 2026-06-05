@@ -26,6 +26,8 @@
 2. [Regra específica do cliente]
 3. [Regra específica do cliente]
 
+> Regras de linguagem e escrita: ver `CLAUDE.md` na raiz do repositório.
+
 ## Arquivos deste cliente
 - `projeto.md` — briefing completo
 - `sazonalidade.md` — calendário sazonal
