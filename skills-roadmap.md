@@ -154,6 +154,15 @@ Skills ja instaladas no `.claude/skills/` e prontas para uso:
 | Manual da Copy | `references/manual-copy.md` | Referencia (Copy) | 15 principios fundamentais + 20 vicios proibidos + checklist de entrega |
 | Checklist Light Copy | `references/checklist-light-copy.md` | Referencia (Copy) | 12 proibicoes absolutas com exemplos de correcao |
 | Template Pagina de Vendas | `references/template-copy-pagina-vendas.md` | Referencia (Copy) | Estrutura detalhada dos 15 blocos com funcao, conteudo e proibicoes |
+| Copy de Anuncio | `copy-anuncio.md` | Copy / Trafego (transversal) | Copy para Meta Ads e Google Ads com variacoes A/B por etapa do funil |
+| Script WhatsApp + Follow-up | `script-whatsapp.md` | Comercial (Wiliam + IA) | Script de primeiro contato + sequencia D+1, D+3, D+7 + mapa de objecoes |
+| Pauta Mensal | `pauta-mensal.md` | Conteudo (Aniki + IA) | Calendario de conteudo do mes com pilares, formatos e sazonalidade |
+| Relatorio Mensal | `relatorio-mensal.md` | Estrategia (Maicon + IA) | Relatorio de resultados com metricas, ROI, diagnostico e proximo mes |
+| Copy de Reels | `copy-reels.md` | Conteudo (Aniki + Wenderson) | Roteiro de reels com gancho 3s, desenvolvimento e CTA |
+| Landing Page | `landing-page.md` | Criativo / Dev (Wenderson + IA) | Cria landing page HTML/CSS responsiva e faz deploy na Vercel |
+| Funil Mapeado | `funil-mapeado.md` | Estrategia (Maicon + IA) | Mapeia funil completo, identifica gargalos e sugere acoes por etapa |
+| Reativacao de Base | `reativacao-base.md` | Comercial (Wiliam + IA) | Campanhas para reativar leads frios e base inativa com sequencia de mensagens |
+| Analise de Metricas | `analise-metricas.md` | Trafego (Julio + IA) | Diagnostico inteligente de metricas com causa provavel e acao corretiva |
 
 ---
 
