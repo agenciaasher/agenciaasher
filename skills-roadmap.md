@@ -145,6 +145,10 @@ Skills ja instaladas no `.claude/skills/` e prontas para uso:
 | Material Didatico | `material-didatico.md` | Producao Digital | Transforma conteudo em material visual premium + prompt ChatGPT |
 | Ideias de Produto | `ideias-produto.md` | Estrategia (Maicon + IA) | 50 ideias de infoproduto em 15 formatos com pesquisa de mercado |
 | FAQ Skills | `references/faq-skills.md` | Referencia (base de conhecimento) | Perguntas e respostas sobre todas as skills do sistema |
+| Ebook Low Ticket | `ebook-low-ticket.md` | Producao Digital | Ebook curto de 7 paginas, pratico, low ticket (R$9-97) |
+| Criativo Surreal | `criativo-surreal.md` | Criativo (Wenderson + IA) | Arte surreal editorial nivel Cannes Lions + Feed + Stories + animacao |
+| Projecao CPL/CPA | `references/projecao-cpl-cpa.md` | Referencia (Trafego) | Simulador de projecao financeira com CPC, taxa de conversao, CPA |
+| Guia Ebook+Hotmart+Lovable | `references/guia-visual-ebook-hotmart-lovable.pdf` | Referencia (Producao Digital) | Guia visual passo a passo de ebook ate integracao Hotmart |
 
 ---
 
