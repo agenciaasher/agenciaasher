@@ -13,13 +13,22 @@ Preparatório para concursos públicos com foco em magistério (professor públi
 - YouTube: Canal "Curso Preparatório Passei" (conteúdo gratuito)
 - Instagram: @preparatoriopasseiconcursos (27K+ seguidores)
 
-## Produtos (esteira)
-| Produto | Tipo | Ticket estimado |
-|---------|------|----------------|
-| **Português do Zero** | Curso gravado | R$ 59,90 |
-| **Gabaritando Raciocínio Lógico** | Gravação/Masterclass | R$ 25,90 |
-| **Mentoria III — Do Zero à Aprovação** | Mentoria | A confirmar |
-| **Cursos por banca/concurso específico** | Cursos segmentados | A confirmar |
+## Produtos (esteira real)
+| Produto | Tipo | Ticket |
+|---------|------|--------|
+| **Apostila 250 Questões** | PDF/apostila | R$ 19,99 |
+| **E-book 200 Questões Conjunção** | E-book | R$ 29,99 |
+| **Reta Final Português - Banca Avalia** | Curso online (2h) | R$ 59,99 |
+| **Intensivo por concurso** (Volta Redonda, Santo Antônio de Pádua etc.) | Curso online (4-8h) | R$ 39,99–R$ 89,99 |
+| **Reta Final / Esquenta por concurso** (Saquarema, Araruama etc.) | Curso online (15-68h) | R$ 119,99–R$ 249,99 |
+| **Turma de Magistério** (Paracambi, etc.) | Curso online (70h) | R$ 189,99 |
+| **Clube da Redação 2.0** | Curso online (25h) | R$ 147,95 |
+| **Projeto Professor Aprovado** (Saquarema) | Turma presencial (68h) | R$ 699,99 |
+
+## Budget
+- Pacote agência: R$ 6.000/mês
+- Mídia paga: A definir com Ramon
+- Meta principal: Converter público gratuito (YouTube/Instagram) em compradores + upsell para produtos de ticket mais alto
 
 ## Público
 Pessoas que prestam ou querem prestar concursos públicos, principalmente para cargos de professor (magistério) em prefeituras e estados do RJ e Brasil. Perfil: 25-45 anos, maioria mulheres, baixa/média renda, estudam em paralelo ao trabalho.

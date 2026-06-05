@@ -15,8 +15,8 @@
 | Instagram Ramon | [@proframonmatos](https://www.instagram.com/proframonmatos/) |
 | Site | [cursopassei.com.br](https://www.cursopassei.com.br/) |
 | YouTube | [Curso Preparatório Passei](https://www.youtube.com/c/CursoPreparatorioPassei) |
-| Pacote agência | A definir |
-| Investimento em mídia | A definir |
+| Pacote agência | R$ 6.000/mês |
+| Investimento em mídia | A definir com Ramon |
 
 ---
 
@@ -37,18 +37,23 @@ O aluno passa no concurso público e conquista estabilidade financeira. Para o p
 
 ## Produtos e Esteira
 
-| Produto | Tipo | Ticket | Status |
-|---------|------|--------|--------|
-| **Português do Zero** | Curso gravado | ~R$ 59,90 | Ativo |
-| **Gabaritando Raciocínio Lógico** | Gravação masterclass | ~R$ 25,90 | Ativo |
-| **Mentoria III — Do Zero à Aprovação** | Mentoria online | A confirmar | Ativo |
-| **Cursos por banca** (IAN, Consulplan, COSEAC, Avança SP etc.) | Cursos segmentados | A confirmar | Ativo |
-| **Simulados** | Produto de entrada / lead | A confirmar | A confirmar |
+| Produto | Tipo | Ticket atual | Obs |
+|---------|------|-------------|-----|
+| **Apostila 250 Questões de Conhecimentos** | PDF/apostila (1h) | R$ 19,99 | Produto de entrada, 500 alunos |
+| **E-book 200 Questões de Conjunção** | E-book | R$ 29,99 | Baixo ticket, alto volume |
+| **Reta Final Português - Banca Avalia** | Curso online (2h) | R$ 59,99 | Segmentado por banca |
+| **Intensivo concurso específico** (Volta Redonda, Santo Antônio de Pádua etc.) | Curso online (4-8h) | R$ 39,99–R$ 89,99 | Altamente segmentado |
+| **Clube da Redação 2.0** | Curso online (25h) | R$ 147,95 | Produto transversal |
+| **Reta Final / Esquenta por cidade** (Saquarema, Araruama, Rio das Ostras etc.) | Curso online (15-68h) | R$ 119,99–R$ 249,99 | Mais vendidos |
+| **Turma de Magistério** (Paracambi etc.) | Turma online (70h) | R$ 189,99 | Alta duração, mais completo |
+| **Projeto Professor Aprovado** (Saquarema) | Turma PRESENCIAL (68h) | R$ 699,99 | Ticket mais alto, presencial |
 
-### Oportunidade de esteira
-- Ticket médio baixo → precisa de volume ou produto de ticket maior (mentoria, assinatura)
-- Conteúdo gratuito no YouTube é forte → funil de topo bem estruturado, mas fundo fraco
-- Cursos por banca específica são altamente segmentados → CPL menor, conversão maior
+### Análise da esteira
+- **Entrada:** Apostila (R$ 20) e e-book (R$ 30) — captura quem não quer gastar muito
+- **Meio:** Intensivos e reta final por concurso (R$ 40-120) — core do negócio
+- **Alto:** Turmas completas e presencial (R$ 190-700) — maior valor entregue
+- **Gap:** Não há produto de assinatura/recorrência. Oportunidade de MRR.
+- Modelo de negócio é **altamente transacional** — novo curso para cada concurso novo. Escalável mas exige produção constante.
 
 ---
 

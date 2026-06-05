@@ -20,7 +20,7 @@ Fluxo completo: [operacao.md](operacao.md)
 |---------|--------|-------|--------|--------|
 | [Agvel Veículos](clientes/agvel-veiculos/projeto.md) | Agência | R$ 3.000/mês | Jun/2026 | Onboarding |
 | [Clincog](clientes/clincog/projeto.md) | Completo | R$ 6.000/mês | Jun/2026 | Onboarding |
-| [Curso Passei](clientes/curso-passei/projeto.md) | A definir | A definir | Jun/2026 | Onboarding |
+| [Curso Passei](clientes/curso-passei/projeto.md) | Completo | R$ 6.000/mês | Jun/2026 | Onboarding |
 
 ## Pacotes
 
