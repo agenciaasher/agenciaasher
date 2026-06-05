@@ -28,6 +28,21 @@ Leia em voz alta (mentalmente). Se soar robótico, reescreva. Se tiver travessã
 | "tendo em vista os dados coletados — que confirmam..." | "Os dados confirmam..." |
 | "Vale destacar que Ramon é o rosto da marca" | "Ramon é o rosto da marca" |
 
+## Skill obrigatória: escrita-humanizada
+
+Toda vez que gerar ou revisar texto para qualquer cliente ou entregável, aplique os padrões da skill `/escrita-humanizada` (`.claude/skills/escrita-humanizada.md`).
+
+A skill detecta e corrige 24 padrões de escrita de IA, incluindo:
+- Vocabulário típico de IA (adicionalmente, testemunho, cenário, evidenciando...)
+- Travessão excessivo
+- Paralelismos negativos ("não é apenas X, é Y")
+- Regra de três forçada
+- Linguagem promocional vazia
+- Tom bajulador ou servil
+- Frases de enchimento e conclusões genéricas
+
+Uso: chame `/escrita-humanizada` passando o texto. O resultado é o texto reescrito sem marcas de IA.
+
 ## Tom geral da agência
 
 Direto, confiante, sem enrolação. A Agência Asher entrega resultado, não relatório bonito. O texto reflete isso.
