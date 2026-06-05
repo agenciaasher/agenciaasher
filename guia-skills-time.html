@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agência Asher — Guia de Skills do Time</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #13131a;
+    --card: #1a1a24;
+    --border: #2a2a3a;
+    --text: #e4e4ed;
+    --text-dim: #8888a0;
+    --accent: #6c5ce7;
+    --accent-light: #a29bfe;
+    --green: #00b894;
+    --orange: #fdcb6e;
+    --red: #e17055;
+    --blue: #74b9ff;
+    --pink: #fd79a8;
+    --teal: #00cec9;
+    --yellow: #ffeaa7;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 56px;
+    padding: 48px 32px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(108,92,231,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  .header .subtitle {
+    font-size: 1.05rem;
+    color: var(--text-dim);
+    position: relative;
+  }
+
+  .header .date {
+    font-size: 0.85rem;
+    color: var(--accent-light);
+    margin-top: 12px;
+    position: relative;
+  }
+
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 28px;
+    position: relative;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-light);
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Sector */
+  .sector {
+    margin-bottom: 48px;
+  }
+
+  .sector-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sector-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+
+  .sector-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
+  .sector-owner {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-left: auto;
+    background: var(--card);
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+  }
+
+  .sector-count {
+    font-size: 0.8rem;
+    color: var(--accent-light);
+    background: rgba(108,92,231,0.15);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* Cards */
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 24px;
+    transition: border-color 0.2s, transform 0.15s;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    align-items: start;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  .card-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .card-desc {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  .card-file {
+    font-size: 0.75rem;
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    color: var(--accent-light);
+    background: rgba(108,92,231,0.1);
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    align-self: center;
+  }
+
+  .card-use {
+    font-size: 0.85rem;
+    color: var(--green);
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .card-use strong {
+    color: var(--teal);
+  }
+
+  /* Reference cards */
+  .ref-card {
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .ref-card .ref-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .ref-card .ref-info {
+    flex: 1;
+  }
+
+  .ref-card .ref-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .ref-card .ref-desc {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  .ref-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Color coding per sector */
+  .sector-estrategia .sector-icon { background: rgba(108,92,231,0.2); }
+  .sector-comercial .sector-icon { background: rgba(253,203,110,0.2); }
+  .sector-trafego .sector-icon { background: rgba(225,112,85,0.2); }
+  .sector-criativo .sector-icon { background: rgba(253,121,168,0.2); }
+  .sector-conteudo .sector-icon { background: rgba(116,185,255,0.2); }
+  .sector-copy .sector-icon { background: rgba(0,206,201,0.2); }
+  .sector-producao .sector-icon { background: rgba(0,184,148,0.2); }
+
+  .sector-estrategia .card { border-left: 3px solid var(--accent); }
+  .sector-comercial .card { border-left: 3px solid var(--orange); }
+  .sector-trafego .card { border-left: 3px solid var(--red); }
+  .sector-criativo .card { border-left: 3px solid var(--pink); }
+  .sector-conteudo .card { border-left: 3px solid var(--blue); }
+  .sector-copy .card { border-left: 3px solid var(--teal); }
+  .sector-producao .card { border-left: 3px solid var(--green); }
+
+  /* Footer guide */
+  .guide {
+    margin-top: 64px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #1e1e30 100%);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px 36px;
+  }
+
+  .guide h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .guide .guide-sub {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    position: relative;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+    padding-bottom: 32px;
+    position: relative;
+  }
+
+  .step:last-child { padding-bottom: 0; }
+
+  .step::before {
+    content: '';
+    position: absolute;
+    left: 27px;
+    top: 48px;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .step:last-child::before { display: none; }
+
+  .step-number {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(108,92,231,0.15);
+    border: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-light);
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-content h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 4px;
+  }
+
+  .step-content p {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  .code-inline {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.85rem;
+    background: rgba(108,92,231,0.15);
+    color: var(--accent-light);
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
+
+  .code-block {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.85rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-top: 10px;
+    color: var(--accent-light);
+    line-height: 1.8;
+    overflow-x: auto;
+  }
+
+  .tip-box {
+    background: rgba(0,184,148,0.08);
+    border: 1px solid rgba(0,184,148,0.2);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    font-size: 0.88rem;
+    color: var(--text-dim);
+  }
+
+  .tip-box strong {
+    color: var(--green);
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 32px 0 16px;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .container { padding: 20px 14px 60px; }
+    .header { padding: 32px 20px; }
+    .header h1 { font-size: 1.6rem; }
+    .stats-bar { gap: 20px; }
+    .stat-number { font-size: 1.4rem; }
+    .card { grid-template-columns: 1fr; }
+    .card-file { justify-self: start; }
+    .ref-grid { grid-template-columns: 1fr; }
+    .sector-owner { display: none; }
+    .guide { padding: 28px 20px; }
+    .step { grid-template-columns: 44px 1fr; gap: 14px; }
+    .step-number { width: 44px; height: 44px; font-size: 1rem; }
+    .step::before { left: 21px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Agência Asher</h1>
+    <p class="subtitle">Guia de Skills por Setor</p>
+    <p class="date">Atualizado em 05/06/2026</p>
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="stat-number">18</div>
+        <div class="stat-label">Skills</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">6</div>
+        <div class="stat-label">Referências</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">7</div>
+        <div class="stat-label">Setores</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESTRATÉGIA -->
+  <div class="sector sector-estrategia">
+    <div class="sector-header">
+      <div class="sector-icon">&#127919;</div>
+      <div>
+        <div class="sector-title">Estratégia</div>
+      </div>
+      <span class="sector-count">4 skills</span>
+      <span class="sector-owner">Maicon</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div>
+          <div class="card-name">Pesquisa de Mercado</div>
+          <div class="card-desc">Pesquisa completa em 9 eixos com busca real na web. Entrega relatório em Markdown ou HTML visual com gráficos SVG.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Antes de criar qualquer campanha ou produto para um cliente novo. É o primeiro passo do onboarding estratégico.</div>
+        </div>
+        <span class="card-file">pesquisa-mercado.md</span>
+      </div>
+      <div class="card">
+        <div>
+          <div class="card-name">Projeção Financeira</div>
+          <div class="card-desc">Projeção de 12 meses com 4 faixas de produto (low ticket até mentoria), curvas de ROAS e faixas do Simples Nacional.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Para apresentar ao cliente quanto ele pode faturar com o funil proposto. Usa na reunião de fechamento ou planejamento mensal.</div>
+        </div>
+        <span class="card-file">projecao-financeira.md</span>
+      </div>
+      <div class="card">
+        <div>
+          <div class="card-name">Ideias de Produto</div>
+          <div class="card-desc">Gera 50 ideias de infoproduto em 15 formatos diferentes (ebook, agente GPT, mini-SaaS, planilha, desafio) com pesquisa de mercado.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Quando o cliente quer lançar produto digital mas não sabe por onde começar. Também serve para criar iscas e produtos de entrada no funil.</div>
+        </div>
+        <span class="card-file">ideias-produto.md</span>
+      </div>
+      <div class="card">
+        <div>
+          <div class="card-name">Concepção de Produto</div>
+          <div class="card-desc">Concebe produto digital completo: Promessa (5 opções), 50 Benefícios em 5 categorias, 5 Baldes Para Quem É, e Identidade do Consumidor com 5 objeções e 7 argumentos de quebra cada.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Depois de definir qual produto criar. Gera todo o material estratégico que alimenta a copy, os anúncios e a página de vendas.</div>
+        </div>
+        <span class="card-file">concepcao-produto.md</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMERCIAL -->
+  <div class="sector sector-comercial">
+    <div class="sector-header">
+      <div class="sector-icon">&#129309;</div>
+      <div>
+        <div class="sector-title">Comercial</div>
+      </div>
+      <span class="sector-count">2 skills</span>
+      <span class="sector-owner">Wiliam</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div>
+          <div class="card-name">Mapa de Objeções</div>
+          <div class="card-desc">Gera 5 objeções reais do público com 7 argumentos de quebra cada (Framework dos 7 Argumentos VTSD). Total: 70 parágrafos prontos para usar em vendas e copy.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Para preparar o time de atendimento do cliente, montar FAQ de vendas, ou alimentar scripts de WhatsApp e anúncios.</div>
+        </div>
+        <span class="card-file">mapa-objecoes.md</span>
+      </div>
+      <div class="card">
+        <div>
+          <div class="card-name">SPIN Selling</div>
+          <div class="card-desc">Simula 2 conversas completas de venda por WhatsApp com marcações didáticas [SITUAÇÃO], [PROBLEMA], [IMPLICAÇÃO], [NECESSIDADE]. Uma fecha, a outra fica de pensar.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Para treinar vendedores do cliente ou do time. Também serve como referência de tom e abordagem para scripts reais.</div>
+        </div>
+        <span class="card-file">spin-selling.md</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRÁFEGO -->
+  <div class="sector sector-trafego">
+    <div class="sector-header">
+      <div class="sector-icon">&#128640;</div>
+      <div>
+        <div class="sector-title">Tráfego Pago</div>
+      </div>
+      <span class="sector-count">2 skills</span>
+      <span class="sector-owner">Júlio César</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div>
+          <div class="card-name">Tráfego Meta Ads</div>
+          <div class="card-desc">Gestão completa de Meta Ads via MCP: conectar conta, criar campanhas, otimizar com base em métricas reais e gerar relatórios de performance.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Para criar, monitorar e otimizar campanhas no Meta Ads. Puxa dados reais da conta do cliente.</div>
+        </div>
+        <span class="card-file">trafego-meta-ads.md</span>
+      </div>
+      <div class="card">
+        <div>
+          <div class="card-name">Mandala de Anúncios</div>
+          <div class="card-desc">4 tipos de anúncio da Mandala VTSD (Ultra Segmentado, Problema-Solução, Pesquisa Científica, Atualidades). Aplica 15 princípios e 20 vícios proibidos. Gera 12 ideias e copy completa com gancho + CTA.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Para gerar variações de copy de anúncio. Use junto com os criativos do Wenderson para montar a campanha completa.</div>
+        </div>
+        <span class="card-file">mandala-anuncios.md</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CRIATIVO -->
+  <div class="sector sector-criativo">
+    <div class="sector-header">
+      <div class="sector-icon">&#127912;</div>
+      <div>
+        <div class="sector-title">Criativo / Design</div>
+      </div>
+      <span class="sector-count">4 skills</span>
+      <span class="sector-owner">Wenderson</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div>
+          <div class="card-name">UGC Rotina Real</div>
+          <div class="card-desc">Criativo estilo UGC de pessoa comum em rotina cotidiana. Gera prompts para Feed (1080x1350) + Stories (1080x1920) + animação Freepik.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Para anúncios que precisam parecer orgânicos, como se alguém estivesse usando o produto no dia a dia. Funciona bem para topo de funil.</div>
+        </div>
+        <span class="card-file">ugc-rotina-real.md</span>
+      </div>
+      <div class="card">
+        <div>
+          <div class="card-name">UGC Persona Creator</div>
+          <div class="card-desc">Cria personagens UGC ultra-realistas brasileiros com calibração por classe (A/B/C). Gera 5 perfis com 3 cenas cada (Talking Head, Usando Produto, Mostrando Resultado).</div>
+          <div class="card-use"><strong>Quando usar:</strong> Quando precisa de personagens consistentes para uma série de criativos. Gera prompts para ChatGPT + Magnific para animação.</div>
+        </div>
+        <span class="card-file">ugc-persona-creator.md</span>
+      </div>
+      <div class="card">
+        <div>
+          <div class="card-name">Problema-Solução</div>
+          <div class="card-desc">Arte dividida ao meio: lado esquerdo mostra o problema, lado direito mostra a solução prática. Estilo UGC com prompts para Feed + Stories + animação.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Para anúncios de meio de funil onde o público já conhece o problema. O formato de comparação visual é direto e converte bem.</div>
+        </div>
+        <span class="card-file">problema-solucao.md</span>
+      </div>
+      <div class="card">
+        <div>
+          <div class="card-name">Criativo Surreal</div>
+          <div class="card-desc">Arte surreal editorial nível Cannes Lions: escalas impossíveis, personificações, metáforas visuais. Paleta e tipografia adaptadas por nicho. Feed + Stories + animação.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Para anúncios de impacto máximo que param o scroll. Ideal para campanhas de awareness ou quando quer se diferenciar no feed.</div>
+        </div>
+        <span class="card-file">criativo-surreal.md</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <div class="sector sector-conteudo">
+    <div class="sector-header">
+      <div class="sector-icon">&#128221;</div>
+      <div>
+        <div class="sector-title">Conteúdo</div>
+      </div>
+      <span class="sector-count">2 skills</span>
+      <span class="sector-owner">Aniki</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div>
+          <div class="card-name">Carrossel Editorial</div>
+          <div class="card-desc">Carrossel de 6 slides com narrativa editorial baseada em dados reais. Pesquisa na web, estrutura com gancho, desenvolvimento e CTA final.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Para posts de Instagram que educam e posicionam o cliente como autoridade. Funciona bem para meio e fundo de funil no orgânico.</div>
+        </div>
+        <span class="card-file">carrossel-editorial.md</span>
+      </div>
+      <div class="card">
+        <div>
+          <div class="card-name">Carrossel Curiosidade</div>
+          <div class="card-desc">Carrossel de 7 a 9 slides com curiosidades atemporais do nicho. Formato leve, altamente compartilhável, pensado para alcance orgânico.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Para posts de topo de funil que geram salvamentos e compartilhamentos. Ideal para crescer a base de seguidores do cliente.</div>
+        </div>
+        <span class="card-file">carrossel-curiosidade.md</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- COPY -->
+  <div class="sector sector-copy">
+    <div class="sector-header">
+      <div class="sector-icon">&#9997;&#65039;</div>
+      <div>
+        <div class="sector-title">Copy</div>
+      </div>
+      <span class="sector-count">1 skill + 3 refs</span>
+      <span class="sector-owner">Transversal</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div>
+          <div class="card-name">Copy Página de Vendas</div>
+          <div class="card-desc">Gera copy completa em 15 blocos atômicos (Hero, Dor, Prova Social, CTA, Método, Para Quem É, Entregáveis, Bônus, Stack de Valor, Depoimentos, Suporte, Garantia, Autoridade, FAQ, Oferta Final). Padrão Light Copy. Só texto, sem HTML.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Quando o cliente precisa de página de vendas para qualquer produto. Gera a copy que depois vai pro Wenderson montar no template visual.</div>
+        </div>
+        <span class="card-file">copy-pagina-vendas.md</span>
+      </div>
+    </div>
+    <div class="ref-grid" style="margin-top: 14px;">
+      <div class="ref-card">
+        <span class="ref-icon">&#128214;</span>
+        <div class="ref-info">
+          <div class="ref-name">Manual da Copy</div>
+          <div class="ref-desc">15 princípios + 20 vícios proibidos + checklist de entrega. A bíblia da Light Copy.</div>
+        </div>
+      </div>
+      <div class="ref-card">
+        <span class="ref-icon">&#9989;</span>
+        <div class="ref-info">
+          <div class="ref-name">Checklist Light Copy</div>
+          <div class="ref-desc">12 proibições absolutas com exemplos de correção para verificação rápida.</div>
+        </div>
+      </div>
+      <div class="ref-card">
+        <span class="ref-icon">&#128196;</span>
+        <div class="ref-info">
+          <div class="ref-name">Template 15 Blocos</div>
+          <div class="ref-desc">Estrutura detalhada de cada bloco da página de vendas: função, conteúdo e proibições.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUÇÃO DIGITAL -->
+  <div class="sector sector-producao">
+    <div class="sector-header">
+      <div class="sector-icon">&#128187;</div>
+      <div>
+        <div class="sector-title">Produção Digital</div>
+      </div>
+      <span class="sector-count">3 skills + 1 ref</span>
+      <span class="sector-owner">Novo setor</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div>
+          <div class="card-name">Produção Digital</div>
+          <div class="card-desc">Workflow completo de 13 etapas para criar infoprodutos do zero: definição, conteúdo, ebook, imagens, app (Lovable), integração Hotmart e publicação.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Quando o cliente quer criar um produto digital completo. Guia desde a ideia até o produto publicado na Hotmart.</div>
+        </div>
+        <span class="card-file">producao-digital.md</span>
+      </div>
+      <div class="card">
+        <div>
+          <div class="card-name">Material Didático</div>
+          <div class="card-desc">Transforma qualquer conteúdo em material educacional premium usando princípios andragógicos (Knowles). 80% prático, 20% contexto. Gera prompts para ChatGPT criar visual.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Para transformar aulas, posts ou textos do cliente em material profissional para cursos, ebooks ou apresentações.</div>
+        </div>
+        <span class="card-file">material-didatico.md</span>
+      </div>
+      <div class="card">
+        <div>
+          <div class="card-name">Ebook Low Ticket</div>
+          <div class="card-desc">Ebook curto de 7 páginas, extremamente prático, para produtos de R$9 a R$97. Estrutura: Capa, O Que Importa, 3 Ações, Curadoria Premium e Plano de Implementação.</div>
+          <div class="card-use"><strong>Quando usar:</strong> Para criar produtos de entrada no funil (isca ou low ticket). Funciona como porta de entrada para vender produtos mais caros depois.</div>
+        </div>
+        <span class="card-file">ebook-low-ticket.md</span>
+      </div>
+    </div>
+    <div class="ref-grid" style="margin-top: 14px;">
+      <div class="ref-card">
+        <span class="ref-icon">&#128218;</span>
+        <div class="ref-info">
+          <div class="ref-name">Guia Ebook + Hotmart + Lovable</div>
+          <div class="ref-desc">Guia visual passo a passo de ebook até integração na Hotmart.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REFERÊNCIAS GERAIS -->
+  <div class="sector" style="margin-bottom: 40px;">
+    <div class="sector-header">
+      <div class="sector-icon" style="background: rgba(136,136,160,0.15);">&#128269;</div>
+      <div>
+        <div class="sector-title">Referências Gerais</div>
+      </div>
+      <span class="sector-count">2 arquivos</span>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <span class="ref-icon">&#10067;</span>
+        <div class="ref-info">
+          <div class="ref-name">FAQ Skills</div>
+          <div class="ref-desc">Perguntas e respostas sobre todas as skills do sistema. Base de conhecimento geral.</div>
+        </div>
+      </div>
+      <div class="ref-card">
+        <span class="ref-icon">&#128200;</span>
+        <div class="ref-info">
+          <div class="ref-name">Projeção CPL/CPA</div>
+          <div class="ref-desc">Simulador de projeção com CPC, taxa de conversão, CPA e benchmarks por nicho. Inclui projeções para Agvel e Clincog.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASSO A PASSO -->
+  <div class="guide">
+    <h2>Como Usar as Skills</h2>
+    <p class="guide-sub">Passo a passo para qualquer pessoa do time</p>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Abra o Claude Code</h3>
+          <p>No terminal, navegue até a pasta do projeto da agência e digite <span class="code-inline">claude</span> para iniciar.</p>
+          <div class="code-block">
+            cd agenciaasher<br>
+            claude
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Chame a skill pelo nome</h3>
+          <p>Digite o nome da skill que quer usar. O Claude vai reconhecer automaticamente e seguir o fluxo.</p>
+          <div class="code-block">
+            Roda a skill de pesquisa de mercado para a Agvel<br><br>
+            Usa a skill de mapa de objeções para o Clube Clincog<br><br>
+            Gera um criativo surreal para a campanha de SUVs da Agvel
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Responda as perguntas</h3>
+          <p>Cada skill vai pedir informações específicas (nicho, produto, público, etc.). Responda com os dados do cliente. Se for cliente da agência, a skill já puxa dados do briefing em <span class="code-inline">clientes/&lt;nome&gt;/projeto.md</span>.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Aprove ou ajuste</h3>
+          <p>A maioria das skills pede aprovação bloco a bloco. Se algo não ficou bom, peça ajuste. O Claude regera só aquele trecho sem refazer o resto.</p>
+          <div class="code-block">
+            1. Aprovar e seguir<br>
+            2. Quero ajustar (diga o que mudar)
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h3>Receba o entregável</h3>
+          <p>No final, a skill entrega o material pronto: copy formatada, relatório, briefing de design, prompts para ChatGPT, etc. Copie, baixe ou passe para o próximo setor.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box">
+      <strong>Dica:</strong> As skills funcionam melhor quando você menciona o cliente. Exemplo: "Roda a skill de concepcao de produto para o Clube Clincog, assinatura mensal de R$97". O Claude vai buscar os dados do cliente automaticamente e adaptar tudo pro contexto real.
+    </div>
+  </div>
+
+  <footer>
+    Agência Asher &middot; Operação via Claude Code &middot; GitHub como hub central
+  </footer>
+
+</div>
+
+</body>
+</html>
