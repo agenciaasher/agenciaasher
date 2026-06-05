@@ -83,6 +83,55 @@ O aluno passa no concurso público e conquista estabilidade financeira. Para o p
 
 ---
 
+## Pesquisa de Público — Mai/Jun 2026
+
+Pesquisa realizada com a base do Curso Passei entre 27/05 e 05/06/2026. ~200+ respondentes.
+
+### Perfil confirmado
+
+| Variável | Dado |
+|----------|------|
+| **Gênero** | 90%+ mulheres |
+| **Escolaridade** | Maioria Pós Graduação, depois Superior, depois Médio |
+| **Tempo de estudo** | Maioria estuda há mais de 1 ano. Faixa 3-6 meses em segundo |
+| **Horas/dia** | 1-2 horas (mais comum); Menos de 1 hora (expressivo) |
+| **Matéria mais difícil** | Português (esmagadora maioria); depois Conhecimentos Pedagógicos |
+
+### Concentração geográfica
+
+Os concursos mais citados foram **Saquarema** e **Araruama** (eixo principal). Também mencionados: Nova Iguaçu, Queimados, Volta Redonda, Duque de Caxias, Rio de Janeiro, Maricá, São Gonçalo, Cabo Frio, Rio das Ostras, Santo Antônio de Pádua, Câmara de Saquarema.
+
+> **Implicação:** Priorizar campanhas geo-segmentadas para Saquarema e Araruama. São os municípios com maior base ativa de alunos.
+
+### Principais obstáculos para estudar
+
+1. **Falta de tempo** (enorme maioria)
+2. Cansaço do trabalho
+3. Rotina com filhos
+
+> **Implicação:** Comunicação deve atacar exatamente esses pontos. "Método para quem tem pouco tempo", "Estude 1 hora por dia e passe no concurso", "Para mães que não abrem mão da aprovação."
+
+### Como descobriram o Curso Passei
+
+| Canal | Posição |
+|-------|---------|
+| Instagram | 1º — maior canal de aquisição |
+| YouTube | 2º — forte e orgânico |
+| Indicação | 3º — sinal de NPS alto |
+| WhatsApp | 4º |
+
+### Preferência de formato de estudo
+
+Preferências distribuídas entre: Ao Vivo, Gravada, Questões comentadas. Não há formato absoluto — turmas mistas são mais adequadas.
+
+### Oportunidades identificadas na pesquisa
+
+- **95%+ querem receber materiais gratuitos** (simulados, dicas) — base receptiva para nutrição por e-mail/WhatsApp.
+- **Maioria toparia participar de grupo estruturado** com acompanhamento — valida produto de comunidade/assinatura.
+- **Indicação forte** como canal de aquisição — programa de indicação pode escalar esse vetor.
+
+---
+
 ## Posicionamento e Diferenciais
 
 ### Por que escolhem o Passei

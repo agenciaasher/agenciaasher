@@ -36,12 +36,28 @@ Pessoas que prestam ou querem prestar concursos públicos, principalmente para c
 ## Tom de voz
 Direto, motivador e acessível. Ramon é o professor que "fala a língua do aluno" — sem enrolação, foca no que cai na prova. Conteúdo gratuito abundante no YouTube cria autoridade.
 
+## Pesquisa de Público (Mai/Jun 2026) — dados confirmados
+
+- **90%+ mulheres**, maioria Pós Graduação, estudam há +1 ano, 1-2h/dia
+- **Obstáculos:** falta de tempo (#1), cansaço do trabalho, filhos
+- **Concursos mais citados:** Saquarema + Araruama (eixo principal), depois Volta Redonda, Nova Iguaçu, Santo Antônio de Pádua
+- **Discovery:** Instagram (#1) → YouTube (#2) → Indicação (#3)
+- **95%+ aceitam materiais gratuitos** — base receptiva para nutrição
+- **Maioria toparia grupo estruturado** — valida produto de assinatura/comunidade
+
+## Ângulos de copy validados pela pesquisa
+
+- "Método para quem estuda 1 hora por dia"
+- "Para mães que não abrem mão da aprovação"
+- "O concurso de [Saquarema/Araruama] está chegando — você está pronto?"
+
 ## Regras obrigatórias
 1. Sempre consultar `sazonalidade.md` antes de gerar campanha ou conteúdo
 2. Ramon é o diferencial humano — ele é a marca. Usar o rosto e autoridade dele
 3. Foco em resultados concretos: aprovações, bancas específicas, concursos reais
 4. Público é sensível a preço — ticket baixo exige volume e upsell bem estruturado
 5. YouTube é canal de topo de funil ativo — integrar na estratégia de conteúdo
+6. Geo-segmentar campanhas para Saquarema e Araruama como prioridade
 
 ## Arquivos deste cliente
 - `projeto.md` — briefing completo
