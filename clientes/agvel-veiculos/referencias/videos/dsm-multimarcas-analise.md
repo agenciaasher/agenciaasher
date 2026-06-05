@@ -193,6 +193,104 @@ Termina ao lado do carro, fachada visível, sorriso ou positivo
 
 ---
 
+---
+
+## Vídeos 6 a 10 — Segunda leva analisada
+
+### Vídeo 6 — Nissan March branco (DZNZ49LRyG)
+**Locação:** showroom interno (noite/fim de tarde)
+**Apresentador:** C (jaqueta preta, calça bege, tênis amarelo-verde)
+**Detalhe incomum:** carro popular filmado dentro do showroom premium
+
+| Sequência | Cena |
+|-----------|------|
+| Abertura | Apresentador C dentro do showroom, logo DSM iluminado ao fundo, March branco ao lado |
+| Detalhe roda | Close-up na roda do March (aro bicolor grafite/prata com logo Nissan central) |
+| Interior cockpit | Volante Nissan, câmbio automático com modo Sport, multimídia touchscreen |
+| Encerramento | Apresentador C ao lado do March dentro do showroom, positivo para câmera |
+
+**Destaque:** Filmar um Nissan March (carro popular de entrada) dentro do showroom premium eleva a percepção do produto. A iluminação de teto faz qualquer carro parecer mais valioso. Isso é o que a Agvel pode fazer com carros de ticket menor.
+
+---
+
+### Vídeo 7 — Institucional com Mercedes A-Class + SUV (DZNOj5IRQhd)
+**Locação:** garagem/pátio secundário da DSM → caminhada até a fachada principal
+**Apresentador:** C
+**Tipo de conteúdo:** MULTI-CARRO / CTA VISITA À LOJA (não é showcase de um produto só)
+
+| Sequência | Cena |
+|-----------|------|
+| Abertura | Apresentador C entre a Mercedes A-Class AMG prata E um SUV cinza (VW T-Cross ou similar) — dois carros ao mesmo tempo |
+| Movimento | Apresentador C caminha sozinho em direção à câmera com os dois carros ao fundo |
+| Encerramento | Apresentador C em frente à fachada principal redonda DSM, braço aberto convidando |
+
+**Destaque:** Esse vídeo é um CTA de visita — "olha quanto carro bom a gente tem, vem aqui". Mostrar DOIS carros ao mesmo tempo dobra o interesse. O movimento do apresentador caminhando em direção à câmera é dinâmico e puxador.
+
+---
+
+### Vídeo 8 — Conteúdo institucional #DSMnãoPARA (DZN8NqIPsHL)
+**Locação:** pátio da DSM ao pôr do sol + showroom interno
+**Tipo de conteúdo:** BASTIDORES / INSTITUCIONAL — sem apresentador, sem showcas de carro
+
+| Sequência | Cena |
+|-----------|------|
+| Abertura | Câmera inclinada no carro vermelho (Renault Sandero ou similar), pôr do sol dramático ao fundo, logo DSM visível |
+| Equipe em ação | 3 funcionários empurrando/posicionando um carro branco (Fiat Argo) no pátio ao pôr do sol — cena de bastidores de trabalho |
+| Detalhe patriótico | Funcionário com uniforme DSM/Zero101 colocando bandeirinha do Brasil na janela do carro |
+| Encerramento | Mesmo funcionário, dentro do showroom, finalizando o detalhe da bandeirinha na janela |
+
+**Destaque:** Esse é o conteúdo institucional da DSM. Mostra a equipe trabalhando duro (hashtag #DSMnãoPARA). A bandeirinha do Brasil é um detalhe humano e patriótico que humaniza a marca. Cria conexão emocional. A Agvel deveria ter um equivalente: um vídeo mostrando a equipe preparando os carros, limpando, documentando.
+
+---
+
+### Vídeo 9 — Mercedes-Benz A 250 AMG branca no showroom (DZOAhh5P5Re)
+**Locação:** showroom interno à noite (iluminação de teto apenas)
+**Apresentador:** E (novo — jaqueta caramelo/marrom, camiseta branca, calça branca) — 5º apresentador identificado
+**Detalhe:** Mercedes G-Class preta e conversível vermelho visíveis ao fundo no showroom
+
+| Sequência | Cena |
+|-----------|------|
+| Abertura | Apresentador E ao lado da frente da A-Class branca, showroom iluminado, logo DSM na parede ao fundo |
+| Movimento | Apresentador E caminha para trás revelando o carro inteiro. G-Class preta visível ao fundo |
+| Exterior frontal | Câmera desce devagar na frente da Mercedes branca — grille "diamante" AMG em destaque |
+| Close frontal | Close-up no logo Mercedes + grade AMG + placa DSM. Iluminação refletida no capô branco |
+
+**Destaque:** Filmar Mercedes à noite no showroom com apenas a iluminação de teto cria um efeito estúdio sem precisar de estúdio. O capô branco brilhante com reflejo das luzes é cinematográfico. Um efeito que a Agvel pode replicar facilmente com qualquer carro branco ou prata no próprio showroom.
+
+---
+
+### Vídeo 10 — Hyundai Creta preto blacked-out (DZN4MinP9R6)
+**Locação:** exterior da DSM (calçada + fachada)
+**Apresentador:** C (jaqueta preta)
+**Detalhe técnico:** interior com iluminação ambiente azul turquesa — o diferencial visual mais forte desse vídeo
+
+| Sequência | Cena |
+|-----------|------|
+| Abertura | Apresentador C ao lado da Creta preta, fachada DSM ao fundo, luz nublada |
+| Grille close | Câmera LOW ANGLE rente ao chão na grade dianteira da Creta — grille Hyundai em destaque |
+| Roda close | Câmera low angle na roda preta fosca 17" — logo DSM visível na fachada ao fundo |
+| Interior cockpit | Painel Hyundai ligado, iluminação ambiente AZUL TURQUESA nas bordas do painel e console, volante com controles, câmbio automático com seletor giratório |
+| Interior console | Vista do passageiro: iluminação azul no console inteiro, couro preto. Muito sofisticado |
+| Encerramento | Apresentador C encostado na Creta, fachada DSM + banner lateral ao fundo |
+
+**Destaque:** A iluminação ambiente azul turquesa da Creta é o gancho visual do vídeo. Eles dedicaram 2 frames inteiros só para capturar esse detalhe. Quando um carro tem um diferencial visual marcante (iluminação, teto solar, rodas especiais), esse detalhe deve ser o clímax visual do vídeo.
+
+---
+
+## Mix de tipos de conteúdo da DSM
+
+Com base nos 10 vídeos analisados, a DSM produz pelo menos 3 tipos distintos:
+
+| Tipo | Proporção estimada | Objetivo |
+|------|--------------------|----------|
+| Showcase individual (um carro, tour completo) | ~70% | Gerar lead para aquele carro |
+| Multi-carro / visita à loja | ~15% | CTA para ir à loja, ver o estoque |
+| Institucional / bastidores | ~15% | Humanizar a marca, fidelizar seguidores |
+
+**Para Agvel:** replicar esse mix. Não postar só produto. Uma vez por semana um vídeo de bastidores (equipe, preparação, entrega de chaves, carro sendo vistoriado) faz muita diferença no engajamento.
+
+---
+
 ## Notas de produção para Wenderson (Editor)
 
 - Não precisa de estabilizador caro. Celular na mão já funciona se a pessoa andar devagar.
