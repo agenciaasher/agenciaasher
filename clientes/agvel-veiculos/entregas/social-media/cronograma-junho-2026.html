@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cronograma Social Media — Junho 2026 | Agvel Veículos</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --preto:    #1D1D1B;
+      --branco:   #FFFFFF;
+      --cinza:    #333333;
+      --cinza-claro: #F5F5F5;
+      --vermelho: #CC0000;
+      --borda:    #E0E0E0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cinza-claro);
+      color: var(--preto);
+      padding: 40px 20px;
+    }
+
+    /* ── HEADER ───────────────────────────────────── */
+    header {
+      background: var(--preto);
+      color: var(--branco);
+      border-radius: 12px;
+      padding: 40px 48px;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    header .marca {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    header .agencia {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header h1 span { color: var(--vermelho); }
+
+    header .meta {
+      text-align: right;
+      font-size: 13px;
+      color: #999;
+      line-height: 1.8;
+    }
+
+    header .meta strong { color: var(--branco); }
+
+    /* ── DATAS-CHAVE ──────────────────────────────── */
+    .datas-chave {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .data-badge {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 8px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .data-badge .dia {
+      background: var(--vermelho);
+      color: var(--branco);
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 6px;
+      padding: 4px 8px;
+      white-space: nowrap;
+    }
+
+    .data-badge .nome {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--cinza);
+    }
+
+    /* ── RESUMO ───────────────────────────────────── */
+    .resumo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .resumo-card {
+      background: var(--branco);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid var(--borda);
+    }
+
+    .resumo-card .numero {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--preto);
+      line-height: 1;
+    }
+
+    .resumo-card .label {
+      font-size: 12px;
+      color: #888;
+      margin-top: 6px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .resumo-card.destaque { background: var(--preto); border-color: var(--preto); }
+    .resumo-card.destaque .numero { color: var(--branco); }
+    .resumo-card.destaque .label { color: #888; }
+
+    /* ── SEMANA ───────────────────────────────────── */
+    .semana {
+      margin-bottom: 36px;
+    }
+
+    .semana-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .semana-numero {
+      background: var(--preto);
+      color: var(--branco);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    .semana-titulo { font-size: 16px; font-weight: 600; }
+
+    .semana-datas {
+      font-size: 13px;
+      color: #888;
+      margin-left: auto;
+    }
+
+    /* ── TABELA ───────────────────────────────────── */
+    .tabela-wrap {
+      background: var(--branco);
+      border-radius: 12px;
+      border: 1px solid var(--borda);
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    thead tr { background: var(--preto); color: var(--branco); }
+
+    thead th {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    tbody tr { border-bottom: 1px solid var(--cinza-claro); transition: background 0.15s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #FAFAFA; }
+
+    tbody td {
+      padding: 14px 16px;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .col-data { white-space: nowrap; font-weight: 600; color: var(--cinza); }
+
+    .col-dia {
+      white-space: nowrap;
+      font-size: 11px;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Badges de formato */
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .badge-estatico  { background: #E8E8E8; color: #444; }
+    .badge-carrossel { background: #FFF3CD; color: #7A5C00; }
+    .badge-reels     { background: #FFE0E0; color: var(--vermelho); }
+    .badge-stories   { background: #E8F4FD; color: #1A6B9A; }
+
+    /* Badges de pilar */
+    .pilar {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .pilar-vitrine      { background: #F0FFF4; color: #276749; }
+    .pilar-institucional{ background: #F0F4FF; color: #2B4FA8; }
+    .pilar-educativo    { background: #FFF8F0; color: #8B4500; }
+    .pilar-sazonalidade { background: #FDF0FF; color: #6B2D8B; }
+    .pilar-conversao    { background: #FFF0F0; color: #8B0000; }
+
+    .tema { font-weight: 600; color: var(--preto); margin-bottom: 4px; }
+    .copy { font-size: 12px; color: #666; line-height: 1.6; }
+
+    /* ── STORIES ──────────────────────────────────── */
+    .stories-box {
+      background: #F0F8FF;
+      border: 1px solid #C3DDF5;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 12px;
+    }
+
+    .stories-box h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #1A6B9A;
+      margin-bottom: 10px;
+    }
+
+    .stories-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .story-item {
+      background: var(--branco);
+      border: 1px solid #C3DDF5;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 12px;
+      color: var(--cinza);
+    }
+
+    /* ── OBSERVAÇÕES ──────────────────────────────── */
+    .obs-section {
+      background: var(--preto);
+      color: var(--branco);
+      border-radius: 12px;
+      padding: 32px 40px;
+      margin-top: 40px;
+    }
+
+    .obs-section h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #CCC;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .obs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .obs-item h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--vermelho);
+      margin-bottom: 8px;
+    }
+
+    .obs-item p {
+      font-size: 13px;
+      color: #BBB;
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ───────────────────────────────────── */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 12px;
+      color: #AAA;
+    }
+
+    footer strong { color: var(--cinza); }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="marca">
+      <span class="agencia">Agência Asher</span>
+      <h1>Cronograma Social Media<br><span>Junho 2026</span></h1>
+    </div>
+    <div class="meta">
+      <strong>Agvel Veículos</strong><br>
+      Instagram + Facebook<br>
+      5 posts/semana · Stories diários<br>
+      Pato Branco, PR
+    </div>
+  </header>
+
+  <!-- DATAS-CHAVE -->
+  <div class="datas-chave">
+    <div class="data-badge">
+      <span class="dia">12/06</span>
+      <span class="nome">Dia dos Namorados</span>
+    </div>
+    <div class="data-badge">
+      <span class="dia">13/06</span>
+      <span class="nome">Santo Antônio</span>
+    </div>
+    <div class="data-badge">
+      <span class="dia">21/06</span>
+      <span class="nome">Início do Inverno</span>
+    </div>
+    <div class="data-badge">
+      <span class="dia">24/06</span>
+      <span class="nome">São João</span>
+    </div>
+    <div class="data-badge">
+      <span class="dia">29/06</span>
+      <span class="nome">Feriado — São Pedro</span>
+    </div>
+  </div>
+
+  <!-- RESUMO -->
+  <div class="resumo-grid">
+    <div class="resumo-card destaque">
+      <div class="numero">19</div>
+      <div class="label">Total de posts</div>
+    </div>
+    <div class="resumo-card">
+      <div class="numero">12</div>
+      <div class="label">Estáticos</div>
+    </div>
+    <div class="resumo-card">
+      <div class="numero">4</div>
+      <div class="label">Carrosséis</div>
+    </div>
+    <div class="resumo-card">
+      <div class="numero">3</div>
+      <div class="label">Reels</div>
+    </div>
+    <div class="resumo-card">
+      <div class="numero">16+</div>
+      <div class="label">Stories</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- SEMANA 1 -->
+  <!-- ══════════════════════════════════════════════ -->
+  <div class="semana">
+    <div class="semana-header">
+      <span class="semana-numero">Semana 1</span>
+      <span class="semana-titulo">Posicionamento de marca</span>
+      <span class="semana-datas">01 – 07/06</span>
+    </div>
+    <div class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Dia</th>
+            <th>Formato</th>
+            <th>Pilar</th>
+            <th>Tema & Chamada</th>
+            <th>Direção de copy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-data">02/06</td>
+            <td class="col-dia">Seg</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-vitrine">Vitrine</span></td>
+            <td><div class="tema">VW Tiguan 2024 — SUV da semana</div></td>
+            <td><div class="copy">Abrir com dado forte (km, ano, opcionais). Tom: desejo + qualidade. CTA para WhatsApp.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">03/06</td>
+            <td class="col-dia">Ter</td>
+            <td><span class="badge badge-carrossel">Carrossel</span></td>
+            <td><span class="pilar pilar-educativo">Educativo</span></td>
+            <td><div class="tema">Seminovo ou 0km? O que faz mais sentido pra você</div></td>
+            <td><div class="copy">5–6 slides comparando custo-benefício. Posicionar seminovo premium como escolha inteligente.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">05/06</td>
+            <td class="col-dia">Qui</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-institucional">Institucional</span></td>
+            <td><div class="tema">20 anos de Agvel — e nenhum veículo com pendência</div></td>
+            <td><div class="copy">Foco no diferencial de documentação 100% regularizada. Tom: autoridade e confiança.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">06/06</td>
+            <td class="col-dia">Sex</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-vitrine">Vitrine</span></td>
+            <td><div class="tema">Tour pelo showroom — os veículos da semana</div></td>
+            <td><div class="copy">Vídeo 30–45s mostrando os destaques disponíveis. Trilha que transmita sofisticação.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">07/06</td>
+            <td class="col-dia">Sáb</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-conversao">Conversão</span></td>
+            <td><div class="tema">Veio de longe comprar aqui. Você pode também.</div></td>
+            <td><div class="copy">Post voltado a leads de outros estados. Destacar entrega, financiamento e documentação.</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stories-box">
+      <h4>Stories — Semana 1</h4>
+      <div class="stories-list">
+        <div class="story-item">Enquete: SUV ou Hatch?</div>
+        <div class="story-item">Bastidor: recebimento de veículo</div>
+        <div class="story-item">CTA: "Manda o modelo que quer ver"</div>
+        <div class="story-item">Repost de produto com sticker WhatsApp</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- SEMANA 2 -->
+  <!-- ══════════════════════════════════════════════ -->
+  <div class="semana">
+    <div class="semana-header">
+      <span class="semana-numero">Semana 2</span>
+      <span class="semana-titulo">Produto em destaque &amp; Dia dos Namorados</span>
+      <span class="semana-datas">08 – 14/06</span>
+    </div>
+    <div class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Dia</th>
+            <th>Formato</th>
+            <th>Pilar</th>
+            <th>Tema & Chamada</th>
+            <th>Direção de copy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-data">09/06</td>
+            <td class="col-dia">Seg</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-vitrine">Vitrine</span></td>
+            <td><div class="tema">Fiat Pulse 2024 — o equilíbrio perfeito</div></td>
+            <td><div class="copy">Destacar design, tecnologia embarcada e consumo. Foto limpa com fundo escuro.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">10/06</td>
+            <td class="col-dia">Ter</td>
+            <td><span class="badge badge-carrossel">Carrossel</span></td>
+            <td><span class="pilar pilar-educativo">Educativo</span></td>
+            <td><div class="tema">O que é laudo cautelar — e por que exigir na compra</div></td>
+            <td><div class="copy">4 slides: o que é, o que avalia, por que importa, e que na Agvel já está incluso.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">11/06</td>
+            <td class="col-dia">Qui</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-sazonalidade">Sazonalidade</span></td>
+            <td><div class="tema">Dia dos Namorados — antecipação</div></td>
+            <td><div class="copy">"O presente em que cabem os dois" — gancho emocional com SUV. Não forçar venda, criar desejo.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">12/06</td>
+            <td class="col-dia">Sex</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-sazonalidade">Sazonalidade</span></td>
+            <td><div class="tema">❤ Dia dos Namorados — post principal</div></td>
+            <td><div class="copy">Imagem de casal / viagem / liberdade. "Escreva uma nova história com ela(e)." Tom emocional, premium.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">14/06</td>
+            <td class="col-dia">Dom</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-vitrine">Vitrine</span></td>
+            <td><div class="tema">VW T-Cross 2025 — apresentação completa</div></td>
+            <td><div class="copy">45s mostrando o veículo em movimento: estacionamento, interior, painel. Trilha moderna.</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stories-box">
+      <h4>Stories — Semana 2</h4>
+      <div class="stories-list">
+        <div class="story-item">Contagem regressiva — Dia dos Namorados</div>
+        <div class="story-item">Enquete: "Melhor presente: carro, viagem ou jantar?"</div>
+        <div class="story-item">Chamada de financiamento: entrada + parcelas</div>
+        <div class="story-item">Bastidor: inspeção de veículo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- SEMANA 3 -->
+  <!-- ══════════════════════════════════════════════ -->
+  <div class="semana">
+    <div class="semana-header">
+      <span class="semana-numero">Semana 3</span>
+      <span class="semana-titulo">Produto &amp; Início do Inverno</span>
+      <span class="semana-datas">15 – 21/06</span>
+    </div>
+    <div class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Dia</th>
+            <th>Formato</th>
+            <th>Pilar</th>
+            <th>Tema & Chamada</th>
+            <th>Direção de copy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-data">16/06</td>
+            <td class="col-dia">Seg</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-vitrine">Vitrine</span></td>
+            <td><div class="tema">Toyota SW4 2021 — feito para quem não para</div></td>
+            <td><div class="copy">Destaque em 4x4, tração e altura. Perfeito para o inverno no sul. Tom: potência + confiança.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">17/06</td>
+            <td class="col-dia">Ter</td>
+            <td><span class="badge badge-carrossel">Carrossel</span></td>
+            <td><span class="pilar pilar-educativo">Educativo</span></td>
+            <td><div class="tema">5 pontos que você deve checar antes de comprar um seminovo</div></td>
+            <td><div class="copy">Checklist educativo. Último slide: "Aqui na Agvel, isso já vem feito pra você." Converte confiança.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">18/06</td>
+            <td class="col-dia">Qui</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-vitrine">Vitrine</span></td>
+            <td><div class="tema">Chevrolet Spin 2023 — família a bordo</div></td>
+            <td><div class="copy">Destaque em espaço, versatilidade e 7 lugares. Para quem pensa prático.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">19/06</td>
+            <td class="col-dia">Sex</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-institucional">Institucional</span></td>
+            <td><div class="tema">3 meses de garantia. Nossa confiança vai com você.</div></td>
+            <td><div class="copy">Post sobre a garantia inclusa. Diferencial raramente comunicado — usar para gerar confiança.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">21/06</td>
+            <td class="col-dia">Dom</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-sazonalidade">Sazonalidade</span></td>
+            <td><div class="tema">Início do Inverno — Para cada estrada, um veículo à altura</div></td>
+            <td><div class="copy">Foto de estrada/frio/serrania. Gancho sazonal ligado a SUV e 4x4. Tom: aventura + segurança.</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stories-box">
+      <h4>Stories — Semana 3</h4>
+      <div class="stories-list">
+        <div class="story-item">Dica de inverno: revisão antes do frio</div>
+        <div class="story-item">Enquete: "Vai viajar nas férias de julho?"</div>
+        <div class="story-item">CTA: "Conforto e segurança pra família — fala com a gente"</div>
+        <div class="story-item">Repost de depoimento de cliente</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- SEMANA 4 -->
+  <!-- ══════════════════════════════════════════════ -->
+  <div class="semana">
+    <div class="semana-header">
+      <span class="semana-numero">Semana 4</span>
+      <span class="semana-titulo">São João &amp; Encerramento do mês</span>
+      <span class="semana-datas">22 – 30/06</span>
+    </div>
+    <div class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Dia</th>
+            <th>Formato</th>
+            <th>Pilar</th>
+            <th>Tema & Chamada</th>
+            <th>Direção de copy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-data">23/06</td>
+            <td class="col-dia">Ter</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-vitrine">Vitrine</span></td>
+            <td><div class="tema">Destaque da semana — [conforme estoque]</div></td>
+            <td><div class="copy">Modelo em evidência com fotos de qualidade. Reforço de diferenciais: km, ano, revisão.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">24/06</td>
+            <td class="col-dia">Ter</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-sazonalidade">Sazonalidade</span></td>
+            <td><div class="tema">São João — Que esse mês seja de novas conquistas</div></td>
+            <td><div class="copy">Post festivo leve, sem forçar venda. Mostrar personalidade da marca. Visual premium com cores quentes.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">25/06</td>
+            <td class="col-dia">Qui</td>
+            <td><span class="badge badge-carrossel">Carrossel</span></td>
+            <td><span class="pilar pilar-educativo">Educativo</span></td>
+            <td><div class="tema">Financiamento direto: o que você precisa saber</div></td>
+            <td><div class="copy">Como funciona, quais documentos, simulação simples. Finalizar com CTA para conversa no WhatsApp.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">27/06</td>
+            <td class="col-dia">Sáb</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-conversao">Conversão</span></td>
+            <td><div class="tema">Chegou novo no estoque — vem ver</div></td>
+            <td><div class="copy">Reels dos veículos que chegaram recentemente. Senso de novidade e exclusividade.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">30/06</td>
+            <td class="col-dia">Ter</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-institucional">Institucional</span></td>
+            <td><div class="tema">Fechamento de junho — Mais um mês de conquistas</div></td>
+            <td><div class="copy">Post de encerramento com tom positivo. Pode incluir número de clientes atendidos no mês.</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stories-box">
+      <h4>Stories — Semana 4</h4>
+      <div class="stories-list">
+        <div class="story-item">Enquete São João: "Festa ou casa?"</div>
+        <div class="story-item">Chamada: "Quanto vale seu carro na troca?"</div>
+        <div class="story-item">Countdown: "Férias de julho chegando"</div>
+        <div class="story-item">CTA direto: sticker WhatsApp "Fale com a Agvel"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OBSERVAÇÕES -->
+  <div class="obs-section">
+    <h2>Observações de Produção</h2>
+    <div class="obs-grid">
+      <div class="obs-item">
+        <h4>Tom de voz</h4>
+        <p>Sempre sério, premium e objetivo. Sem urgência falsa ou humor exagerado. Alinhado à reputação construída em 20 anos de mercado.</p>
+      </div>
+      <div class="obs-item">
+        <h4>Visual</h4>
+        <p>Fundo escuro + tipografia clean nos posts de produto. Paleta: preto #1D1D1B, branco #FFFFFF, vermelho #CC0000 para CTAs.</p>
+      </div>
+      <div class="obs-item">
+        <h4>Estoque</h4>
+        <p>Alinhar posts de vitrine com o estoque real da semana. Grazi valida disponibilidade antes da produção de cada peça.</p>
+      </div>
+      <div class="obs-item">
+        <h4>Reels</h4>
+        <p>Definir veículo com o cliente com até 7 dias de antecedência. Gravação presencial no showroom em Pato Branco.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Produzido por <strong>Agência Asher</strong> · Junho 2026 · contato@ashermidia.com</p>
+  </footer>
+
+</body>
+</html>

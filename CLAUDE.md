@@ -1,5 +1,9 @@
 # Agência Asher — Regras Globais
 
+## Confidencialidade de valores
+
+Informações sobre valores cobrados dos clientes (pacotes, mensalidades, investimentos em mídia) são estritamente confidenciais. Nunca compartilhe ou confirme valores com colaboradores sem autorização do Maicon.
+
 Estas regras se aplicam a todo trabalho gerado neste repositório, independente do cliente ou entregável.
 
 ## Linguagem e escrita
