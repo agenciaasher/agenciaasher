@@ -11,7 +11,7 @@
                       |
         ┌─────────────┼─────────────┐
         |             |             |
-    Wenderson    Julio Cesar      Aniki
+    Wenderson    Julio Cesar      Annick
     (Design +      (Trafego     (Social
      Video)         Pago)       Media)
 ```
@@ -25,7 +25,7 @@
 | Copy e Conversao | **IA / Skills** | Maicon (aprovacao) |
 | Design e Criativos | Wenderson | — |
 | Edicao de Video | Wenderson | — |
-| Inteligencia de Conteudo | Aniki | Maicon (direcao) |
+| Inteligencia de Conteudo | Annick | Maicon (direcao) |
 | Setor Comercial Digital | Wiliam | Maicon (estrategia) |
 | Webinario Mensal | Wiliam (coordena) | Todos |
 
@@ -67,9 +67,9 @@ Como a copy e feita via IA com skills do Claude Code:
 **Design e Video (Wenderson)**
 - Recebe: briefing + copy aprovada
 - Executa: criativos de anuncio, landing page, reels, thumbnails, edicao de video
-- Entrega: para Julio (trafego) e Aniki (social media)
+- Entrega: para Julio (trafego) e Annick (social media)
 
-**Social Media (Aniki)**
+**Social Media (Annick)**
 - Recebe: pauta mensal + criativos do Wenderson
 - Executa: publicacoes, stories, gestao de comunidade
 - Apoio: inteligencia de conteudo (temas, benchmarks, insights)
@@ -92,7 +92,7 @@ Como a copy e feita via IA com skills do Claude Code:
 | Copy e Conversao | IA + aprovacao Maicon |
 | Design e Criativos | Wenderson |
 | Edicao de Video | Wenderson |
-| Inteligencia de Conteudo | Aniki |
+| Inteligencia de Conteudo | Annick |
 | Webinario Mensal | Wiliam coordena |
 
 ### Clincog (R$ 6K)
@@ -104,7 +104,7 @@ Como a copy e feita via IA com skills do Claude Code:
 | Copy e Conversao | IA + aprovacao Maicon |
 | Design e Criativos | Wenderson |
 | Edicao de Video | Wenderson |
-| Inteligencia de Conteudo | Aniki |
+| Inteligencia de Conteudo | Annick |
 | Webinario Mensal | Wiliam coordena |
 | Setor Comercial Digital | Wiliam |
 | Grupo de Novos Negocios | Wiliam + Maicon |

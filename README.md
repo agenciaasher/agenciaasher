@@ -10,7 +10,7 @@ Estrutura de projetos e entregáveis da Agência Asher.
 | Wiliam | Coordenador / CS / Comercial | Distribuição de tarefas, CS com cliente, setor comercial |
 | Wenderson | Designer + Editor de Vídeo | Criativos, landing pages, reels, edição |
 | Júlio César | Gestor de Tráfego | Google Ads, Meta Ads, otimização, relatórios |
-| Aniki | Social Media | Conteúdo, pautas, publicações, inteligência |
+| Annick | Social Media | Conteúdo, pautas, publicações, inteligência |
 
 Fluxo completo: [operacao.md](operacao.md)
 

@@ -56,7 +56,7 @@ Cada agente e um fluxo automatizado que combina varias skills.
 
 ---
 
-## Aniki (Social Media)
+## Annick (Social Media)
 
 | Skill | O que faz |
 |-------|-----------|
@@ -130,8 +130,8 @@ Skills ja instaladas no `.claude/skills/` e prontas para uso:
 
 | Skill | Arquivo | Setor | Descricao |
 |-------|---------|-------|-----------|
-| Carrossel Editorial | `carrossel-editorial.md` | Conteudo (Aniki + IA) | Carrossel de 6 slides com narrativa editorial baseada em dados reais |
-| Carrossel Curiosidade | `carrossel-curiosidade.md` | Conteudo (Aniki + IA) | Carrossel de 7-9 slides com curiosidades atemporais do nicho |
+| Carrossel Editorial | `carrossel-editorial.md` | Conteudo (Annick + IA) | Carrossel de 6 slides com narrativa editorial baseada em dados reais |
+| Carrossel Curiosidade | `carrossel-curiosidade.md` | Conteudo (Annick + IA) | Carrossel de 7-9 slides com curiosidades atemporais do nicho |
 | UGC Rotina Real | `ugc-rotina-real.md` | Criativo (Wenderson + IA) | Criativo estilo UGC de pessoa comum em rotina cotidiana |
 | UGC Persona Creator | `ugc-persona-creator.md` | Criativo (Wenderson + IA) | Cria personagens UGC ultra-realistas com prompts ChatGPT + Magnific |
 | Problema-Solucao | `problema-solucao.md` | Criativo / Copy (IA) | Arte dividida ao meio: problema vs. solucao pratica, estilo UGC |
@@ -156,9 +156,9 @@ Skills ja instaladas no `.claude/skills/` e prontas para uso:
 | Template Pagina de Vendas | `references/template-copy-pagina-vendas.md` | Referencia (Copy) | Estrutura detalhada dos 15 blocos com funcao, conteudo e proibicoes |
 | Copy de Anuncio | `copy-anuncio.md` | Copy / Trafego (transversal) | Copy para Meta Ads e Google Ads com variacoes A/B por etapa do funil |
 | Script WhatsApp + Follow-up | `script-whatsapp.md` | Comercial (Wiliam + IA) | Script de primeiro contato + sequencia D+1, D+3, D+7 + mapa de objecoes |
-| Pauta Mensal | `pauta-mensal.md` | Conteudo (Aniki + IA) | Calendario de conteudo do mes com pilares, formatos e sazonalidade |
+| Pauta Mensal | `pauta-mensal.md` | Conteudo (Annick + IA) | Calendario de conteudo do mes com pilares, formatos e sazonalidade |
 | Relatorio Mensal | `relatorio-mensal.md` | Estrategia (Maicon + IA) | Relatorio de resultados com metricas, ROI, diagnostico e proximo mes |
-| Copy de Reels | `copy-reels.md` | Conteudo (Aniki + Wenderson) | Roteiro de reels com gancho 3s, desenvolvimento e CTA |
+| Copy de Reels | `copy-reels.md` | Conteudo (Annick + Wenderson) | Roteiro de reels com gancho 3s, desenvolvimento e CTA |
 | Landing Page | `landing-page.md` | Criativo / Dev (Wenderson + IA) | Cria landing page HTML/CSS responsiva e faz deploy na Vercel |
 | Funil Mapeado | `funil-mapeado.md` | Estrategia (Maicon + IA) | Mapeia funil completo, identifica gargalos e sugere acoes por etapa |
 | Reativacao de Base | `reativacao-base.md` | Comercial (Wiliam + IA) | Campanhas para reativar leads frios e base inativa com sequencia de mensagens |

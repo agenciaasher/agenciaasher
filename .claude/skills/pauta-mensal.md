@@ -73,10 +73,10 @@ Formato obrigatório:
 
 | Dia | Formato | Pilar | Tema | Descrição curta | Responsável |
 |-----|---------|-------|------|-----------------|-------------|
-| Seg DD | Carrossel (feed) | Autoridade | [tema] | [1 linha do que o post entrega] | Aniki |
+| Seg DD | Carrossel (feed) | Autoridade | [tema] | [1 linha do que o post entrega] | Annick |
 | Ter DD | Reels | Prova Social | [tema] | [1 linha] | Wenderson |
-| Qua DD | Stories (3 telas) | Bastidores | [tema] | [1 linha] | Aniki |
-| Qui DD | Post estático (feed) | Sazonal | [tema] | [1 linha] | Aniki |
+| Qua DD | Stories (3 telas) | Bastidores | [tema] | [1 linha] | Annick |
+| Qui DD | Post estático (feed) | Sazonal | [tema] | [1 linha] | Annick |
 | Sex DD | Reels | Autoridade | [tema] | [1 linha] | Wenderson |
 
 ## Semana 2 (DD/MM a DD/MM)
@@ -127,5 +127,5 @@ Apresente o calendário completo e pergunte:
 - Não repetir o mesmo pilar em dias consecutivos.
 - Stories são complementares, não substituem posts de feed.
 - Se houver campanha paga, o orgânico não repete o mesmo criativo. Complementa com bastidores, prova social ou conteúdo educativo.
-- Responsável é quem executa: Aniki (copy + publicação), Wenderson (design + vídeo).
+- Responsável é quem executa: Annick (copy + publicação), Wenderson (design + vídeo).
 - Todo tema deve ser específico o suficiente para o executor saber o que fazer sem briefing adicional.
