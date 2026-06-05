@@ -2,6 +2,18 @@
 
 Estrutura de projetos e entregáveis da Agência Asher.
 
+## Time
+
+| Pessoa | Cargo | Responsabilidades |
+|--------|-------|-------------------|
+| Maicon | Dono / Estratégia | Direção, estratégia, aprovação de copies |
+| Wiliam | Coordenador / CS / Comercial | Distribuição de tarefas, CS com cliente, setor comercial |
+| Wenderson | Designer + Editor de Vídeo | Criativos, landing pages, reels, edição |
+| Júlio César | Gestor de Tráfego | Google Ads, Meta Ads, otimização, relatórios |
+| Aniki | Social Media | Conteúdo, pautas, publicações, inteligência |
+
+Fluxo completo: [operacao.md](operacao.md)
+
 ## Clientes Ativos
 
 | Cliente | Pacote | Valor | Início | Status |
@@ -29,11 +41,15 @@ Tudo do Pacote Agência, mais:
 
 ```
 agenciaasher/
+├── README.md
+├── operacao.md              ← organograma + fluxo do time
 ├── clientes/
 │   ├── agvel-veiculos/
 │   │   └── projeto.md
 │   └── clincog/
 │       └── projeto.md
-└── templates/
-    └── notion-estrutura.md
+├── templates/
+│   └── notion-estrutura.md
+└── .claude/
+    └── skills/              ← skills por entregável (em construção)
 ```
