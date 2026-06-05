@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pesquisa de Mercado · {{NICHO}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* shadcn light mode neutrals */
+  --background:#FFFFFF;
+  --foreground:#0A0A0A;
+  --card:#FFFFFF;
+  --muted:#F4F4F5;
+  --muted-foreground:#71717A;
+  --border:#E5E7EB;
+  --border-strong:#D4D4D8;
+  --primary:#18181B;
+  --primary-foreground:#FAFAFA;
+
+  /* chart palette */
+  --chart-1:#0EA5E9;
+  --chart-2:#10B981;
+  --chart-3:#F59E0B;
+  --chart-4:#8B5CF6;
+  --chart-5:#EF4444;
+
+  --radius:0.625rem;
+  --radius-sm:0.375rem;
+  --font-sans:"Inter",system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--background);
+  color:var(--foreground);
+  font-family:var(--font-sans);
+  font-feature-settings:"cv02","cv03","cv04","cv11";
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+  font-size:15px;
+}
+img{max-width:100%;display:block}
+a{color:var(--foreground);text-decoration:underline;text-decoration-color:var(--border-strong);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--foreground)}
+
+/* ============ LAYOUT ============ */
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:64px 0;position:relative}
+@media (max-width:720px){
+  section{padding:40px 0}
+  .wrap{padding:0 16px}
+}
+
+/* ============ HERO ============ */
+.hero{
+  padding:96px 0 56px;
+  border-bottom:1px solid var(--border);
+}
+.hero-eyebrow{
+  font-family:var(--font-mono);
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:var(--muted-foreground);
+  margin-bottom:24px;
+}
+.hero h1{
+  font-size:clamp(40px,6.5vw,72px);
+  font-weight:700;
+  line-height:1.02;
+  letter-spacing:-.025em;
+  margin:0 0 16px;
+  color:var(--foreground);
+}
+.hero h1 .accent{
+  color:var(--muted-foreground);
+  font-weight:400;
+}
+.hero-sub{
+  font-size:17px;
+  font-weight:400;
+  max-width:640px;
+  color:var(--muted-foreground);
+  margin:0;
+  line-height:1.55;
+}
+.hero-meta{
+  margin-top:32px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.pill{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:5px 12px;
+  border-radius:999px;
+  background:var(--background);
+  border:1px solid var(--border);
+  font-size:12px;
+  font-weight:500;
+  color:var(--foreground);
+}
+.pill .dot{
+  width:6px;height:6px;border-radius:999px;background:var(--chart-1);
+}
+
+/* ============ STATS GRID ============ */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-top:48px;
+}
+@media (max-width:720px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+.stat{
+  padding:20px 22px;
+  border-radius:var(--radius);
+  background:var(--card);
+  border:1px solid var(--border);
+}
+.stat-value{
+  font-size:32px;
+  font-weight:700;
+  line-height:1.1;
+  letter-spacing:-.02em;
+  color:var(--foreground);
+}
+.stat-label{
+  font-size:12px;
+  color:var(--muted-foreground);
+  margin-top:6px;
+  font-weight:500;
+}
+
+/* ============ TOC ============ */
+.toc{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:saturate(180%) blur(12px);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:12px 0;
+}
+.toc-list{
+  display:flex;
+  gap:4px;
+  overflow-x:auto;
+  flex-wrap:nowrap;
+  scrollbar-width:thin;
+}
+.toc-list::-webkit-scrollbar{height:4px}
+.toc-list::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+.toc-list a{
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:500;
+  color:var(--muted-foreground);
+  text-decoration:none;
+  white-space:nowrap;
+  transition:background .15s, color .15s;
+}
+.toc-list a:hover{background:var(--muted);color:var(--foreground)}
+
+/* ============ SECTION ============ */
+.section-eyebrow{
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--muted-foreground);
+  margin-bottom:12px;
+}
+.section-title{
+  font-size:clamp(28px,4vw,40px);
+  font-weight:700;
+  line-height:1.1;
+  letter-spacing:-.02em;
+  margin:0 0 12px;
+  color:var(--foreground);
+}
+.section-title .accent{color:var(--muted-foreground);font-weight:400}
+.section-lede{
+  font-size:16px;
+  color:var(--muted-foreground);
+  max-width:720px;
+  margin:0 0 32px;
+}
+
+/* ============ CARD ============ */
+.card{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:var(--card);
+  padding:28px;
+  margin:16px 0;
+}
+.card h3{
+  font-size:15px;
+  font-weight:600;
+  margin:0 0 8px;
+  color:var(--foreground);
+  letter-spacing:-.01em;
+}
+.card h3:not(:first-child){margin-top:24px}
+.card p{color:var(--foreground);margin:0 0 12px;line-height:1.65}
+.card p:last-child{margin-bottom:0}
+.card p strong{font-weight:600}
+
+/* ============ CHART CARD ============ */
+.chart-card{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:var(--card);
+  padding:24px;
+  margin:24px 0;
+}
+.chart-header{margin-bottom:20px}
+.chart-title{
+  font-size:15px;
+  font-weight:600;
+  color:var(--foreground);
+  margin:0 0 4px;
+  letter-spacing:-.01em;
+}
+.chart-desc{
+  font-size:13px;
+  color:var(--muted-foreground);
+  margin:0;
+}
+.chart-canvas{width:100%;overflow:hidden}
+.chart-canvas svg{width:100%;height:auto;display:block}
+.chart-legend{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:16px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  font-size:12px;
+  color:var(--muted-foreground);
+}
+.chart-legend-item{display:inline-flex;align-items:center;gap:6px}
+.chart-legend-swatch{
+  width:10px;height:10px;border-radius:3px;
+}
+.chart-empty{
+  padding:48px 24px;
+  text-align:center;
+  background:var(--muted);
+  border-radius:var(--radius-sm);
+  color:var(--muted-foreground);
+  font-size:14px;
+}
+
+/* ============ TABLE ============ */
+.table-wrap{
+  overflow-x:auto;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  margin:16px 0;
+  background:var(--card);
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+thead{background:var(--muted)}
+th{
+  text-align:left;
+  padding:12px 16px;
+  font-weight:600;
+  font-size:11px;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:var(--muted-foreground);
+  border-bottom:1px solid var(--border);
+}
+td{
+  padding:14px 16px;
+  border-bottom:1px solid var(--border);
+  color:var(--foreground);
+  vertical-align:top;
+  line-height:1.5;
+}
+tr:last-child td{border-bottom:none}
+.col-name{font-weight:600;min-width:200px}
+.col-price{font-family:var(--font-mono);font-size:12px;white-space:nowrap}
+
+/* ============ OBJECTIONS ============ */
+.numbered{
+  list-style:none;
+  padding:0;
+  margin:16px 0;
+  display:grid;
+  gap:8px;
+}
+.numbered li{
+  display:flex;
+  gap:16px;
+  padding:18px 20px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+}
+.numbered .num{
+  font-family:var(--font-mono);
+  font-size:13px;
+  font-weight:600;
+  color:var(--muted-foreground);
+  flex-shrink:0;
+  width:28px;
+  padding-top:1px;
+}
+.numbered .body{flex:1;line-height:1.55}
+.numbered .body .src{
+  display:block;
+  margin-top:8px;
+  font-size:12px;
+  color:var(--muted-foreground);
+}
+
+/* ============ TAGS ============ */
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.tag{
+  padding:5px 12px;
+  border-radius:999px;
+  background:var(--muted);
+  border:1px solid var(--border);
+  font-size:12px;
+  font-weight:500;
+  color:var(--foreground);
+}
+
+/* ============ YOUTUBE GRID ============ */
+.yt-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:12px;
+  margin:24px 0;
+}
+.yt-card{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:var(--card);
+  padding:20px;
+}
+.yt-rank{
+  font-family:var(--font-mono);
+  font-size:12px;
+  font-weight:600;
+  color:var(--muted-foreground);
+  margin-bottom:10px;
+}
+.yt-title{
+  font-size:14px;
+  font-weight:600;
+  line-height:1.4;
+  margin-bottom:12px;
+  letter-spacing:-.005em;
+}
+.yt-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:14px;
+}
+.yt-meta span{
+  font-size:11px;
+  color:var(--muted-foreground);
+  padding:3px 8px;
+  background:var(--muted);
+  border-radius:999px;
+}
+.yt-comments{
+  list-style:none;
+  padding:0;
+  margin:0 0 14px;
+}
+.yt-comments li{
+  font-size:12px;
+  color:var(--foreground);
+  padding:6px 10px;
+  background:var(--muted);
+  border-radius:var(--radius-sm);
+  margin-bottom:4px;
+  line-height:1.45;
+}
+.yt-gap{
+  padding-top:12px;
+  border-top:1px solid var(--border);
+  font-size:12px;
+  color:var(--muted-foreground);
+  line-height:1.5;
+}
+.yt-gap strong{
+  display:block;
+  font-family:var(--font-mono);
+  color:var(--foreground);
+  font-weight:600;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin-bottom:4px;
+}
+
+/* ============ WARNING (RISK) ============ */
+.warning{
+  border:1px solid var(--border);
+  border-left:3px solid var(--chart-5);
+  border-radius:var(--radius);
+  background:var(--card);
+  padding:28px;
+  margin:16px 0;
+}
+.warning h3{
+  font-size:15px;
+  font-weight:600;
+  margin:0 0 8px;
+  color:var(--foreground);
+}
+.warning h3:not(:first-of-type){margin-top:20px}
+.warning p{margin:0 0 12px;line-height:1.6}
+
+/* ============ HIGHLIGHT (OPORTUNIDADES) ============ */
+.highlight{
+  background:var(--primary);
+  color:var(--primary-foreground);
+  border-radius:var(--radius);
+  padding:48px;
+  margin:24px 0;
+}
+.highlight .section-eyebrow{color:rgba(250,250,250,.6)}
+.highlight h2{
+  font-size:clamp(28px,4vw,40px);
+  font-weight:700;
+  letter-spacing:-.02em;
+  line-height:1.1;
+  margin:0 0 16px;
+  color:var(--primary-foreground);
+}
+.highlight p{
+  color:rgba(250,250,250,.8);
+  margin:0 0 20px;
+  line-height:1.6;
+}
+.highlight ol{
+  padding-left:20px;
+  margin:0;
+}
+.highlight ol li{
+  margin-bottom:10px;
+  color:rgba(250,250,250,.92);
+  line-height:1.6;
+}
+
+/* ============ CONFIDENCE ============ */
+.confidence{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:var(--card);
+  padding:28px;
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+  margin:24px 0;
+}
+@media (max-width:560px){
+  .confidence{flex-direction:column;gap:16px}
+}
+.confidence .seal{
+  font-family:var(--font-mono);
+  font-size:12px;
+  font-weight:600;
+  padding:8px 14px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:var(--muted);
+  white-space:nowrap;
+  flex-shrink:0;
+  color:var(--foreground);
+}
+.confidence .body strong{
+  display:block;
+  font-weight:600;
+  margin-bottom:6px;
+  color:var(--foreground);
+}
+.confidence .body p{
+  color:var(--muted-foreground);
+  margin:0;
+  line-height:1.6;
+}
+
+/* ============ FOOTER ============ */
+footer{
+  padding:48px 0;
+  text-align:center;
+  border-top:1px solid var(--border);
+  margin-top:48px;
+}
+footer .foot-eyebrow{
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--muted-foreground);
+}
+footer .foot-title{
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:-.01em;
+  color:var(--foreground);
+  margin-top:6px;
+}
+
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">Pesquisa de Mercado · {{DATA}}</div>
+    <h1>{{NICHO}} <span class="accent">{{NICHO_SUBTITULO}}</span></h1>
+    <p class="hero-sub">Análise dos 9 eixos do nicho para concepção de produto digital. Fontes reais, dados cruzados, ângulos prontos para virar oferta.</p>
+
+    <div class="hero-meta">
+      <span class="pill"><span class="dot"></span>9 eixos cobertos</span>
+      <span class="pill"><span class="dot"></span>{{N_CONCORRENTES}} concorrentes</span>
+      <span class="pill"><span class="dot"></span>{{N_OBJECOES}} objeções mapeadas</span>
+      <span class="pill"><span class="dot"></span>Confiança {{CONFIANCA}}</span>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value">{{STAT_1_VALOR}}</div>
+        <div class="stat-label">{{STAT_1_LABEL}}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">{{STAT_2_VALOR}}</div>
+        <div class="stat-label">{{STAT_2_LABEL}}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">{{STAT_3_VALOR}}</div>
+        <div class="stat-label">{{STAT_3_LABEL}}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">{{STAT_4_VALOR}}</div>
+        <div class="stat-label">{{STAT_4_LABEL}}</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TOC ============ -->
+<nav class="toc">
+  <div class="wrap">
+    <div class="toc-list">
+      <a href="#eixo-1">01 Tamanho</a>
+      <a href="#eixo-2">02 Concorrentes</a>
+      <a href="#eixo-3">03 Preço</a>
+      <a href="#eixo-4">04 Público</a>
+      <a href="#eixo-5">05 Objeções</a>
+      <a href="#eixo-6">06 Assuntos</a>
+      <a href="#eixo-7">07 YouTube</a>
+      <a href="#eixo-8">08 Anúncios</a>
+      <a href="#eixo-9">09 Riscos</a>
+      <a href="#oportunidades">Oportunidades</a>
+      <a href="#cuidados">Cuidados</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ EIXO 1 ============ -->
+<section id="eixo-1">
+  <div class="wrap">
+    <div class="section-eyebrow">Eixo 01</div>
+    <h2 class="section-title">Tamanho e <span class="accent">saúde do mercado</span></h2>
+    <div class="card">
+      <p>{{EIXO_1_TEXTO}}</p>
+      <p><strong>Fontes consultadas:</strong> {{EIXO_1_FONTES}}</p>
+    </div>
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">{{EIXO_1_GRAFICO_TITULO}}</div>
+        <p class="chart-desc">{{EIXO_1_GRAFICO_DESC}}</p>
+      </div>
+      <div class="chart-canvas">
+        {{EIXO_1_GRAFICO_SVG}}
+        <!-- SVG inline. Barras verticais, evolução temporal. Última barra com opacidade .5 se for projeção. -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EIXO 2 ============ -->
+<section id="eixo-2">
+  <div class="wrap">
+    <div class="section-eyebrow">Eixo 02</div>
+    <h2 class="section-title">Concorrentes <span class="accent">mapeados</span></h2>
+    <p class="section-lede">{{EIXO_2_INTRO}}</p>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">{{EIXO_2_GRAFICO_TITULO}}</div>
+        <p class="chart-desc">{{EIXO_2_GRAFICO_DESC}}</p>
+      </div>
+      <div class="chart-canvas">
+        {{EIXO_2_GRAFICO_SVG}}
+        <!-- SVG inline. Barras horizontais, top 5 a 8 concorrentes por preço. Sem preço = cinza claro. -->
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Promessa</th>
+            <th>Entregáveis</th>
+            <th>Bônus</th>
+            <th>Preço</th>
+            <th>Diferencial</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{EIXO_2_LINHAS_TABELA}}
+          <!-- Cada linha:
+          <tr>
+            <td>1</td>
+            <td class="col-name"><a href="{{LINK}}" target="_blank">{{NOME}}</a></td>
+            <td>{{PROMESSA}}</td>
+            <td>{{ENTREGAVEIS}}</td>
+            <td>{{BONUS}}</td>
+            <td class="col-price">{{PRECO}}</td>
+            <td>{{DIFERENCIAL}}</td>
+          </tr>
+          -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EIXO 3 ============ -->
+<section id="eixo-3">
+  <div class="wrap">
+    <div class="section-eyebrow">Eixo 03</div>
+    <h2 class="section-title">Faixa de <span class="accent">preço praticada</span></h2>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">{{EIXO_3_GRAFICO_TITULO}}</div>
+        <p class="chart-desc">{{EIXO_3_GRAFICO_DESC}}</p>
+      </div>
+      <div class="chart-canvas">
+        {{EIXO_3_GRAFICO_SVG}}
+        <!-- SVG inline. Range bars por formato. Marcador no preço típico. -->
+      </div>
+    </div>
+
+    <div class="card">
+      <p><strong>Menor preço:</strong> {{PRECO_MIN}}</p>
+      <p><strong>Maior preço:</strong> {{PRECO_MAX}}</p>
+      <p><strong>Faixa mais comum:</strong> {{PRECO_FAIXA_COMUM}}</p>
+      <p><strong>Relação preço x formato:</strong> {{PRECO_X_FORMATO}}</p>
+      <p><strong>Ofertas e parcelamentos típicos:</strong> {{PRECO_OFERTAS}}</p>
+      <h3>Sugestão de preço para o produto novo</h3>
+      <p>{{PRECO_SUGESTAO}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EIXO 4 ============ -->
+<section id="eixo-4">
+  <div class="wrap">
+    <div class="section-eyebrow">Eixo 04</div>
+    <h2 class="section-title">Público-alvo <span class="accent">real</span></h2>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">{{EIXO_4_GRAFICO_TITULO}}</div>
+        <p class="chart-desc">{{EIXO_4_GRAFICO_DESC}}</p>
+      </div>
+      <div class="chart-canvas">
+        {{EIXO_4_GRAFICO_SVG}}
+        <!-- SVG inline. Donut por tribo + barras horizontais por faixa etária. -->
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Demografia</h3>
+      <p>{{EIXO_4_DEMOGRAFIA}}</p>
+      <h3>Comportamento</h3>
+      <p>{{EIXO_4_COMPORTAMENTO}}</p>
+      <h3>Situações de vida típicas</h3>
+      <p>{{EIXO_4_SITUACOES}}</p>
+      <h3>Nível de consciência dominante (Schwartz)</h3>
+      <p>{{EIXO_4_CONSCIENCIA}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EIXO 5 ============ -->
+<section id="eixo-5">
+  <div class="wrap">
+    <div class="section-eyebrow">Eixo 05</div>
+    <h2 class="section-title">Objeções <span class="accent">reais</span></h2>
+    <p class="section-lede">{{EIXO_5_INTRO_RECLAME_AQUI}}</p>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">{{EIXO_5_GRAFICO_TITULO}}</div>
+        <p class="chart-desc">{{EIXO_5_GRAFICO_DESC}}</p>
+      </div>
+      <div class="chart-canvas">
+        {{EIXO_5_GRAFICO_SVG}}
+        <!-- SVG inline. Barras horizontais. Vermelho nas 3 mais críticas, âmbar nas médias, azul no resto. -->
+      </div>
+    </div>
+
+    <ol class="numbered">
+      {{EIXO_5_LISTA_OBJECOES}}
+      <!-- Cada objeção:
+      <li>
+        <span class="num">01</span>
+        <div class="body">
+          {{TEXTO_OBJECAO}}
+          <span class="src">Fonte: {{FONTE}}</span>
+        </div>
+      </li>
+      -->
+    </ol>
+  </div>
+</section>
+
+<!-- ============ EIXO 6 ============ -->
+<section id="eixo-6">
+  <div class="wrap">
+    <div class="section-eyebrow">Eixo 06</div>
+    <h2 class="section-title">Assuntos <span class="accent">quentes</span></h2>
+
+    <div class="card">
+      <h3>Termos em alta</h3>
+      <div class="tags" style="margin:14px 0 24px">{{EIXO_6_TERMOS}}</div>
+      <!-- Cada termo: <span class="tag">{{TERMO}}</span> -->
+
+      <h3>Conteúdos virais recentes</h3>
+      <p>{{EIXO_6_VIRAIS}}</p>
+
+      <h3>Ganchos que performam</h3>
+      <p>{{EIXO_6_GANCHOS}}</p>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">{{EIXO_6_GRAFICO_TITULO}}</div>
+        <p class="chart-desc">{{EIXO_6_GRAFICO_DESC}}</p>
+      </div>
+      <div class="chart-canvas">
+        {{EIXO_6_GRAFICO_SVG}}
+        <!-- SVG inline. 5 termos mais quentes, barras horizontais com intensidade relativa. -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EIXO 7 ============ -->
+<section id="eixo-7">
+  <div class="wrap">
+    <div class="section-eyebrow">Eixo 07</div>
+    <h2 class="section-title">YouTube <span class="accent">Top 10</span></h2>
+    <p class="section-lede">Vídeos mais relevantes do nicho. Cada card traz título exato, canal, métricas, comentários reais e a lacuna que o vídeo não cobre.</p>
+
+    <div class="yt-grid">
+      {{EIXO_7_CARDS_YOUTUBE}}
+      <!-- Cada card:
+      <div class="yt-card">
+        <div class="yt-rank">01</div>
+        <div class="yt-title">{{TITULO_EXATO}}</div>
+        <div class="yt-meta">
+          <span>{{CANAL}}</span>
+          <span>{{INSCRITOS}}</span>
+          <span>{{VIEWS}}</span>
+          <span>{{DATA}}</span>
+        </div>
+        <ul class="yt-comments">
+          <li>{{COMENTARIO_1}}</li>
+          <li>{{COMENTARIO_2}}</li>
+          <li>{{COMENTARIO_3}}</li>
+        </ul>
+        <div class="yt-gap">
+          <strong>Lacuna</strong>
+          {{LACUNA_DO_VIDEO}}
+        </div>
+      </div>
+      -->
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">{{EIXO_7_GRAFICO_TITULO}}</div>
+        <p class="chart-desc">{{EIXO_7_GRAFICO_DESC}}</p>
+      </div>
+      <div class="chart-canvas">
+        {{EIXO_7_GRAFICO_SVG}}
+        <!-- SVG inline. Distribuição dos formatos de conteúdo nos 10 vídeos. -->
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Padrões observados nos 10</h3>
+      <p><strong>Thumb dominante:</strong> {{EIXO_7_PADRAO_THUMB}}</p>
+      <p><strong>Gancho de título dominante:</strong> {{EIXO_7_PADRAO_TITULO}}</p>
+      <p><strong>Dor e desejo dominante nos comentários:</strong> {{EIXO_7_PADRAO_COMENTARIOS}}</p>
+      <p><strong>Lacunas de conteúdo do mercado:</strong> {{EIXO_7_LACUNAS}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EIXO 8 ============ -->
+<section id="eixo-8">
+  <div class="wrap">
+    <div class="section-eyebrow">Eixo 08</div>
+    <h2 class="section-title">Biblioteca de <span class="accent">anúncios</span></h2>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">{{EIXO_8_GRAFICO_TITULO}}</div>
+        <p class="chart-desc">{{EIXO_8_GRAFICO_DESC}}</p>
+      </div>
+      <div class="chart-canvas">
+        {{EIXO_8_GRAFICO_SVG}}
+        <!-- SVG inline. Frequência de cada padrão de criativo, barras horizontais. -->
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Anúncios ativos há mais de 30 dias</h3>
+      <p>{{EIXO_8_ANUNCIOS_LONGOS}}</p>
+      <h3>Anúncios com muitas variações</h3>
+      <p>{{EIXO_8_VARIACOES}}</p>
+      <h3>Padrões que se repetem</h3>
+      <p><strong>Headlines:</strong> {{EIXO_8_HEADLINES}}</p>
+      <p><strong>Ganchos:</strong> {{EIXO_8_GANCHOS}}</p>
+      <p><strong>Ofertas:</strong> {{EIXO_8_OFERTAS}}</p>
+      <p><strong>CTAs:</strong> {{EIXO_8_CTAS}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EIXO 9 ============ -->
+<section id="eixo-9">
+  <div class="wrap">
+    <div class="section-eyebrow">Eixo 09</div>
+    <h2 class="section-title">Riscos <span class="accent">regulatórios</span></h2>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">{{EIXO_9_GRAFICO_TITULO}}</div>
+        <p class="chart-desc">{{EIXO_9_GRAFICO_DESC}}</p>
+      </div>
+      <div class="chart-canvas">
+        {{EIXO_9_GRAFICO_SVG}}
+        <!-- SVG inline. Matriz 3x3 (severidade x probabilidade), pontos numerados. -->
+      </div>
+    </div>
+
+    <div class="warning">
+      <div class="section-eyebrow">Atenção</div>
+      <h3>Regras específicas do nicho</h3>
+      <p>{{EIXO_9_REGRAS}}</p>
+      <h3>Palavras e promessas que dão problema</h3>
+      <p>{{EIXO_9_PALAVRAS}}</p>
+      <h3>Histórico de polêmicas</h3>
+      <p>{{EIXO_9_POLEMICAS}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPORTUNIDADES ============ -->
+<section id="oportunidades">
+  <div class="wrap">
+    <div class="highlight">
+      <div class="section-eyebrow">Síntese</div>
+      <h2>Oportunidades<br>e lacuna de posicionamento</h2>
+      <p>{{OPORTUNIDADES_INTRO}}</p>
+      <ol>
+        {{OPORTUNIDADES_LISTA}}
+        <!-- Cada item: <li>{{TEXTO}}</li> -->
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CUIDADOS ============ -->
+<section id="cuidados">
+  <div class="wrap">
+    <div class="section-eyebrow">Cuidados</div>
+    <h2 class="section-title">O que <span class="accent">evitar</span></h2>
+    <div class="card">
+      <ul style="padding-left:20px;margin:0;line-height:1.7">
+        {{CUIDADOS_LISTA}}
+        <!-- Cada item: <li>{{TEXTO}}</li> -->
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFIDENCE ============ -->
+<section>
+  <div class="wrap">
+    <div class="confidence">
+      <div class="seal">{{CONFIANCA}}</div>
+      <div class="body">
+        <strong>Confiança geral da pesquisa</strong>
+        <p>{{CONFIANCA_JUSTIFICATIVA}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-eyebrow">Pesquisa de Mercado · {{DATA}}</div>
+    <div class="foot-title">{{NICHO}}</div>
+  </div>
+</footer>
+
+</body>
+</html>

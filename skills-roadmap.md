@@ -124,6 +124,25 @@ Final do mes
 
 ---
 
+## Skills Instaladas (Curso Ladeira + Adaptacoes)
+
+Skills ja instaladas no `.claude/skills/` e prontas para uso:
+
+| Skill | Arquivo | Setor | Descricao |
+|-------|---------|-------|-----------|
+| Carrossel Editorial | `carrossel-editorial.md` | Conteudo (Aniki + IA) | Carrossel de 6 slides com narrativa editorial baseada em dados reais |
+| Carrossel Curiosidade | `carrossel-curiosidade.md` | Conteudo (Aniki + IA) | Carrossel de 7-9 slides com curiosidades atemporais do nicho |
+| UGC Rotina Real | `ugc-rotina-real.md` | Criativo (Wenderson + IA) | Criativo estilo UGC de pessoa comum em rotina cotidiana |
+| UGC Persona Creator | `ugc-persona-creator.md` | Criativo (Wenderson + IA) | Cria personagens UGC ultra-realistas com prompts ChatGPT + Magnific |
+| Problema-Solucao | `problema-solucao.md` | Criativo / Copy (IA) | Arte dividida ao meio: problema vs. solucao pratica, estilo UGC |
+| Mapa de Objecoes | `mapa-objecoes.md` | Comercial (Wiliam + IA) | Framework dos 7 Argumentos (VTSD), 5 objecoes x 7 argumentos |
+| Trafego Meta Ads | `trafego-meta-ads.md` | Trafego (Julio + IA) | Gestao completa de Meta Ads: conectar, criar, otimizar, relatorios |
+| Pesquisa de Mercado | `pesquisa-mercado.md` | Estrategia (Maicon + IA) | Pesquisa de 9 eixos com busca real na web + relatorio HTML |
+| Projecao Financeira | `projecao-financeira.md` | Estrategia / Planejamento | Projecao de 12 meses com 4 faixas de produto e ROAS |
+| Producao Digital | `producao-digital.md` | Producao Digital (novo setor) | Workflow completo para criar infoprodutos: ebook, app, curso |
+
+---
+
 ## Integracoes Disponiveis
 
 | Plataforma | O que faz | Status |
