@@ -140,6 +140,11 @@ Skills ja instaladas no `.claude/skills/` e prontas para uso:
 | Pesquisa de Mercado | `pesquisa-mercado.md` | Estrategia (Maicon + IA) | Pesquisa de 9 eixos com busca real na web + relatorio HTML |
 | Projecao Financeira | `projecao-financeira.md` | Estrategia / Planejamento | Projecao de 12 meses com 4 faixas de produto e ROAS |
 | Producao Digital | `producao-digital.md` | Producao Digital (novo setor) | Workflow completo para criar infoprodutos: ebook, app, curso |
+| SPIN Selling | `spin-selling.md` | Comercial (Wiliam + vendedores) | Simula conversas de venda WhatsApp com marcacoes SPIN didaticas |
+| Mandala de Anuncios | `mandala-anuncios.md` | Copy / Trafego (transversal) | 4 tipos de anuncio VTSD, 15 principios, 20 vicios proibidos |
+| Material Didatico | `material-didatico.md` | Producao Digital | Transforma conteudo em material visual premium + prompt ChatGPT |
+| Ideias de Produto | `ideias-produto.md` | Estrategia (Maicon + IA) | 50 ideias de infoproduto em 15 formatos com pesquisa de mercado |
+| FAQ Skills | `references/faq-skills.md` | Referencia (base de conhecimento) | Perguntas e respostas sobre todas as skills do sistema |
 
 ---
 
