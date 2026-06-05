@@ -149,6 +149,11 @@ Skills ja instaladas no `.claude/skills/` e prontas para uso:
 | Criativo Surreal | `criativo-surreal.md` | Criativo (Wenderson + IA) | Arte surreal editorial nivel Cannes Lions + Feed + Stories + animacao |
 | Projecao CPL/CPA | `references/projecao-cpl-cpa.md` | Referencia (Trafego) | Simulador de projecao financeira com CPC, taxa de conversao, CPA |
 | Guia Ebook+Hotmart+Lovable | `references/guia-visual-ebook-hotmart-lovable.pdf` | Referencia (Producao Digital) | Guia visual passo a passo de ebook ate integracao Hotmart |
+| Concepcao de Produto | `concepcao-produto.md` | Estrategia / Planejamento | Promessa + 50 Beneficios + 5 Baldes + Identidade do Consumidor (5 objecoes x 7 argumentos) |
+| Copy Pagina de Vendas | `copy-pagina-vendas.md` | Copy (transversal) | 15 blocos atomicos de pagina de vendas no padrao Light Copy |
+| Manual da Copy | `references/manual-copy.md` | Referencia (Copy) | 15 principios fundamentais + 20 vicios proibidos + checklist de entrega |
+| Checklist Light Copy | `references/checklist-light-copy.md` | Referencia (Copy) | 12 proibicoes absolutas com exemplos de correcao |
+| Template Pagina de Vendas | `references/template-copy-pagina-vendas.md` | Referencia (Copy) | Estrutura detalhada dos 15 blocos com funcao, conteudo e proibicoes |
 
 ---
 
