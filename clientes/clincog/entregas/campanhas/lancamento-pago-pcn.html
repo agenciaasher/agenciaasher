@@ -88,7 +88,7 @@ p{margin-bottom:14px;color:rgba(255,255,255,0.83);}
 .f-meta{font-size:11px;color:var(--mint);font-weight:600;text-align:right;flex-shrink:0;white-space:nowrap;}
 .f-arrow{width:2px;height:20px;background:linear-gradient(to bottom,rgba(123,45,142,0.6),transparent);margin:0 auto;}
 
-.phase-block{border-radius:12px;padding:20px;margin-bottom:0;}
+.phase-block{border-radius:12px;padding:20px;}
 .ph-aq{background:rgba(80,200,120,0.07);border:1px solid rgba(80,200,120,0.2);}
 .ph-ca{background:rgba(245,200,66,0.07);border:1px solid rgba(245,200,66,0.2);}
 .ph-ab{background:rgba(123,45,142,0.1);border:1px solid rgba(123,45,142,0.3);}
@@ -102,8 +102,8 @@ p{margin-bottom:14px;color:rgba(255,255,255,0.83);}
 .phase-items li::before{content:'·';position:absolute;left:0;color:var(--mint);}
 
 .budget-row{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
-.budget-label{font-size:13px;min-width:170px;}
-.budget-track{flex:1;background:rgba(255,255,255,.06);border-radius:20px;height:8px;overflow:hidden;}
+.budget-label{font-size:13px;min-width:200px;}
+.budget-track{flex:1;background:rgba(255,255,255,.06);border-radius:20px;height:10px;overflow:hidden;}
 .budget-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--purple),var(--mint));}
 .budget-value{font-size:13px;font-weight:700;color:var(--mint);min-width:64px;text-align:right;}
 
@@ -130,10 +130,18 @@ p{margin-bottom:14px;color:rgba(255,255,255,0.83);}
 .check-list li:last-child{border-bottom:none;}
 .check-list li::before{content:'→';position:absolute;left:0;color:var(--mint);font-weight:700;}
 
+.horario-block{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:10px;display:flex;gap:16px;align-items:flex-start;}
+.horario-time{font-size:12px;font-weight:800;color:var(--mint);min-width:80px;margin-top:2px;}
+.horario-content{flex:1;}
+.horario-title{font-weight:700;font-size:13px;margin-bottom:4px;}
+.horario-desc{font-size:12px;color:var(--muted);}
+
 table.data{width:100%;border-collapse:collapse;font-size:13px;}
 table.data th{text-align:left;padding:10px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--border);}
 table.data td{padding:10px;border-bottom:1px solid rgba(255,255,255,.04);}
 table.data tr:last-child td{border-bottom:none;}
+
+.alert{background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.25);border-radius:10px;padding:14px 18px;font-size:13px;color:#F5C842;margin-bottom:20px;}
 </style>
 </head>
 <body>
@@ -167,13 +175,13 @@ table.data tr:last-child td{border-bottom:none;}
 <div class="panel active" id="p0">
   <div class="s-label">Lançamento pago</div>
   <h2 class="s-title">Imersão PCN + Clube Clincog</h2>
-  <p class="s-sub">Um lançamento em duas camadas. A Imersão "Pense como Neuropsicólogo" vende o ingresso e entrega o método. O Clube Clincog vende a continuidade. O profissional entra pela imersão e fica pelo Clube.</p>
+  <p class="s-sub">Um lançamento em duas camadas. A Imersão "Pense como Neuropsicólogo" vende o ingresso e entrega o método em 1 dia intensivo. O Clube Clincog vende a continuidade. O profissional entra pela imersão e fica pelo Clube.</p>
 
   <div class="grid-4">
-    <div class="card"><div class="stat-num">28</div><div class="stat-label">dias de lançamento (D-14 a D+14)</div></div>
+    <div class="card"><div class="stat-num">1 dia</div><div class="stat-label">evento intensivo ao vivo</div></div>
     <div class="card"><div class="stat-num">4</div><div class="stat-label">fases de campanha paga</div></div>
-    <div class="card"><div class="stat-num">2</div><div class="stat-label">produtos: Imersão + Clube</div></div>
-    <div class="card"><div class="stat-num">R$ 97</div><div class="stat-label">por mês no Clube (produto principal)</div></div>
+    <div class="card"><div class="stat-num">95/5</div><div class="stat-label">% do budget: ingresso vs. aquecimento</div></div>
+    <div class="card"><div class="stat-num">R$ 3.000</div><div class="stat-label">Clube Clincog (produto principal)</div></div>
   </div>
 
   <hr class="divider">
@@ -183,14 +191,14 @@ table.data tr:last-child td{border-bottom:none;}
     <div class="card card-purple">
       <div class="tag">Produto de entrada</div>
       <h3>Imersão PCN</h3>
-      <p>Dois dias de imersão ao vivo para aprender o método Pense como Neuropsicólogo. Baseada no livro da Natalie. Ensina raciocínio clínico de forma estruturada.</p>
+      <p>Um dia intensivo ao vivo para aprender o método Pense como Neuropsicólogo. Baseada no livro da Natalie. Ensina raciocínio clínico de forma estruturada.</p>
       <p style="color:var(--muted);font-size:13px;margin:0;">Capta públicos novos, gera receita imediata e cria uma base de leads quentes para o Clube.</p>
     </div>
     <div class="card card-mint">
       <div class="tag tag-mint">Produto principal</div>
       <h3>Clube Clincog</h3>
-      <p>Assinatura mensal de R$ 97 com discussão de casos, plantão de dúvidas e conteúdo novo toda semana. A imersão ensina o método. O Clube é onde o profissional pratica.</p>
-      <p style="color:var(--muted);font-size:13px;margin:0;">Resultado recorrente. MRR crescente. Retenção de longo prazo.</p>
+      <p>R$ 3.000 com discussão de casos, plantão de dúvidas e conteúdo novo toda semana. A imersão ensina o método. O Clube é onde o profissional pratica.</p>
+      <p style="color:var(--muted);font-size:13px;margin:0;">Resultado recorrente. Alto valor por assinante. Retenção de longo prazo.</p>
     </div>
   </div>
 
@@ -200,10 +208,10 @@ table.data tr:last-child td{border-bottom:none;}
   <div class="grid-3">
     <div class="card"><h4>Grande ideia</h4><p style="font-size:13px;margin:0;">O ângulo criativo central do lançamento. O que faz esse produto diferente de qualquer formação do mercado.</p></div>
     <div class="card"><h4>Funil completo</h4><p style="font-size:13px;margin:0;">Do primeiro anúncio até a assinatura do Clube. Cada etapa com responsável e taxa de conversão esperada.</p></div>
-    <div class="card"><h4>Criativos</h4><p style="font-size:13px;margin:0;">Os dois vídeos da Natalie como âncoras. Cortes por fase. Estáticos com as frases mais fortes das gravações.</p></div>
+    <div class="card"><h4>Criativos</h4><p style="font-size:13px;margin:0;">Os dois vídeos da Natalie como âncoras. Cortes por fase. Estáticos com as frases mais fortes.</p></div>
     <div class="card"><h4>Páginas</h4><p style="font-size:13px;margin:0;">Lista de espera, LP da Imersão, confirmação e LP do Clube para o upsell pós-evento.</p></div>
     <div class="card"><h4>Comunicação</h4><p style="font-size:13px;margin:0;">Sequências de WhatsApp por fase. Scripts prontos para Lili, Ingrid e Yasmin.</p></div>
-    <div class="card"><h4>Budget e KPIs</h4><p style="font-size:13px;margin:0;">Alocação do investimento de mídia por fase. Métricas de sucesso para cada produto.</p></div>
+    <div class="card"><h4>Budget e KPIs</h4><p style="font-size:13px;margin:0;">95% do investimento vai direto para venda de ingresso. 5% para aquecimento e lembrete.</p></div>
   </div>
 </div>
 
@@ -217,15 +225,15 @@ table.data tr:last-child td{border-bottom:none;}
 
   <div class="big-idea">
     <div class="big-idea-text">Não é falta de experiência.<br><span>É falta de método.</span></div>
-    <p class="big-idea-sub">A crença do mercado é que a competência vem com os anos. A Clincog diz que não. Vem com o treinamento deliberado do raciocínio clínico. E isso pode ser ensinado em dias, não em décadas.</p>
+    <p class="big-idea-sub">A crença do mercado é que a competência vem com os anos. A Clincog diz que não. Vem com o treinamento deliberado do raciocínio clínico. E isso pode ser ensinado em um dia, não em uma década.</p>
   </div>
 
   <h3 style="margin-bottom:16px;">Por que esse ângulo funciona</h3>
   <div class="grid-2" style="margin-bottom:32px;">
     <div class="card"><h4>Remove a culpa</h4><p style="font-size:13px;margin:0;">O público acredita que suas limitações clínicas são falhas pessoais. Esse ângulo muda o quadro: o sistema de formação não ensinou. Isso gera alívio imediato e abre a escuta para a solução.</p></div>
-    <div class="card"><h4>Cria esperança real</h4><p style="font-size:13px;margin:0;">Se é método e não tempo, o problema tem solução agora. A Imersão PCN é essa solução: dois dias para aprender o que levaria anos por tentativa e erro.</p></div>
+    <div class="card"><h4>Cria esperança real</h4><p style="font-size:13px;margin:0;">Se é método e não tempo, o problema tem solução agora. A Imersão PCN é essa solução: um dia para aprender o que levaria anos por tentativa e erro.</p></div>
     <div class="card"><h4>Tem base científica</h4><p style="font-size:13px;margin:0;">A literatura sobre raciocínio clínico confirma que experiência sem prática reflexiva não gera expertise. A Natalie cita isso nos dois vídeos. Não é promessa vaga, é pesquisa real.</p></div>
-    <div class="card"><h4>Diferencia da concorrência</h4><p style="font-size:13px;margin:0;">A Incantato vende curso. O Neuropsi Online vende pesquisa. A Clincog vende raciocínio clínico aplicado. Esse ângulo deixa isso evidente e torna a comparação desfavorável para os concorrentes.</p></div>
+    <div class="card"><h4>Diferencia da concorrência</h4><p style="font-size:13px;margin:0;">A Incantato vende curso. O Neuropsi Online vende pesquisa. A Clincog vende raciocínio clínico aplicado. Esse ângulo torna a comparação desfavorável para os concorrentes.</p></div>
   </div>
 
   <hr class="divider">
@@ -235,7 +243,7 @@ table.data tr:last-child td{border-bottom:none;}
     <div class="step-num">1</div>
     <div class="step-content">
       <div class="step-title">O problema que o mercado ignora</div>
-      <div class="step-desc">Neuropsicólogos aprendem a aplicar testes. Não aprendem a pensar clinicamente. Saem da especialização sabendo identificar escores baixos, sem saber por que estão baixos, o que está causando, o que é primário ou secundário.</div>
+      <div class="step-desc">Neuropsicólogos aprendem a aplicar testes. Não aprendem a pensar clinicamente. Saem da especialização sem saber por que um escore está baixo, o que está causando, o que é primário ou secundário.</div>
     </div>
   </div>
   <div class="step-row">
@@ -249,14 +257,14 @@ table.data tr:last-child td{border-bottom:none;}
     <div class="step-num">3</div>
     <div class="step-content">
       <div class="step-title">A virada</div>
-      <div class="step-desc">Raciocínio clínico pode ser ensinado. Não precisa de 10 anos. Precisa de método e treinamento deliberado. A Natalie levou 20 anos para construir esse método, e agora o ensina de forma estruturada.</div>
+      <div class="step-desc">Raciocínio clínico pode ser ensinado. Não precisa de 10 anos. Precisa de método e treinamento deliberado. A Natalie levou 20 anos para construir esse método, e agora o ensina em um dia intensivo.</div>
     </div>
   </div>
   <div class="step-row">
     <div class="step-num">4</div>
     <div class="step-content">
       <div class="step-title">A solução</div>
-      <div class="step-desc">A Imersão PCN ensina o método em dois dias. O Clube Clincog é onde o profissional pratica todo mês, com suporte real e discussão de casos.</div>
+      <div class="step-desc">A Imersão PCN ensina o método em 1 dia. O Clube Clincog é onde o profissional pratica, com suporte real e discussão de casos.</div>
     </div>
   </div>
 
@@ -310,7 +318,7 @@ table.data tr:last-child td{border-bottom:none;}
   <div class="funnel">
     <div class="f-step">
       <div class="f-icon">📣</div>
-      <div class="f-main"><div class="f-title">Anúncios pagos — Meta Ads</div><div class="f-desc">Vídeos da Natalie segmentados para psicólogos e neuropsicólogos. Objetivo: alcance e reconhecimento de marca.</div></div>
+      <div class="f-main"><div class="f-title">Anúncios pagos — Meta Ads</div><div class="f-desc">Vídeos da Natalie segmentados para psicólogos e neuropsicólogos. 95% do budget vai direto para conversão de ingresso.</div></div>
       <div class="f-meta">Público frio<br>BR nacional</div>
     </div>
     <div class="f-arrow"></div>
@@ -334,7 +342,7 @@ table.data tr:last-child td{border-bottom:none;}
     <div class="f-arrow"></div>
     <div class="f-step">
       <div class="f-icon">🎓</div>
-      <div class="f-main"><div class="f-title">Imersão PCN — 2 dias ao vivo</div><div class="f-desc">Entrega do método PCN. Último bloco do Dia 2: pitch do Clube com condição especial para participantes.</div></div>
+      <div class="f-main"><div class="f-title">Imersão PCN — 1 dia intensivo ao vivo</div><div class="f-desc">Entrega do método PCN. Último bloco do dia: pitch do Clube com condição especial para participantes.</div></div>
       <div class="f-meta">Presença esperada<br>70%+ dos inscritos</div>
     </div>
     <div class="f-arrow"></div>
@@ -386,54 +394,55 @@ table.data tr:last-child td{border-bottom:none;}
 <div class="panel" id="p3">
   <div class="s-label">Produto de entrada</div>
   <h2 class="s-title">Imersão PCN</h2>
-  <p class="s-sub">O ticket de entrada para o ecossistema Clincog. Quem compra o ingresso recebe o método. Depois recebe a oferta do Clube.</p>
+  <p class="s-sub">O ticket de entrada para o ecossistema Clincog. Um dia intensivo ao vivo. Quem compra o ingresso recebe o método. Depois recebe a oferta do Clube.</p>
 
   <div class="grid-2" style="margin-bottom:32px;">
-    <div class="card"><h4>Formato</h4><h3>2 dias ao vivo (online)</h3><p style="font-size:13px;margin:0;">Sábado e domingo. Dois blocos por dia. Gravação disponível por 30 dias para inscritos.</p></div>
+    <div class="card"><h4>Formato</h4><h3>1 dia intensivo (online ao vivo)</h3><p style="font-size:13px;margin:0;">Um único dia com quatro blocos. Gravação disponível por 30 dias para inscritos. Formato concentrado para maximizar presença e engajamento.</p></div>
     <div class="card"><h4>Base</h4><h3>Livro e Método PCN</h3><p style="font-size:13px;margin:0;">A imersão deriva do livro "Pense como Neuropsicólogo", lançado em maio de 2026, e do método que a Natalie desenvolveu em mais de 20 anos de clínica real.</p></div>
   </div>
 
   <hr class="divider">
-  <h3 style="margin-bottom:16px;">Estrutura dos dois dias</h3>
-  <div class="grid-2">
-    <div class="card card-purple">
-      <div class="tag">Dia 1 — Sábado</div>
-      <h3>Como funciona o raciocínio clínico</h3>
-      <ul class="check-list" style="margin-top:12px;">
-        <li>O que separa raciocínio de aplicação de teste</li>
-        <li>Como o viés cognitivo contamina avaliações</li>
-        <li>Prática deliberada versus experiência automática</li>
-        <li>Formulação de hipóteses antes e durante a avaliação</li>
-        <li>Workshop: análise de casos reais</li>
-      </ul>
-    </div>
-    <div class="card card-purple">
-      <div class="tag">Dia 2 — Domingo</div>
-      <h3>Aplicando o método na prática clínica</h3>
-      <ul class="check-list" style="margin-top:12px;">
-        <li>Integração de dados: cognição, emoção e contexto</li>
-        <li>Diferenciar o que é primário, secundário e contextual</li>
-        <li>Como construir um laudo com raciocínio visível</li>
-        <li>Workshop: reescrita de laudo ao vivo</li>
-        <li>Último bloco: apresentação e oferta do Clube</li>
-      </ul>
+  <h3 style="margin-bottom:16px;">Estrutura do dia</h3>
+
+  <div class="horario-block">
+    <div class="horario-time">09h — 11h</div>
+    <div class="horario-content">
+      <div class="horario-title">Bloco 1 — Como o raciocínio clínico funciona</div>
+      <div class="horario-desc">O que separa raciocínio de aplicação de teste. Como o viés cognitivo contamina avaliações. Prática deliberada versus experiência automática. Formulação de hipóteses antes e durante a avaliação.</div>
     </div>
   </div>
-
-  <hr class="divider">
-  <h3 style="margin-bottom:16px;">Posicionamento da oferta</h3>
-  <div class="card">
-    <div class="grid-3" style="gap:16px;margin:0;">
-      <div><h4>Para quem é</h4><p style="font-size:13px;margin:0;">Neuropsicólogos em qualquer fase da carreira que querem sair do piloto automático e aprender a pensar de forma estruturada.</p></div>
-      <div><h4>O que entrega</h4><p style="font-size:13px;margin:0;">O método PCN completo. Exercícios práticos, casos reais e discussão ao vivo. Não é teoria; é processo aplicado.</p></div>
-      <div><h4>O que diferencia</h4><p style="font-size:13px;margin:0;">A Natalie tem experiência clínica real. O método veio de atendimento real, de erros e acertos em mais de duas décadas de prática, não só de pesquisa acadêmica.</p></div>
+  <div class="horario-block">
+    <div class="horario-time">11h — 12h30</div>
+    <div class="horario-content">
+      <div class="horario-title">Bloco 2 — Workshop de casos</div>
+      <div class="horario-desc">Análise de casos clínicos reais ao vivo. Aplicação imediata do raciocínio ensinado no Bloco 1.</div>
+    </div>
+  </div>
+  <div class="horario-block" style="background:rgba(255,255,255,.02);border-color:rgba(255,255,255,.05);">
+    <div class="horario-time" style="color:var(--muted);">12h30 — 13h30</div>
+    <div class="horario-content">
+      <div class="horario-title" style="color:var(--muted);">Intervalo</div>
+    </div>
+  </div>
+  <div class="horario-block">
+    <div class="horario-time">13h30 — 15h30</div>
+    <div class="horario-content">
+      <div class="horario-title">Bloco 3 — Aplicando o método na prática</div>
+      <div class="horario-desc">Integração de dados: cognição, emoção e contexto. Diferenciar o que é primário, secundário e contextual. Como construir um laudo com raciocínio visível. Workshop: reescrita de laudo ao vivo.</div>
+    </div>
+  </div>
+  <div class="horario-block" style="background:rgba(168,230,207,0.06);border-color:rgba(168,230,207,0.2);">
+    <div class="horario-time">15h30 — 17h</div>
+    <div class="horario-content">
+      <div class="horario-title">Bloco 4 — Apresentação do Clube Clincog</div>
+      <div class="horario-desc">Encerramento da imersão + pitch do Clube. Oferta especial exclusiva para participantes com prazo de 48 horas.</div>
     </div>
   </div>
 
   <hr class="divider">
   <h3 style="margin-bottom:16px;">Frases de venda para os criativos</h3>
   <div class="quote"><p>"Você não vai sair da imersão com mais um certificado. Vai sair com um processo."</p></div>
-  <div class="quote"><p>"Dois dias para aprender o que a Natalie levou vinte anos construindo."</p></div>
+  <div class="quote"><p>"Um dia para aprender o que a Natalie levou vinte anos construindo."</p></div>
   <div class="quote"><p>"A diferença entre um laudo com escores e um laudo com raciocínio começa aqui."</p></div>
 </div>
 
@@ -447,7 +456,7 @@ table.data tr:last-child td{border-bottom:none;}
 
   <div class="big-idea" style="margin-bottom:32px;">
     <div class="big-idea-text" style="font-size:clamp(16px,2.5vw,26px);">"A imersão te deu o método.<br><span>O Clube é onde você pratica."</span></div>
-    <p class="big-idea-sub">Essa é a frase de abertura do pitch do Clube, no último bloco do Dia 2 da imersão.</p>
+    <p class="big-idea-sub">Essa é a frase de abertura do pitch do Clube, no último bloco da imersão.</p>
   </div>
 
   <hr class="divider">
@@ -457,21 +466,21 @@ table.data tr:last-child td{border-bottom:none;}
     <div class="step-num">1</div>
     <div class="step-content">
       <div class="step-title">O momento certo</div>
-      <div class="step-desc">O pitch acontece no último bloco do Dia 2, depois do workshop de laudo. O público acabou de aplicar o método na prática. Está no pico de clareza sobre o que aprendeu e o que ainda quer desenvolver.</div>
+      <div class="step-desc">O pitch acontece no Bloco 4, depois do workshop de laudo. O público acabou de aplicar o método na prática. Está no pico de clareza sobre o que aprendeu e o que ainda quer desenvolver.</div>
     </div>
   </div>
   <div class="step-row">
     <div class="step-num">2</div>
     <div class="step-content">
       <div class="step-title">A transição</div>
-      <div class="step-desc">Natalie faz a ponte: "Você aprendeu o método nesses dois dias. Método precisa de prática contínua. Não dá para desenvolver raciocínio clínico em dois dias, assim como não dava em dez anos sem método. Precisa dos dois."</div>
+      <div class="step-desc">Natalie faz a ponte: "Você aprendeu o método hoje. Método precisa de prática contínua. Não dá para desenvolver raciocínio clínico em um dia, assim como não dava em dez anos sem método. Precisa dos dois."</div>
     </div>
   </div>
   <div class="step-row">
     <div class="step-num">3</div>
     <div class="step-content">
       <div class="step-title">A oferta especial</div>
-      <div class="step-desc">Condição exclusiva para quem participou da imersão: primeiro mês gratuito ou dois meses pelo preço de um. A definir com a Clincog. Válida por 48 horas após o Dia 2.</div>
+      <div class="step-desc">Condição exclusiva para quem participou da imersão. A definir com a Clincog. Válida por 48 horas após o evento.</div>
     </div>
   </div>
   <div class="step-row">
@@ -527,25 +536,18 @@ table.data tr:last-child td{border-bottom:none;}
   <div class="creative-card">
     <div class="creative-header">
       <div class="creative-title">Vídeo 1 — "No meu primeiro dia de especialização..."</div>
-      <div class="tag tag-green" style="margin:0;">Topo de funil | Autoridade</div>
+      <div class="tag tag-green" style="margin:0;">Aquecimento | Autoridade</div>
     </div>
     <div class="creative-body">
-      <p style="font-size:13px;margin-bottom:16px;"><strong>Função:</strong> gera identificação emocional. Constrói confiança antes de qualquer oferta. Funciona com público frio.</p>
+      <p style="font-size:13px;margin-bottom:16px;"><strong>Função:</strong> gera identificação emocional. Constrói confiança antes de qualquer oferta. Representa os 5% de aquecimento.</p>
 
       <h4>Corte A — 90 segundos (feed 4:5)</h4>
-      <p style="font-size:12px;color:var(--muted);margin-bottom:8px;">Do início até "foi dessa inquietação que nasceu o método PCN". Arco completo: dor, aceitação, virada, missão.</p>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px;">Arco completo: dor, aceitação, virada, missão. Para a fase de aquecimento com objetivo de alcance.</p>
       <div class="hook">"No meu primeiro dia da especialização em neuropsicologia no Hospital das Clínicas, ouvi uma frase que nunca esqueci..."</div>
       <p style="font-size:12px;color:var(--muted);">Texto sobreposto nos primeiros 3s: <strong>"Ela disse que eu ia precisar de mais 5 anos. Ela estava certa."</strong></p>
 
       <hr class="divider" style="margin:16px 0;">
-
-      <h4>Corte B — 45 segundos (feed + stories)</h4>
-      <p style="font-size:12px;color:var(--muted);margin-bottom:8px;">Do início até "eu comecei a discordar da Beatriz Lefèvre". CTA para lista de espera.</p>
-      <div class="hook">"No meu primeiro dia da especialização, ouvi que eu ainda ia precisar de mais 5 anos para começar a fazer neuropsicologia de verdade."</div>
-
-      <hr class="divider" style="margin:16px 0;">
-
-      <h4>Corte C — 20 segundos (stories + reels — conversão)</h4>
+      <h4>Corte B — 30 segundos (stories + reels de lembrete)</h4>
       <div class="hook">"Ninguém deveria precisar esperar dez anos para começar a fazer um trabalho de excelência. O raciocínio clínico pode ser ensinado."</div>
     </div>
   </div>
@@ -553,31 +555,29 @@ table.data tr:last-child td{border-bottom:none;}
   <div class="creative-card">
     <div class="creative-header">
       <div class="creative-title">Vídeo 2 — "Você já ficou decepcionado com um laudo de referência?"</div>
-      <div class="tag tag-yellow" style="margin:0;">Meio e fundo de funil | Conversão</div>
+      <div class="tag tag-yellow" style="margin:0;">Conversão direta | 95% do budget</div>
     </div>
     <div class="creative-body">
-      <p style="font-size:13px;margin-bottom:16px;"><strong>Função:</strong> provoca intelectualmente. O público pensa isso mas nunca fala. A pergunta cria um pacto de honestidade. Converte quem já conhece a Clincog.</p>
+      <p style="font-size:13px;margin-bottom:16px;"><strong>Função:</strong> provoca intelectualmente e converte. Esse vídeo carrega a maior parte do investimento porque vai direto para venda de ingresso.</p>
 
-      <h4>Corte A — 90 segundos (feed 4:5)</h4>
-      <p style="font-size:12px;color:var(--muted);margin-bottom:8px;">Do início até "raciocínio clínico pode e precisa ser ensinado". Diagnóstico completo do problema.</p>
+      <h4>Corte A — 60 segundos (feed 4:5) — principal</h4>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px;">Gancho + diagnóstico + sacada central + CTA de compra. Objetivo: Conversões no Meta Ads.</p>
       <div class="hook">"Você já leu o laudo neuropsicológico de alguém que é referência na área e ficou decepcionado?"</div>
       <p style="font-size:12px;color:var(--muted);">Texto sobreposto nos primeiros 3s: <strong>"Laudos cheios de percentis. Pouca integração. Sem raciocínio."</strong></p>
 
       <hr class="divider" style="margin:16px 0;">
-
-      <h4>Corte B — 45 segundos (feed + stories)</h4>
-      <div class="hook">"Experiência não garante expertise. Um profissional pode passar vinte anos repetindo os mesmos processos sem desenvolver um raciocínio mais sofisticado."</div>
+      <h4>Corte B — 20 segundos (stories + conversão direta)</h4>
+      <div class="hook">"Uma boa avaliação neuropsicológica não é definida pela quantidade de testes. É definida pela qualidade do raciocínio clínico."</div>
 
       <hr class="divider" style="margin:16px 0;">
-
-      <h4>Corte C — 20 segundos (conversão direta)</h4>
-      <div class="hook">"Uma boa avaliação neuropsicológica não é definida pela quantidade de testes. É definida pela qualidade do raciocínio clínico."</div>
+      <h4>Corte C — 15 segundos (urgência)</h4>
+      <div class="hook">"Experiência não garante expertise. Raciocínio clínico pode ser ensinado. Última chance de entrar na Imersão PCN."</div>
     </div>
   </div>
 
   <hr class="divider">
   <h3 style="margin-bottom:16px;">Estáticos — frases âncora</h3>
-  <p style="color:var(--muted);font-size:13px;margin-bottom:20px;">Extraídas diretamente das falas da Natalie. Foto dela em destaque, frase sobreposta, logo Clincog, CTA. Fundo roxo escuro ou menta.</p>
+  <p style="color:var(--muted);font-size:13px;margin-bottom:20px;">Foto da Natalie em destaque, frase sobreposta, logo Clincog, CTA de ingresso. Fundo roxo escuro ou menta.</p>
 
   <div class="grid-2">
     <div>
@@ -595,15 +595,15 @@ table.data tr:last-child td{border-bottom:none;}
   </div>
 
   <hr class="divider">
-  <h3 style="margin-bottom:16px;">Criativos por fase</h3>
+  <h3 style="margin-bottom:16px;">Criativos por fase — divisão 95/5</h3>
   <div class="card">
     <table class="data">
-      <thead><tr><th>Fase</th><th>Criativo</th><th>Objetivo Meta Ads</th><th>Público</th></tr></thead>
+      <thead><tr><th>Fase</th><th>Criativo</th><th>Objetivo Meta Ads</th><th>% do budget</th></tr></thead>
       <tbody>
-        <tr><td><span class="tag tag-green" style="margin:0;font-size:10px;">Aquecimento</span></td><td>V1 Corte A + V2 Corte A (90s)</td><td>Alcance / Visualização</td><td>Frio — interesse em psicologia</td></tr>
-        <tr><td><span class="tag tag-yellow" style="margin:0;font-size:10px;">Captação</span></td><td>V1 Corte B + V2 Corte B (45s)</td><td>Tráfego / Leads</td><td>Retargeting 50%+ vídeo + lookalike</td></tr>
-        <tr><td><span class="tag" style="margin:0;font-size:10px;">Abertura</span></td><td>V1 C + V2 C (20s) + Estáticos</td><td>Conversões</td><td>Leads + visitantes da LP</td></tr>
-        <tr><td><span class="tag tag-red" style="margin:0;font-size:10px;">Urgência</span></td><td>Estáticos urgência + stories</td><td>Conversões</td><td>LP visitantes sem compra (7 dias)</td></tr>
+        <tr><td><span class="tag tag-green" style="margin:0;font-size:10px;">Aquecimento</span></td><td>V1 Corte A (90s)</td><td>Alcance / Visualização</td><td style="color:var(--muted);">5%</td></tr>
+        <tr><td><span class="tag tag-yellow" style="margin:0;font-size:10px;">Captação</span></td><td>V2 Corte A (60s)</td><td>Tráfego / Leads</td><td style="color:var(--mint);font-weight:700;">95%</td></tr>
+        <tr><td><span class="tag" style="margin:0;font-size:10px;">Abertura</span></td><td>V2 Corte B (20s) + Estáticos</td><td>Conversões</td><td style="color:var(--mint);font-weight:700;">95%</td></tr>
+        <tr><td><span class="tag tag-red" style="margin:0;font-size:10px;">Urgência</span></td><td>V1 Corte B + V2 Corte C (15s)</td><td>Conversões (retargeting)</td><td style="color:var(--mint);font-weight:700;">95%</td></tr>
       </tbody>
     </table>
   </div>
@@ -621,7 +621,7 @@ table.data tr:last-child td{border-bottom:none;}
     <div class="wire-header"><span class="tag tag-green" style="margin:0;font-size:10px;">01</span>LP Lista de Espera — captação pré-lançamento</div>
     <div class="wire-body">
       <div class="wire-section"><strong>Headline</strong>Aprenda a pensar como neuropsicólogo. A imersão que ensina o que a especialização não ensinou.</div>
-      <div class="wire-section"><strong>Subheadline</strong>A Imersão PCN é um treinamento intensivo de 2 dias baseado no método que a Natalie construiu em mais de duas décadas de experiência clínica real.</div>
+      <div class="wire-section"><strong>Subheadline</strong>A Imersão PCN é um treinamento intensivo de 1 dia baseado no método que a Natalie construiu em mais de duas décadas de experiência clínica real.</div>
       <div class="wire-section"><strong>Formulário</strong>Nome + WhatsApp. CTA: "Quero entrar na lista de espera." Sem e-mail — WhatsApp é o canal de conversão.</div>
       <div class="wire-section"><strong>Abaixo do formulário</strong>3 pontos curtos do que a imersão entrega. Sem preço ainda.</div>
       <div class="wire-section"><strong>Rodapé</strong>Logo Clincog + regulação CRP.</div>
@@ -632,18 +632,18 @@ table.data tr:last-child td{border-bottom:none;}
     <div class="wire-header"><span class="tag" style="margin:0;font-size:10px;">02</span>LP Imersão PCN — página de vendas completa</div>
     <div class="wire-body">
       <p style="font-size:12px;color:var(--muted);margin-bottom:14px;">A página <code style="background:rgba(255,255,255,.08);padding:2px 6px;border-radius:4px;">jornada-pcn.html</code> já existe. Revisar e atualizar com data, horário e preço do lançamento atual.</p>
-      <div class="wire-section"><strong>Hero</strong>Headline forte + foto da Natalie + data e hora da imersão + CTA de compra. Timer de contagem regressiva para a abertura.</div>
+      <div class="wire-section"><strong>Hero</strong>Headline forte + foto da Natalie + data e hora da imersão + CTA de compra. Timer de contagem regressiva.</div>
       <div class="wire-section"><strong>O problema</strong>Seção que ecoa o Vídeo 2: laudos sem raciocínio, experiência que não gera expertise.</div>
-      <div class="wire-section"><strong>A solução</strong>O método PCN. O que é, como funciona, por que pode ser ensinado.</div>
-      <div class="wire-section"><strong>O que você aprende</strong>Estrutura dos 2 dias com os tópicos de cada bloco.</div>
-      <div class="wire-section"><strong>A Natalie</strong>Credenciais: Hospital das Clínicas, 20+ anos de clínica, autora do livro PCN. Foto + história curta.</div>
+      <div class="wire-section"><strong>A solução</strong>O método PCN. O que é, como funciona, por que pode ser ensinado em 1 dia intensivo.</div>
+      <div class="wire-section"><strong>Programação do dia</strong>Os 4 blocos com horários e o que será abordado em cada um.</div>
+      <div class="wire-section"><strong>A Natalie</strong>Hospital das Clínicas, 20+ anos de clínica, autora do livro PCN. Foto + história curta.</div>
       <div class="wire-section"><strong>Depoimentos</strong>Mínimo 5 depoimentos de alunas do Clube ou de participantes de eventos anteriores.</div>
-      <div class="wire-section"><strong>A oferta</strong>Preço, o que está incluído, prazo de acesso à gravação. CTA final.</div>
+      <div class="wire-section"><strong>A oferta</strong>Preço, o que está incluído, acesso à gravação por 30 dias. CTA final.</div>
     </div>
   </div>
 
   <div class="wirebox">
-    <div class="wire-header"><span class="tag tag-mint" style="margin:0;font-size:10px;">03</span>Página de Confirmação — pós-inscrição na imersão</div>
+    <div class="wire-header"><span class="tag tag-mint" style="margin:0;font-size:10px;">03</span>Página de Confirmação — pós-inscrição</div>
     <div class="wire-body">
       <div class="wire-section"><strong>Headline</strong>"Sua vaga está garantida." Data, horário e link chegam no WhatsApp.</div>
       <div class="wire-section"><strong>Próximos passos</strong>1. Salva o número no WhatsApp. 2. Fique de olho nas mensagens — vamos te preparar antes da imersão. 3. Separa um caderno.</div>
@@ -655,11 +655,11 @@ table.data tr:last-child td{border-bottom:none;}
     <div class="wire-header"><span class="tag tag-yellow" style="margin:0;font-size:10px;">04</span>LP Clube Clincog — upsell pós-imersão</div>
     <div class="wire-body">
       <div class="wire-section"><strong>Headline</strong>"O método você já tem. O Clube é onde você pratica."</div>
-      <div class="wire-section"><strong>Subheadline</strong>"Discussão de casos, plantão de dúvidas e conteúdo novo toda semana. Por R$ 97/mês."</div>
+      <div class="wire-section"><strong>Subheadline</strong>"Discussão de casos, plantão de dúvidas e conteúdo novo toda semana."</div>
       <div class="wire-section"><strong>A oferta especial</strong>Condição exclusiva para quem participou da Imersão PCN. Com prazo visível e real.</div>
-      <div class="wire-section"><strong>O que está incluído</strong>Lista clara do que o Clube entrega todo mês.</div>
+      <div class="wire-section"><strong>O que está incluído</strong>Lista clara do que o Clube entrega.</div>
       <div class="wire-section"><strong>Depoimentos</strong>Assinantes do Clube falando sobre como o raciocínio clínico evoluiu desde que entraram.</div>
-      <div class="wire-section"><strong>CTA</strong>"Quero continuar com o Clube." Link direto para o checkout de R$ 97.</div>
+      <div class="wire-section"><strong>CTA</strong>"Quero continuar com o Clube." Link direto para o checkout.</div>
     </div>
   </div>
 </div>
@@ -678,11 +678,11 @@ table.data tr:last-child td{border-bottom:none;}
 
   <div class="wpp"><div class="wpp-day">D-3 — Diagnóstico</div>Antes de abrir as vagas, uma pergunta.<br><br>Você já terminou de ler um laudo de alguém que é referência na área e pensou: "mas onde está o raciocínio aqui?"<br><br>A Natalie fala sobre isso nesse vídeo — e sobre o que realmente diferencia uma boa avaliação. [link vídeo 2]</div>
 
-  <div class="wpp"><div class="wpp-day">D-1 — Antecipação</div>Amanhã abrimos as vagas da Imersão PCN. Assim que abrir, você recebe o link primeiro.<br><br>A imersão acontece nos dias [data 1] e [data 2]. Das [horário] às [horário].<br><br>Tem alguma dúvida antes de amanhã?</div>
+  <div class="wpp"><div class="wpp-day">D-1 — Antecipação</div>Amanhã abrimos as vagas da Imersão PCN. Assim que abrir, você recebe o link primeiro.<br><br>A imersão acontece no dia [data]. Das 9h às 17h.<br><br>Tem alguma dúvida antes de amanhã?</div>
 
-  <div class="wpp"><div class="wpp-day">D0 — Abertura</div>As vagas estão abertas agora, [nome].<br><br>A Imersão PCN: 2 dias para aprender o método de raciocínio clínico que a Natalie construiu em mais de 20 anos.<br><br>[link da LP imersão]<br><br>Vagas limitadas. Se tiver dúvida, me fala aqui.</div>
+  <div class="wpp"><div class="wpp-day">D0 — Abertura</div>As vagas estão abertas agora, [nome].<br><br>A Imersão PCN: 1 dia intensivo para aprender o método de raciocínio clínico que a Natalie construiu em mais de 20 anos.<br><br>[link da LP imersão]<br><br>Vagas limitadas. Se tiver dúvida, me fala aqui.</div>
 
-  <div class="wpp"><div class="wpp-day">D+1 — Follow-up (não comprou)</div>Ainda tem vagas, [nome]. A imersão acontece nos dias [data 1] e [data 2].<br><br>Tem alguma dúvida que posso responder?</div>
+  <div class="wpp"><div class="wpp-day">D+1 — Follow-up (não comprou)</div>Ainda tem vagas, [nome]. A imersão acontece no dia [data], das 9h às 17h.<br><br>Tem alguma dúvida que posso responder?</div>
 
   <div class="wpp"><div class="wpp-day">D+2 — Segunda tentativa</div>Dois pontos do vídeo da Natalie que ficam comigo:<br><br>Primeiro: um profissional pode passar 20 anos repetindo os mesmos processos sem desenvolver um raciocínio mais sofisticado.<br><br>Segundo: raciocínio clínico pode ser ensinado, e precisa ser ensinado.<br><br>A imersão é exatamente isso. Ainda dá pra entrar: [link]</div>
 
@@ -693,20 +693,20 @@ table.data tr:last-child td{border-bottom:none;}
 
   <div class="wpp"><div class="wpp-day">D+1 pós-imersão</div>Oi [nome], como foi? O que ficou com você da imersão?</div>
 
-  <div class="wpp"><div class="wpp-day">D+2 — Apresentação do Clube</div>Queria falar de algo antes que você saia.<br><br>A imersão te deu o método. Mas método precisa de prática. O Clube Clincog é onde você pratica todo mês: discussão de casos reais, plantão de dúvidas, conteúdo novo toda semana.<br><br>Para quem fez a imersão, tem uma condição especial. Válida até [data].<br><br>Quer saber mais?</div>
+  <div class="wpp"><div class="wpp-day">D+2 — Apresentação do Clube</div>Queria falar de algo antes que você saia.<br><br>A imersão te deu o método. Mas método precisa de prática. O Clube Clincog é onde você pratica: discussão de casos reais, plantão de dúvidas, conteúdo novo toda semana.<br><br>Para quem fez a imersão, tem uma condição especial. Válida até [data].<br><br>Quer saber mais?</div>
 
-  <div class="wpp"><div class="wpp-day">D+2 — Se responder que sim</div>Aqui está a oferta para quem fez a imersão:<br><br>[condição especial — primeiro mês grátis ou outra condição definida pela Clincog]<br><br>É R$ 97/mês depois do período especial. Pode cancelar quando quiser.<br><br>[link da LP Clube]</div>
+  <div class="wpp"><div class="wpp-day">D+2 — Se responder que sim</div>Aqui está a oferta para quem fez a imersão:<br><br>[condição especial a definir com a Clincog]<br><br>[link da LP Clube]</div>
 
   <div class="wpp"><div class="wpp-day">D+5 — Lembrete</div>Oi [nome], a condição especial de participante encerra em 48 horas.<br><br>Depois volta ao valor padrão sem o benefício adicional.<br><br>Alguma dúvida que posso tirar?</div>
 
-  <div class="wpp"><div class="wpp-day">D+7 — Último follow-up</div>Hoje é o último dia da condição especial, [nome].<br><br>A partir de amanhã o Clube fica disponível pelo valor padrão de R$ 97/mês, sem o benefício de participante.<br><br>Se quiser entrar com a condição especial: [link]</div>
+  <div class="wpp"><div class="wpp-day">D+7 — Último follow-up</div>Hoje é o último dia da condição especial, [nome].<br><br>A partir de amanhã o Clube fica disponível pelo valor padrão de R$ 3.000, sem o benefício de participante.<br><br>Se quiser entrar com a condição especial: [link]</div>
 
   <hr class="divider">
   <h3 style="margin-bottom:16px;">Scripts para Lili, Ingrid e Yasmin</h3>
 
   <div class="card card-purple" style="margin-bottom:12px;">
     <h4>Lead pergunta: "O que é a Imersão PCN?"</h4>
-    <p style="font-size:13px;margin:0;">É um treinamento de dois dias com a Natalie, ao vivo. Ela ensina o método Pense como Neuropsicólogo: o processo de raciocínio clínico que ela desenvolveu em mais de 20 anos de clínica real. Não é teoria de teste. É aprender a pensar do jeito certo diante de um paciente.</p>
+    <p style="font-size:13px;margin:0;">É um treinamento intensivo de 1 dia com a Natalie, ao vivo. Ela ensina o método Pense como Neuropsicólogo: o processo de raciocínio clínico que ela desenvolveu em mais de 20 anos de clínica real. Não é teoria de teste. É aprender a pensar do jeito certo diante de um paciente.</p>
   </div>
   <div class="card card-purple" style="margin-bottom:12px;">
     <h4>Lead diz: "Já tenho muitos anos de experiência, isso é pra mim?"</h4>
@@ -728,14 +728,14 @@ table.data tr:last-child td{border-bottom:none;}
 <div class="panel" id="p8">
   <div class="s-label">Calendário do lançamento</div>
   <h2 class="s-title">Timeline</h2>
-  <p class="s-sub">O lançamento tem 6 fases. Cada fase tem objetivo, criativos e responsáveis definidos. O calendário serve como guia de execução.</p>
+  <p class="s-sub">O lançamento tem 5 fases. Cada fase tem objetivo, criativos e responsáveis definidos.</p>
 
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:32px;">
     <div class="phase-block ph-aq">
       <div class="phase-title" style="color:#50C878;">Fase 1 — Aquecimento</div>
-      <div class="phase-date" style="color:#50C878;">D-14 a D-8</div>
+      <div class="phase-date" style="color:#50C878;">D-10 a D-6 | 5% do budget</div>
       <ul class="phase-items">
-        <li>V1 e V2 completos rodando como alcance</li>
+        <li>V1 completo (90s) rodando como alcance</li>
         <li>Segmentação: psicólogos BR + neuropsicologia</li>
         <li>Construir audiência de vídeo para retargeting</li>
         <li>Posts orgânicos de aquecimento no Instagram</li>
@@ -744,21 +744,21 @@ table.data tr:last-child td{border-bottom:none;}
     </div>
     <div class="phase-block ph-ca">
       <div class="phase-title" style="color:#F5C842;">Fase 2 — Captação</div>
-      <div class="phase-date" style="color:#F5C842;">D-7 a D-2</div>
+      <div class="phase-date" style="color:#F5C842;">D-5 a D-2 | 95% do budget</div>
       <ul class="phase-items">
         <li>LP Lista de Espera no ar</li>
-        <li>Cortes de 45s com CTA para lista</li>
-        <li>Retargeting: 50%+ de visualização</li>
+        <li>V2 Corte A (60s) com CTA para lista</li>
+        <li>Retargeting: 50%+ de visualização do V1</li>
         <li>Sequência WhatsApp pré-lançamento inicia</li>
         <li>ManyChat captura e encaminha ao WhatsApp</li>
       </ul>
     </div>
     <div class="phase-block ph-ab">
       <div class="phase-title" style="color:var(--mint);">Fase 3 — Abertura</div>
-      <div class="phase-date" style="color:var(--mint);">D-1 a D+4</div>
+      <div class="phase-date" style="color:var(--mint);">D-1 a D+3 | 95% do budget</div>
       <ul class="phase-items">
         <li>LP Imersão PCN no ar com vagas abertas</li>
-        <li>Cortes de 20s + estáticos — objetivo Conversões</li>
+        <li>V2 Cortes curtos + estáticos — Conversões</li>
         <li>Lili, Ingrid e Yasmin em atendimento ativo</li>
         <li>Follow-up diário para leads que não fecharam</li>
         <li>Tráfego pago no pico de investimento</li>
@@ -766,34 +766,33 @@ table.data tr:last-child td{border-bottom:none;}
     </div>
     <div class="phase-block ph-ur">
       <div class="phase-title" style="color:#E87B8A;">Fase 4 — Urgência</div>
-      <div class="phase-date" style="color:#E87B8A;">D+5 a D+6</div>
+      <div class="phase-date" style="color:#E87B8A;">D+4 a D+5 | 95% do budget</div>
       <ul class="phase-items">
         <li>Stories: contagem regressiva real</li>
         <li>Retargeting pesado: LP sem compra</li>
         <li>Disparo para grupos WhatsApp (3.000 pessoas)</li>
-        <li>Fechamento das vagas às [horário] do D+6</li>
+        <li>Fechamento das vagas às [horário] do D+5</li>
       </ul>
     </div>
     <div class="phase-block ph-im">
-      <div class="phase-title" style="color:var(--mint);">Fase 5 — Imersão</div>
-      <div class="phase-date" style="color:var(--mint);">D+10 e D+11</div>
+      <div class="phase-title" style="color:var(--mint);">Fase 5 — Imersão + Clube</div>
+      <div class="phase-date" style="color:var(--mint);">D+10 a D+17</div>
       <ul class="phase-items">
-        <li>Imersão ao vivo: fim de semana</li>
-        <li>Dia 1: método e raciocínio clínico</li>
-        <li>Dia 2: prática, laudo e pitch do Clube</li>
-        <li>Links do Clube no chat durante o pitch</li>
-        <li>Sequência WhatsApp pós-imersão inicia D+11</li>
+        <li>Imersão ao vivo: 1 dia (9h às 17h)</li>
+        <li>Blocos 1-3: método PCN</li>
+        <li>Bloco 4: pitch do Clube Clincog</li>
+        <li>Sequência WhatsApp pós-imersão (D+11)</li>
+        <li>Oferta especial do Clube encerra D+17</li>
       </ul>
     </div>
     <div class="phase-block ph-po">
-      <div class="phase-title" style="color:#6496FF;">Fase 6 — Clube</div>
-      <div class="phase-date" style="color:#6496FF;">D+11 a D+18</div>
+      <div class="phase-title" style="color:#6496FF;">Depois do lançamento</div>
+      <div class="phase-date" style="color:#6496FF;">D+18 em diante</div>
       <ul class="phase-items">
-        <li>Sequência de 7 dias para quem não assinou</li>
-        <li>LP Clube no ar com oferta especial</li>
-        <li>Depoimentos de participantes da imersão</li>
-        <li>Encerramento da oferta especial no D+18</li>
-        <li>Relatório de resultados do lançamento</li>
+        <li>Relatório de resultados: CPL, conv., novos assinantes</li>
+        <li>Depoimentos coletados para o próximo lançamento</li>
+        <li>Análise: vale tornar a imersão trimestral?</li>
+        <li>Acompanhamento de churn dos novos assinantes</li>
       </ul>
     </div>
   </div>
@@ -802,11 +801,12 @@ table.data tr:last-child td{border-bottom:none;}
   <h3 style="margin-bottom:16px;">Datas a confirmar com a Clincog</h3>
   <div class="card">
     <ul class="check-list">
-      <li>Data de início da Fase 1 — depende de quando querem fazer a imersão</li>
-      <li>Data e horário da Imersão PCN (Dia 1 e Dia 2)</li>
+      <li>Data da Imersão PCN (1 dia — sugestão: sábado)</li>
+      <li>Horário de início e fim (sugestão: 9h às 17h)</li>
       <li>Plataforma da imersão ao vivo (Zoom, Hopin, outro)</li>
-      <li>Preço da Imersão e da oferta especial do Clube para participantes</li>
-      <li>Capacidade máxima de inscritos na imersão</li>
+      <li>Preço da Imersão PCN</li>
+      <li>Condição especial do Clube para participantes</li>
+      <li>Capacidade máxima de inscritos</li>
     </ul>
   </div>
 </div>
@@ -817,16 +817,37 @@ table.data tr:last-child td{border-bottom:none;}
 <div class="panel" id="p9">
   <div class="s-label">Investimento e métricas</div>
   <h2 class="s-title">Budget e KPIs</h2>
-  <p class="s-sub">Budget de mídia distribuído pelas 4 fases de anúncio. As métricas cobrem a Imersão e o Clube separadamente.</p>
+  <p class="s-sub">A divisão é direta: 95% do budget vai para venda de ingresso, 5% para aquecimento e lembrete. Sem meio-termo.</p>
 
-  <h3 style="margin-bottom:20px;">Alocação do budget de mídia</h3>
+  <div class="alert">Regra da agência para lançamento pago: 95% conversão de ingresso / 5% aquecimento e lembrete. Essa proporção não muda.</div>
+
+  <h3 style="margin-bottom:20px;">Alocação do budget de mídia (R$ 3.000)</h3>
   <div class="card" style="margin-bottom:32px;">
-    <div class="budget-row"><div class="budget-label">Fase 1 — Aquecimento</div><div class="budget-track"><div class="budget-fill" style="width:20%;"></div></div><div class="budget-value">R$ 600</div></div>
-    <div class="budget-row"><div class="budget-label">Fase 2 — Captação</div><div class="budget-track"><div class="budget-fill" style="width:25%;"></div></div><div class="budget-value">R$ 750</div></div>
-    <div class="budget-row"><div class="budget-label">Fase 3 — Abertura</div><div class="budget-track"><div class="budget-fill" style="width:40%;"></div></div><div class="budget-value">R$ 1.200</div></div>
-    <div class="budget-row"><div class="budget-label">Fase 4 — Urgência</div><div class="budget-track"><div class="budget-fill" style="width:15%;"></div></div><div class="budget-value">R$ 450</div></div>
+    <div class="budget-row">
+      <div class="budget-label">Aquecimento e lembrete (5%)</div>
+      <div class="budget-track"><div class="budget-fill" style="width:5%;"></div></div>
+      <div class="budget-value">R$ 150</div>
+    </div>
+    <div class="budget-row">
+      <div class="budget-label" style="font-weight:700;">Venda de ingresso (95%)</div>
+      <div class="budget-track"><div class="budget-fill" style="width:95%;"></div></div>
+      <div class="budget-value" style="font-size:16px;">R$ 2.850</div>
+    </div>
     <hr class="divider" style="margin:16px 0;">
-    <div class="budget-row"><div class="budget-label" style="font-weight:700;">Total de mídia</div><div class="budget-track"><div class="budget-fill" style="width:100%;"></div></div><div class="budget-value">R$ 3.000</div></div>
+    <p style="font-size:13px;color:var(--muted);margin:0;">Os R$ 2.850 de conversão se distribuem pelas fases 2, 3 e 4. A fase de aquecimento (Fase 1) usa apenas os R$ 150 disponíveis para construir a audiência que vai receber os anúncios de ingresso.</p>
+  </div>
+
+  <h3 style="margin-bottom:16px;">Detalhamento por fase</h3>
+  <div class="card" style="margin-bottom:32px;">
+    <table class="data">
+      <thead><tr><th>Fase</th><th>Objetivo</th><th>Budget</th><th>% do total</th></tr></thead>
+      <tbody>
+        <tr><td>Fase 1 — Aquecimento</td><td>Alcance e construção de audiência</td><td style="color:var(--muted);">R$ 150</td><td style="color:var(--muted);">5%</td></tr>
+        <tr><td>Fase 2 — Captação (leads)</td><td>Lista de espera e leads qualificados</td><td style="font-weight:700;">R$ 750</td><td style="font-weight:700;color:var(--mint);">25%</td></tr>
+        <tr><td>Fase 3 — Abertura (conversão)</td><td>Venda direta de ingressos</td><td style="font-weight:700;">R$ 1.500</td><td style="font-weight:700;color:var(--mint);">50%</td></tr>
+        <tr><td>Fase 4 — Urgência (retargeting)</td><td>Fechar quem visitou sem comprar</td><td style="font-weight:700;">R$ 600</td><td style="font-weight:700;color:var(--mint);">20%</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <h3 style="margin-bottom:20px;">KPIs por produto</h3>
@@ -836,32 +857,31 @@ table.data tr:last-child td{border-bottom:none;}
       <table class="data">
         <tr><td style="color:var(--muted);">CPL (custo por lead)</td><td style="text-align:right;font-weight:700;">Meta: &lt; R$ 30</td></tr>
         <tr><td style="color:var(--muted);">Lead para inscrição</td><td style="text-align:right;font-weight:700;">Meta: &gt; 15%</td></tr>
-        <tr><td style="color:var(--muted);">Leads gerados (R$ 3k / R$ 30)</td><td style="text-align:right;font-weight:700;">~100 leads</td></tr>
-        <tr><td style="color:var(--muted);">Inscrições estimadas (mídia)</td><td style="text-align:right;font-weight:700;">15-20</td></tr>
+        <tr><td style="color:var(--muted);">Leads estimados (R$ 2.850 / R$ 30)</td><td style="text-align:right;font-weight:700;">~95 leads</td></tr>
+        <tr><td style="color:var(--muted);">Inscrições estimadas (mídia)</td><td style="text-align:right;font-weight:700;">14-19</td></tr>
       </table>
-      <p style="font-size:11px;color:var(--muted);margin:12px 0 0;">Inscrições via base orgânica (grupos WhatsApp, seguidores) não estão incluídas — são receita adicional.</p>
+      <p style="font-size:11px;color:var(--muted);margin:12px 0 0;">Inscrições via base orgânica (grupos WhatsApp, seguidores) são receita adicional.</p>
     </div>
     <div class="card card-mint">
       <div class="tag tag-mint">Clube Clincog</div>
       <table class="data">
         <tr><td style="color:var(--muted);">Conv. imersão para Clube</td><td style="text-align:right;font-weight:700;">Meta: 25-35%</td></tr>
-        <tr><td style="color:var(--muted);">Novos assinantes (base mídia)</td><td style="text-align:right;font-weight:700;">5-7 conservador</td></tr>
-        <tr><td style="color:var(--muted);">MRR gerado</td><td style="text-align:right;font-weight:700;">R$ 485-679/mês</td></tr>
-        <tr><td style="color:var(--muted);">LTV médio (12 meses)</td><td style="text-align:right;font-weight:700;">R$ 1.164/assinante</td></tr>
+        <tr><td style="color:var(--muted);">Novos assinantes (base mídia)</td><td style="text-align:right;font-weight:700;">4-7 conservador</td></tr>
+        <tr><td style="color:var(--muted);">Valor por assinante</td><td style="text-align:right;font-weight:700;">R$ 3.000</td></tr>
+        <tr><td style="color:var(--muted);">Receita estimada (Clube)</td><td style="text-align:right;font-weight:700;">R$ 12k-21k</td></tr>
       </table>
-      <p style="font-size:11px;color:var(--muted);margin:12px 0 0;">Cada assinante conquistado nesse lançamento gera retorno por meses. O custo de aquisição via imersão é baixo comparado ao LTV do Clube.</p>
+      <p style="font-size:11px;color:var(--muted);margin:12px 0 0;">Um único assinante do Clube já paga mais de 4 vezes o custo total do budget de mídia do lançamento.</p>
     </div>
   </div>
 
   <hr class="divider">
   <h3 style="margin-bottom:16px;">Como escalar depois do primeiro lançamento</h3>
   <div class="card">
-    <p style="font-size:13px;margin-bottom:12px;">O primeiro lançamento serve para medir as taxas reais: CPL, conversão lead-imersão, conversão imersão-Clube. Com esses dados:</p>
     <ul class="check-list">
-      <li>Se o CPL ficar abaixo de R$ 25: aumentar o budget da Fase 3 imediatamente</li>
-      <li>Se a conversão lead-imersão ultrapassar 20%: dobrar o investimento no próximo lançamento</li>
-      <li>Se a taxa de Clube ultrapassar 30%: transformar a imersão em produto recorrente (trimestral)</li>
-      <li>Depoimentos coletados nesse lançamento entram como prova social no próximo ciclo</li>
+      <li>Se CPL ficar abaixo de R$ 20: aumentar budget de conversão imediatamente</li>
+      <li>Se conversão imersão-Clube ultrapassar 30%: repetir o lançamento em 3 meses</li>
+      <li>Depoimentos da primeira turma entram como prova social no próximo ciclo</li>
+      <li>Manter sempre a proporção 95/5 independente do budget total</li>
     </ul>
   </div>
 </div>

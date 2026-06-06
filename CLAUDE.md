@@ -65,3 +65,12 @@ Todo HTML de apresentação, strategy deck, plano ou documento que vai ser mostr
 - O histórico do `main` é o registro oficial do trabalho da agência — qualquer commit fora dele está perdido
 
 Se por algum motivo um commit foi parar em outro branch, mover para o `main` antes de encerrar a sessão.
+
+## Lançamento pago — divisão de verba obrigatória
+
+Sempre que estruturar budget de mídia para lançamento pago (imersão, evento, produto com ingresso), usar esta divisão:
+
+- **95% — venda de ingresso** (campanha direta de conversão)
+- **5% — aquecimento/lembrete** (topo de funil e retargeting de lembrança)
+
+Não inverter essa proporção. O foco é conversão, não construção de audiência.
