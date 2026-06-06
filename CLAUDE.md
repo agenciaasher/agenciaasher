@@ -51,6 +51,13 @@ Uso: chame `/escrita-humanizada` passando o texto. O resultado é o texto reescr
 
 Direto, confiante, sem enrolação. A Agência Asher entrega resultado, não relatório bonito. O texto reflete isso.
 
-## Git
+## Git — REGRA OBRIGATÓRIA
 
-Trabalhar sempre no branch `main`. Nunca criar branches separados para entregáveis de clientes.
+**Todo trabalho vai para o `main`. Sem exceção.**
+
+- Sempre commitar e fazer push direto no branch `main`
+- Se o ambiente criar um branch automático (ex: `claude/...`), ignorar e trabalhar no `main` mesmo assim
+- Nunca criar branches separados para entregáveis de clientes
+- O histórico do `main` é o registro oficial do trabalho da agência — qualquer commit fora dele está perdido
+
+Se por algum motivo um commit foi parar em outro branch, mover para o `main` antes de encerrar a sessão.
