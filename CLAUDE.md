@@ -74,3 +74,5 @@ Sempre que estruturar budget de mídia para lançamento pago (imersão, evento, 
 - **5% — aquecimento/lembrete** (topo de funil e retargeting de lembrança)
 
 Não inverter essa proporção. O foco é conversão, não construção de audiência.
+
+Em lançamento pago, a métrica principal de eficiência é **custo por compra**, não custo por lead. Usar sempre "custo por compra" em documentos, KPIs e relatórios de lançamento.
