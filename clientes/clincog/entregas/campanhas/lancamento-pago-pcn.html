@@ -50,10 +50,12 @@ p{margin-bottom:14px;color:rgba(255,255,255,0.83);}
 .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;}
 .card-purple{background:rgba(123,45,142,0.08);border-color:rgba(123,45,142,0.25);}
 .card-mint{background:rgba(168,230,207,0.05);border-color:rgba(168,230,207,0.2);}
+.card-dark-purple{background:rgba(60,10,80,0.25);border-color:rgba(123,45,142,0.4);}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;}
 .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:32px;}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px;}
-@media(max-width:700px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}.panel{padding:32px 20px;}.tabs-wrapper,.header{padding-left:20px;padding-right:20px;}}
+.grid-6{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-bottom:32px;}
+@media(max-width:700px){.grid-2,.grid-3,.grid-4,.grid-6{grid-template-columns:1fr;}.panel{padding:32px 20px;}.tabs-wrapper,.header{padding-left:20px;padding-right:20px;}}
 
 .stat-num{font-size:36px;font-weight:900;color:var(--mint);line-height:1;margin-bottom:4px;}
 .stat-label{font-size:12px;color:var(--muted);}
@@ -64,6 +66,7 @@ p{margin-bottom:14px;color:rgba(255,255,255,0.83);}
 .tag-red{background:rgba(232,123,138,0.12);color:#E87B8A;}
 .tag-green{background:rgba(80,200,120,0.12);color:#50C878;}
 .tag-blue{background:rgba(100,150,255,0.12);color:#6496FF;}
+.tag-dark{background:rgba(60,10,80,0.4);color:#D8A8FF;}
 
 .big-idea{background:linear-gradient(135deg,rgba(123,45,142,0.18) 0%,rgba(168,230,207,0.05) 100%);border:1px solid rgba(168,230,207,0.2);border-radius:16px;padding:40px;text-align:center;margin:32px 0;}
 .big-idea-text{font-size:clamp(20px,3vw,32px);font-weight:800;line-height:1.3;margin-bottom:16px;}
@@ -80,7 +83,10 @@ p{margin-bottom:14px;color:rgba(255,255,255,0.83);}
 .f-step{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 24px;width:100%;max-width:700px;display:flex;align-items:center;gap:16px;transition:border-color .2s;}
 .f-step:hover{border-color:rgba(168,230,207,0.25);}
 .f-step.highlight{border-color:rgba(123,45,142,0.35);background:rgba(123,45,142,0.07);}
+.f-step.highlight-ob{border-color:rgba(60,10,80,0.6);background:rgba(60,10,80,0.15);}
+.f-step.highlight-vip{border-color:rgba(100,150,255,0.4);background:rgba(100,150,255,0.06);}
 .f-step.final-step{border-color:rgba(168,230,207,0.35);background:rgba(168,230,207,0.04);}
+.f-step.downsell-step{border-color:rgba(245,200,66,0.3);background:rgba(245,200,66,0.04);}
 .f-icon{width:44px;height:44px;border-radius:10px;background:var(--purple-light);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
 .f-main{flex:1;}
 .f-title{font-weight:700;font-size:14px;margin-bottom:2px;}
@@ -118,6 +124,8 @@ p{margin-bottom:14px;color:rgba(255,255,255,0.83);}
 
 .wpp{background:#162016;border:1px solid #2a3e2a;border-radius:12px;padding:16px;font-size:13px;color:#dff0df;line-height:1.65;margin-bottom:12px;}
 .wpp-day{font-size:10px;color:#6abd6a;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+.wpp-vip{background:#0e1a2e;border:1px solid #1e3a5f;border-radius:12px;padding:16px;font-size:13px;color:#d0e8ff;line-height:1.65;margin-bottom:12px;}
+.wpp-vip .wpp-day{color:#6aabff;}
 
 .wirebox{background:var(--navy-3);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:20px;}
 .wire-header{background:var(--purple-dark);padding:10px 16px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:8px;}
@@ -140,6 +148,12 @@ table.data{width:100%;border-collapse:collapse;font-size:13px;}
 table.data th{text-align:left;padding:10px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--border);}
 table.data td{padding:10px;border-bottom:1px solid rgba(255,255,255,.04);}
 table.data tr:last-child td{border-bottom:none;}
+
+.ob-card{background:rgba(60,10,80,0.18);border:1px solid rgba(123,45,142,0.35);border-radius:12px;padding:20px;margin-bottom:12px;}
+.ob-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:12px;}
+.ob-title{font-weight:800;font-size:14px;}
+.ob-price{font-size:24px;font-weight:900;color:#D8A8FF;}
+.ob-meta{font-size:12px;color:var(--muted);margin-top:4px;}
 </style>
 </head>
 <body>
@@ -175,17 +189,19 @@ table.data tr:last-child td{border-bottom:none;}
   <h2 class="s-title">Imersão PCN + Clube Clincog</h2>
   <p class="s-sub">Um lançamento em duas camadas. A pessoa vê o anúncio, compra o ingresso, participa da imersão de 1 dia e, no encerramento, recebe a oferta do Clube Clincog. Sem lista de espera, sem intermediários.</p>
 
-  <div class="grid-4">
+  <div class="grid-6" style="grid-template-columns:repeat(3,1fr);">
     <div class="card"><div class="stat-num">1 dia</div><div class="stat-label">evento intensivo ao vivo</div></div>
     <div class="card"><div class="stat-num">4</div><div class="stat-label">fases de campanha paga</div></div>
     <div class="card"><div class="stat-num">95/5</div><div class="stat-label">% do budget: ingresso vs. aquecimento</div></div>
     <div class="card"><div class="stat-num">R$ 2.748</div><div class="stat-label">Clube Clincog — assinatura anual</div></div>
+    <div class="card"><div class="stat-num">2</div><div class="stat-label">order bumps no checkout</div></div>
+    <div class="card"><div class="stat-num">Down sell</div><div class="stat-label">plano mensal R$ 97/mês para quem não fechou o anual</div></div>
   </div>
 
   <hr class="divider">
-  <h3 style="margin-bottom:20px;">Como os dois produtos se conectam</h3>
+  <h3 style="margin-bottom:20px;">Como os produtos se conectam</h3>
 
-  <div class="grid-2">
+  <div class="grid-3">
     <div class="card card-purple">
       <div class="tag">Produto de entrada</div>
       <h3>Imersão PCN</h3>
@@ -198,6 +214,12 @@ table.data tr:last-child td{border-bottom:none;}
       <p>R$ 2.748/ano com aulas semanais, plantão de dúvidas, sessão científica e supervisão de casos. A imersão ensina o método. O Clube é onde o profissional pratica.</p>
       <p style="color:var(--muted);font-size:13px;margin:0;">A oferta do Clube acontece no último bloco da imersão, para quem acabou de vivenciar o método na prática.</p>
     </div>
+    <div class="card card-dark-purple">
+      <div class="tag tag-dark">No checkout</div>
+      <h3>Order Bumps</h3>
+      <p>Dois produtos adicionais apresentados no checkout da imersão. OB1: gravação completa por R$ 37. OB2: checklist de raciocínio neuropsicológico por R$ 27.</p>
+      <p style="color:var(--muted);font-size:13px;margin:0;">Aumentam o ticket médio do ingresso e criam pontos de contato adicionais antes do evento. Receita esperada: R$ 2.179 com 250 inscritos.</p>
+    </div>
   </div>
 
   <hr class="divider">
@@ -205,11 +227,11 @@ table.data tr:last-child td{border-bottom:none;}
 
   <div class="grid-3">
     <div class="card"><h4>Grande ideia</h4><p style="font-size:13px;margin:0;">O ângulo criativo central do lançamento. O que faz esse produto diferente de qualquer formação do mercado.</p></div>
-    <div class="card"><h4>Funil completo</h4><p style="font-size:13px;margin:0;">Do primeiro anúncio até a assinatura do Clube. Cada etapa com responsável e conversão esperada.</p></div>
-    <div class="card"><h4>Criativos</h4><p style="font-size:13px;margin:0;">Os dois vídeos da Natalie como âncoras. Cortes por fase. Estáticos com as frases mais fortes.</p></div>
+    <div class="card"><h4>Funil completo</h4><p style="font-size:13px;margin:0;">Do primeiro anúncio até a assinatura do Clube. Sete etapas com objetivo claro e conversão esperada.</p></div>
+    <div class="card"><h4>Criativos</h4><p style="font-size:13px;margin:0;">Os dois vídeos da Natalie como âncoras. Cortes por fase. Estáticos com as frases mais fortes. Single Shot e Advantage+.</p></div>
     <div class="card"><h4>Páginas</h4><p style="font-size:13px;margin:0;">LP da Imersão PCN, página de confirmação pós-compra e LP do Clube para o encerramento do evento.</p></div>
-    <div class="card"><h4>Comunicação</h4><p style="font-size:13px;margin:0;">Sequências de WhatsApp por fase. Scripts prontos para Lili, Ingrid e Yasmin.</p></div>
-    <div class="card"><h4>Budget e KPIs</h4><p style="font-size:13px;margin:0;">95% do investimento vai direto para venda de ingresso. 5% para aquecimento e lembrete.</p></div>
+    <div class="card"><h4>Comunicação</h4><p style="font-size:13px;margin:0;">Sequências de WhatsApp por fase. Scripts prontos para Lili, Ingrid e Yasmin. Grupo VIP com aquecimento pré-evento.</p></div>
+    <div class="card"><h4>Budget e KPIs</h4><p style="font-size:13px;margin:0;">95% do investimento vai direto para venda de ingresso. Projeção de receita incluindo order bumps e down sell.</p></div>
   </div>
 </div>
 
@@ -311,32 +333,103 @@ table.data tr:last-child td{border-bottom:none;}
 <div class="panel" id="p2">
   <div class="s-label">Arquitetura de conversão</div>
   <h2 class="s-title">O Funil Completo</h2>
-  <p class="s-sub">Quatro etapas. Anúncio, compra de ingresso, evento de 1 dia e oferta do Clube no encerramento. Cada etapa tem objetivo claro, responsável definido e conversão esperada.</p>
+  <p class="s-sub">Sete etapas. Do anúncio ao down sell. Cada etapa tem objetivo claro, responsável definido e conversão esperada.</p>
 
   <div class="funnel">
+
     <div class="f-step">
       <div class="f-icon">📣</div>
-      <div class="f-main"><div class="f-title">Anúncios pagos — Meta Ads</div><div class="f-desc">Vídeos da Natalie segmentados para psicólogos e neuropsicólogos. 95% do budget vai direto para compra de ingresso.</div></div>
-      <div class="f-meta">Público frio<br>BR nacional</div>
+      <div class="f-main">
+        <div class="f-title">1. Meta Ads</div>
+        <div class="f-desc">Vídeos da Natalie segmentados para psicólogos e neuropsicólogos. 95% do budget vai direto para compra de ingresso. 5% para aquecimento e lembrete.</div>
+      </div>
+      <div class="f-meta">95% conversão<br>5% aquecimento</div>
     </div>
     <div class="f-arrow"></div>
+
     <div class="f-step highlight">
       <div class="f-icon">🛒</div>
-      <div class="f-main"><div class="f-title">LP de vendas — Imersão PCN</div><div class="f-desc">Página de vendas direta. Três lotes: R$ 47, R$ 67 e R$ 87. Lili, Ingrid e Yasmin atendem dúvidas por WhatsApp para fechar quem hesita.</div></div>
-      <div class="f-meta">Ingresso<br>3 lotes</div>
+      <div class="f-main">
+        <div class="f-title">2. LP de Vendas — Imersão PCN</div>
+        <div class="f-desc">Página de vendas direta. Três lotes: R$ 47, R$ 67 e R$ 87. Lili, Ingrid e Yasmin atendem dúvidas por WhatsApp para fechar quem hesita.</div>
+      </div>
+      <div class="f-meta">3 lotes<br>R$ 47 / 67 / 87</div>
     </div>
     <div class="f-arrow"></div>
+
+    <div class="f-step highlight-ob">
+      <div class="f-icon">➕</div>
+      <div class="f-main">
+        <div class="f-title">3. Checkout com Order Bumps</div>
+        <div class="f-desc">OB1: Gravação completa da imersão por R$ 37 (conv. 9-20%). OB2: Checklist de Raciocínio Neuropsicológico por R$ 27 (conv. 10-15%). Apresentados direto no checkout, sem página separada.</div>
+      </div>
+      <div class="f-meta">OB1 R$ 37<br>OB2 R$ 27</div>
+    </div>
+    <div class="f-arrow"></div>
+
+    <div class="f-step highlight-vip">
+      <div class="f-icon">💬</div>
+      <div class="f-main">
+        <div class="f-title">4. Grupo VIP WhatsApp</div>
+        <div class="f-desc">Criado para todos os inscritos. Três mensagens antes do evento: boas-vindas (D-7), conteúdo preparatório (D-3) e lembrete com link (D-1). Aquecimento para maximizar comparecimento.</div>
+      </div>
+      <div class="f-meta">Meta: 70%+<br>comparecimento</div>
+    </div>
+    <div class="f-arrow"></div>
+
     <div class="f-step">
       <div class="f-icon">🎓</div>
-      <div class="f-main"><div class="f-title">Imersão PCN — 1 dia intensivo ao vivo</div><div class="f-desc">Entrega do método PCN em 4 blocos. Último bloco: apresentação do Clube com condição especial para quem participou.</div></div>
-      <div class="f-meta">Presença esperada<br>70%+ dos inscritos</div>
+      <div class="f-main">
+        <div class="f-title">5. Imersão PCN — 1 dia ao vivo (9h-17h)</div>
+        <div class="f-desc">Entrega do método PCN em 4 blocos. Bloco 1: raciocínio clínico. Bloco 2: workshop de casos. Bloco 3: integração e laudo. Bloco 4: apresentação do Clube com condição especial.</div>
+      </div>
+      <div class="f-meta">4 blocos<br>9h às 17h</div>
     </div>
     <div class="f-arrow"></div>
+
     <div class="f-step final-step">
       <div class="f-icon">⭐</div>
-      <div class="f-main"><div class="f-title">Clube Clincog — produto principal</div><div class="f-desc">Oferta apresentada no encerramento da imersão. Follow-up de 7 dias via WhatsApp para quem não fechou no evento.</div></div>
+      <div class="f-main">
+        <div class="f-title">6. Pitch Clube Clincog — produto principal</div>
+        <div class="f-desc">Oferta apresentada no Bloco 4 da imersão. Condição especial com 48 horas. Follow-up de 7 dias via WhatsApp para quem não fechou no evento.</div>
+      </div>
       <div class="f-meta">Conv. esperada<br>10-20% dos inscritos</div>
     </div>
+    <div class="f-arrow"></div>
+
+    <div class="f-step downsell-step">
+      <div class="f-icon">↩️</div>
+      <div class="f-main">
+        <div class="f-title">7. Down sell — Plano mensal</div>
+        <div class="f-desc">Para quem não fechou o anual. Uma mensagem no D+2 pós-imersão oferecendo o Clube por R$ 97/mês, sem compromisso anual. Só para quem não respondeu à oferta do Clube.</div>
+      </div>
+      <div class="f-meta">R$ 97/mês<br>conv. 7-10%</div>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+  <h3 style="margin-bottom:16px;">Por que o order bump existe</h3>
+  <div class="card" style="margin-bottom:32px;">
+    <table class="data">
+      <thead><tr><th>Order Bump</th><th>Produto</th><th>Preço</th><th>Objetivo principal</th><th>Conv. esperada</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-dark" style="margin:0;font-size:10px;">OB1</span></td>
+          <td>Gravação completa da imersão</td>
+          <td style="font-weight:700;">R$ 37</td>
+          <td>Aumentar comparecimento. Quem pagou pela gravação quer usar o conteúdo, então vai ao vivo.</td>
+          <td style="color:var(--mint);font-weight:700;">9-20%</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-dark" style="margin:0;font-size:10px;">OB2</span></td>
+          <td>Checklist de Raciocínio Neuropsicológico PCN</td>
+          <td style="font-weight:700;">R$ 27</td>
+          <td>Criar pontos de contato adicionais antes e depois do evento. Reter na memória da marca.</td>
+          <td style="color:var(--mint);font-weight:700;">10-15%</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <hr class="divider">
@@ -350,15 +443,16 @@ table.data tr:last-child td{border-bottom:none;}
           <li>Segmentação e lookalike</li>
           <li>Retargeting de vídeo e LP</li>
           <li>Acompanhamento de custo por compra</li>
+          <li>Single Shot nos últimos 2 dias</li>
         </ul>
       </div>
       <div>
         <h4>Conteúdo e copy</h4>
         <ul class="check-list">
           <li>Cortes dos vídeos por fase</li>
-          <li>Copy dos anúncios</li>
-          <li>WhatsApp pós-compra para inscritos</li>
-          <li>Textos das páginas</li>
+          <li>Copy dos anúncios e order bumps</li>
+          <li>WhatsApp pós-compra e Grupo VIP</li>
+          <li>Textos das páginas e checkout</li>
         </ul>
       </div>
       <div>
@@ -367,7 +461,7 @@ table.data tr:last-child td{border-bottom:none;}
           <li>Atendimento de dúvidas no WhatsApp</li>
           <li>Fechamento de indecisos</li>
           <li>Pitch do Clube no encerramento</li>
-          <li>Follow-up pós-evento</li>
+          <li>Follow-up pós-evento e down sell</li>
         </ul>
       </div>
     </div>
@@ -448,6 +542,40 @@ table.data tr:last-child td{border-bottom:none;}
     </div>
   </div>
   <p style="font-size:13px;color:var(--muted);margin-bottom:0;">O preço cresce a cada fase. Quem compra nos primeiros dias paga R$ 47. Quem compra no último dia paga R$ 87. Essa escada de preço não é desconto, é urgência com lógica clara.</p>
+
+  <hr class="divider">
+  <h3 style="margin-bottom:16px;">Order Bumps — no checkout</h3>
+  <p style="font-size:13px;color:var(--muted);margin-bottom:20px;">Apresentados direto na página de checkout, logo abaixo do resumo do pedido. Um clique para adicionar. Sem redirecionamento.</p>
+
+  <div class="ob-card">
+    <div class="ob-header">
+      <div>
+        <div class="tag tag-dark" style="margin-bottom:6px;">Order Bump 1</div>
+        <div class="ob-title">Gravação completa da imersão</div>
+        <div class="ob-meta">Acesso por 90 dias. Download disponível.</div>
+      </div>
+      <div style="text-align:right;">
+        <div class="ob-price">R$ 37</div>
+        <div style="font-size:11px;color:var(--muted);">conv. esperada: 9-20%</div>
+      </div>
+    </div>
+    <p style="font-size:13px;margin:0;color:rgba(255,255,255,.75);">Objetivo: aumentar comparecimento ao vivo. Quem pagou pela gravação quer usar, então vai ao evento. Também cobre quem não puder estar ao vivo em algum bloco.</p>
+  </div>
+
+  <div class="ob-card">
+    <div class="ob-header">
+      <div>
+        <div class="tag tag-dark" style="margin-bottom:6px;">Order Bump 2</div>
+        <div class="ob-title">Checklist de Raciocínio Neuropsicológico PCN</div>
+        <div class="ob-meta">PDF para usar na prática clínica.</div>
+      </div>
+      <div style="text-align:right;">
+        <div class="ob-price">R$ 27</div>
+        <div style="font-size:11px;color:var(--muted);">conv. esperada: 10-15%</div>
+      </div>
+    </div>
+    <p style="font-size:13px;margin:0;color:rgba(255,255,255,.75);">Objetivo: criar pontos de contato adicionais antes e depois do evento. Quem usa o checklist antes da imersão chega mais engajada. Quem usa depois fica retida na memória da marca.</p>
+  </div>
 
   <hr class="divider">
   <h3 style="margin-bottom:16px;">Frases de venda para os criativos</h3>
@@ -540,7 +668,7 @@ table.data tr:last-child td{border-bottom:none;}
 
   <hr class="divider">
   <h3 style="margin-bottom:16px;">Sequência de follow-up pós-imersão</h3>
-  <div class="card">
+  <div class="card" style="margin-bottom:32px;">
     <div style="display:flex;gap:12px;flex-wrap:wrap;">
       <div style="text-align:center;padding:16px 20px;background:rgba(255,255,255,.04);border-radius:8px;min-width:90px;"><div style="font-size:18px;font-weight:900;color:var(--mint);">D+1</div><div style="font-size:11px;color:var(--muted);">"Como foi?"</div></div>
       <div style="text-align:center;padding:16px 20px;background:rgba(255,255,255,.04);border-radius:8px;min-width:90px;"><div style="font-size:18px;font-weight:900;color:var(--mint);">D+2</div><div style="font-size:11px;color:var(--muted);">Clube + link</div></div>
@@ -548,6 +676,41 @@ table.data tr:last-child td{border-bottom:none;}
       <div style="text-align:center;padding:16px 20px;background:rgba(255,255,255,.04);border-radius:8px;min-width:90px;"><div style="font-size:18px;font-weight:900;color:var(--mint);">D+5</div><div style="font-size:11px;color:var(--muted);">Oferta encerra em 48h</div></div>
       <div style="text-align:center;padding:16px 20px;background:rgba(255,255,255,.04);border-radius:8px;min-width:90px;"><div style="font-size:18px;font-weight:900;color:var(--mint);">D+7</div><div style="font-size:11px;color:var(--muted);">Última chance</div></div>
     </div>
+  </div>
+
+  <hr class="divider">
+  <h3 style="margin-bottom:16px;">Down sell — para quem não fechou o Clube</h3>
+  <div class="card" style="background:rgba(245,200,66,0.04);border-color:rgba(245,200,66,0.2);margin-bottom:20px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+      <div>
+        <div class="tag tag-yellow" style="margin-bottom:8px;">Down sell</div>
+        <div style="font-size:20px;font-weight:900;color:#F5C842;">Plano mensal — R$ 97/mês</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px;">Acesso ao Clube sem compromisso anual</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:12px;color:var(--muted);">Conv. esperada</div>
+        <div style="font-size:18px;font-weight:800;color:#F5C842;">7-10%</div>
+        <div style="font-size:11px;color:var(--muted);">de quem não comprou o anual</div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin:0;gap:12px;">
+      <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:14px;">
+        <div style="font-size:11px;font-weight:700;color:#F5C842;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Quando apresentar</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.83);">D+2 pós-imersão. Só para quem não respondeu à oferta do Clube anual.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:14px;">
+        <div style="font-size:11px;font-weight:700;color:#F5C842;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Importante</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.83);">O down sell não enfraquece o anual. Só captura quem não ia comprar de qualquer forma.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wpp" style="background:#1a1000;border-color:#3d2f00;">
+    <div class="wpp-day" style="color:#c8a000;">D+2 pós-imersão — Script do down sell</div>
+    [nome], a imersão de ontem foi boa, né?<br><br>
+    Sei que o Clube anual é um investimento maior. Então criei uma opção para quem quer continuar praticando sem compromisso de um ano: R$ 97/mês, com acesso completo.<br><br>
+    Você cancela quando quiser. Mas quem fica, costuma ficar por um bom tempo.<br><br>
+    Se tiver interesse: [link]
   </div>
 </div>
 
@@ -622,7 +785,7 @@ table.data tr:last-child td{border-bottom:none;}
 
   <hr class="divider">
   <h3 style="margin-bottom:16px;">Criativos por fase — divisão 95/5</h3>
-  <div class="card">
+  <div class="card" style="margin-bottom:32px;">
     <table class="data">
       <thead><tr><th>Fase</th><th>Criativo</th><th>Objetivo Meta Ads</th><th>% do budget</th></tr></thead>
       <tbody>
@@ -632,6 +795,65 @@ table.data tr:last-child td{border-bottom:none;}
         <tr><td><span class="tag tag-red" style="margin:0;font-size:10px;">Urgência</span></td><td>V1 Corte B + V2 Corte C (15s)</td><td>Conversões (retargeting)</td><td style="color:var(--mint);font-weight:700;">95%</td></tr>
       </tbody>
     </table>
+  </div>
+
+  <hr class="divider">
+  <h3 style="margin-bottom:16px;">Campanha Single Shot — remarketing final</h3>
+  <div class="card card-purple" style="margin-bottom:20px;">
+    <div class="tag tag-red" style="margin-bottom:12px;">D+4 e D+5 — últimos 2 dias</div>
+    <p style="font-size:13px;margin-bottom:16px;"><strong>Público:</strong> quem viu 75%+ dos vídeos ou visitou a LP sem comprar. O anúncio aparece <strong>uma vez por pessoa</strong>, nunca mais. Sem frequência, sem saturação.</p>
+
+    <div class="hook">"Esse anúncio só vai aparecer uma vez para você. O ingresso fecha [data]. Se entrar, é agora."</div>
+
+    <div class="grid-2" style="margin:16px 0 0;gap:12px;">
+      <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:14px;text-align:center;">
+        <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">Teste A</div>
+        <div style="font-size:22px;font-weight:900;color:var(--mint);">R$ 67</div>
+        <div style="font-size:12px;color:var(--muted);">Lote 2 — ainda disponível</div>
+      </div>
+      <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:14px;text-align:center;">
+        <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">Teste B</div>
+        <div style="font-size:22px;font-weight:900;color:#F5C842;">R$ 87</div>
+        <div style="font-size:12px;color:var(--muted);">Lote 3 — preço final</div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin:12px 0 0;">Testar os dois preços para medir se a urgência do preço mais alto converte melhor do que o preço mais acessível nesse momento do funil.</p>
+  </div>
+
+  <hr class="divider">
+  <h3 style="margin-bottom:16px;">Estrutura de campanha — Advantage+</h3>
+  <div class="card">
+    <div class="step-row" style="margin-bottom:16px;">
+      <div class="step-num" style="background:rgba(123,45,142,0.4);font-size:12px;">1</div>
+      <div class="step-content">
+        <div class="step-title">Começar com Advantage+ (público aberto)</div>
+        <div class="step-desc">Subir todos os criativos juntos numa campanha Advantage+. Deixar o algoritmo distribuir. Observar por 48-72h antes de mexer.</div>
+      </div>
+    </div>
+    <div class="step-row" style="margin-bottom:16px;">
+      <div class="step-num" style="background:rgba(123,45,142,0.4);font-size:12px;">2</div>
+      <div class="step-content">
+        <div class="step-title">Identificar os campeões</div>
+        <div class="step-desc">Isolar criativos com melhor custo por compra medido por UTM, não só pelo gerenciador. O gerenciador mente na atribuição.</div>
+      </div>
+    </div>
+    <div class="step-row" style="margin-bottom:16px;">
+      <div class="step-num" style="background:rgba(123,45,142,0.4);font-size:12px;">3</div>
+      <div class="step-content">
+        <div class="step-title">Reunir campeões numa nova Advantage+</div>
+        <div class="step-desc">Criar nova campanha só com os criativos que performaram. Escalar budget progressivamente.</div>
+      </div>
+    </div>
+    <div class="step-row" style="margin-bottom:16px;">
+      <div class="step-num" style="background:rgba(123,45,142,0.4);font-size:12px;">4</div>
+      <div class="step-content">
+        <div class="step-title">A/B obrigatório na LP</div>
+        <div class="step-desc">Sempre testar variações de headline na LP. No mínimo dois textos diferentes para o hero. Medir por UTM qual converte mais antes de pausar.</div>
+      </div>
+    </div>
+    <div style="background:rgba(168,230,207,0.05);border:1px solid rgba(168,230,207,0.15);border-radius:8px;padding:14px;font-size:13px;">
+      <strong style="color:var(--mint);">Regra de ouro:</strong> confiar no ROAS medido por UTM, não no ROAS do gerenciador. O gerenciador atribui conversões com janela de 7 dias de clique, o que infla os números em campanhas com remarketing ativo.
+    </div>
   </div>
 </div>
 
@@ -687,7 +909,34 @@ table.data tr:last-child td{border-bottom:none;}
   <h2 class="s-title">Comunicação</h2>
   <p class="s-sub">O WhatsApp é o canal de conversão principal. Cada mensagem tem objetivo, tom e momento definidos.</p>
 
-  <h3 style="margin-bottom:16px;">Sequência pré-evento (para quem comprou o ingresso)</h3>
+  <h3 style="margin-bottom:16px;">Grupo VIP — mensagens de aquecimento</h3>
+  <p style="font-size:13px;color:var(--muted);margin-bottom:20px;">O Grupo VIP é criado no WhatsApp assim que as vendas abrem. Todos os inscritos entram automaticamente. Três mensagens antes do evento.</p>
+
+  <div class="wpp-vip">
+    <div class="wpp-day">D-7 — Boas-vindas ao Grupo VIP</div>
+    Bem-vindas ao grupo da Imersão PCN!<br><br>
+    Me chamo [nome], e vou estar aqui com vocês até o dia do evento.<br><br>
+    A Natalie vai facilitar a imersão junto com [nome das facilitadoras]. A ideia desse grupo é criar antecipação e deixar todo mundo preparada para aproveitar ao máximo.<br><br>
+    No dia [data], das 9h às 17h, a gente se encontra ao vivo. Enquanto isso, fique de olho aqui.
+  </div>
+
+  <div class="wpp-vip">
+    <div class="wpp-day">D-3 — Conteúdo preparatório</div>
+    Uma dúvida que aparece muito nos primeiros laudos:<br><br>
+    "Meus dados estão todos aqui. Por que o raciocínio não flui?"<br><br>
+    A Natalie vai responder isso na imersão, mas já deixo uma pista: o problema raramente está nos dados. Está na ordem em que você os lê.<br><br>
+    Guarda essa ideia para o Bloco 1.
+  </div>
+
+  <div class="wpp-vip">
+    <div class="wpp-day">D-1 — Lembrete + link</div>
+    Amanhã é o dia.<br><br>
+    Link de acesso: [link]<br><br>
+    Começa às 9h em ponto. Separa um caderno e venha com um caso clínico em mente. O Bloco 2 é um workshop ao vivo e você vai querer ter um caso pronto para trabalhar.
+  </div>
+
+  <hr class="divider">
+  <h3 style="margin-bottom:16px;">Sequência pré-evento (mensagens diretas para quem comprou)</h3>
 
   <div class="wpp"><div class="wpp-day">Logo após a compra — Confirmação</div>Oi [nome], sua vaga na Imersão PCN está confirmada!<br><br>A imersão acontece no dia [data], das 9h às 17h. O link de acesso chega aqui no WhatsApp um dia antes.<br><br>Enquanto isso, assiste esse vídeo da Natalie — ele explica de onde veio o método. [link vídeo 1]</div>
 
@@ -778,6 +1027,7 @@ table.data tr:last-child td{border-bottom:none;}
         <li>Último lote: R$ 87 — maior preço, maior urgência</li>
         <li>Stories: contagem regressiva real</li>
         <li>Retargeting pesado: quem visitou a LP sem comprar</li>
+        <li>Single Shot: aparece uma vez para quem viu 75%+ dos vídeos</li>
         <li>Disparo para grupos WhatsApp (3.000 pessoas)</li>
         <li>Fechamento das vagas às [horário] do D+5</li>
       </ul>
@@ -790,6 +1040,7 @@ table.data tr:last-child td{border-bottom:none;}
         <li>Blocos 1–3: método PCN</li>
         <li>Bloco 4: apresentação do Clube Clincog</li>
         <li>Sequência WhatsApp pós-imersão (D+11)</li>
+        <li>Down sell mensal (D+12) para quem não fechou o anual</li>
         <li>Oferta especial do Clube encerra D+17</li>
       </ul>
     </div>
@@ -801,6 +1052,7 @@ table.data tr:last-child td{border-bottom:none;}
         <li>Depoimentos coletados para o próximo ciclo</li>
         <li>Análise: vale tornar a imersão trimestral?</li>
         <li>Acompanhamento de retenção dos novos assinantes</li>
+        <li>Revisão de conversão dos order bumps</li>
       </ul>
     </div>
   </div>
@@ -815,6 +1067,7 @@ table.data tr:last-child td{border-bottom:none;}
       <li>Condição especial do Clube para participantes (desconto, bônus ou período extra)</li>
       <li>Capacidade máxima de inscritos</li>
       <li>Data de início das vendas — abertura do Lote 1</li>
+      <li>Ferramenta de checkout para ativar os order bumps</li>
     </ul>
   </div>
 </div>
@@ -851,9 +1104,32 @@ table.data tr:last-child td{border-bottom:none;}
         <tr><td>Fase 1 — Aquecimento</td><td>Alcance e construção de audiência</td><td style="color:var(--muted);">R$ 150</td><td style="color:var(--muted);">5%</td></tr>
         <tr><td>Fase 2 — Lote 1 (conversão)</td><td>Venda direta de ingresso a R$ 47</td><td style="font-weight:700;">R$ 750</td><td style="font-weight:700;color:var(--mint);">25%</td></tr>
         <tr><td>Fase 3 — Abertura (conversão)</td><td>Venda direta de ingresso a R$ 67</td><td style="font-weight:700;">R$ 1.500</td><td style="font-weight:700;color:var(--mint);">50%</td></tr>
-        <tr><td>Fase 4 — Urgência (retargeting)</td><td>Fechar quem visitou sem comprar</td><td style="font-weight:700;">R$ 600</td><td style="font-weight:700;color:var(--mint);">20%</td></tr>
+        <tr><td>Fase 4 — Urgência (retargeting)</td><td>Fechar quem visitou sem comprar + Single Shot</td><td style="font-weight:700;">R$ 600</td><td style="font-weight:700;color:var(--mint);">20%</td></tr>
       </tbody>
     </table>
+  </div>
+
+  <h3 style="margin-bottom:16px;">Pacing diário</h3>
+  <div class="card" style="margin-bottom:32px;">
+    <p style="font-size:13px;margin-bottom:16px;">Com meta de 250 inscritos em 10 dias de venda (D-5 a D+5), o ritmo esperado é de 25 ingressos por dia. Esse número orienta ajustes de budget durante a campanha.</p>
+    <div class="grid-3" style="margin:0;gap:12px;">
+      <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:14px;text-align:center;">
+        <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">Meta total</div>
+        <div style="font-size:24px;font-weight:900;color:var(--mint);">250</div>
+        <div style="font-size:12px;color:var(--muted);">inscritos</div>
+      </div>
+      <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:14px;text-align:center;">
+        <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">Janela de vendas</div>
+        <div style="font-size:24px;font-weight:900;color:var(--mint);">10</div>
+        <div style="font-size:12px;color:var(--muted);">dias</div>
+      </div>
+      <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:14px;text-align:center;">
+        <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">Pacing diário</div>
+        <div style="font-size:24px;font-weight:900;color:var(--mint);">25</div>
+        <div style="font-size:12px;color:var(--muted);">ingressos/dia</div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin:14px 0 0;">Se o pacing ficar abaixo de 20/dia nas primeiras 48h, revisar criativos e CPA antes de escalar. Se ultrapassar 35/dia, escalar budget com cautela para não inflacionar o CPM.</p>
   </div>
 
   <h3 style="margin-bottom:16px;">Projeções de resultado — Clube Clincog</h3>
@@ -897,7 +1173,35 @@ table.data tr:last-child td{border-bottom:none;}
       </table>
     </div>
   </div>
-  <p style="font-size:12px;color:var(--muted);margin-bottom:32px;">Clube a R$ 3.000 por assinante. Um único assinante já cobre o budget total de mídia do lançamento.</p>
+  <p style="font-size:12px;color:var(--muted);margin-bottom:32px;">Clube a R$ 2.748 por assinante. Um único assinante já cobre quase o budget total de mídia do lançamento.</p>
+
+  <h3 style="margin-bottom:16px;">Receita adicional — Order Bumps (base: 250 inscritos)</h3>
+  <div class="card" style="background:rgba(60,10,80,0.12);border-color:rgba(123,45,142,0.3);margin-bottom:32px;">
+    <table class="data">
+      <thead><tr><th>Order Bump</th><th>Preço</th><th>Conv. esperada</th><th>Vendas</th><th>Receita</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>OB1</strong> — Gravação completa</td>
+          <td>R$ 37</td>
+          <td style="color:var(--muted);">15%</td>
+          <td style="font-weight:700;">37 vendas</td>
+          <td style="font-weight:700;color:#D8A8FF;">R$ 1.369</td>
+        </tr>
+        <tr>
+          <td><strong>OB2</strong> — Checklist PCN</td>
+          <td>R$ 27</td>
+          <td style="color:var(--muted);">12%</td>
+          <td style="font-weight:700;">30 vendas</td>
+          <td style="font-weight:700;color:#D8A8FF;">R$ 810</td>
+        </tr>
+        <tr style="background:rgba(123,45,142,0.1);">
+          <td colspan="4" style="font-weight:800;">Total order bumps</td>
+          <td style="font-weight:800;font-size:15px;color:var(--mint);">R$ 2.179</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--muted);margin:12px 0 0;">Os R$ 2.179 de order bumps ajudam a cobrir o custo do tráfego da captação. No melhor cenário, os OBs pagam boa parte do budget de mídia antes do evento acontecer.</p>
+  </div>
 
   <hr class="divider">
   <h3 style="margin-bottom:16px;">Custo por compra</h3>
@@ -908,6 +1212,9 @@ table.data tr:last-child td{border-bottom:none;}
         <tr><td>Custo por compra — ingresso (Lotes 1–3)</td><td style="color:var(--muted);">R$ 47 / R$ 67 / R$ 87</td><td style="font-weight:700;">Abaixo do ticket do lote</td></tr>
         <tr><td>Custo por compra — Clube</td><td style="color:var(--muted);">A medir no primeiro ciclo</td><td style="font-weight:700;">&lt; R$ 500</td></tr>
         <tr><td>ROAS (sobre faturamento do Clube)</td><td style="color:var(--muted);">Budget total R$ 3.000</td><td style="color:var(--mint);font-weight:700;">25x — 60x</td></tr>
+        <tr><td>Conversão Order Bump 1 — Gravação</td><td style="color:var(--muted);">Referência: 9-20%</td><td style="font-weight:700;">Meta: acima de 10%</td></tr>
+        <tr><td>Conversão Order Bump 2 — Checklist</td><td style="color:var(--muted);">Referência: 10-15%</td><td style="font-weight:700;">Meta: acima de 10%</td></tr>
+        <tr><td>Comparecimento ao vivo</td><td style="color:var(--muted);">Referência: 50-60% do mercado</td><td style="color:var(--mint);font-weight:700;">Meta: 70%+ dos inscritos</td></tr>
       </tbody>
     </table>
   </div>
@@ -918,9 +1225,11 @@ table.data tr:last-child td{border-bottom:none;}
     <ul class="check-list">
       <li>Se custo por compra de ingresso ficar abaixo do Lote 1: aumentar budget de conversão imediatamente</li>
       <li>Se conversão imersão-Clube ultrapassar 20%: repetir o lançamento em 3 meses</li>
+      <li>Se conversão do OB1 (gravação) ultrapassar 18%: aumentar o preço do OB para R$ 47 no próximo ciclo</li>
       <li>Depoimentos da primeira turma entram como prova social no próximo ciclo</li>
       <li>Manter sempre a proporção 95/5 independente do budget total</li>
       <li>Avaliar a distribuição de vendas por lote e ajustar os preços para o próximo ciclo</li>
+      <li>Revisar taxa de down sell mensal: se passar de 10%, considerar comunicar o plano mensal com mais visibilidade</li>
     </ul>
   </div>
 </div>
