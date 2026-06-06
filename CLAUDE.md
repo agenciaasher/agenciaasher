@@ -50,3 +50,7 @@ Uso: chame `/escrita-humanizada` passando o texto. O resultado é o texto reescr
 ## Tom geral da agência
 
 Direto, confiante, sem enrolação. A Agência Asher entrega resultado, não relatório bonito. O texto reflete isso.
+
+## Git
+
+Trabalhar sempre no branch `main`. Nunca criar branches separados para entregáveis de clientes.
