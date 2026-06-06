@@ -51,6 +51,10 @@ Uso: chame `/escrita-humanizada` passando o texto. O resultado é o texto reescr
 
 Direto, confiante, sem enrolação. A Agência Asher entrega resultado, não relatório bonito. O texto reflete isso.
 
+## Apresentações para clientes — obrigatoriedade
+
+Todo HTML de apresentação, strategy deck, plano ou documento que vai ser mostrado ao cliente precisa ter o texto revisado pela skill `/escrita-humanizada` antes de ser finalizado. Sem exceção. Se o documento tem copy de anúncio, script de WhatsApp, headline de LP ou qualquer outro texto que o cliente vai usar, aplicar a skill antes de entregar.
+
 ## Git — REGRA OBRIGATÓRIA
 
 **Todo trabalho vai para o `main`. Sem exceção.**
