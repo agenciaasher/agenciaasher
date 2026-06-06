@@ -66,13 +66,22 @@ Todo HTML de apresentação, strategy deck, plano ou documento que vai ser mostr
 
 Se por algum motivo um commit foi parar em outro branch, mover para o `main` antes de encerrar a sessão.
 
-## Lançamento pago — divisão de verba obrigatória
+## Lançamento pago — memória estratégica
 
-Sempre que estruturar budget de mídia para lançamento pago (imersão, evento, produto com ingresso), usar esta divisão:
+Toda conversa sobre lançamento pago (imersão, evento com ingresso, pit de produto) deve partir da skill `.claude/skills/lancamento-pago.md`. Ela contém:
 
+- Estrutura completa do lançamento (lotes, order bumps, pit, down sell, carrinho)
+- Benchmarks de conversão por etapa
+- Estratégia de tráfego e criativos
+- Planejamento financeiro e pacing
+- Aplicação específica ao projeto Clincog (seção 14)
+
+### Regras fixas de lançamento pago
+
+**Divisão de verba obrigatória:**
 - **95% — venda de ingresso** (campanha direta de conversão)
 - **5% — aquecimento/lembrete** (topo de funil e retargeting de lembrança)
 
 Não inverter essa proporção. O foco é conversão, não construção de audiência.
 
-Em lançamento pago, a métrica principal de eficiência é **custo por compra**, não custo por lead. Usar sempre "custo por compra" em documentos, KPIs e relatórios de lançamento.
+**Métrica principal:** custo por compra (nunca custo por lead). Usar sempre "custo por compra" em documentos, KPIs e relatórios de lançamento.
