@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cronograma Social Media — Junho 2026 | Curso Passei</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --azul:        #0D2B5E;
+      --verde:       #00C896;
+      --branco:      #FFFFFF;
+      --cinza:       #333333;
+      --cinza-claro: #F5F7FA;
+      --borda:       #E0E0E0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cinza-claro);
+      color: var(--cinza);
+      padding: 40px 20px;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--azul);
+      color: var(--branco);
+      border-radius: 12px;
+      padding: 40px 48px;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    header .marca { display: flex; flex-direction: column; gap: 6px; }
+
+    header .agencia {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+    header h1 span { color: var(--verde); }
+
+    header .meta {
+      text-align: right;
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.9;
+    }
+
+    header .meta strong { color: var(--branco); }
+
+    /* DATAS CHAVE */
+    .datas-chave { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+
+    .data-badge {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 8px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .data-badge .dia {
+      background: var(--azul);
+      color: var(--branco);
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 6px;
+      padding: 4px 8px;
+      white-space: nowrap;
+    }
+
+    .data-badge .dia.verde { background: var(--verde); color: var(--azul); }
+
+    .data-badge .nome { font-size: 13px; font-weight: 500; color: var(--cinza); }
+
+    /* RESUMO */
+    .resumo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .resumo-card {
+      background: var(--branco);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid var(--borda);
+    }
+
+    .resumo-card .numero { font-size: 32px; font-weight: 700; color: var(--azul); line-height: 1; }
+    .resumo-card .label { font-size: 12px; color: #888; margin-top: 6px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .resumo-card.destaque { background: var(--azul); border-color: var(--azul); }
+    .resumo-card.destaque .numero { color: var(--verde); }
+    .resumo-card.destaque .label { color: rgba(255,255,255,0.6); }
+
+    /* SEMANA */
+    .semana { margin-bottom: 40px; }
+
+    .semana-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+
+    .semana-numero {
+      background: var(--azul);
+      color: var(--branco);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    .semana-titulo { font-size: 16px; font-weight: 600; }
+    .semana-datas { font-size: 13px; color: #888; margin-left: auto; }
+
+    /* TABELA */
+    .tabela-wrap {
+      background: var(--branco);
+      border-radius: 12px;
+      border: 1px solid var(--borda);
+      overflow: hidden;
+    }
+
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+
+    thead tr { background: var(--azul); color: var(--branco); }
+
+    thead th {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    tbody tr { border-bottom: 1px solid var(--cinza-claro); transition: background 0.15s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #FAFAFE; }
+
+    tbody td { padding: 14px 16px; vertical-align: top; line-height: 1.5; }
+
+    .col-data { white-space: nowrap; font-weight: 600; color: var(--cinza); }
+    .col-dia { white-space: nowrap; font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* BADGES FORMATO */
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .badge-estatico  { background: #E8E8E8; color: #444; }
+    .badge-carrossel { background: #FFF3CD; color: #7A5C00; }
+    .badge-reels     { background: #D6F5EC; color: #006644; }
+    .badge-stories   { background: #E8EEFF; color: #2B4FA8; }
+
+    /* BADGES PILAR */
+    .pilar {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .pilar-autoridade { background: #E3EAF8; color: #0D2B5E; }
+    .pilar-aprovacao  { background: #D6F5EC; color: #006644; }
+    .pilar-metodo     { background: #FFF3CD; color: #7A5C00; }
+    .pilar-motivacao  { background: #F3E8FF; color: #6B2D8B; }
+    .pilar-conversao  { background: #FFE8E8; color: #8B0000; }
+
+    .tema { font-weight: 600; color: var(--cinza); margin-bottom: 4px; }
+    .copy { font-size: 12px; color: #666; line-height: 1.6; }
+
+    /* STORIES BOX */
+    .stories-box {
+      background: #EEF3FC;
+      border: 1px solid #C3D3F5;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 12px;
+    }
+
+    .stories-box h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--azul);
+      margin-bottom: 10px;
+    }
+
+    .stories-list { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .stories-item {
+      background: var(--branco);
+      border: 1px solid #C3D3F5;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: var(--cinza);
+      max-width: 260px;
+    }
+
+    .stories-item strong {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--azul);
+      margin-bottom: 2px;
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 16px;
+      margin-top: 40px;
+    }
+
+    /* SPEC SECTION */
+    .spec-section {
+      background: var(--branco);
+      border-radius: 12px;
+      border: 1px solid var(--borda);
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+
+    .spec-section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 8px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--verde);
+    }
+
+    .spec-desc { font-size: 13px; color: #666; margin-bottom: 24px; margin-top: 8px; }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .spec-card {
+      border: 1px solid var(--borda);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .spec-card h3 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--azul);
+      margin-bottom: 12px;
+    }
+
+    .spec-card ul { list-style: none; }
+
+    .spec-card ul li {
+      font-size: 13px;
+      color: var(--cinza);
+      padding: 5px 0;
+      border-bottom: 1px solid var(--cinza-claro);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .spec-card ul li:last-child { border-bottom: none; }
+
+    .spec-card ul li::before { content: '→'; color: var(--verde); font-weight: 700; flex-shrink: 0; }
+
+    /* PALETA */
+    .palette { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+
+    .color-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--cinza-claro);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+
+    .color-dot { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); flex-shrink: 0; }
+
+    .color-info { display: flex; flex-direction: column; }
+    .color-name { font-weight: 600; font-size: 12px; }
+    .color-hex  { color: #888; font-size: 11px; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--borda);
+      line-height: 1.8;
+    }
+
+    footer strong { color: var(--azul); }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="marca">
+      <span class="agencia">Agência Asher · Entregável de Social Media</span>
+      <h1>Cronograma <span>Junho 2026</span></h1>
+      <p style="font-size:15px;color:rgba(255,255,255,0.65);margin-top:4px;">Curso Preparatório Passei — Prof. Ramon Matos</p>
+    </div>
+    <div class="meta">
+      <div><strong>Período:</strong> 01–30 de Junho</div>
+      <div><strong>Foco:</strong> Balanço do semestre + 2º semestre</div>
+      <div><strong>Instagram:</strong> @preparatoriopasseiconcursos</div>
+      <div><strong>Gerado em:</strong> 06/06/2026</div>
+    </div>
+  </header>
+
+  <!-- DATAS CHAVE -->
+  <p class="section-title">Datas-chave do mês</p>
+  <div class="datas-chave">
+    <div class="data-badge">
+      <span class="dia verde">12/06</span>
+      <span class="nome">Dia dos Namorados</span>
+    </div>
+    <div class="data-badge">
+      <span class="dia">Semana 3</span>
+      <span class="nome">Balanço do semestre — reativação de leads</span>
+    </div>
+    <div class="data-badge">
+      <span class="dia">Jun/Jul</span>
+      <span class="nome">Editais de 2º semestre — monitorar</span>
+    </div>
+    <div class="data-badge">
+      <span class="dia">Qualquer dia</span>
+      <span class="nome">Edital publicado = campanha em 24h</span>
+    </div>
+  </div>
+
+  <!-- RESUMO -->
+  <p class="section-title">Resumo do mês</p>
+  <div class="resumo-grid">
+    <div class="resumo-card destaque">
+      <div class="numero">22</div>
+      <div class="label">Posts no Feed</div>
+    </div>
+    <div class="resumo-card">
+      <div class="numero">12</div>
+      <div class="label">Reels</div>
+    </div>
+    <div class="resumo-card">
+      <div class="numero">6</div>
+      <div class="label">Carrosséis</div>
+    </div>
+    <div class="resumo-card">
+      <div class="numero">4</div>
+      <div class="label">Estáticos</div>
+    </div>
+    <div class="resumo-card">
+      <div class="numero">30+</div>
+      <div class="label">Stories/Mês</div>
+    </div>
+  </div>
+
+  <!-- SEMANAS -->
+  <p class="section-title">Cronograma semanal</p>
+
+  <!-- SEMANA 1 -->
+  <div class="semana">
+    <div class="semana-header">
+      <span class="semana-numero">Semana 1</span>
+      <span class="semana-titulo">Arrancada de Junho</span>
+      <span class="semana-datas">03–08 de Junho</span>
+    </div>
+    <div class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Dia</th>
+            <th>Formato</th>
+            <th>Pilar</th>
+            <th>Tema + Copy de Apoio</th>
+            <th>Direção para Wenderson</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-data">Ter 03</td>
+            <td class="col-dia">Terça</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-autoridade">Autoridade</span></td>
+            <td>
+              <div class="tema">3 erros de Português que derrubam todo mundo na Consulplan</div>
+              <div class="copy">Ramon resolve 3 questões clássicas da banca. Cada erro tem nome e regra. CTA no final para o curso da Consulplan.</div>
+            </td>
+            <td><span class="copy">Vertical 9:16. Foto do Ramon + "3 ERROS" em destaque. Fundo azul marinho. Verde menta nos números. Logo no canto superior.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Qua 04</td>
+            <td class="col-dia">Quarta</td>
+            <td><span class="badge badge-carrossel">Carrossel</span></td>
+            <td><span class="pilar pilar-metodo">Método</span></td>
+            <td>
+              <div class="tema">Como estudar 1 hora por dia e chegar pronto na prova</div>
+              <div class="copy">Slide 1: problema (falta de tempo). Slides 2–6: técnica de blocos que Ramon usa. Slide final: CTA para a Apostila 250 Questões (R$19,99).</div>
+            </td>
+            <td><span class="copy">8 slides. Fundo azul marinho. Texto branco. Verde menta nos números e ícones. Clean e direto.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Qui 05</td>
+            <td class="col-dia">Quinta</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-aprovacao">Aprovação</span></td>
+            <td>
+              <div class="tema">Depoimento de aprovada — concurso de Saquarema</div>
+              <div class="copy">"Estudei 1h por dia com o Ramon e passei. Hoje sou professora efetiva." Nome + cidade + banca. CTA: "Você pode ser a próxima."</div>
+            </td>
+            <td><span class="copy">Fundo cinza claro. Foto da aluna (se disponível). Citação em destaque azul marinho. Badge verde com a banca. Layout minimalista.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Sex 06</td>
+            <td class="col-dia">Sexta</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-autoridade">Autoridade</span></td>
+            <td>
+              <div class="tema">Questão de Português da prova de Saquarema (COSEAC)</div>
+              <div class="copy">Ramon resolve em tempo real. Explica por que a resposta errada parece certa. Final: "Se Saquarema está no seu plano, clique no link."</div>
+            </td>
+            <td><span class="copy">Thumbnail: foto do Ramon + "QUESTÃO COSEAC" em letras grandes. Fundo azul marinho com verde menta. Texto branco.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Sáb 07</td>
+            <td class="col-dia">Sábado</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-motivacao">Motivação</span></td>
+            <td>
+              <div class="tema">Você é professora. Só falta o cargo.</div>
+              <div class="copy">Ramon direto ao câmera: "Você já tem o dom, a vocação, o esforço. Só falta a prova te reconhecer. Isso é o que a gente resolve." 30 segundos, impacto máximo.</div>
+            </td>
+            <td><span class="copy">Formato simples, fundo limpo ou sala de aula. Sem muito texto. Legenda automática ativa. Final com logo e @.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stories-box">
+      <h4>Stories da Semana 1</h4>
+      <div class="stories-list">
+        <div class="stories-item"><strong>Seg 02</strong>Enquete: "Qual concurso você está mirando em 2026?"</div>
+        <div class="stories-item"><strong>Ter 03</strong>Repost do Reels + link direto para o curso da Consulplan</div>
+        <div class="stories-item"><strong>Qua 04</strong>Pergunta aberta: "Quantas horas você estuda por dia?"</div>
+        <div class="stories-item"><strong>Qui 05</strong>Depoimento de aprovada em vídeo curto (15s)</div>
+        <div class="stories-item"><strong>Sex 06</strong>CTA: "Questão nova no feed — vai resolver antes de ver a resposta"</div>
+        <div class="stories-item"><strong>Sáb 07</strong>Quiz: 1 questão de Português com votação A/B/C/D</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 2 -->
+  <div class="semana">
+    <div class="semana-header">
+      <span class="semana-numero">Semana 2</span>
+      <span class="semana-titulo">Namorados — Parceiro de Estudos</span>
+      <span class="semana-datas">09–15 de Junho</span>
+    </div>
+    <div class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Dia</th>
+            <th>Formato</th>
+            <th>Pilar</th>
+            <th>Tema + Copy de Apoio</th>
+            <th>Direção para Wenderson</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-data">Seg 09</td>
+            <td class="col-dia">Segunda</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-autoridade">Autoridade</span></td>
+            <td>
+              <div class="tema">A banca que mais reprova em Português nos concursos do RJ</div>
+              <div class="copy">Ramon revela qual banca tem a redação mais difícil e por quê. Dados reais. CTA para o Clube da Redação 2.0.</div>
+            </td>
+            <td><span class="copy">Thumbnail: "BANCA MAIS DIFÍCIL DO RJ" em letras grandes. Ramon com expressão séria. Fundo azul marinho.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Ter 10</td>
+            <td class="col-dia">Terça</td>
+            <td><span class="badge badge-carrossel">Carrossel</span></td>
+            <td><span class="pilar pilar-metodo">Método</span></td>
+            <td>
+              <div class="tema">5 bancas que abrem concurso de magistério no 2º semestre</div>
+              <div class="copy">1 banca por slide: datas prováveis e o que cai de Português. Slide final: "Para qual dessas você está se preparando?" + link para os cursos.</div>
+            </td>
+            <td><span class="copy">Cada slide com destaque diferente dentro da paleta. Ícone da banca + texto objetivo. Slide final azul marinho com CTA verde.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Qua 11</td>
+            <td class="col-dia">Quarta</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-aprovacao">Aprovação</span></td>
+            <td>
+              <div class="tema">Aprovação na SME-RJ — professora de Nova Iguaçu</div>
+              <div class="copy">Depoimento curto com foto da aprovada, nome, concurso e banca. "Passei com o método do Ramon em 4 meses."</div>
+            </td>
+            <td><span class="copy">Layout limpo. Foto da aluna à esquerda. Texto à direita. Verde menta no destaque. Badge com banca e data.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Qui 12</td>
+            <td class="col-dia" style="color:#006644;font-weight:600;">Namorados</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-motivacao">Motivação</span></td>
+            <td>
+              <div class="tema">O melhor parceiro de estudos que você vai ter</div>
+              <div class="copy">Ramon entra em cena: "Hoje é dia dos namorados. E eu vim te pedir em namoro... de estudos." Tom leve. Final: "Me chama no link da bio."</div>
+            </td>
+            <td><span class="copy">Vídeo informal, bem-humorado. O carisma do Ramon é o design. Textos de apoio mínimos. Seta ou coração em verde menta.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Sex 13</td>
+            <td class="col-dia">Sexta</td>
+            <td><span class="badge badge-carrossel">Carrossel</span></td>
+            <td><span class="pilar pilar-conversao">Conversão</span></td>
+            <td>
+              <div class="tema">Concurso de Saquarema: você está pronto?</div>
+              <div class="copy">Checklist real: matérias que caem, o que já estudou, o que falta. Slide final: "Se marcou 'não' em qualquer item, o curso certo está no link."</div>
+            </td>
+            <td><span class="copy">Checklist visual com ✓ e ✗. Verde nos itens OK, vermelho nos itens faltantes. Slide final azul marinho com CTA verde. Urgência visual.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Sáb 14</td>
+            <td class="col-dia">Sábado</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-autoridade">Autoridade</span></td>
+            <td>
+              <div class="tema">Questão de Português da prova de Araruama comentada</div>
+              <div class="copy">Resolução ao vivo. "Araruama usa muito essa pegadinha. Sabe por quê?" CTA para o curso específico.</div>
+            </td>
+            <td><span class="copy">Thumbnail: "PROVA DE ARARUAMA" + nome da banca. Ramon apontando para a questão. Fundo contrastante.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stories-box">
+      <h4>Stories da Semana 2</h4>
+      <div class="stories-list">
+        <div class="stories-item"><strong>Seg 09</strong>Contagem: "3 dias para o Namorados. E para o seu próximo edital?"</div>
+        <div class="stories-item"><strong>Ter 10</strong>Votação: "Qual banca você mais teme?" (IAN / Consulplan / COSEAC / FGV)</div>
+        <div class="stories-item"><strong>Qua 11</strong>Repost do depoimento + CTA: "Quer ser a próxima? Link na bio."</div>
+        <div class="stories-item"><strong>Qui 12</strong>Namorados: questão temática nos stories com votação</div>
+        <div class="stories-item"><strong>Sex 13</strong>CTA: "Saquarema está chegando. Você já está inscrita no curso?"</div>
+        <div class="stories-item"><strong>Sáb 14</strong>Quiz Araruama: questão ao vivo + resposta amanhã</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 3 -->
+  <div class="semana">
+    <div class="semana-header">
+      <span class="semana-numero">Semana 3</span>
+      <span class="semana-titulo">Balanço do Semestre</span>
+      <span class="semana-datas">16–22 de Junho</span>
+    </div>
+    <div class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Dia</th>
+            <th>Formato</th>
+            <th>Pilar</th>
+            <th>Tema + Copy de Apoio</th>
+            <th>Direção para Wenderson</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-data">Seg 16</td>
+            <td class="col-dia">Segunda</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-motivacao">Motivação</span></td>
+            <td>
+              <div class="tema">Você está na metade do ano. Quantos editais você deixou passar?</div>
+              <div class="copy">Ramon faz a conta ao vivo: "De janeiro até agora, quantos concursos de magistério saíram no RJ? Você estava pronto para algum?" Reativação direta, sem julgamento.</div>
+            </td>
+            <td><span class="copy">Texto em tela + voz do Ramon. Números em destaque verde menta. Urgência sem pressão falsa. Termina com CTA suave.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Ter 17</td>
+            <td class="col-dia">Terça</td>
+            <td><span class="badge badge-carrossel">Carrossel</span></td>
+            <td><span class="pilar pilar-conversao">Conversão</span></td>
+            <td>
+              <div class="tema">Tudo sobre o concurso de Araruama — guia completo</div>
+              <div class="copy">Slides: banca, matérias, o que mais cai, datas prováveis, como estudar. Slide final: "Quer o curso completo de Araruama? Link na bio."</div>
+            </td>
+            <td><span class="copy">Design informativo. 1 dado-chave por slide. Ícones simples. Slide final com mockup do curso + botão CTA verde.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Qua 18</td>
+            <td class="col-dia">Quarta</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-aprovacao">Aprovação</span></td>
+            <td>
+              <div class="tema">Aprovação em Queimados e Nova Iguaçu — duas amigas que estudaram juntas</div>
+              <div class="copy">Foto das duas com cartaz "Passei!". "Estudamos juntas com o método do Ramon. As duas passaram." Emoção real + CTA.</div>
+            </td>
+            <td><span class="copy">Foto principal em destaque. Badge duplo com as duas cidades. Tom humano, menos design, mais emoção. Mantém identidade visual.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Qui 19</td>
+            <td class="col-dia">Quinta</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-autoridade">Autoridade</span></td>
+            <td>
+              <div class="tema">Questão da banca IAN — a mais traiçoeira do RJ</div>
+              <div class="copy">Ramon resolve. "A IAN tem um truque específico que eu vou te mostrar agora." Explica o mecanismo. CTA: "Quer treinar mais? Link na bio."</div>
+            </td>
+            <td><span class="copy">Thumbnail: "IAN" em destaque com cor de alerta. Ramon com expressão séria. Fundo azul forte ou contraste alto.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Sex 20</td>
+            <td class="col-dia">Sexta</td>
+            <td><span class="badge badge-carrossel">Carrossel</span></td>
+            <td><span class="pilar pilar-metodo">Método</span></td>
+            <td>
+              <div class="tema">Método para mães que estudam 1 hora por dia</div>
+              <div class="copy">7 slides com rotina real: como dividir 1h para máximo aproveitamento. "Você não precisa de mais tempo. Precisa de método." Baseado na pesquisa de público.</div>
+            </td>
+            <td><span class="copy">Foto de mulher estudando na capa. Infográfico simples nos slides internos. Slide final: citação de aprovada que era mãe + CTA.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Sáb 21</td>
+            <td class="col-dia">Sábado</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-aprovacao">Aprovação</span></td>
+            <td>
+              <div class="tema">O que muda na vida de uma professora aprovada</div>
+              <div class="copy">Entrevista rápida (20–30s) com aluna aprovada. "Antes: salário variável, sem benefícios. Depois: cargo efetivo, plano de saúde, estabilidade." Impacto real.</div>
+            </td>
+            <td><span class="copy">Formato entrevista informal. Legenda automática. Sem muito design — a história fala por si. Final com logo e CTA overlay.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stories-box">
+      <h4>Stories da Semana 3</h4>
+      <div class="stories-list">
+        <div class="stories-item"><strong>Seg 16</strong>Contagem: "Faltam 6 meses para o fim do ano. Quantos editais você ainda vai pegar?"</div>
+        <div class="stories-item"><strong>Ter 17</strong>CTA: "Guia de Araruama no feed — vai lá antes que saia o edital"</div>
+        <div class="stories-item"><strong>Qua 18</strong>Repost da aprovação + "Tem uma amiga que precisa ver isso?"</div>
+        <div class="stories-item"><strong>Qui 19</strong>Quiz: questão da IAN nos stories. Resposta no Reels do feed.</div>
+        <div class="stories-item"><strong>Sex 20</strong>Caixinha de perguntas: "Me manda sua maior dúvida de Português"</div>
+        <div class="stories-item"><strong>Sáb 21</strong>Repost do depoimento de aprovada + chamada para DM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEMANA 4 -->
+  <div class="semana">
+    <div class="semana-header">
+      <span class="semana-numero">Semana 4</span>
+      <span class="semana-titulo">Arrancada do 2º Semestre</span>
+      <span class="semana-datas">23–30 de Junho</span>
+    </div>
+    <div class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Dia</th>
+            <th>Formato</th>
+            <th>Pilar</th>
+            <th>Tema + Copy de Apoio</th>
+            <th>Direção para Wenderson</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-data">Seg 23</td>
+            <td class="col-dia">Segunda</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-autoridade">Autoridade</span></td>
+            <td>
+              <div class="tema">O que cai em Português em todo concurso de magistério — a lista definitiva</div>
+              <div class="copy">Ramon revela os 7 tópicos que aparecem em 90% das provas. "Domina esses 7 assuntos e você passa na maioria dos concursos de professor." Autoridade máxima.</div>
+            </td>
+            <td><span class="copy">Thumbnail: "7 TÓPICOS" em destaque. Lista visual no vídeo. Fundo azul marinho. Verde menta nos números.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Ter 24</td>
+            <td class="col-dia">Terça</td>
+            <td><span class="badge badge-carrossel">Carrossel</span></td>
+            <td><span class="pilar pilar-metodo">Método</span></td>
+            <td>
+              <div class="tema">Guia de bancas do RJ para o 2º semestre de 2026</div>
+              <div class="copy">Mapa das bancas que historicamente abrem concurso no 2º semestre: IAN, Consulplan, COSEAC, IBAM. Cada slide: banca + dica de Português específica dela.</div>
+            </td>
+            <td><span class="copy">Cada banca com destaque visual diferente. Ícones simples. Slide final com mapa esquemático do RJ com cidades marcadas.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Qua 25</td>
+            <td class="col-dia">Quarta</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-aprovacao">Aprovação</span></td>
+            <td>
+              <div class="tema">Aprovação recente de junho</div>
+              <div class="copy">Depoimento da aprovada mais recente. Nome + concurso + banca. Frase curta e real. CTA: "Resultado novo toda semana. Você pode ser a próxima."</div>
+            </td>
+            <td><span class="copy">Layout padrão de aprovação. Destaque no concurso e na banca. Verde menta no resultado. Badge "Aprovação Recente".</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Qui 26</td>
+            <td class="col-dia">Quinta</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-conversao">Conversão</span></td>
+            <td>
+              <div class="tema">Por que o Clube da Redação 2.0 é diferente de todo curso de redação que você fez</div>
+              <div class="copy">Ramon explica: redação oficial vs. dissertativa. "A prova não quer criatividade. Quer técnica específica." CTA direto para o Clube da Redação.</div>
+            </td>
+            <td><span class="copy">Formato direto ao câmera. B-roll de Ramon escrevendo/corrigindo. CTA com seta animada para o link. Urgência no final.</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Sex 27</td>
+            <td class="col-dia">Sexta</td>
+            <td><span class="badge badge-carrossel">Carrossel</span></td>
+            <td><span class="pilar pilar-autoridade">Autoridade</span></td>
+            <td>
+              <div class="tema">Por que o Passei aprova mais: os números que falam por si</div>
+              <div class="copy">3.000+ aprovações. Desde 2018. Bancas dominadas. Preço acessível. "Não é o maior curso do Brasil. É o mais eficiente para o concurso que você quer passar."</div>
+            </td>
+            <td><span class="copy">Design institucional. Números grandes em verde menta sobre azul marinho. Slide final: diferenciais rápidos do Passei vs. "grandes plataformas" (sem citar nomes).</span></td>
+          </tr>
+          <tr>
+            <td class="col-data">Seg 30</td>
+            <td class="col-dia">Segunda</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-motivacao">Motivação</span></td>
+            <td>
+              <div class="tema">Julho começa amanhã. E o seu próximo concurso está chegando.</div>
+              <div class="copy">Fechamento do mês. Ramon direto: "Julho é o mês das férias. Para o concurseiro, é o mês de ouro para estudar. Vem comigo." CTA para DM ou WhatsApp.</div>
+            </td>
+            <td><span class="copy">Estilo motivacional. Pode usar música de fundo. Final com chamada para DM e para o link da bio.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stories-box">
+      <h4>Stories da Semana 4</h4>
+      <div class="stories-list">
+        <div class="stories-item"><strong>Seg 23</strong>"Os 7 tópicos estão no feed — qual você mais precisa treinar?"</div>
+        <div class="stories-item"><strong>Ter 24</strong>Votação: "Para qual banca você está estudando agora?"</div>
+        <div class="stories-item"><strong>Qua 25</strong>Repost da aprovação + "Manda para quem precisa ver"</div>
+        <div class="stories-item"><strong>Qui 26</strong>CTA: "Redação cai no seu concurso? Vai ver o que mudou no Clube 2.0"</div>
+        <div class="stories-item"><strong>Sex 27</strong>CTA final de semana: "Link na bio. Escolhe o concurso, escolhe o curso."</div>
+        <div class="stories-item"><strong>Seg 30</strong>Retrospectiva: posts mais engajados + "Obrigado pelos 27K que confiam"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPECS PARA WENDERSON -->
+  <p class="section-title">Especificações de Design — Wenderson</p>
+
+  <div class="spec-section">
+    <h2>Identidade Visual: Curso Passei</h2>
+    <p class="spec-desc">Referência visual: thumbnails dos cursos no Hotmart e Instagram @preparatoriopasseiconcursos. Estilo direto, colorido, com Ramon sempre em destaque.</p>
+
+    <div class="spec-grid">
+
+      <div class="spec-card">
+        <h3>Paleta de Cores</h3>
+        <div class="palette">
+          <div class="color-chip">
+            <div class="color-dot" style="background:#0D2B5E;"></div>
+            <div class="color-info"><span class="color-name">Azul Marinho</span><span class="color-hex">#0D2B5E · Cor principal</span></div>
+          </div>
+          <div class="color-chip">
+            <div class="color-dot" style="background:#00C896;"></div>
+            <div class="color-info"><span class="color-name">Verde Menta</span><span class="color-hex">#00C896 · CTA e destaque</span></div>
+          </div>
+          <div class="color-chip">
+            <div class="color-dot" style="background:#FFFFFF;border:1px solid #ddd;"></div>
+            <div class="color-info"><span class="color-name">Branco</span><span class="color-hex">#FFFFFF · Fundo e texto</span></div>
+          </div>
+          <div class="color-chip">
+            <div class="color-dot" style="background:#F5F7FA;border:1px solid #ddd;"></div>
+            <div class="color-info"><span class="color-name">Cinza Claro</span><span class="color-hex">#F5F7FA · Fundo secundário</span></div>
+          </div>
+          <div class="color-chip">
+            <div class="color-dot" style="background:#333333;"></div>
+            <div class="color-info"><span class="color-name">Cinza Texto</span><span class="color-hex">#333333 · Corpo de texto</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spec-card">
+        <h3>Formatos e Tamanhos</h3>
+        <ul>
+          <li>Feed quadrado: 1080 × 1080 px</li>
+          <li>Feed retrato: 1080 × 1350 px</li>
+          <li>Reels (thumb): 1080 × 1920 px</li>
+          <li>Stories: 1080 × 1920 px</li>
+          <li>Carrossel: 1080 × 1080 px por slide</li>
+          <li>Foto de perfil: 320 × 320 px</li>
+        </ul>
+      </div>
+
+      <div class="spec-card">
+        <h3>Tipografia</h3>
+        <ul>
+          <li>Família: sem serifa (Montserrat ou Inter)</li>
+          <li>Headline: bold/extrabold, tamanho grande</li>
+          <li>Corpo: regular 400, leitura confortável</li>
+          <li>CTA: bold, caixa alta, cor verde menta</li>
+          <li>Evitar: fontes cursivas ou serifadas</li>
+        </ul>
+      </div>
+
+      <div class="spec-card">
+        <h3>Regras Obrigatórias</h3>
+        <ul>
+          <li>Ramon aparece em toda peça de divulgação</li>
+          <li>Logo no canto superior ou inferior em toda peça</li>
+          <li>Todos os CTAs em verde menta #00C896</li>
+          <li>Azul marinho como cor dominante de fundo</li>
+          <li>Nunca usar vermelho (associado ao Degrau Cultural)</li>
+          <li>Nunca prometer "aprovação garantida"</li>
+        </ul>
+      </div>
+
+      <div class="spec-card">
+        <h3>Thumbnail de Reels — Padrão</h3>
+        <ul>
+          <li>Foto do Ramon em destaque (da cintura pra cima)</li>
+          <li>Fundo: azul marinho ou cor sólida contrastante</li>
+          <li>Texto: máximo 6 palavras, fonte grande</li>
+          <li>Badge da banca/concurso no canto quando aplicável</li>
+          <li>Logo Passei no canto inferior direito</li>
+          <li>Elemento visual que convida ao clique</li>
+        </ul>
+      </div>
+
+      <div class="spec-card">
+        <h3>Carrossel — Padrão</h3>
+        <ul>
+          <li>Slide 1: capa com título forte + imagem</li>
+          <li>Slides 2–N: 1 ideia por slide, texto curto</li>
+          <li>Slide final: CTA direto com link ou ação</li>
+          <li>Máximo 10 slides por carrossel</li>
+          <li>Consistência visual entre todos os slides</li>
+          <li>Indicador de "deslize para ver mais" no slide 1</li>
+        </ul>
+      </div>
+
+      <div class="spec-card">
+        <h3>Estático (Feed) — Padrão</h3>
+        <ul>
+          <li>Depoimento: foto da aluna + citação + nome + concurso</li>
+          <li>Institucional: números grandes (3.000+ aprovações)</li>
+          <li>Motivação: frase curta + Ramon ao fundo</li>
+          <li>CTA sempre presente e visível</li>
+          <li>Margem de segurança: 80px em todo o contorno</li>
+        </ul>
+      </div>
+
+      <div class="spec-card">
+        <h3>Stories — Padrão</h3>
+        <ul>
+          <li>Sempre interativos: enquete, quiz, caixinha, contagem</li>
+          <li>Fundo: azul marinho ou branco com elementos coloridos</li>
+          <li>Máximo 3 stories por dia</li>
+          <li>Link na bio sempre reforçado nos stories de conversão</li>
+          <li>Hashtags: #cursopassei #magistério #concursopúblico</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BRIEFING PARA RAMON -->
+  <div class="spec-section">
+    <h2>Briefing de Gravação — Ramon</h2>
+    <p class="spec-desc">Orientações para os Reels de junho. Todos os vídeos: vertical (9:16). Legenda automática ativa no app de edição.</p>
+
+    <div class="spec-grid">
+
+      <div class="spec-card">
+        <h3>Reels de Questão Comentada</h3>
+        <ul>
+          <li>Duração ideal: 30–60 segundos</li>
+          <li>Mostrar a questão na tela (câmera aponta para a folha ou tela)</li>
+          <li>Falar rápido e direto, sem enrolação</li>
+          <li>Nomear a banca e o concurso no início do vídeo</li>
+          <li>Terminar com CTA verbal: "Se quer treinar mais, link na bio"</li>
+        </ul>
+      </div>
+
+      <div class="spec-card">
+        <h3>Reels de Autoridade / Método</h3>
+        <ul>
+          <li>Duração ideal: 45–90 segundos</li>
+          <li>Começar com afirmação forte — gancho nos primeiros 3s</li>
+          <li>Trazer dados reais: bancas, percentuais, provas específicas</li>
+          <li>Tom: "professor que sabe mais e explica fácil"</li>
+          <li>CTA para o produto mais relacionado ao tema do vídeo</li>
+        </ul>
+      </div>
+
+      <div class="spec-card">
+        <h3>Reels Motivacionais</h3>
+        <ul>
+          <li>Duração ideal: 20–45 segundos</li>
+          <li>Pode ser no carro, em casa — mais informal</li>
+          <li>Falar para "a professora que ainda não passou"</li>
+          <li>Evitar clichês. Ramon deve soar genuíno, não ensaiado.</li>
+          <li>CTA mais suave: "Me chama no DM se quiser conversar"</li>
+        </ul>
+      </div>
+
+      <div class="spec-card">
+        <h3>Configurações de Gravação</h3>
+        <ul>
+          <li>Câmera: traseira do celular (qualidade superior à frontal)</li>
+          <li>Iluminação: natural ou ring light frontal</li>
+          <li>Fundo: parede limpa, livros ou sala de aula</li>
+          <li>Roupa: camisa ou polo — profissional e acessível</li>
+          <li>Áudio: microfone lapela nos Reels mais longos</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    Cronograma gerado por <strong>Agência Asher</strong> para <strong>Curso Preparatório Passei</strong> · Junho 2026<br>
+    Responsável: Annick (Social Media) · Design: Wenderson · Estratégia: Maicon
+  </footer>
+
+</body>
+</html>
