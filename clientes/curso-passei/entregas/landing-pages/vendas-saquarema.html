@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reta Final Saquarema — Prof. Ramon Matos</title>
+  <meta name="description" content="Preparação específica para o concurso de magistério de Saquarema. Português por quem conhece a banca. Prof. Ramon Matos.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --azul: #0D2B5E;
+      --verde: #00C896;
+      --branco: #FFFFFF;
+      --cinza-claro: #F5F7FA;
+      --cinza: #333333;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--cinza);
+      background: var(--branco);
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--azul);
+      padding: 72px 20px 80px;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--verde);
+      color: var(--azul);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 900;
+      color: var(--branco);
+      line-height: 1.15;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    .hero h1 span { color: var(--verde); }
+    .hero p {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: rgba(255,255,255,0.72);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.65;
+    }
+    .hero-bullets {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+    .hero-bullet {
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-bullet::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--verde);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .btn-hero {
+      display: inline-block;
+      background: var(--verde);
+      color: var(--azul);
+      font-size: 19px;
+      font-weight: 800;
+      padding: 18px 48px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: opacity 0.15s, transform 0.15s;
+      box-shadow: 0 4px 24px rgba(0,200,150,0.35);
+    }
+    .btn-hero:hover { opacity: 0.9; transform: scale(1.015); }
+    .hero-sub {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 14px;
+    }
+
+    /* WHATSAPP FLUTUANTE */
+    .whats-float {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      background: #25D366;
+      color: var(--branco);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      z-index: 999;
+      transition: transform 0.15s;
+    }
+    .whats-float:hover { transform: scale(1.04); }
+
+    /* SEÇÕES GENÉRICAS */
+    section { padding: 64px 20px; }
+    .container { max-width: 880px; margin: 0 auto; }
+    .secao-titulo {
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 800;
+      color: var(--azul);
+      text-align: center;
+      margin-bottom: 40px;
+      line-height: 1.25;
+    }
+    .secao-sub {
+      font-size: 17px;
+      color: #555;
+      text-align: center;
+      max-width: 600px;
+      margin: -28px auto 40px;
+      line-height: 1.65;
+    }
+
+    /* DOR */
+    .dor { background: var(--cinza-claro); }
+    .dor p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--cinza);
+      max-width: 720px;
+      margin: 0 auto 20px;
+    }
+    .dor p:last-child { margin-bottom: 0; }
+    .dor strong { color: var(--azul); }
+
+    /* PROVA SOCIAL 1 */
+    .depoimentos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .dep {
+      background: var(--cinza-claro);
+      border-radius: 12px;
+      padding: 24px 22px;
+    }
+    .dep p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--cinza);
+      margin-bottom: 14px;
+    }
+    .dep-nome { font-size: 13px; font-weight: 700; color: var(--azul); }
+    .dep-cargo { font-size: 12px; color: #777; }
+
+    /* CTA INTERMEDIÁRIO */
+    .cta-mid {
+      background: var(--verde);
+      padding: 48px 20px;
+      text-align: center;
+    }
+    .cta-mid p {
+      font-size: clamp(18px, 3.5vw, 26px);
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 24px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-cta-mid {
+      display: inline-block;
+      background: var(--azul);
+      color: var(--branco);
+      font-size: 17px;
+      font-weight: 700;
+      padding: 16px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn-cta-mid:hover { opacity: 0.88; }
+
+    /* MÉTODO */
+    .metodo { background: var(--branco); }
+    .metodo-intro {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--cinza);
+      max-width: 720px;
+      margin: 0 auto 36px;
+    }
+    .fases {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .fase {
+      border: 2px solid var(--verde);
+      border-radius: 12px;
+      padding: 22px 18px;
+    }
+    .fase-num {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--verde);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .fase h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 8px;
+    }
+    .fase p { font-size: 13px; color: #555; line-height: 1.6; }
+
+    /* PARA QUEM */
+    .para-quem { background: var(--cinza-claro); }
+    .dois-lados {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .lado h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .lado-sim h3 { color: var(--verde); }
+    .lado-nao h3 { color: #C0392B; }
+    .lado ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .lado ul li {
+      font-size: 14px;
+      color: var(--cinza);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .lado-sim ul li::before { content: '✓'; position: absolute; left: 0; color: var(--verde); font-weight: 700; }
+    .lado-nao ul li::before { content: '✗'; position: absolute; left: 0; color: #C0392B; font-weight: 700; }
+    @media (max-width: 540px) { .dois-lados { grid-template-columns: 1fr; } }
+
+    /* ENTREGÁVEIS */
+    .entregaveis { background: var(--branco); }
+    .lista-entregaveis {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .entrega-item {
+      background: var(--cinza-claro);
+      border-radius: 10px;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .entrega-nome { font-size: 15px; font-weight: 700; color: var(--azul); margin-bottom: 4px; }
+    .entrega-desc { font-size: 13px; color: #555; line-height: 1.5; }
+    .entrega-valor {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--verde);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* BÔNUS */
+    .bonus { background: var(--azul); }
+    .bonus .secao-titulo { color: var(--branco); }
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .bonus-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(0,200,150,0.3);
+      border-radius: 12px;
+      padding: 24px 20px;
+    }
+    .bonus-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--verde);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .bonus-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--branco);
+      margin-bottom: 8px;
+    }
+    .bonus-card p { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.6; }
+    .bonus-valor { font-size: 13px; color: var(--verde); font-weight: 700; margin-top: 10px; }
+
+    /* STACK DE VALOR */
+    .stack { background: var(--cinza-claro); }
+    .stack-table {
+      max-width: 560px;
+      margin: 0 auto 32px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .stack-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 20px;
+      font-size: 15px;
+      background: var(--branco);
+      border-bottom: 1px solid #E8EDF5;
+    }
+    .stack-row:last-child { border-bottom: none; }
+    .stack-row span:first-child { color: var(--cinza); }
+    .stack-row span:last-child { font-weight: 700; color: var(--azul); }
+    .stack-total {
+      background: var(--azul);
+      color: var(--branco);
+      font-weight: 700;
+    }
+    .stack-total span:last-child { color: var(--verde); font-size: 17px; }
+    .preco-real {
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--branco);
+      border-radius: 16px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    }
+    .preco-de {
+      font-size: 16px;
+      color: #999;
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+    .preco-por { font-size: 14px; color: #555; margin-bottom: 4px; }
+    .preco-valor {
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--azul);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .preco-parcel { font-size: 14px; color: #555; }
+    .btn-comprar {
+      display: block;
+      background: var(--verde);
+      color: var(--azul);
+      font-size: 18px;
+      font-weight: 800;
+      padding: 17px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+    .btn-comprar:hover { opacity: 0.9; transform: scale(1.01); }
+
+    /* GARANTIA */
+    .garantia { background: var(--branco); text-align: center; }
+    .garantia-box {
+      border: 2px solid var(--verde);
+      border-radius: 16px;
+      padding: 36px 32px;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    .garantia-icon { font-size: 48px; margin-bottom: 16px; }
+    .garantia-box h3 { font-size: 22px; font-weight: 700; color: var(--azul); margin-bottom: 12px; }
+    .garantia-box p { font-size: 15px; color: #555; line-height: 1.7; }
+
+    /* AUTORIDADE */
+    .autoridade { background: var(--cinza-claro); }
+    .autoridade-conteudo {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 32px;
+      align-items: start;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .autor-foto {
+      width: 160px;
+      height: 160px;
+      border-radius: 12px;
+      background: var(--azul);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .autor-texto h3 { font-size: 22px; font-weight: 800; color: var(--azul); margin-bottom: 12px; }
+    .autor-texto p { font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 12px; }
+    .autor-num {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .a-num { text-align: center; }
+    .a-num-val { font-size: 28px; font-weight: 800; color: var(--verde); }
+    .a-num-label { font-size: 12px; color: #555; }
+    @media (max-width: 540px) {
+      .autoridade-conteudo { grid-template-columns: 1fr; }
+      .autor-foto { width: 120px; height: 120px; margin: 0 auto; }
+    }
+
+    /* FAQ */
+    .faq { background: var(--branco); }
+    .faq-lista {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .faq-item {
+      background: var(--cinza-claro);
+      border-radius: 10px;
+      padding: 20px 22px;
+    }
+    .faq-pergunta { font-size: 15px; font-weight: 700; color: var(--azul); margin-bottom: 8px; }
+    .faq-resposta { font-size: 14px; color: #555; line-height: 1.7; }
+
+    /* OFERTA FINAL */
+    .oferta-final {
+      background: var(--azul);
+      padding: 72px 20px;
+      text-align: center;
+    }
+    .oferta-final h2 {
+      font-size: clamp(24px, 4.5vw, 40px);
+      font-weight: 900;
+      color: var(--branco);
+      margin-bottom: 16px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .oferta-final p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 36px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-oferta {
+      display: inline-block;
+      background: var(--verde);
+      color: var(--azul);
+      font-size: 20px;
+      font-weight: 800;
+      padding: 20px 56px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 28px rgba(0,200,150,0.35);
+      transition: opacity 0.15s, transform 0.15s;
+    }
+    .btn-oferta:hover { opacity: 0.9; transform: scale(1.015); }
+    .oferta-final-sub {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 18px;
+    }
+
+    footer {
+      background: #091D42;
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      line-height: 1.8;
+    }
+    footer a { color: inherit; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO — Bloco 01 -->
+  <section class="hero">
+    <div class="hero-tag">Concurso de Magistério — Saquarema</div>
+    <h1>Quem estuda com <span>método de banca</span> não chuta. Sabe.</h1>
+    <p>O concurso de Saquarema tem padrão próprio de questões de Português. Você pode estudar gramática genérica por meses ou aprender exatamente o que cai nessa prova.</p>
+    <div class="hero-bullets">
+      <div class="hero-bullet">Conteúdo mapeado pelo histórico de provas de Saquarema</div>
+      <div class="hero-bullet">Prof. Ramon Matos — mais de 3.000 aprovações desde 2018</div>
+      <div class="hero-bullet">Funciona para quem tem 1 hora por dia para estudar</div>
+    </div>
+    <a href="[LINK_HOTMART]" class="btn-hero">Quero entrar na Reta Final Saquarema</a>
+    <div class="hero-sub">Acesso imediato após a confirmação do pagamento</div>
+  </section>
+
+  <!-- BOTÃO FLUTUANTE -->
+  <a href="https://wa.me/55[NUMERO]" class="whats-float">Dúvidas? WhatsApp</a>
+
+  <!-- DOR — Bloco 02 -->
+  <section class="dor">
+    <div class="container">
+      <p>
+        O concurseiro que estuda muito mas não passa tem um problema específico: estuda o que acha que vai cair, não o que a banca cobra.
+        As provas de magistério de Saquarema seguem um padrão. Há tópicos que aparecem toda vez e há tópicos que nunca caem.
+        <strong>Quem conhece esse padrão elimina 70% do que precisaria estudar.</strong>
+      </p>
+      <p>
+        Estudar em paralelo ao trabalho e aos filhos já é difícil por si só. Usar esse tempo com conteúdo que não está no edital é desperdiçar o pouco que você tem.
+        Não é falta de disciplina. É falta de mapa.
+      </p>
+      <p>
+        A Reta Final Saquarema existe para resolver exatamente isso. Nada de curso genérico de Português.
+        <strong>O foco é o concurso de Saquarema, a banca que o organiza e o que de fato aparece na prova.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL 1 — Bloco 03 -->
+  <section style="padding: 64px 20px; background: var(--branco);">
+    <div class="container">
+      <h2 class="secao-titulo">Quem foi por esse caminho passou</h2>
+      <div class="depoimentos">
+        <div class="dep">
+          <p>"<strong>Passei em Saquarema</strong> na minha primeira tentativa. Estudei só o que o Prof. Ramon indicou para essa prova específica. Não perdi tempo com o que não ia cair."</p>
+          <div class="dep-nome">[NOME DA ALUNA]</div>
+          <div class="dep-cargo">Aprovada — Concurso de Magistério de Saquarema [substituir por depoimento real]</div>
+        </div>
+        <div class="dep">
+          <p>"Trabalho como professora contratada e nunca tinha conseguido passar para efetiva. Fiz a Reta Final Saquarema e <strong>passei em 4 meses</strong>. Foi o único curso que foi direto ao ponto."</p>
+          <div class="dep-nome">[NOME DA ALUNA]</div>
+          <div class="dep-cargo">Aprovada como professora efetiva [substituir por depoimento real]</div>
+        </div>
+        <div class="dep">
+          <p>"Tenho dois filhos e trabalho o dia inteiro. Estudava no máximo 1 hora por dia. <strong>O método do Ramon é feito para quem tem pouco tempo.</strong> Passei."</p>
+          <div class="dep-nome">[NOME DA ALUNA]</div>
+          <div class="dep-cargo">Aprovada — concurso de magistério RJ [substituir por depoimento real]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA INTERMEDIÁRIO — Bloco 04 -->
+  <div class="cta-mid">
+    <p>O concurso de Saquarema não é o lugar para apostar. É o lugar para chegar preparado.</p>
+    <a href="[LINK_HOTMART]" class="btn-cta-mid">Garantir minha vaga na Reta Final</a>
+  </div>
+
+  <!-- MÉTODO — Bloco 05 -->
+  <section class="metodo">
+    <div class="container">
+      <h2 class="secao-titulo">Como a Reta Final Saquarema funciona</h2>
+      <p class="metodo-intro">
+        Ao longo de 8 anos preparando candidatos para concursos de magistério no Rio de Janeiro, o Prof. Ramon Matos identificou o padrão exato das bancas regionais.
+        A Reta Final não é um curso de gramática. É um curso de prova. Cada módulo parte das questões reais de Saquarema e trabalha o conteúdo que aparece, na forma como aparece.
+        Quem termina o curso conhece a prova antes de entrar na sala.
+      </p>
+      <div class="fases">
+        <div class="fase">
+          <div class="fase-num">Fase 1</div>
+          <h3>Mapa da banca</h3>
+          <p>Quais tópicos a banca de Saquarema cobra mais. Quais nunca aparecem. Como as questões são estruturadas.</p>
+        </div>
+        <div class="fase">
+          <div class="fase-num">Fase 2</div>
+          <h3>Conteúdo cirúrgico</h3>
+          <p>Aulas de Português focadas no que cai. Sem aprofundar o que não está no edital. Direto ao que importa.</p>
+        </div>
+        <div class="fase">
+          <div class="fase-num">Fase 3</div>
+          <h3>Treino com provas reais</h3>
+          <p>Resolução de questões de concursos anteriores de Saquarema com comentário e raciocínio de cada alternativa.</p>
+        </div>
+        <div class="fase">
+          <div class="fase-num">Fase 4</div>
+          <h3>Reta final</h3>
+          <p>Revisão dos pontos mais cobrados. Estratégia para a prova. Como gerir o tempo e eliminar alternativas erradas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM — Bloco 06 -->
+  <section class="para-quem">
+    <div class="container">
+      <h2 class="secao-titulo">Para quem é esse curso</h2>
+      <div class="dois-lados">
+        <div class="lado lado-sim">
+          <h3>É pra você se</h3>
+          <ul>
+            <li>Vai prestar o concurso de magistério de Saquarema</li>
+            <li>Quer parar de perder tempo com conteúdo que não cai</li>
+            <li>Tem dificuldade com Português e quer material direto</li>
+            <li>Estuda com pouco tempo disponível por dia</li>
+            <li>Já prestou concursos antes e não passou em Português</li>
+            <li>Quer estudar no próprio ritmo, sem aula ao vivo obrigatória</li>
+          </ul>
+        </div>
+        <div class="lado lado-nao">
+          <h3>Não é pra você se</h3>
+          <ul>
+            <li>Não vai prestar concurso em Saquarema</li>
+            <li>Quer um curso completo de língua portuguesa do zero ao avançado</li>
+            <li>Precisa de mentoria individual com o Prof. Ramon</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENTREGÁVEIS — Bloco 07 -->
+  <section class="entregaveis">
+    <div class="container">
+      <h2 class="secao-titulo">O que você recebe</h2>
+      <div class="lista-entregaveis">
+        <div class="entrega-item">
+          <div>
+            <div class="entrega-nome">Videoaulas da Reta Final Saquarema</div>
+            <div class="entrega-desc">Módulos gravados com os conteúdos mapeados para essa prova. Acesso vitalício.</div>
+          </div>
+          <div class="entrega-valor">R$ [XX]</div>
+        </div>
+        <div class="entrega-item">
+          <div>
+            <div class="entrega-nome">Resolução de provas anteriores</div>
+            <div class="entrega-desc">Questões reais de concursos de Saquarema comentadas uma a uma.</div>
+          </div>
+          <div class="entrega-valor">R$ [XX]</div>
+        </div>
+        <div class="entrega-item">
+          <div>
+            <div class="entrega-nome">Material de apoio em PDF</div>
+            <div class="entrega-desc">Resumos, mapas de conteúdo e listas de questões para revisar sem precisar assistir as aulas.</div>
+          </div>
+          <div class="entrega-valor">R$ [XX]</div>
+        </div>
+        <div class="entrega-item">
+          <div>
+            <div class="entrega-nome">Acesso à plataforma sem prazo de expiração</div>
+            <div class="entrega-desc">Você assiste quando e onde quiser. Pelo celular, tablet ou computador.</div>
+          </div>
+          <div class="entrega-valor">Incluso</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BÔNUS — Bloco 08 -->
+  <section class="bonus">
+    <div class="container">
+      <h2 class="secao-titulo">Bônus que vêm junto</h2>
+      <div class="bonus-grid">
+        <div class="bonus-card">
+          <div class="bonus-tag">Bônus 1</div>
+          <h3>Simulado exclusivo de Saquarema</h3>
+          <p>30 questões no padrão da banca de Saquarema com gabarito comentado. Faça antes da prova.</p>
+          <div class="bonus-valor">Valor de mercado: R$ [XX]</div>
+        </div>
+        <div class="bonus-card">
+          <div class="bonus-tag">Bônus 2</div>
+          <h3>Mapa de conteúdo por edital</h3>
+          <p>Tabela completa cruzando os conteúdos do edital de Saquarema com o que cada um representa em questões.</p>
+          <div class="bonus-valor">Valor de mercado: R$ [XX]</div>
+        </div>
+        <div class="bonus-card">
+          <div class="bonus-tag">Bônus 3</div>
+          <h3>Acesso ao grupo de alunos</h3>
+          <p>Grupo exclusivo de alunos da Reta Final com avisos de edital, dúvidas e troca de experiências.</p>
+          <div class="bonus-valor">Valor de mercado: R$ [XX]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK DE VALOR — Bloco 09 -->
+  <section class="stack">
+    <div class="container">
+      <h2 class="secao-titulo">Quanto tudo isso vale</h2>
+      <div class="stack-table">
+        <div class="stack-row">
+          <span>Videoaulas da Reta Final</span>
+          <span>R$ [XX]</span>
+        </div>
+        <div class="stack-row">
+          <span>Resolução de provas anteriores</span>
+          <span>R$ [XX]</span>
+        </div>
+        <div class="stack-row">
+          <span>Material PDF de apoio</span>
+          <span>R$ [XX]</span>
+        </div>
+        <div class="stack-row">
+          <span>Bônus: Simulado exclusivo</span>
+          <span>R$ [XX]</span>
+        </div>
+        <div class="stack-row">
+          <span>Bônus: Mapa de conteúdo</span>
+          <span>R$ [XX]</span>
+        </div>
+        <div class="stack-row">
+          <span>Bônus: Grupo de alunos</span>
+          <span>R$ [XX]</span>
+        </div>
+        <div class="stack-row stack-total">
+          <span>Total se comprado separado</span>
+          <span>R$ [TOTAL]</span>
+        </div>
+      </div>
+      <div class="preco-real">
+        <div class="preco-de">De R$ [TOTAL]</div>
+        <div class="preco-por">Por apenas</div>
+        <div class="preco-valor">R$ [PRECO]</div>
+        <div class="preco-parcel">ou [X]x de R$ [PARCELA] sem juros</div>
+        <a href="[LINK_HOTMART]" class="btn-comprar">Quero garantir minha vaga</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS 2 — Bloco 10 -->
+  <section style="padding: 64px 20px; background: var(--branco);">
+    <div class="container">
+      <h2 class="secao-titulo">Mais quem passou pelo método</h2>
+      <p class="secao-sub">Resultados reais de alunos reais. Aprovações documentadas.</p>
+      <div class="depoimentos">
+        <div class="dep">
+          <p>"Passei há 3 anos tentando. Sempre ficava em Português. Com o Prof. Ramon entendi que estava estudando matéria que não caia. Mudei o foco e <strong>passei em 5 meses.</strong>"</p>
+          <div class="dep-nome">[NOME]</div>
+          <div class="dep-cargo">Aprovada — Magistério Municipal RJ [substituir]</div>
+        </div>
+        <div class="dep">
+          <p>"Achei que era cara. Comparei com quanto ia gastar se ficasse mais um ano sem passar. <strong>Não fiz essa conta antes por medo de ver o número.</strong> O curso se pagou em uma semana."</p>
+          <div class="dep-nome">[NOME]</div>
+          <div class="dep-cargo">Aprovada — Saquarema [substituir]</div>
+        </div>
+        <div class="dep">
+          <p>"Sou mãe de dois e professora temporária há 4 anos. Queria ser efetiva. <strong>Em 4 meses com 1 hora por dia consegui passar.</strong> O método funciona mesmo com pouco tempo."</p>
+          <div class="dep-nome">[NOME]</div>
+          <div class="dep-cargo">Aprovada como professora efetiva [substituir]</div>
+        </div>
+        <div class="dep">
+          <p>"Fiz outros cursos de Português para concursos. Nenhum foi tão direto quanto o do Ramon. <strong>Ele ensina o que a banca quer, não o que você acha que ela quer.</strong>"</p>
+          <div class="dep-nome">[NOME]</div>
+          <div class="dep-cargo">Aprovada — concurso de magistério [substituir]</div>
+        </div>
+        <div class="dep">
+          <p>"Nunca me dei bem com Português. Na prova de Saquarema, <strong>acertei 80% das questões de língua portuguesa.</strong> Não me reconheci no resultado."</p>
+          <div class="dep-nome">[NOME]</div>
+          <div class="dep-cargo">Aprovada — Saquarema [substituir]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIA — Bloco 12 -->
+  <section class="garantia">
+    <div class="container">
+      <h2 class="secao-titulo">Garantia de 7 dias</h2>
+      <div class="garantia-box">
+        <div class="garantia-icon">🛡</div>
+        <h3>Risco zero para você</h3>
+        <p>
+          Você tem 7 dias após a compra para assistir as aulas e avaliar o curso.
+          Se decidir que não é o que esperava por qualquer motivo, é só pedir o reembolso.
+          Devolução total, sem burocracia e sem perguntas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTORIDADE — Bloco 13 -->
+  <section class="autoridade">
+    <div class="container">
+      <h2 class="secao-titulo">Quem é o Prof. Ramon Matos</h2>
+      <div class="autoridade-conteudo">
+        <div class="autor-foto">Foto<br>Ramon<br>[inserir]</div>
+        <div class="autor-texto">
+          <h3>Professor de Português para concursos desde 2018</h3>
+          <p>
+            Ramon Matos criou o Curso Passei com um objetivo simples: ensinar Português pelo que cai em cada prova, não pelo que os livros didáticos ensinam.
+            Ao longo de 8 anos, mapeou o padrão de bancas regionais do Rio de Janeiro — IAN, Consulplan, COSEAC-UFF, IBAM — e transformou esse conhecimento em cursos práticos e acessíveis.
+          </p>
+          <p>
+            Hoje o canal do YouTube tem dezenas de vídeos com resolução de provas por banca, abertos para qualquer concurseiro. Os cursos pagos existem para quem quer preparação cirúrgica para um concurso específico.
+          </p>
+          <div class="autor-num">
+            <div class="a-num">
+              <div class="a-num-val">+3.000</div>
+              <div class="a-num-label">aprovações documentadas</div>
+            </div>
+            <div class="a-num">
+              <div class="a-num-val">2018</div>
+              <div class="a-num-label">ano de fundação</div>
+            </div>
+            <div class="a-num">
+              <div class="a-num-val">27K+</div>
+              <div class="a-num-label">seguidores no Instagram</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ — Bloco 14 -->
+  <section class="faq">
+    <div class="container">
+      <h2 class="secao-titulo">Dúvidas frequentes</h2>
+      <div class="faq-lista">
+        <div class="faq-item">
+          <div class="faq-pergunta">O concurso de Saquarema já tem data de prova?</div>
+          <div class="faq-resposta">[Inserir status real do edital]. De qualquer forma, quem compra o curso tem acesso imediato e pode começar a estudar agora, antes mesmo da divulgação da data.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-pergunta">Funciona para quem tem pouco tempo de estudo?</div>
+          <div class="faq-resposta">Sim. O curso foi estruturado para funcionar com 1 hora por dia. Quem tem mais tempo avança mais rápido, mas o método foi testado com concurseiros que estudam em paralelo ao trabalho e a filhos.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-pergunta">É para Português apenas, ou cobre outras matérias?</div>
+          <div class="faq-resposta">A Reta Final Saquarema é focada em Português, a matéria que mais reprova nos concursos de magistério. Para preparação completa com outras disciplinas, consulte as outras turmas disponíveis no site.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-pergunta">Se eu já tiver um nível bom de Português, vale a pena?</div>
+          <div class="faq-resposta">Sim. Saber Português bem não é o mesmo que saber o Português da banca de Saquarema. O curso ensina o padrão de questões específico desta prova, o que é diferente de gramática geral.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-pergunta">Quando tenho acesso depois da compra?</div>
+          <div class="faq-resposta">Imediatamente após a confirmação do pagamento, você recebe o acesso por email e pode começar no mesmo dia.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-pergunta">As aulas ficam disponíveis por quanto tempo?</div>
+          <div class="faq-resposta">Acesso vitalício. Você pode assistir quantas vezes quiser, no ritmo que quiser.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA FINAL — Bloco 15 -->
+  <section class="oferta-final">
+    <h2>O concurso de Saquarema está chegando. Você pode entrar preparado.</h2>
+    <p>Mais de 3.000 aprovações desde 2018. O método funciona. A pergunta é quando você vai começar.</p>
+    <a href="[LINK_HOTMART]" class="btn-oferta">Quero entrar na Reta Final Saquarema</a>
+    <div class="oferta-final-sub">Garantia de 7 dias. Acesso imediato. Cancele se não gostar.</div>
+  </section>
+
+  <footer>
+    &copy; 2026 Curso Preparatório Passei — Prof. Ramon Matos &nbsp;|&nbsp;
+    CNPJ: 29.931.449/0001-55 &nbsp;|&nbsp;
+    <a href="[LINK_PRIVACIDADE]">Política de Privacidade</a> &nbsp;|&nbsp;
+    <a href="[LINK_TERMOS]">Termos de Uso</a>
+  </footer>
+
+</body>
+</html>

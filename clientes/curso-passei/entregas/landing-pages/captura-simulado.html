@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulado Gratuito — Prof. Ramon Matos</title>
+  <meta name="description" content="Baixe grátis o simulado de Português para concursos de magistério. Questões comentadas pelo Prof. Ramon Matos.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --azul: #0D2B5E;
+      --verde: #00C896;
+      --branco: #FFFFFF;
+      --cinza-claro: #F5F7FA;
+      --cinza: #333333;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--cinza);
+      background: var(--branco);
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--azul);
+      padding: 60px 20px 72px;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--verde);
+      color: var(--azul);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: 800;
+      color: var(--branco);
+      line-height: 1.2;
+      max-width: 700px;
+      margin: 0 auto 18px;
+    }
+    .hero h1 span { color: var(--verde); }
+    .hero p {
+      font-size: clamp(16px, 2.5vw, 19px);
+      color: rgba(255,255,255,0.75);
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    /* FORM */
+    .form-card {
+      background: var(--branco);
+      border-radius: 16px;
+      padding: 32px 28px;
+      max-width: 420px;
+      margin: 0 auto;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+    }
+    .form-titulo {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--azul);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-card label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      margin-bottom: 6px;
+    }
+    .form-card input {
+      width: 100%;
+      padding: 13px 16px;
+      border: 2px solid #E0E7F0;
+      border-radius: 8px;
+      font-size: 15px;
+      color: var(--cinza);
+      margin-bottom: 14px;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-card input:focus { border-color: var(--verde); }
+    .btn-enviar {
+      width: 100%;
+      padding: 16px;
+      background: var(--verde);
+      color: var(--azul);
+      font-size: 17px;
+      font-weight: 800;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.15s;
+      margin-top: 4px;
+    }
+    .btn-enviar:hover { opacity: 0.9; transform: scale(1.01); }
+    .privacidade {
+      font-size: 11px;
+      color: #999;
+      text-align: center;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    /* PROVAS */
+    .provas {
+      background: var(--cinza-claro);
+      padding: 56px 20px;
+      text-align: center;
+    }
+    .provas h2 {
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 36px;
+    }
+    .bullets {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .bullet {
+      background: var(--branco);
+      border-radius: 12px;
+      padding: 22px 20px;
+      border-left: 4px solid var(--verde);
+    }
+    .bullet-titulo {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 6px;
+    }
+    .bullet p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* PROVA SOCIAL */
+    .prova-social {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .prova-social h2 {
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 36px;
+    }
+    .depoimentos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto 40px;
+      text-align: left;
+    }
+    .dep {
+      background: var(--cinza-claro);
+      border-radius: 12px;
+      padding: 22px 20px;
+    }
+    .dep p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--cinza);
+      margin-bottom: 14px;
+    }
+    .dep-nome {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--azul);
+    }
+    .dep-cargo {
+      font-size: 12px;
+      color: #777;
+    }
+    .numeros {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 16px;
+    }
+    .numero { text-align: center; }
+    .numero-valor {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--verde);
+    }
+    .numero-label {
+      font-size: 13px;
+      color: var(--azul);
+      margin-top: 4px;
+    }
+
+    /* QUEM */
+    .quem {
+      background: var(--azul);
+      padding: 60px 20px;
+      text-align: center;
+      color: var(--branco);
+    }
+    .quem h2 {
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .quem-foto {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--verde);
+      background: #1A3F7A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      margin: 24px auto 20px;
+    }
+    .quem p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* FAQ */
+    .faq {
+      padding: 60px 20px;
+      background: var(--cinza-claro);
+    }
+    .faq h2 {
+      font-size: clamp(20px, 3.5vw, 26px);
+      font-weight: 700;
+      color: var(--azul);
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .faq-lista {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .faq-item {
+      background: var(--branco);
+      border-radius: 10px;
+      padding: 20px 22px;
+    }
+    .faq-pergunta {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 8px;
+    }
+    .faq-resposta {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    /* CTA FINAL */
+    .cta-final {
+      background: var(--verde);
+      padding: 56px 20px;
+      text-align: center;
+    }
+    .cta-final h2 {
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 800;
+      color: var(--azul);
+      margin-bottom: 12px;
+    }
+    .cta-final p {
+      font-size: 16px;
+      color: rgba(13,43,94,0.7);
+      margin-bottom: 28px;
+    }
+    .btn-cta-final {
+      display: inline-block;
+      background: var(--azul);
+      color: var(--branco);
+      font-size: 17px;
+      font-weight: 700;
+      padding: 17px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+    .btn-cta-final:hover { opacity: 0.88; transform: scale(1.01); }
+
+    /* RODAPÉ */
+    footer {
+      background: var(--azul);
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+    }
+
+    @media (max-width: 480px) {
+      .form-card { padding: 24px 18px; margin: 0 -4px; border-radius: 12px; }
+      .hero { padding: 48px 16px 64px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-tag">Grátis para você</div>
+    <h1>Quem estuda <span>1 hora por dia</span> do jeito certo passa no concurso</h1>
+    <p>Baixe agora o simulado de Português com 30 questões comentadas pelo Prof. Ramon Matos. Questões retiradas de provas reais de magistério.</p>
+
+    <div class="form-card">
+      <div class="form-titulo">Receba o simulado gratuito</div>
+      <form action="[URL_DE_ACAO_DO_FORMULARIO]" method="POST">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Como você se chama?" required>
+
+        <label for="whatsapp">Seu WhatsApp</label>
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(21) 99999-9999" required>
+
+        <button type="submit" class="btn-enviar">Quero meu simulado gratuito</button>
+      </form>
+      <p class="privacidade">Seus dados ficam com a gente. Sem spam, sem enrolação.</p>
+    </div>
+  </section>
+
+  <!-- O QUE VOCÊ RECEBE -->
+  <section class="provas">
+    <h2>O que vem no simulado</h2>
+    <div class="bullets">
+      <div class="bullet">
+        <div class="bullet-titulo">30 questões de provas reais</div>
+        <p>Questões de concursos de magistério das principais bancas do RJ: IAN, Consulplan, COSEAC e IBAM.</p>
+      </div>
+      <div class="bullet">
+        <div class="bullet-titulo">Gabarito com comentário</div>
+        <p>Cada questão explicada com o raciocínio por trás da resposta certa, não só o número do gabarito.</p>
+      </div>
+      <div class="bullet">
+        <div class="bullet-titulo">Foco no que cai de verdade</div>
+        <p>Sem conteúdo que não aparece nas provas. O simulado foi montado com base no histórico real das bancas.</p>
+      </div>
+      <div class="bullet">
+        <div class="bullet-titulo">Ideal para 1h de estudo</div>
+        <p>Formatado para resolver em partes, mesmo com pouco tempo disponível no dia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL -->
+  <section class="prova-social">
+    <h2>Quem usou o método do Ramon passou</h2>
+    <div class="depoimentos">
+      <div class="dep">
+        <p>"Estudava há 2 anos sem resultado. Em 4 meses com o Prof. Ramon aprendi a estudar pelo que cai na prova, não o que eu achava que ia cair. <strong>Passei em Araruama em primeiro lugar.</strong>"</p>
+        <div class="dep-nome">[NOME DA ALUNA]</div>
+        <div class="dep-cargo">Aprovada — Concurso de Araruama (substituir por depoimento real)</div>
+      </div>
+      <div class="dep">
+        <p>"Trabalho o dia inteiro e tenho dois filhos. Achei que nunca ia conseguir estudar. O simulado me mostrou exatamente onde eu tava errando. <strong>Passei em 6 meses.</strong>"</p>
+        <div class="dep-nome">[NOME DA ALUNA]</div>
+        <div class="dep-cargo">Aprovada — Concurso de Magistério (substituir por depoimento real)</div>
+      </div>
+      <div class="dep">
+        <p>"Fiz o simulado e achei que ia bem. Errei 40% das questões. Isso me mostrou que eu precisava de ajuda. Fiz o curso e <strong>passei na primeira tentativa.</strong>"</p>
+        <div class="dep-nome">[NOME DA ALUNA]</div>
+        <div class="dep-cargo">Aprovada — Concurso Municipal RJ (substituir por depoimento real)</div>
+      </div>
+    </div>
+
+    <div class="numeros">
+      <div class="numero">
+        <div class="numero-valor">+3.000</div>
+        <div class="numero-label">aprovações desde 2018</div>
+      </div>
+      <div class="numero">
+        <div class="numero-valor">27K+</div>
+        <div class="numero-label">seguidores no Instagram</div>
+      </div>
+      <div class="numero">
+        <div class="numero-label" style="font-size:14px; color:#555; font-weight:600; max-width:200px">Aprovações em bancas IAN, Consulplan, COSEAC-UFF e FGV</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM É O RAMON -->
+  <section class="quem">
+    <h2>Quem vai te preparar</h2>
+    <div class="quem-foto">Foto<br>Ramon<br>[inserir]</div>
+    <p>
+      O Prof. Ramon Matos é professor de Português especializado em concursos de magistério desde 2018.
+      Em vez de ensinar gramática genérica, ele ensina o português de cada banca, o que cai em cada prova, e como resolver questões com o tempo que você tem.
+      São mais de 3.000 aprovações documentadas, com foco nos concursos do Rio de Janeiro.
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-lista">
+      <div class="faq-item">
+        <div class="faq-pergunta">O simulado é mesmo gratuito?</div>
+        <div class="faq-resposta">Sim. Você preenche o formulário e recebe o PDF direto no WhatsApp. Sem custo nenhum.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pergunta">Para qual concurso esse simulado serve?</div>
+        <div class="faq-resposta">O foco é em provas de magistério (professor público) das principais bancas do RJ: IAN, Consulplan, COSEAC-UFF e IBAM. Mas o conteúdo serve para qualquer concurso que cobre Português.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pergunta">Você vai me mandar spam depois?</div>
+        <div class="faq-resposta">Não. Você vai receber o simulado e, eventualmente, avisos de editais abertos e material de estudo. Nada de enrolação.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pergunta">Preciso ter experiência em concursos?</div>
+        <div class="faq-resposta">Não. O simulado funciona tanto pra quem está começando quanto pra quem já prestou concurso antes e quer identificar onde ainda erra.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <h2>Comece agora. É gratuito.</h2>
+    <p>30 questões comentadas. Sem enrolação. Estude onde e quando quiser.</p>
+    <a href="#form" class="btn-cta-final">Quero meu simulado gratuito</a>
+  </section>
+
+  <footer>
+    &copy; 2026 Curso Preparatório Passei — Prof. Ramon Matos |
+    <a href="[LINK_PRIVACIDADE]" style="color:inherit">Política de Privacidade</a>
+  </footer>
+
+</body>
+</html>
