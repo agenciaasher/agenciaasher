@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grade de Conteúdo — Ramon Matos | Curso Passei</title>
+  <title>O que o Ramon grava por mês</title>
   <style>
     :root {
       --azul: #0D2B5E;
       --verde: #00C896;
       --branco: #FFFFFF;
-      --cinza-claro: #F5F7FA;
-      --cinza-texto: #333333;
-      --cinza-borda: #E2E8F0;
-      --azul-suave: #EEF2FF;
+      --fundo: #F4F6FA;
+      --texto: #222222;
+      --cinza: #666666;
+      --borda: #E0E6EF;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: var(--cinza-claro);
-      color: var(--cinza-texto);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
       line-height: 1.6;
     }
 
@@ -28,77 +28,81 @@
     .header {
       background: var(--azul);
       color: var(--branco);
-      padding: 48px 40px 40px;
+      padding: 52px 40px 44px;
     }
 
-    .header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .header-inner { max-width: 860px; margin: 0 auto; }
 
-    .header-tag {
-      display: inline-block;
+    .header-eyebrow {
       background: var(--verde);
       color: var(--azul);
+      display: inline-block;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      padding: 4px 12px;
+      padding: 4px 14px;
       border-radius: 20px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .header h1 {
-      font-size: 36px;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 10px;
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 14px;
     }
 
-    .header h1 span { color: var(--verde); }
+    .header h1 em {
+      font-style: normal;
+      color: var(--verde);
+    }
 
     .header p {
-      font-size: 16px;
-      opacity: 0.8;
-      max-width: 560px;
+      font-size: 17px;
+      opacity: 0.75;
+      max-width: 520px;
     }
 
-    .header-meta {
-      display: flex;
-      gap: 32px;
-      margin-top: 28px;
-      flex-wrap: wrap;
-    }
-
-    .meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .meta-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      opacity: 0.6;
-    }
-
-    .meta-value {
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    /* MAIN CONTAINER */
-    .container {
-      max-width: 1100px;
+    /* PAGE */
+    .page {
+      max-width: 860px;
       margin: 0 auto;
-      padding: 40px 40px 80px;
+      padding: 48px 40px 80px;
     }
 
-    /* SECTION TITLE */
+    @media (max-width: 600px) {
+      .header { padding: 36px 20px; }
+      .header h1 { font-size: 28px; }
+      .page { padding: 32px 20px 60px; }
+    }
+
+    /* INTRO */
+    .intro {
+      background: var(--branco);
+      border-left: 5px solid var(--verde);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin-bottom: 52px;
+      font-size: 15px;
+      color: #333;
+      line-height: 1.75;
+    }
+
+    /* SECTION */
+    .section { margin-bottom: 52px; }
+
     .section-title {
-      font-size: 22px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--verde);
+      margin-bottom: 8px;
+    }
+
+    .section-heading {
+      font-size: 24px;
       font-weight: 800;
       color: var(--azul);
       margin-bottom: 6px;
@@ -106,342 +110,274 @@
 
     .section-sub {
       font-size: 14px;
-      color: #666;
+      color: var(--cinza);
       margin-bottom: 24px;
     }
 
-    /* INTRO */
-    .intro-box {
-      background: var(--branco);
-      border-left: 4px solid var(--verde);
-      border-radius: 0 12px 12px 0;
-      padding: 24px 28px;
-      margin-bottom: 48px;
-    }
+    /* VIDEO TYPES */
+    .types-list { display: flex; flex-direction: column; gap: 16px; }
 
-    .intro-box p {
-      font-size: 15px;
-      line-height: 1.7;
-      color: var(--cinza-texto);
-    }
-
-    .intro-box p + p { margin-top: 12px; }
-
-    /* PILLARS */
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-bottom: 48px;
-    }
-
-    .pillar-card {
+    .type-row {
       background: var(--branco);
       border-radius: 14px;
-      padding: 22px 20px;
-      border-top: 4px solid var(--azul);
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      padding: 22px 24px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
     }
 
-    .pillar-card.verde { border-top-color: var(--verde); }
-    .pillar-card.azul2 { border-top-color: #1E40AF; }
-    .pillar-card.roxo { border-top-color: #7C3AED; }
-    .pillar-card.laranja { border-top-color: #EA580C; }
+    .type-number {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--azul);
+      color: var(--branco);
+      font-size: 20px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-    .pillar-icon {
-      font-size: 26px;
+    .type-body { flex: 1; }
+
+    .type-name {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--azul);
+      margin-bottom: 4px;
+    }
+
+    .type-desc {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
       margin-bottom: 10px;
     }
 
-    .pillar-name {
+    .type-example {
+      background: var(--fundo);
+      border-left: 3px solid var(--verde);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
       font-size: 13px;
+      color: var(--cinza);
+      font-style: italic;
+    }
+
+    .type-freq {
+      font-size: 12px;
       font-weight: 700;
+      color: var(--verde);
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      color: var(--azul);
-      margin-bottom: 6px;
+      margin-top: 10px;
     }
 
-    .pillar-desc {
-      font-size: 13px;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    .pillar-freq {
-      margin-top: 12px;
-      display: inline-block;
-      background: var(--cinza-claro);
-      color: var(--azul);
-      font-size: 11px;
-      font-weight: 600;
-      padding: 3px 10px;
-      border-radius: 20px;
-    }
-
-    /* WEEKLY GRID */
-    .week-section { margin-bottom: 56px; }
-
-    .week-label {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .week-badge {
-      background: var(--azul);
-      color: var(--branco);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      padding: 4px 14px;
-      border-radius: 20px;
-      text-transform: uppercase;
-    }
-
-    .week-theme {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--azul);
-    }
-
-    .days-grid {
+    /* WEEK GRID */
+    .week-grid {
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 10px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 14px;
     }
 
-    @media (max-width: 900px) {
-      .days-grid { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 700px) {
+      .week-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    @media (max-width: 600px) {
-      .days-grid { grid-template-columns: repeat(2, 1fr); }
-      .container { padding: 24px 20px 60px; }
-      .header { padding: 32px 20px; }
-      .header h1 { font-size: 26px; }
-    }
-
-    .day-card {
-      background: var(--branco);
-      border-radius: 12px;
-      padding: 16px 14px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.07);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      min-height: 180px;
-    }
-
-    .day-card.weekend {
-      background: var(--cinza-claro);
-      opacity: 0.6;
-    }
-
-    .day-name {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #888;
-    }
-
-    .day-card-items { display: flex; flex-direction: column; gap: 6px; flex: 1; }
-
-    .content-item {
-      border-radius: 8px;
-      padding: 8px 10px;
-      font-size: 12px;
-      line-height: 1.4;
-    }
-
-    .content-item .format-tag {
-      display: inline-block;
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 3px;
-      border-radius: 4px;
-      padding: 1px 6px;
-    }
-
-    .content-item .content-text { color: #333; }
-
-    /* Format colors */
-    .bg-reel { background: #EFF6FF; }
-    .bg-reel .format-tag { background: #BFDBFE; color: #1D4ED8; }
-
-    .bg-carrossel { background: #F0FDF4; }
-    .bg-carrossel .format-tag { background: #BBF7D0; color: #15803D; }
-
-    .bg-stories { background: #FFF7ED; }
-    .bg-stories .format-tag { background: #FED7AA; color: #C2410C; }
-
-    .bg-youtube { background: #FEF2F2; }
-    .bg-youtube .format-tag { background: #FECACA; color: #B91C1C; }
-
-    .bg-tiktok { background: #F5F3FF; }
-    .bg-tiktok .format-tag { background: #DDD6FE; color: #6D28D9; }
-
-    .bg-off { background: var(--cinza-claro); }
-    .bg-off .format-tag { background: #E2E8F0; color: #475569; }
-
-    /* FORMAT GUIDE */
-    .format-section { margin-bottom: 56px; }
-
-    .formats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 16px;
-    }
-
-    .format-card {
+    .day {
       background: var(--branco);
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
     }
 
-    .format-header {
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    .day-header {
+      background: var(--azul);
+      color: var(--branco);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 10px 14px;
     }
 
-    .format-header.reel { background: #EFF6FF; }
-    .format-header.carrossel { background: #F0FDF4; }
-    .format-header.stories { background: #FFF7ED; }
-    .format-header.youtube { background: #FEF2F2; }
+    .day-body { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
 
-    .format-emoji { font-size: 22px; }
-
-    .format-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--azul);
+    .slot {
+      border-radius: 8px;
+      padding: 10px 12px;
     }
 
-    .format-body { padding: 16px 20px; }
+    .slot-label {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 4px;
+    }
 
-    .format-body ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .slot-text { font-size: 13px; color: #333; line-height: 1.4; }
 
-    .format-body ul li {
+    .slot-reel { background: #EEF4FF; }
+    .slot-reel .slot-label { color: #1D4ED8; }
+
+    .slot-carrossel { background: #EDFFF5; }
+    .slot-carrossel .slot-label { color: #15803D; }
+
+    .slot-stories { background: #FFF4ED; }
+    .slot-stories .slot-label { color: #C2410C; }
+
+    .slot-youtube { background: #FFF0F0; }
+    .slot-youtube .slot-label { color: #B91C1C; }
+
+    .slot-off { background: var(--fundo); }
+    .slot-off .slot-label { color: #999; }
+    .slot-off .slot-text { color: #999; }
+
+    .weekend-note {
+      background: var(--branco);
+      border-radius: 12px;
+      padding: 14px 18px;
       font-size: 13px;
-      color: #444;
-      padding-left: 16px;
-      position: relative;
-      line-height: 1.5;
+      color: var(--cinza);
+      text-align: center;
     }
 
-    .format-body ul li::before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: var(--verde);
-      font-weight: 700;
-    }
-
-    /* HOOKS */
-    .hooks-section { margin-bottom: 56px; }
-
-    .hooks-grid {
+    /* HOW TO RECORD */
+    .how-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 14px;
     }
 
-    .hook-card {
+    .how-card {
+      background: var(--branco);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .how-header {
+      padding: 16px 20px 12px;
+      border-bottom: 1px solid var(--borda);
+    }
+
+    .how-format {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--azul);
+    }
+
+    .how-duration {
+      font-size: 13px;
+      color: var(--cinza);
+      margin-top: 2px;
+    }
+
+    .how-body { padding: 16px 20px; }
+
+    .how-body ol {
+      list-style: none;
+      counter-reset: steps;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .how-body ol li {
+      counter-increment: steps;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 13px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .how-body ol li::before {
+      content: counter(steps);
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--azul);
+      color: var(--branco);
+      font-size: 11px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* OPENINGS */
+    .openings-list { display: flex; flex-direction: column; gap: 12px; }
+
+    .opening-card {
       background: var(--azul);
       color: var(--branco);
       border-radius: 12px;
-      padding: 20px;
+      padding: 20px 22px;
     }
 
-    .hook-type {
-      font-size: 10px;
+    .opening-situation {
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
       color: var(--verde);
       margin-bottom: 8px;
     }
 
-    .hook-text {
-      font-size: 15px;
-      font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 10px;
+    .opening-line {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.35;
     }
 
-    .hook-why {
-      font-size: 12px;
-      opacity: 0.7;
-      line-height: 1.5;
-    }
+    /* RULES */
+    .rules-list { display: flex; flex-direction: column; gap: 12px; }
 
-    /* METRICS */
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-bottom: 56px;
-    }
-
-    .metric-card {
-      background: var(--branco);
-      border-radius: 14px;
-      padding: 22px;
-      text-align: center;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    }
-
-    .metric-number {
-      font-size: 32px;
-      font-weight: 900;
-      color: var(--azul);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-
-    .metric-number span { color: var(--verde); }
-
-    .metric-label {
-      font-size: 13px;
-      color: #666;
-      line-height: 1.4;
-    }
-
-    /* NOTES */
-    .notes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-      margin-bottom: 48px;
-    }
-
-    .note-card {
+    .rule-row {
       background: var(--branco);
       border-radius: 12px;
-      padding: 20px;
-      border-left: 3px solid var(--verde);
+      padding: 18px 22px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
     }
 
-    .note-title {
-      font-size: 13px;
-      font-weight: 700;
+    .rule-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .rule-body { flex: 1; }
+
+    .rule-title {
+      font-size: 15px;
+      font-weight: 800;
       color: var(--azul);
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      margin-bottom: 4px;
     }
 
-    .note-text {
+    .rule-text {
       font-size: 13px;
-      color: #555;
+      color: #444;
       line-height: 1.6;
+    }
+
+    /* DIVIDER */
+    hr {
+      border: none;
+      border-top: 1px solid var(--borda);
+      margin: 48px 0;
     }
 
     /* FOOTER */
@@ -449,779 +385,322 @@
       background: var(--azul);
       color: var(--branco);
       text-align: center;
-      padding: 32px;
+      padding: 28px;
       font-size: 13px;
-      opacity: 0.9;
+      opacity: 0.85;
     }
-
-    /* DIVIDER */
-    .divider {
-      border: none;
-      border-top: 1px solid var(--cinza-borda);
-      margin: 48px 0;
-    }
-
-    /* MONTH GRID */
-    .month-grid {
-      background: var(--branco);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-      margin-bottom: 48px;
-    }
-
-    .month-header {
-      background: var(--azul);
-      color: var(--branco);
-      padding: 16px 24px;
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    .month-table { width: 100%; border-collapse: collapse; }
-
-    .month-table th {
-      background: var(--azul-suave);
-      color: var(--azul);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      padding: 10px 14px;
-      text-align: left;
-      border-bottom: 1px solid var(--cinza-borda);
-    }
-
-    .month-table td {
-      padding: 12px 14px;
-      font-size: 13px;
-      border-bottom: 1px solid var(--cinza-borda);
-      vertical-align: top;
-    }
-
-    .month-table tr:last-child td { border-bottom: none; }
-
-    .month-table tr:hover td { background: var(--cinza-claro); }
-
-    .table-week { font-weight: 700; color: var(--azul); white-space: nowrap; }
-    .table-tema { font-weight: 600; color: #333; }
-    .table-reel { color: #1D4ED8; }
-    .table-carrossel { color: #15803D; }
-    .table-yt { color: #B91C1C; }
-    .table-stories { color: #C2410C; }
-
-    .badge-pillar {
-      display: inline-block;
-      font-size: 10px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .p-autoridade { background: #BFDBFE; color: #1E40AF; }
-    .p-prova { background: #BBF7D0; color: #15803D; }
-    .p-venda { background: #FED7AA; color: #C2410C; }
-    .p-id { background: #DDD6FE; color: #6D28D9; }
-    .p-bastidor { background: #FEE2E2; color: #B91C1C; }
   </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <div class="header">
   <div class="header-inner">
-    <div class="header-tag">Grade de Conteúdo</div>
-    <h1>O que o <span>Ramon grava</span> todo mês</h1>
-    <p>Uma estrutura clara para ele aparecer todo dia, sem improvisar, sem desperdiçar energia em conteúdo que não converte.</p>
-    <div class="header-meta">
-      <div class="meta-item">
-        <span class="meta-label">Período</span>
-        <span class="meta-value">Junho 2026</span>
-      </div>
-      <div class="meta-item">
-        <span class="meta-label">Plataformas</span>
-        <span class="meta-value">Instagram + TikTok + YouTube</span>
-      </div>
-      <div class="meta-item">
-        <span class="meta-label">Peças por mês</span>
-        <span class="meta-value">~38 entregas</span>
-      </div>
-      <div class="meta-item">
-        <span class="meta-label">Dias de gravação</span>
-        <span class="meta-value">2 por mês</span>
-      </div>
-    </div>
+    <div class="header-eyebrow">Curso Passei — Junho 2026</div>
+    <h1>O que o <em>Ramon grava</em> por mês</h1>
+    <p>Um guia simples. Sem complicação de marketing. Só o que precisa gravar, quando postar e como fazer.</p>
   </div>
 </div>
 
-<div class="container">
+<div class="page">
 
   <!-- INTRO -->
-  <div class="intro-box">
-    <p>O Ramon já tem o que faz o conteúdo funcionar: autoridade real, aprovações concretas e um diferencial claro (Português por banca). O problema não é o que ele sabe. É que esse conhecimento não está aparecendo com frequência e formato suficientes.</p>
-    <p>Essa grade resolve isso. Cinco pilares, três plataformas, dois dias de gravação por mês. Toda semana o público encontra o Ramon em algum lugar, com alguma coisa útil, sem ele precisar gravar toda hora.</p>
+  <div class="intro">
+    A ideia é simples: o Ramon grava tudo em dois dias por mês. O resto do tempo ele só posta o que já está pronto. São 4 tipos de vídeo, uma rotina semanal clara e algumas regras práticas. Nada mais.
   </div>
 
-  <!-- PILLARS -->
-  <div class="section-title">Os 5 pilares de conteúdo</div>
-  <div class="section-sub">Cada peça que o Ramon publica cabe em um desses pilares. Nada de conteúdo aleatório.</div>
+  <!-- TIPOS DE VÍDEO -->
+  <div class="section">
+    <div class="section-title">Passo 1</div>
+    <div class="section-heading">Os 4 tipos de vídeo</div>
+    <div class="section-sub">Tudo que o Ramon publica é um desses quatro. Só precisa saber qual tipo gravar em cada semana.</div>
 
-  <div class="pillars-grid">
-    <div class="pillar-card">
-      <div class="pillar-icon">🎯</div>
-      <div class="pillar-name">Autoridade</div>
-      <div class="pillar-desc">Ramon resolve uma questão ou explica o padrão de uma banca. Curto, objetivo, com insight real. Esse é o conteúdo que faz alguém salvar e mandar para a amiga.</div>
-      <span class="pillar-freq">3x por semana</span>
-    </div>
-    <div class="pillar-card verde">
-      <div class="pillar-icon">🏆</div>
-      <div class="pillar-name">Prova Social</div>
-      <div class="pillar-desc">Aprovação publicada. Depoimento de aluna. Resultado de concurso. Esse conteúdo não pede permissão para converter, ele converte sozinho.</div>
-      <span class="pillar-freq">1x por semana</span>
-    </div>
-    <div class="pillar-card azul2">
-      <div class="pillar-icon">📣</div>
-      <div class="pillar-name">Urgência/Edital</div>
-      <div class="pillar-desc">Saiu edital. Inscrições fecham em X dias. Faltam 2 semanas para a prova. Conteúdo reativo, publicado em menos de 24h, que captura o concurseiro no momento exato de maior intenção de compra.</div>
-      <span class="pillar-freq">1–2x conforme editais</span>
-    </div>
-    <div class="pillar-card roxo">
-      <div class="pillar-icon">💜</div>
-      <div class="pillar-name">Identificação</div>
-      <div class="pillar-desc">Para a mãe que estuda de madrugada. Para quem tentou três vezes e não passou. Para quem acha que não tem tempo. Esse pilar conecta antes de vender.</div>
-      <span class="pillar-freq">1x por semana</span>
-    </div>
-    <div class="pillar-card laranja">
-      <div class="pillar-icon">🎬</div>
-      <div class="pillar-name">Bastidor/Ramon</div>
-      <div class="pillar-desc">Ele é a marca. Um momento de sala de aula. Uma opinião sobre o mercado de concursos. Algo pessoal que humaniza. Esse conteúdo fideliza quem já segue.</div>
-      <span class="pillar-freq">2x por mês</span>
-    </div>
-  </div>
+    <div class="types-list">
 
-  <hr class="divider">
+      <div class="type-row">
+        <div class="type-number">1</div>
+        <div class="type-body">
+          <div class="type-name">Questão comentada</div>
+          <div class="type-desc">Ramon pega uma questão real de uma prova de magistério e resolve na frente da câmera. Explica o raciocínio, mostra o que a banca estava cobrando. Esse é o conteúdo que as pessoas salvam e mandam para as amigas.</div>
+          <div class="type-example">"Essa questão caiu na Consulplan ano passado. Olha o que você precisa saber para acertar."</div>
+          <div class="type-freq">3 vezes por semana</div>
+        </div>
+      </div>
 
-  <!-- WEEKLY GRID -->
-  <div class="section-title">Grade semanal modelo</div>
-  <div class="section-sub">Como distribuir o conteúdo ao longo de uma semana típica. Adaptável conforme editais abertos.</div>
+      <div class="type-row">
+        <div class="type-number">2</div>
+        <div class="type-body">
+          <div class="type-name">Aprovação de aluna</div>
+          <div class="type-desc">Uma aluna que passou no concurso aparece (ou manda mensagem/vídeo) contando a história. Ramon apresenta, ela fala, ele encerra com uma frase e o link para o curso. Simples assim.</div>
+          <div class="type-example">"A Juliana trabalha, tem dois filhos e estudava de madrugada. Ela passou em Saquarema. Essa é a história dela."</div>
+          <div class="type-freq">1 vez por semana</div>
+        </div>
+      </div>
 
-  <!-- WEEK 1 -->
-  <div class="week-section">
-    <div class="week-label">
-      <span class="week-badge">Semana 1</span>
-      <span class="week-theme">Autoridade — Diferença entre bancas</span>
-    </div>
-    <div class="days-grid">
-      <div class="day-card">
-        <span class="day-name">Segunda</span>
-        <div class="day-card-items">
-          <div class="content-item bg-reel">
-            <span class="format-tag">Reel</span>
-            <div class="content-text">"A Consulplan cobra português assim. A IAN cobra diferente. Olha a diferença."</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Quiz: "Qual banca vai aplicar o seu concurso?" + CTA para o curso</div>
-          </div>
+      <div class="type-row">
+        <div class="type-number">3</div>
+        <div class="type-body">
+          <div class="type-name">Aula longa no YouTube</div>
+          <div class="type-desc">Uma aula completa sobre um tema ou sobre uma banca específica. Esse vídeo fica no YouTube e serve para quem ainda não conhece o Ramon encontrá-lo na busca. É o vídeo que convence antes de comprar.</div>
+          <div class="type-example">"O português da Consulplan em 2025 — o que caiu, o que cobram e como estudar"</div>
+          <div class="type-freq">1 vez por semana</div>
         </div>
       </div>
-      <div class="day-card">
-        <span class="day-name">Terça</span>
-        <div class="day-card-items">
-          <div class="content-item bg-carrossel">
-            <span class="format-tag">Carrossel</span>
-            <div class="content-text">"Consulplan vs IAN vs COSEAC: o que muda em Português" — 6 slides, alto salvamento</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Compartilha o carrossel nos stories + enquete sobre qual banca o seguidor vai encarar</div>
-          </div>
+
+      <div class="type-row">
+        <div class="type-number">4</div>
+        <div class="type-body">
+          <div class="type-name">Vídeo pessoal</div>
+          <div class="type-desc">O Ramon fala sobre algo que viveu, uma opinião sobre o mercado de concursos, sua trajetória como professor. Não tem que ser técnico. Pode ser curto. Esse é o vídeo que faz quem já segue continuar seguindo.</div>
+          <div class="type-example">"Por que eu larguei o ensino regular para focar só em concurso de magistério."</div>
+          <div class="type-freq">2 vezes por mês</div>
         </div>
       </div>
-      <div class="day-card">
-        <span class="day-name">Quarta</span>
-        <div class="day-card-items">
-          <div class="content-item bg-reel">
-            <span class="format-tag">Reel</span>
-            <div class="content-text">Ramon resolve uma questão de Português da prova mais recente de magistério em 60 segundos</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Bastidor: Ramon mostrando a questão antes de resolver. Cria antecipação.</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card">
-        <span class="day-name">Quinta</span>
-        <div class="day-card-items">
-          <div class="content-item bg-youtube">
-            <span class="format-tag">YouTube</span>
-            <div class="content-text">Aula completa: "O português da Consulplan em 2025 — o que caiu, o que vai cair" (30–45 min)</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Divulga o vídeo do YouTube com trecho do gancho nos stories</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card">
-        <span class="day-name">Sexta</span>
-        <div class="day-card-items">
-          <div class="content-item bg-reel">
-            <span class="format-tag">Reel</span>
-            <div class="content-text">Prova social: aprovada na Consulplan — "Ela estudou 6 semanas. O que ela fez diferente."</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">CTA direto para o curso da Consulplan. Sem rodeio.</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card weekend">
-        <span class="day-name">Sábado</span>
-        <div class="day-card-items">
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Story leve: dica rápida de estudo ou motivação de fim de semana</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card weekend">
-        <span class="day-name">Domingo</span>
-        <div class="day-card-items">
-          <div class="content-item bg-off">
-            <span class="format-tag">Descanso</span>
-            <div class="content-text">Sem post. O algoritmo aguenta. O Ramon precisa recarregar.</div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 
-  <!-- WEEK 2 -->
-  <div class="week-section">
-    <div class="week-label">
-      <span class="week-badge">Semana 2</span>
-      <span class="week-theme">Identificação — Para quem estuda 1h por dia</span>
+  <hr>
+
+  <!-- SEMANA MODELO -->
+  <div class="section">
+    <div class="section-title">Passo 2</div>
+    <div class="section-heading">Como fica a semana</div>
+    <div class="section-sub">Um exemplo de semana. Toda semana segue esse mesmo esquema, mudando só o assunto.</div>
+
+    <div class="week-grid">
+
+      <div class="day">
+        <div class="day-header">Segunda</div>
+        <div class="day-body">
+          <div class="slot slot-reel">
+            <div class="slot-label">Reel</div>
+            <div class="slot-text">Questão comentada de Português — foco na banca da semana</div>
+          </div>
+          <div class="slot slot-stories">
+            <div class="slot-label">Stories</div>
+            <div class="slot-text">Compartilha o Reel + pergunta para a audiência ("qual concurso você vai prestar?")</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-header">Terça</div>
+        <div class="day-body">
+          <div class="slot slot-carrossel">
+            <div class="slot-label">Carrossel</div>
+            <div class="slot-text">Post com vários slides explicando algo sobre a banca ou o concurso da semana</div>
+          </div>
+          <div class="slot slot-stories">
+            <div class="slot-label">Stories</div>
+            <div class="slot-text">Divulga o carrossel + mostra o bastidor de como ele preparou a aula</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-header">Quarta</div>
+        <div class="day-body">
+          <div class="slot slot-reel">
+            <div class="slot-label">Reel</div>
+            <div class="slot-text">Segunda questão comentada ou aprovação de aluna</div>
+          </div>
+          <div class="slot slot-stories">
+            <div class="slot-label">Stories</div>
+            <div class="slot-text">Caixa de perguntas: "Manda a sua dúvida de Português que eu respondo aqui"</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-header">Quinta</div>
+        <div class="day-body">
+          <div class="slot slot-youtube">
+            <div class="slot-label">YouTube</div>
+            <div class="slot-text">Aula longa sobre a banca ou o concurso da semana</div>
+          </div>
+          <div class="slot slot-stories">
+            <div class="slot-label">Stories</div>
+            <div class="slot-text">Manda um trecho do vídeo do YouTube e linka para assistir completo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-header">Sexta</div>
+        <div class="day-body">
+          <div class="slot slot-reel">
+            <div class="slot-label">Reel</div>
+            <div class="slot-text">Terceira questão ou vídeo pessoal do Ramon</div>
+          </div>
+          <div class="slot slot-stories">
+            <div class="slot-label">Stories</div>
+            <div class="slot-text">Link direto para o curso da semana. Sem rodeio.</div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="days-grid">
-      <div class="day-card">
-        <span class="day-name">Segunda</span>
-        <div class="day-card-items">
-          <div class="content-item bg-reel">
-            <span class="format-tag">Reel</span>
-            <div class="content-text">"Você trabalha, tem filho e ainda tenta passar no concurso. Esse vídeo é pra você."</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Enquete: "Você estuda quantas horas por dia?" Resultado gera próximo conteúdo.</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card">
-        <span class="day-name">Terça</span>
-        <div class="day-card-items">
-          <div class="content-item bg-carrossel">
-            <span class="format-tag">Carrossel</span>
-            <div class="content-text">"Como estudar Português em 1 hora por dia e ainda chegar competitivo no concurso" — método prático, 7 slides</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Responde o resultado da enquete de segunda. Tangencia para o carrossel.</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card">
-        <span class="day-name">Quarta</span>
-        <div class="day-card-items">
-          <div class="content-item bg-reel">
-            <span class="format-tag">Reel</span>
-            <div class="content-text">Ramon resolve questão de interpretação de texto — formato mais comum na IAN. Didático, sem pressa.</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Pergunta: "Qual matéria te trava mais no concurso?" Caixa de perguntas.</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card">
-        <span class="day-name">Quinta</span>
-        <div class="day-card-items">
-          <div class="content-item bg-youtube">
-            <span class="format-tag">YouTube</span>
-            <div class="content-text">Aula: "Interpretação de texto do jeito que a IAN cobra — resolução comentada de 10 questões"</div>
-          </div>
-          <div class="content-item bg-tiktok">
-            <span class="format-tag">TikTok</span>
-            <div class="content-text">Corte do Reel de quarta adaptado para TikTok — mesma questão, formato vertical</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card">
-        <span class="day-name">Sexta</span>
-        <div class="day-card-items">
-          <div class="content-item bg-reel">
-            <span class="format-tag">Reel</span>
-            <div class="content-text">Bastidor: Ramon fala sobre o que viu em sala de aula essa semana — algo que a maioria erra e ele consegue mostrar de outra forma</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">CTA: "Se você quer aprender assim todo dia, o curso está no link da bio."</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card weekend">
-        <span class="day-name">Sábado</span>
-        <div class="day-card-items">
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Responde perguntas da caixa de quarta. Conteúdo real, gerado pela audiência.</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card weekend">
-        <span class="day-name">Domingo</span>
-        <div class="day-card-items">
-          <div class="content-item bg-off">
-            <span class="format-tag">Descanso</span>
-            <div class="content-text">Sem post.</div>
-          </div>
-        </div>
-      </div>
+
+    <div class="weekend-note">
+      Sábado: no máximo um story leve. Domingo: sem post. Descanso faz parte.
     </div>
   </div>
 
-  <!-- WEEK 3 -->
-  <div class="week-section">
-    <div class="week-label">
-      <span class="week-badge">Semana 3</span>
-      <span class="week-theme">Urgência — 2º semestre chegando</span>
-    </div>
-    <div class="days-grid">
-      <div class="day-card">
-        <span class="day-name">Segunda</span>
-        <div class="day-card-items">
-          <div class="content-item bg-reel">
-            <span class="format-tag">Reel</span>
-            <div class="content-text">"Agosto é o mês mais forte de concursos de magistério no ano. Você está pronto?"</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Contagem regressiva até agosto. "X semanas para o maior mês de editais do ano."</div>
-          </div>
+  <hr>
+
+  <!-- COMO GRAVAR -->
+  <div class="section">
+    <div class="section-title">Passo 3</div>
+    <div class="section-heading">Como gravar cada tipo</div>
+    <div class="section-sub">Sem equipamento caro. O que importa é luz boa, áudio limpo e câmera parada.</div>
+
+    <div class="how-grid">
+
+      <div class="how-card">
+        <div class="how-header">
+          <div class="how-format">Reel (questão comentada)</div>
+          <div class="how-duration">30 a 60 segundos</div>
+        </div>
+        <div class="how-body">
+          <ol>
+            <li>Começa com uma frase que prende. Não diz "olá, tudo bem".</li>
+            <li>Mostra a questão na tela ou fala sobre ela direto.</li>
+            <li>Resolve e explica o raciocínio em menos de 40 segundos.</li>
+            <li>Termina com: "Quer aprender mais sobre essa banca? Curso no link da bio."</li>
+          </ol>
         </div>
       </div>
-      <div class="day-card">
-        <span class="day-name">Terça</span>
-        <div class="day-card-items">
-          <div class="content-item bg-carrossel">
-            <span class="format-tag">Carrossel</span>
-            <div class="content-text">"Os concursos de magistério que devem sair no 2º semestre no RJ — e o que estudar para cada um" — 8 slides</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Divulga o carrossel + enquete: "Qual concurso você mais espera?"</div>
-          </div>
+
+      <div class="how-card">
+        <div class="how-header">
+          <div class="how-format">Reel (aprovação de aluna)</div>
+          <div class="how-duration">45 a 60 segundos</div>
+        </div>
+        <div class="how-body">
+          <ol>
+            <li>Ramon abre falando o nome da aluna e onde ela passou.</li>
+            <li>A aluna conta em uma frase o maior obstáculo que tinha.</li>
+            <li>Conta o que mudou depois do curso.</li>
+            <li>Ramon fecha: "É assim toda semana aqui no Passei. Link na bio."</li>
+          </ol>
         </div>
       </div>
-      <div class="day-card">
-        <span class="day-name">Quarta</span>
-        <div class="day-card-items">
-          <div class="content-item bg-reel">
-            <span class="format-tag">Reel</span>
-            <div class="content-text">Prova social + urgência: "Ela entrou no curso 8 semanas antes do concurso de Saquarema. Passou." CTA para o curso.</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Link direto para o curso de Saquarema/Araruama.</div>
-          </div>
+
+      <div class="how-card">
+        <div class="how-header">
+          <div class="how-format">Carrossel (post de slides)</div>
+          <div class="how-duration">6 a 8 slides</div>
+        </div>
+        <div class="how-body">
+          <ol>
+            <li>Slide 1: uma pergunta ou frase forte. É o que faz alguém parar de rolar.</li>
+            <li>Slides do meio: o conteúdo. Um ponto por slide, frase curta.</li>
+            <li>Slide final: "Quer o curso dessa banca? Link na bio." e o @ do Ramon.</li>
+            <li>Assunto ideal: diferença entre bancas, o que cai, dica de estudo por tempo.</li>
+          </ol>
         </div>
       </div>
-      <div class="day-card">
-        <span class="day-name">Quinta</span>
-        <div class="day-card-items">
-          <div class="content-item bg-youtube">
-            <span class="format-tag">YouTube</span>
-            <div class="content-text">"O que estudar para o concurso de Saquarema — análise da banca e do edital" (aula completa, 25–35 min)</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Trecho do vídeo do YouTube para stories. CTA para assistir completo.</div>
-          </div>
+
+      <div class="how-card">
+        <div class="how-header">
+          <div class="how-format">Aula longa (YouTube)</div>
+          <div class="how-duration">25 a 45 minutos</div>
+        </div>
+        <div class="how-body">
+          <ol>
+            <li>Título com o nome da banca e do concurso. Isso aparece na busca do Google.</li>
+            <li>Começa falando o que a pessoa vai aprender. Nada de introdução longa.</li>
+            <li>No meio do vídeo, menciona o curso pago relacionado ao tema.</li>
+            <li>No final, pede para se inscrever e fala do próximo vídeo.</li>
+          </ol>
         </div>
       </div>
-      <div class="day-card">
-        <span class="day-name">Sexta</span>
-        <div class="day-card-items">
-          <div class="content-item bg-reel">
-            <span class="format-tag">Reel</span>
-            <div class="content-text">"Essa é a última semana com desconto no curso de Araruama. Na segunda, o preço volta." — urgência real, sem enrolação.</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">5 stories de venda direta: preço, o que tem no curso, quem já aprovou, CTA.</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card weekend">
-        <span class="day-name">Sábado</span>
-        <div class="day-card-items">
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Últimas horas do desconto. Depoimento rápido de aluna aprovada.</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card weekend">
-        <span class="day-name">Domingo</span>
-        <div class="day-card-items">
-          <div class="content-item bg-off">
-            <span class="format-tag">Descanso</span>
-            <div class="content-text">Sem post.</div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 
-  <!-- WEEK 4 -->
-  <div class="week-section">
-    <div class="week-label">
-      <span class="week-badge">Semana 4</span>
-      <span class="week-theme">Bastidor + Prova Social — Humanização e aprovações</span>
-    </div>
-    <div class="days-grid">
-      <div class="day-card">
-        <span class="day-name">Segunda</span>
-        <div class="day-card-items">
-          <div class="content-item bg-reel">
-            <span class="format-tag">Reel</span>
-            <div class="content-text">Ramon fala sobre sua trajetória — por que ele ensina Português para concurso, o que o diferencia de um professor de vestibular</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Continuação do bastidor — Ramon mostrando a rotina de preparar uma aula por banca</div>
-          </div>
-        </div>
+  <hr>
+
+  <!-- COMO COMEÇAR O VÍDEO -->
+  <div class="section">
+    <div class="section-title">Dica extra</div>
+    <div class="section-heading">Como começar o vídeo</div>
+    <div class="section-sub">Os primeiros 3 segundos decidem se a pessoa assiste ou passa. Esses modelos funcionam nesse nicho.</div>
+
+    <div class="openings-list">
+
+      <div class="opening-card">
+        <div class="opening-situation">Quando for falar de banca específica</div>
+        <div class="opening-line">"Você está estudando Português do jeito errado para esse concurso. Deixa eu te mostrar."</div>
       </div>
-      <div class="day-card">
-        <span class="day-name">Terça</span>
-        <div class="day-card-items">
-          <div class="content-item bg-carrossel">
-            <span class="format-tag">Carrossel</span>
-            <div class="content-text">"3.000 aprovações em 8 anos — o que os alunos que passaram tinham em comum" — prova social com dados reais</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Divulga o carrossel + caixa de perguntas para o Ramon sobre aprovações</div>
-          </div>
-        </div>
+
+      <div class="opening-card">
+        <div class="opening-situation">Quando for falar com quem tem pouco tempo</div>
+        <div class="opening-line">"Se você trabalha, tem filho e estuda de madrugada — esse vídeo é pra você."</div>
       </div>
-      <div class="day-card">
-        <span class="day-name">Quarta</span>
-        <div class="day-card-items">
-          <div class="content-item bg-reel">
-            <span class="format-tag">Reel</span>
-            <div class="content-text">Depoimento de aluna aprovada em formato de minidocumentário: história, obstáculo, virada, resultado. Ramon aparece no final.</div>
-          </div>
-          <div class="content-item bg-tiktok">
-            <span class="format-tag">TikTok</span>
-            <div class="content-text">Mesmo vídeo do Reel, adaptado para TikTok</div>
-          </div>
-        </div>
+
+      <div class="opening-card">
+        <div class="opening-situation">Quando for resolver uma questão</div>
+        <div class="opening-line">"Essa questão caiu na última prova de magistério. 70% das pessoas errou. Você sabe por quê?"</div>
       </div>
-      <div class="day-card">
-        <span class="day-name">Quinta</span>
-        <div class="day-card-items">
-          <div class="content-item bg-youtube">
-            <span class="format-tag">YouTube</span>
-            <div class="content-text">"Questões que mais caem em concordância verbal nos concursos do RJ — resolução comentada ao vivo" (30 min)</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Trecho do vídeo nos stories. Pergunta: "Concordância verbal te trava? Comenta aqui."</div>
-          </div>
-        </div>
+
+      <div class="opening-card">
+        <div class="opening-situation">Quando for falar de urgência de concurso</div>
+        <div class="opening-line">"O concurso de [município] está chegando. Você sabe o que a banca cobra em Português?"</div>
       </div>
-      <div class="day-card">
-        <span class="day-name">Sexta</span>
-        <div class="day-card-items">
-          <div class="content-item bg-reel">
-            <span class="format-tag">Reel</span>
-            <div class="content-text">Fechamento do mês: "O que trabalhamos esse mês, o que vem no próximo e o que você não pode perder." Ramon direto na câmera.</div>
-          </div>
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Retrospectiva da semana + lembrete do link na bio</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card weekend">
-        <span class="day-name">Sábado</span>
-        <div class="day-card-items">
-          <div class="content-item bg-stories">
-            <span class="format-tag">Stories</span>
-            <div class="content-text">Story pessoal do Ramon — algo fora do conteúdo técnico. Humaniza.</div>
-          </div>
-        </div>
-      </div>
-      <div class="day-card weekend">
-        <span class="day-name">Domingo</span>
-        <div class="day-card-items">
-          <div class="content-item bg-off">
-            <span class="format-tag">Descanso</span>
-            <div class="content-text">Sem post.</div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 
-  <hr class="divider">
+  <hr>
 
-  <!-- MONTHLY TABLE -->
-  <div class="section-title">Visão do mês — Junho 2026</div>
-  <div class="section-sub">O que gravar, quando publicar e qual pilar cada peça serve.</div>
+  <!-- REGRAS PRÁTICAS -->
+  <div class="section">
+    <div class="section-title">Para não esquecer</div>
+    <div class="section-heading">4 regras práticas</div>
+    <div class="section-sub">O que faz diferença no dia a dia — e que não precisa de agência para executar.</div>
 
-  <div class="month-grid">
-    <div class="month-header">Grade mensal completa</div>
-    <table class="month-table">
-      <thead>
-        <tr>
-          <th>Semana</th>
-          <th>Tema central</th>
-          <th>Reels (3x)</th>
-          <th>Carrossel (1x)</th>
-          <th>YouTube (1x)</th>
-          <th>Pilar</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="table-week">S1<br><small>02–07 jun</small></td>
-          <td class="table-tema">Diferença entre bancas</td>
-          <td class="table-reel">Consulplan vs IAN / Questão ao vivo / Aprovada na Consulplan</td>
-          <td class="table-carrossel">Consulplan vs IAN vs COSEAC — o que muda no português</td>
-          <td class="table-yt">O português da Consulplan — o que caiu e o que vai cair</td>
-          <td><span class="badge-pillar p-autoridade">Autoridade</span></td>
-        </tr>
-        <tr>
-          <td class="table-week">S2<br><small>09–14 jun</small></td>
-          <td class="table-tema">Para quem estuda 1h/dia</td>
-          <td class="table-reel">Mãe que estuda / Questão IAN / Bastidor sala de aula</td>
-          <td class="table-carrossel">Como estudar Português 1h/dia e chegar competitivo</td>
-          <td class="table-yt">Interpretação de texto da IAN — 10 questões comentadas</td>
-          <td><span class="badge-pillar p-id">Identificação</span></td>
-        </tr>
-        <tr>
-          <td class="table-week">S3<br><small>16–21 jun</small></td>
-          <td class="table-tema">2º semestre chegando</td>
-          <td class="table-reel">Agosto chegando / Aprovada Saquarema / Último dia de desconto</td>
-          <td class="table-carrossel">Concursos de magistério previstos para o 2º semestre no RJ</td>
-          <td class="table-yt">O que estudar para o concurso de Saquarema — análise da banca</td>
-          <td><span class="badge-pillar p-venda">Urgência</span></td>
-        </tr>
-        <tr>
-          <td class="table-week">S4<br><small>23–28 jun</small></td>
-          <td class="table-tema">Prova social + bastidor</td>
-          <td class="table-reel">Historia do Ramon / Minidocumentário aprovada / Fechamento do mês</td>
-          <td class="table-carrossel">3.000 aprovações — o que os alunos que passaram tinham em comum</td>
-          <td class="table-yt">Concordância verbal nos concursos do RJ — resolução comentada</td>
-          <td><span class="badge-pillar p-prova">Prova Social</span> <span class="badge-pillar p-bastidor">Bastidor</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="rules-list">
 
-  <hr class="divider">
-
-  <!-- FORMAT GUIDE -->
-  <div class="section-title">Guia de formato por canal</div>
-  <div class="section-sub">O que gravar, como gravar e o que não errar em cada plataforma.</div>
-
-  <div class="format-section">
-    <div class="formats-grid">
-      <div class="format-card">
-        <div class="format-header reel">
-          <span class="format-emoji">📱</span>
-          <span class="format-title">Reels (Instagram)</span>
-        </div>
-        <div class="format-body">
-          <ul>
-            <li>Duração ideal: 30 a 60 segundos. Acima de 90s, a retenção cai muito no nicho.</li>
-            <li>Gancho nos primeiros 3 segundos: pergunta, afirmação provocadora ou dado concreto.</li>
-            <li>Ramon de frente para a câmera, ambiente de estúdio ou sala limpa. Sem fundo bagunçado.</li>
-            <li>Legenda automática obrigatória — 85% do público assiste sem som.</li>
-            <li>CTA no último frame em texto: "Curso no link da bio" ou "Comenta o seu concurso."</li>
-            <li>Caption curta (3–5 linhas) com contexto + hashtags de banca e concurso.</li>
-          </ul>
+      <div class="rule-row">
+        <div class="rule-icon">📅</div>
+        <div class="rule-body">
+          <div class="rule-title">Grava tudo em dois dias por mês</div>
+          <div class="rule-text">Reserva um dia para gravar os Reels e carrosséis e outro para a aula longa do YouTube. O resto do mês é só postar o que já está gravado. Assim o Ramon não precisa pensar em conteúdo toda semana.</div>
         </div>
       </div>
-      <div class="format-card">
-        <div class="format-header carrossel">
-          <span class="format-emoji">📂</span>
-          <span class="format-title">Carrosséis (Feed)</span>
-        </div>
-        <div class="format-body">
-          <ul>
-            <li>Mínimo 6 slides, máximo 10. Slides 1 e 2 vendem o resto — ou prende ou perde.</li>
-            <li>Slide 1 (capa): frase de impacto + foto do Ramon ou visual forte. Sem texto pequeno.</li>
-            <li>Slide final sempre com CTA e @proframonmatos.</li>
-            <li>Design nas cores da marca: azul marinho (#0D2B5E) e verde menta (#00C896).</li>
-            <li>Conteúdo que gera salvamento: comparações entre bancas, resumos de tema, listas de o que cai.</li>
-            <li>Caption longa aqui funciona bem — o público lê mais em post de feed.</li>
-          </ul>
+
+      <div class="rule-row">
+        <div class="rule-icon">🏆</div>
+        <div class="rule-body">
+          <div class="rule-title">Aprovação publicada em até 48 horas</div>
+          <div class="rule-text">Quando sair resultado de um concurso onde o Passei tem alunas, Ramon entra em contato, pega o depoimento e publica. Esse timing importa. Quem espera uma semana perde o momento.</div>
         </div>
       </div>
-      <div class="format-card">
-        <div class="format-header stories">
-          <span class="format-emoji">🔄</span>
-          <span class="format-title">Stories (diários)</span>
-        </div>
-        <div class="format-body">
-          <ul>
-            <li>Mínimo 3, máximo 7 por dia. Mais que isso, as pessoas pulam.</li>
-            <li>Mix de: conteúdo, bastidor, pergunta/enquete e CTA. Nunca só venda.</li>
-            <li>Enquetes e caixas de perguntas pelo menos 2x por semana — geram dado real do público.</li>
-            <li>Compartilhar Reel nos stories é obrigatório no dia de publicação.</li>
-            <li>Stories de venda: mostrar o produto, o preço e o link. Sem rodeio.</li>
-            <li>Salvar os stories com mais resposta como Destaques: "Aprovações", "Bancas", "Cursos".</li>
-          </ul>
+
+      <div class="rule-row">
+        <div class="rule-icon">📢</div>
+        <div class="rule-body">
+          <div class="rule-title">Edital novo vira post no mesmo dia</div>
+          <div class="rule-text">Saiu edital de magistério no RJ, Ramon grava um vídeo rápido falando o que sabe sobre aquela banca e linka para o curso. Não precisa ser produção elaborada. Pode ser no celular mesmo. A velocidade vale mais que o polimento.</div>
         </div>
       </div>
-      <div class="format-card">
-        <div class="format-header youtube">
-          <span class="format-emoji">▶️</span>
-          <span class="format-title">YouTube (semanal)</span>
-        </div>
-        <div class="format-body">
-          <ul>
-            <li>Um vídeo por semana, 25 a 45 minutos. Esse é o formato que cria confiança antes da compra.</li>
-            <li>Título com banca + concurso específico: SEO paga bem neste nicho.</li>
-            <li>Thumbnail com foto do Ramon + texto grande + cor vibrante. Padrão que já funciona no canal.</li>
-            <li>Início do vídeo: Ramon vai direto ao ponto — o que a pessoa vai aprender e por que precisa saber.</li>
-            <li>CTA no meio e no final: mencionar o curso da banca relacionada ao vídeo.</li>
-            <li>Reutilizar 1 corte do vídeo como Reel. Dobra a distribuição com o mesmo conteúdo.</li>
-          </ul>
+
+      <div class="rule-row">
+        <div class="rule-icon">♻️</div>
+        <div class="rule-body">
+          <div class="rule-title">Um vídeo vira três conteúdos</div>
+          <div class="rule-text">Aula longa no YouTube vira um Reel de 60 segundos. Esse Reel vai para o TikTok também. Um carrossel vira stories. O conteúdo não morre depois da primeira publicação — ele se multiplica.</div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <hr class="divider">
-
-  <!-- HOOKS -->
-  <div class="section-title">Ganchos que funcionam no nicho</div>
-  <div class="section-sub">Os primeiros 3 segundos do Reel determinam se alguém assiste ou passa. Use esses modelos como ponto de partida.</div>
-
-  <div class="hooks-section">
-    <div class="hooks-grid">
-      <div class="hook-card">
-        <div class="hook-type">Provocação técnica</div>
-        <div class="hook-text">"Você está estudando Português para concurso do jeito errado."</div>
-        <div class="hook-why">Funciona porque quem estuda concurso tem medo de estar perdendo tempo. Essa frase força o play.</div>
-      </div>
-      <div class="hook-card">
-        <div class="hook-type">Identificação direta</div>
-        <div class="hook-text">"Se você trabalha, tem filho e ainda tenta passar no concurso — esse vídeo é pra você."</div>
-        <div class="hook-why">Descreve exatamente o perfil do público. Quem se encaixa não passa o dedo.</div>
-      </div>
-      <div class="hook-card">
-        <div class="hook-type">Dado concreto</div>
-        <div class="hook-text">"3.000 aprovações em 8 anos. O que esses alunos tinham em comum?"</div>
-        <div class="hook-why">Número real cria credibilidade imediata. A pergunta cria curiosidade para ficar até o fim.</div>
-      </div>
-      <div class="hook-card">
-        <div class="hook-type">Urgência de banca</div>
-        <div class="hook-text">"A Consulplan vai aplicar o concurso de Saquarema. Você sabe o que ela cobra em Português?"</div>
-        <div class="hook-why">Público com intenção alta de compra clica nesse gancho porque é exatamente o que precisa saber.</div>
-      </div>
-      <div class="hook-card">
-        <div class="hook-type">Contra-intuitivo</div>
-        <div class="hook-text">"Você não precisa estudar mais. Você precisa estudar o que cai."</div>
-        <div class="hook-why">Contradiz o senso comum de "estudar mais". Desafia a crença e abre espaço para o método do Ramon.</div>
-      </div>
-      <div class="hook-card">
-        <div class="hook-type">Urgência temporal</div>
-        <div class="hook-text">"Agosto chega em 8 semanas. O maior mês de concursos de magistério do ano."</div>
-        <div class="hook-why">Cria senso de urgência real baseado em calendário. Funciona especialmente para quem está em cima do muro.</div>
-      </div>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <!-- METRICS -->
-  <div class="section-title">Meta por mês</div>
-  <div class="section-sub">O que acompanhar para saber se o conteúdo está funcionando.</div>
-
-  <div class="metrics-grid">
-    <div class="metric-card">
-      <div class="metric-number">12<span>+</span></div>
-      <div class="metric-label">Reels publicados no mês (Instagram + TikTok)</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">4<span>x</span></div>
-      <div class="metric-label">Carrosséis no feed</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">4<span>x</span></div>
-      <div class="metric-label">Vídeos longos no YouTube</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">6<span>+</span></div>
-      <div class="metric-label">Aprovações publicadas (prova social) no mês</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">+500</div>
-      <div class="metric-label">Novos seguidores no Instagram como meta inicial</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">2<span>x</span></div>
-      <div class="metric-label">Dias de gravação por mês (batch gravação)</div>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <!-- NOTES -->
-  <div class="section-title">O que não pode faltar na operação</div>
-  <div class="section-sub">Detalhes que fazem a diferença entre uma grade que existe no papel e uma que realmente funciona.</div>
-
-  <div class="notes-grid">
-    <div class="note-card">
-      <div class="note-title">Gravação em lote</div>
-      <div class="note-text">Ramon grava tudo em dois dias por mês: um dia para Reels e outro para o conteúdo de YouTube e carrosséis. Assim ele não precisa pensar em conteúdo toda semana. A grade está aqui, ele só precisa executar.</div>
-    </div>
-    <div class="note-card">
-      <div class="note-title">Aprovação publicada em 48h</div>
-      <div class="note-text">Quando sair resultado de concurso onde o Passei tem alunos inscritos, coletar depoimento e publicar em no máximo 48 horas. Esse timing importa. O público de concurso busca notícia de aprovação logo após o resultado.</div>
-    </div>
-    <div class="note-card">
-      <div class="note-title">Edital publicado em menos de 24h</div>
-      <div class="note-text">Quando sair qualquer edital de magistério no RJ, criar um Reel ou story no mesmo dia. Não precisa ser produção elaborada — pode ser o Ramon na frente do celular falando o que sabe sobre aquela banca e linkando para o curso. A velocidade vale mais que o polimento.</div>
-    </div>
-    <div class="note-card">
-      <div class="note-title">Reaproveitar tudo</div>
-      <div class="note-text">Um vídeo longo do YouTube vira um Reel. Um Reel vira TikTok. Um carrossel vira stories. O conteúdo nunca morre na primeira publicação. Com 4 vídeos do YouTube, o Passei tem material para 8 Reels, 4 TikToks e vários stories.</div>
-    </div>
-    <div class="note-card">
-      <div class="note-title">Ramon fala de si mesmo</div>
-      <div class="note-text">Pelo menos duas vezes por mês, ele precisa aparecer como pessoa, não só como professor. Trajetória, bastidor de preparação de aula, opinião sobre algo no mercado de concursos. Isso é o que constrói audiência fiel, não só seguidores.</div>
-    </div>
-    <div class="note-card">
-      <div class="note-title">TikTok começa agora</div>
-      <div class="note-text">Não existe razão para esperar. Os Reels prontos já viram TikTok com ajuste de legenda e hashtag. O nicho de magistério no TikTok está praticamente vazio. Quem entrar primeiro vai pagar o menor preço por alcance.</div>
     </div>
   </div>
 
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
-  Agência Asher · Curso Preparatório Passei · Grade de Conteúdo — Junho 2026
+  Agência Asher · Curso Preparatório Passei · Junho 2026
 </div>
 
 </body>
