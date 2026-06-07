@@ -8,12 +8,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
     :root {
-      --preto:    #1D1D1B;
-      --branco:   #FFFFFF;
-      --cinza:    #333333;
+      --preto:       #1D1D1B;
+      --branco:      #FFFFFF;
+      --cinza:       #333333;
       --cinza-claro: #F5F5F5;
-      --vermelho: #CC0000;
-      --borda:    #E0E0E0;
+      --vermelho:    #CC0000;
+      --borda:       #E0E0E0;
+      --verde-copa:  #1B5E20;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,11 +40,7 @@
       flex-wrap: wrap;
     }
 
-    header .marca {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
+    header .marca { display: flex; flex-direction: column; gap: 6px; }
 
     header .agencia {
       font-size: 11px;
@@ -53,12 +50,7 @@
       color: #888;
     }
 
-    header h1 {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-
+    header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
     header h1 span { color: var(--vermelho); }
 
     header .meta {
@@ -67,7 +59,6 @@
       color: #999;
       line-height: 1.8;
     }
-
     header .meta strong { color: var(--branco); }
 
     /* ── DATAS-CHAVE ──────────────────────────────── */
@@ -88,6 +79,11 @@
       gap: 12px;
     }
 
+    .data-badge.copa {
+      background: #E8F5E9;
+      border-color: #A5D6A7;
+    }
+
     .data-badge .dia {
       background: var(--vermelho);
       color: var(--branco);
@@ -96,6 +92,10 @@
       border-radius: 6px;
       padding: 4px 8px;
       white-space: nowrap;
+    }
+
+    .data-badge.copa .dia {
+      background: var(--verde-copa);
     }
 
     .data-badge .nome {
@@ -107,9 +107,9 @@
     /* ── RESUMO ───────────────────────────────────── */
     .resumo-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 12px;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     .resumo-card {
@@ -128,7 +128,7 @@
     }
 
     .resumo-card .label {
-      font-size: 12px;
+      font-size: 11px;
       color: #888;
       margin-top: 6px;
       font-weight: 500;
@@ -140,16 +140,71 @@
     .resumo-card.destaque .numero { color: var(--branco); }
     .resumo-card.destaque .label { color: #888; }
 
-    /* ── SEMANA ───────────────────────────────────── */
-    .semana {
-      margin-bottom: 36px;
+    .resumo-card.copa-card { background: #E8F5E9; border-color: #A5D6A7; }
+    .resumo-card.copa-card .numero { color: var(--verde-copa); }
+
+    /* ── COPA BANNER ──────────────────────────────── */
+    .copa-banner {
+      background: var(--verde-copa);
+      border-radius: 12px;
+      padding: 28px 40px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
     }
+
+    .copa-banner-left h2 {
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .copa-banner-left p {
+      color: #A5D6A7;
+      font-size: 13px;
+      line-height: 1.6;
+      max-width: 560px;
+    }
+
+    .copa-badge-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 200px;
+    }
+
+    .copa-badge-item {
+      background: rgba(255,255,255,0.12);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 12px;
+      color: #E8F5E9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .copa-badge-item .dot {
+      width: 6px;
+      height: 6px;
+      background: #A5D6A7;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── SEMANA ───────────────────────────────────── */
+    .semana { margin-bottom: 36px; }
 
     .semana-header {
       display: flex;
       align-items: center;
       gap: 16px;
       margin-bottom: 16px;
+      flex-wrap: wrap;
     }
 
     .semana-numero {
@@ -161,15 +216,11 @@
       text-transform: uppercase;
       padding: 6px 14px;
       border-radius: 20px;
+      white-space: nowrap;
     }
 
     .semana-titulo { font-size: 16px; font-weight: 600; }
-
-    .semana-datas {
-      font-size: 13px;
-      color: #888;
-      margin-left: auto;
-    }
+    .semana-datas { font-size: 13px; color: #888; margin-left: auto; white-space: nowrap; }
 
     /* ── TABELA ───────────────────────────────────── */
     .tabela-wrap {
@@ -179,11 +230,7 @@
       overflow: hidden;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13px;
-    }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
 
     thead tr { background: var(--preto); color: var(--branco); }
 
@@ -200,6 +247,8 @@
     tbody tr { border-bottom: 1px solid var(--cinza-claro); transition: background 0.15s; }
     tbody tr:last-child { border-bottom: none; }
     tbody tr:hover { background: #FAFAFA; }
+    tbody tr.row-copa { background: #F1F8E9; }
+    tbody tr.row-copa:hover { background: #E8F5E9; }
 
     tbody td {
       padding: 14px 16px;
@@ -208,7 +257,6 @@
     }
 
     .col-data { white-space: nowrap; font-weight: 600; color: var(--cinza); }
-
     .col-dia {
       white-space: nowrap;
       font-size: 11px;
@@ -229,10 +277,9 @@
       white-space: nowrap;
     }
 
-    .badge-estatico  { background: #E8E8E8; color: #444; }
-    .badge-carrossel { background: #FFF3CD; color: #7A5C00; }
-    .badge-reels     { background: #FFE0E0; color: var(--vermelho); }
-    .badge-stories   { background: #E8F4FD; color: #1A6B9A; }
+    .badge-estatico   { background: #E8E8E8; color: #444; }
+    .badge-carrossel  { background: #FFF3CD; color: #7A5C00; }
+    .badge-reels      { background: #FFE0E0; color: var(--vermelho); }
 
     /* Badges de pilar */
     .pilar {
@@ -245,14 +292,28 @@
       white-space: nowrap;
     }
 
-    .pilar-vitrine      { background: #F0FFF4; color: #276749; }
-    .pilar-institucional{ background: #F0F4FF; color: #2B4FA8; }
-    .pilar-educativo    { background: #FFF8F0; color: #8B4500; }
-    .pilar-sazonalidade { background: #FDF0FF; color: #6B2D8B; }
-    .pilar-conversao    { background: #FFF0F0; color: #8B0000; }
+    .pilar-vitrine        { background: #F0FFF4; color: #276749; }
+    .pilar-institucional  { background: #F0F4FF; color: #2B4FA8; }
+    .pilar-educativo      { background: #FFF8F0; color: #8B4500; }
+    .pilar-sazonalidade   { background: #FDF0FF; color: #6B2D8B; }
+    .pilar-conversao      { background: #FFF0F0; color: #8B0000; }
+    .pilar-copa           { background: #E8F5E9; color: #1B5E20; }
+    .pilar-bastidores     { background: #F3E5F5; color: #6A1B9A; }
+    .pilar-aspiracional   { background: #FFF8E1; color: #E65100; }
 
     .tema { font-weight: 600; color: var(--preto); margin-bottom: 4px; }
-    .copy { font-size: 12px; color: #666; line-height: 1.6; }
+    .chamada { font-size: 12px; color: #666; line-height: 1.6; font-style: italic; }
+
+    .tag-alerta {
+      display: inline-block;
+      font-size: 10px;
+      background: #FFF3CD;
+      color: #7A5C00;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 6px;
+      font-weight: 600;
+    }
 
     /* ── STORIES ──────────────────────────────────── */
     .stories-box {
@@ -272,11 +333,7 @@
       margin-bottom: 10px;
     }
 
-    .stories-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .stories-list { display: flex; flex-wrap: wrap; gap: 8px; }
 
     .story-item {
       background: var(--branco);
@@ -320,11 +377,9 @@
       margin-bottom: 8px;
     }
 
-    .obs-item p {
-      font-size: 13px;
-      color: #BBB;
-      line-height: 1.7;
-    }
+    .obs-item h4.copa-title { color: #A5D6A7; }
+
+    .obs-item p { font-size: 13px; color: #BBB; line-height: 1.7; }
 
     /* ── FOOTER ───────────────────────────────────── */
     footer {
@@ -335,6 +390,15 @@
     }
 
     footer strong { color: var(--cinza); }
+
+    @media (max-width: 640px) {
+      header { padding: 24px; }
+      header .meta { text-align: left; }
+      .copa-banner { padding: 24px; }
+      .obs-section { padding: 24px; }
+      table { font-size: 12px; }
+      thead th, tbody td { padding: 10px 12px; }
+    }
   </style>
 </head>
 <body>
@@ -348,13 +412,17 @@
     <div class="meta">
       <strong>Agvel Veículos</strong><br>
       Instagram + Facebook<br>
-      5 posts/semana · Stories diários<br>
+      1 post por dia · 30 posts no total<br>
       Pato Branco, PR
     </div>
   </header>
 
   <!-- DATAS-CHAVE -->
   <div class="datas-chave">
+    <div class="data-badge copa">
+      <span class="dia">11/06</span>
+      <span class="nome">⚽ Copa do Mundo começa</span>
+    </div>
     <div class="data-badge">
       <span class="dia">12/06</span>
       <span class="nome">Dia dos Namorados</span>
@@ -380,24 +448,43 @@
   <!-- RESUMO -->
   <div class="resumo-grid">
     <div class="resumo-card destaque">
-      <div class="numero">19</div>
-      <div class="label">Total de posts</div>
+      <div class="numero">30</div>
+      <div class="label">Total posts</div>
     </div>
     <div class="resumo-card">
-      <div class="numero">12</div>
+      <div class="numero">21</div>
       <div class="label">Estáticos</div>
     </div>
     <div class="resumo-card">
-      <div class="numero">4</div>
+      <div class="numero">5</div>
       <div class="label">Carrosséis</div>
     </div>
     <div class="resumo-card">
-      <div class="numero">3</div>
+      <div class="numero">4</div>
       <div class="label">Reels</div>
     </div>
+    <div class="resumo-card copa-card">
+      <div class="numero">6</div>
+      <div class="label">Posts Copa</div>
+    </div>
     <div class="resumo-card">
-      <div class="numero">16+</div>
+      <div class="numero">20+</div>
       <div class="label">Stories</div>
+    </div>
+  </div>
+
+  <!-- COPA BANNER -->
+  <div class="copa-banner">
+    <div class="copa-banner-left">
+      <h2>⚽ Campanha Copa do Mundo 2026</h2>
+      <p>Copa começa dia 11/06 e o Brasil joga a fase de grupos em junho. Posts da Copa entram no calendário sem forçar venda: a Agvel entra na conversa como marca que está junto da torcida. Copie as legendas prontas no cronograma .md e adapte a data conforme a tabela FIFA.</p>
+    </div>
+    <div class="copa-badge-list">
+      <div class="copa-badge-item"><span class="dot"></span>Abertura da Copa (11/06) — copy pronta</div>
+      <div class="copa-badge-item"><span class="dot"></span>Dia de jogo do Brasil — template pronto</div>
+      <div class="copa-badge-item"><span class="dot"></span>Pós-vitória do Brasil — template pronto</div>
+      <div class="copa-badge-item"><span class="dot"></span>Mata-mata / fase decisiva — template pronto</div>
+      <div class="copa-badge-item"><span class="dot"></span>Se o Brasil sair: substituir por vitrine</div>
     </div>
   </div>
 
@@ -407,7 +494,7 @@
   <div class="semana">
     <div class="semana-header">
       <span class="semana-numero">Semana 1</span>
-      <span class="semana-titulo">Posicionamento de marca</span>
+      <span class="semana-titulo">Abertura do mês</span>
       <span class="semana-datas">01 – 07/06</span>
     </div>
     <div class="tabela-wrap">
@@ -418,50 +505,66 @@
             <th>Dia</th>
             <th>Formato</th>
             <th>Pilar</th>
-            <th>Tema & Chamada</th>
-            <th>Direção de copy</th>
+            <th>Tema</th>
+            <th>Chamada / Ideia</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="col-data">02/06</td>
+            <td class="col-data">01/06</td>
             <td class="col-dia">Seg</td>
             <td><span class="badge badge-estatico">Estático</span></td>
             <td><span class="pilar pilar-vitrine">Vitrine</span></td>
-            <td><div class="tema">VW Tiguan 2024 — SUV da semana</div></td>
-            <td><div class="copy">Abrir com dado forte (km, ano, opcionais). Tom: desejo + qualidade. CTA para WhatsApp.</div></td>
+            <td><div class="tema">Abertura de junho</div></td>
+            <td><div class="chamada">"Junho chegou. O estoque também." Lista os 5 modelos disponíveis com gancho de boas-vindas.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">02/06</td>
+            <td class="col-dia">Ter</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-vitrine">Vitrine</span></td>
+            <td><div class="tema">VW Tiguan 2024 <span class="tag-alerta">⚠ km/versão</span></div></td>
+            <td><div class="chamada">"Esse nível de equipamento em um zero-km sairia por quase o dobro." Tração integral, couro, painel digital.</div></td>
           </tr>
           <tr>
             <td class="col-data">03/06</td>
-            <td class="col-dia">Ter</td>
+            <td class="col-dia">Qua</td>
             <td><span class="badge badge-carrossel">Carrossel</span></td>
             <td><span class="pilar pilar-educativo">Educativo</span></td>
-            <td><div class="tema">Seminovo ou 0km? O que faz mais sentido pra você</div></td>
-            <td><div class="copy">5–6 slides comparando custo-benefício. Posicionar seminovo premium como escolha inteligente.</div></td>
+            <td><div class="tema">Seminovo ou 0km?</div></td>
+            <td><div class="chamada">6 slides. O 0km perde 10–15% no primeiro ano. A diferença está na procedência — e na Agvel isso já vem resolvido.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">04/06</td>
+            <td class="col-dia">Qui</td>
+            <td><span class="badge badge-reels">Reels</span></td>
+            <td><span class="pilar pilar-bastidores">Bastidores</span></td>
+            <td><div class="tema">Chegada de veículo novo <span class="tag-alerta">⚠ Wenderson</span></div></td>
+            <td><div class="chamada">"Esse chegou ontem." Gravar chegada real: carreta ou entrada no pátio, vistoria, posicionamento no showroom.</div></td>
           </tr>
           <tr>
             <td class="col-data">05/06</td>
-            <td class="col-dia">Qui</td>
+            <td class="col-dia">Sex</td>
             <td><span class="badge badge-estatico">Estático</span></td>
             <td><span class="pilar pilar-institucional">Institucional</span></td>
-            <td><div class="tema">20 anos de Agvel — e nenhum veículo com pendência</div></td>
-            <td><div class="copy">Foco no diferencial de documentação 100% regularizada. Tom: autoridade e confiança.</div></td>
+            <td><div class="tema">20 anos de Agvel</div></td>
+            <td><div class="chamada">"20 anos. Nenhum veículo entregue com pendência." Não é sorte, é procedimento. Tom: autoridade.</div></td>
           </tr>
           <tr>
             <td class="col-data">06/06</td>
-            <td class="col-dia">Sex</td>
+            <td class="col-dia">Sáb</td>
             <td><span class="badge badge-reels">Reels</span></td>
             <td><span class="pilar pilar-vitrine">Vitrine</span></td>
-            <td><div class="tema">Tour pelo showroom — os veículos da semana</div></td>
-            <td><div class="copy">Vídeo 30–45s mostrando os destaques disponíveis. Trilha que transmita sofisticação.</div></td>
+            <td><div class="tema">Tour pelo showroom <span class="tag-alerta">⚠ Wenderson</span></div></td>
+            <td><div class="chamada">Câmera percorre o showroom mostrando os 3 carros da semana. Fachada Agvel visível. Trilha instrumental.</div></td>
           </tr>
           <tr>
             <td class="col-data">07/06</td>
-            <td class="col-dia">Sáb</td>
+            <td class="col-dia">Dom</td>
             <td><span class="badge badge-estatico">Estático</span></td>
             <td><span class="pilar pilar-conversao">Conversão</span></td>
-            <td><div class="tema">Veio de longe comprar aqui. Você pode também.</div></td>
-            <td><div class="copy">Post voltado a leads de outros estados. Destacar entrega, financiamento e documentação.</div></td>
+            <td><div class="tema">Clientes de fora de Pato Branco</div></td>
+            <td><div class="chamada">"Vieram de Curitiba. De Cascavel. De Chapecó." Dalton atende pessoalmente. Financiamento e docs pela distância.</div></td>
           </tr>
         </tbody>
       </table>
@@ -470,8 +573,8 @@
       <h4>Stories — Semana 1</h4>
       <div class="stories-list">
         <div class="story-item">Enquete: SUV ou Hatch?</div>
-        <div class="story-item">Bastidor: recebimento de veículo</div>
-        <div class="story-item">CTA: "Manda o modelo que quer ver"</div>
+        <div class="story-item">Bastidores: recebimento de veículo</div>
+        <div class="story-item">CTA: "Manda o modelo que você quer ver"</div>
         <div class="story-item">Repost de produto com sticker WhatsApp</div>
       </div>
     </div>
@@ -483,7 +586,7 @@
   <div class="semana">
     <div class="semana-header">
       <span class="semana-numero">Semana 2</span>
-      <span class="semana-titulo">Produto em destaque &amp; Dia dos Namorados</span>
+      <span class="semana-titulo">Copa começa &middot; Dia dos Namorados</span>
       <span class="semana-datas">08 – 14/06</span>
     </div>
     <div class="tabela-wrap">
@@ -494,50 +597,66 @@
             <th>Dia</th>
             <th>Formato</th>
             <th>Pilar</th>
-            <th>Tema & Chamada</th>
-            <th>Direção de copy</th>
+            <th>Tema</th>
+            <th>Chamada / Ideia</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="col-data">09/06</td>
+          <tr class="row-copa">
+            <td class="col-data">08/06</td>
             <td class="col-dia">Seg</td>
             <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-copa">⚽ Copa</span></td>
+            <td><div class="tema">Copa do Mundo em 3 dias</div></td>
+            <td><div class="chamada">"Em 3 dias começa a Copa do Mundo." Gancho: o showroom está aberto com SUVs pro torcedor que quer conforto.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">09/06</td>
+            <td class="col-dia">Ter</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
             <td><span class="pilar pilar-vitrine">Vitrine</span></td>
-            <td><div class="tema">Fiat Pulse 2024 — o equilíbrio perfeito</div></td>
-            <td><div class="copy">Destacar design, tecnologia embarcada e consumo. Foto limpa com fundo escuro.</div></td>
+            <td><div class="tema">Fiat Pulse 2024 <span class="tag-alerta">⚠ km/versão</span></div></td>
+            <td><div class="chamada">"Estilo e tecnologia sem abrir mão da eficiência." Design, multimídia, câmera de ré. Público jovem.</div></td>
           </tr>
           <tr>
             <td class="col-data">10/06</td>
-            <td class="col-dia">Ter</td>
+            <td class="col-dia">Qua</td>
             <td><span class="badge badge-carrossel">Carrossel</span></td>
             <td><span class="pilar pilar-educativo">Educativo</span></td>
-            <td><div class="tema">O que é laudo cautelar — e por que exigir na compra</div></td>
-            <td><div class="copy">4 slides: o que é, o que avalia, por que importa, e que na Agvel já está incluso.</div></td>
+            <td><div class="tema">O que é laudo cautelar</div></td>
+            <td><div class="chamada">6 slides. Carro bonito por fora pode esconder danos sérios. Na Agvel, o laudo já vem incluso antes da venda.</div></td>
           </tr>
-          <tr>
+          <tr class="row-copa">
             <td class="col-data">11/06</td>
             <td class="col-dia">Qui</td>
             <td><span class="badge badge-estatico">Estático</span></td>
-            <td><span class="pilar pilar-sazonalidade">Sazonalidade</span></td>
-            <td><div class="tema">Dia dos Namorados — antecipação</div></td>
-            <td><div class="copy">"O presente em que cabem os dois" — gancho emocional com SUV. Não forçar venda, criar desejo.</div></td>
+            <td><span class="pilar pilar-copa">⚽ Copa</span></td>
+            <td><div class="tema">Copa do Mundo começa hoje</div></td>
+            <td><div class="chamada">"A Copa do Mundo começa hoje." Post celebratório sem venda. Da equipe Agvel pra toda a torcida.</div></td>
           </tr>
           <tr>
             <td class="col-data">12/06</td>
             <td class="col-dia">Sex</td>
             <td><span class="badge badge-estatico">Estático</span></td>
             <td><span class="pilar pilar-sazonalidade">Sazonalidade</span></td>
-            <td><div class="tema">❤ Dia dos Namorados — post principal</div></td>
-            <td><div class="copy">Imagem de casal / viagem / liberdade. "Escreva uma nova história com ela(e)." Tom emocional, premium.</div></td>
+            <td><div class="tema">Dia dos Namorados</div></td>
+            <td><div class="chamada">"Escreva uma nova história juntos." Tom emocional puro. Sem CTA de venda. Assinatura da marca.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">13/06</td>
+            <td class="col-dia">Sáb</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-sazonalidade">Sazonalidade</span></td>
+            <td><div class="tema">Santo Antônio</div></td>
+            <td><div class="chamada">"O santo casamenteiro ajuda quem procura um par. Quando o assunto é carro, a Agvel ajuda." Leve, sem forçar.</div></td>
           </tr>
           <tr>
             <td class="col-data">14/06</td>
             <td class="col-dia">Dom</td>
             <td><span class="badge badge-reels">Reels</span></td>
             <td><span class="pilar pilar-vitrine">Vitrine</span></td>
-            <td><div class="tema">VW T-Cross 2025 — apresentação completa</div></td>
-            <td><div class="copy">45s mostrando o veículo em movimento: estacionamento, interior, painel. Trilha moderna.</div></td>
+            <td><div class="tema">VW T-Cross 2025 <span class="tag-alerta">⚠ Wenderson</span></div></td>
+            <td><div class="chamada">Estilo Royal 4x4: sem apresentador. Walking shot baixo. Interior com painel digital e bancos traseiros.</div></td>
           </tr>
         </tbody>
       </table>
@@ -545,10 +664,10 @@
     <div class="stories-box">
       <h4>Stories — Semana 2</h4>
       <div class="stories-list">
-        <div class="story-item">Contagem regressiva — Dia dos Namorados</div>
+        <div class="story-item">Contagem regressiva — Namorados (11/06)</div>
+        <div class="story-item">⚽ Copa: sticker de torcida (11/06)</div>
         <div class="story-item">Enquete: "Melhor presente: carro, viagem ou jantar?"</div>
-        <div class="story-item">Chamada de financiamento: entrada + parcelas</div>
-        <div class="story-item">Bastidor: inspeção de veículo</div>
+        <div class="story-item">Bastidores: inspeção de veículo</div>
       </div>
     </div>
   </div>
@@ -559,7 +678,7 @@
   <div class="semana">
     <div class="semana-header">
       <span class="semana-numero">Semana 3</span>
-      <span class="semana-titulo">Produto &amp; Início do Inverno</span>
+      <span class="semana-titulo">Jogos do Brasil &middot; Início do Inverno</span>
       <span class="semana-datas">15 – 21/06</span>
     </div>
     <div class="tabela-wrap">
@@ -570,50 +689,66 @@
             <th>Dia</th>
             <th>Formato</th>
             <th>Pilar</th>
-            <th>Tema & Chamada</th>
-            <th>Direção de copy</th>
+            <th>Tema</th>
+            <th>Chamada / Ideia</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="col-data">16/06</td>
+          <tr class="row-copa">
+            <td class="col-data">15/06</td>
             <td class="col-dia">Seg</td>
             <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-copa">⚽ Copa</span></td>
+            <td><div class="tema">Dia de jogo do Brasil <span class="tag-alerta">⚠ confirmar tabela</span></div></td>
+            <td><div class="chamada">"Hoje o Brasil joga." Antes do apito, passa no showroom. Adaptar a data conforme tabela FIFA.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">16/06</td>
+            <td class="col-dia">Ter</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
             <td><span class="pilar pilar-vitrine">Vitrine</span></td>
-            <td><div class="tema">Toyota SW4 2021 — feito para quem não para</div></td>
-            <td><div class="copy">Destaque em 4x4, tração e altura. Perfeito para o inverno no sul. Tom: potência + confiança.</div></td>
+            <td><div class="tema">Toyota SW4 2021 <span class="tag-alerta">⚠ km</span></div></td>
+            <td><div class="chamada">"No frio do sul, com neblina na serrana, você sabe que vai chegar." 4x4, diesel, 7 lugares. Tom: potência.</div></td>
           </tr>
           <tr>
             <td class="col-data">17/06</td>
-            <td class="col-dia">Ter</td>
+            <td class="col-dia">Qua</td>
             <td><span class="badge badge-carrossel">Carrossel</span></td>
             <td><span class="pilar pilar-educativo">Educativo</span></td>
-            <td><div class="tema">5 pontos que você deve checar antes de comprar um seminovo</div></td>
-            <td><div class="copy">Checklist educativo. Último slide: "Aqui na Agvel, isso já vem feito pra você." Converte confiança.</div></td>
+            <td><div class="tema">5 pontos antes de comprar seminovo</div></td>
+            <td><div class="chamada">7 slides: histórico, laudo, docs, test-drive, garantia. Slide final: "Na Agvel, os 5 pontos já vêm resolvidos."</div></td>
           </tr>
           <tr>
             <td class="col-data">18/06</td>
             <td class="col-dia">Qui</td>
             <td><span class="badge badge-estatico">Estático</span></td>
             <td><span class="pilar pilar-vitrine">Vitrine</span></td>
-            <td><div class="tema">Chevrolet Spin 2023 — família a bordo</div></td>
-            <td><div class="copy">Destaque em espaço, versatilidade e 7 lugares. Para quem pensa prático.</div></td>
+            <td><div class="tema">Chevrolet Spin 2023 <span class="tag-alerta">⚠ km</span></div></td>
+            <td><div class="chamada">"7 lugares. Para quem pensa em família." Espaço, conforto, flex. Tudo que a família precisa.</div></td>
           </tr>
           <tr>
             <td class="col-data">19/06</td>
             <td class="col-dia">Sex</td>
             <td><span class="badge badge-estatico">Estático</span></td>
             <td><span class="pilar pilar-institucional">Institucional</span></td>
-            <td><div class="tema">3 meses de garantia. Nossa confiança vai com você.</div></td>
-            <td><div class="copy">Post sobre a garantia inclusa. Diferencial raramente comunicado — usar para gerar confiança.</div></td>
+            <td><div class="tema">Garantia de 3 meses</div></td>
+            <td><div class="chamada">"3 meses de garantia. Em todo veículo. Sem asterisco." Raramente comunicado — diferencial forte.</div></td>
+          </tr>
+          <tr class="row-copa">
+            <td class="col-data">20/06</td>
+            <td class="col-dia">Sáb</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-copa">⚽ Copa</span></td>
+            <td><div class="tema">Pós-vitória do Brasil <span class="tag-alerta">⚠ só se ganhou</span></div></td>
+            <td><div class="chamada">"Brasil ganhou." Celebratório, sem venda forçada. Se o Brasil não jogou ou perdeu: substituir por vitrine.</div></td>
           </tr>
           <tr>
             <td class="col-data">21/06</td>
             <td class="col-dia">Dom</td>
             <td><span class="badge badge-estatico">Estático</span></td>
             <td><span class="pilar pilar-sazonalidade">Sazonalidade</span></td>
-            <td><div class="tema">Início do Inverno — Para cada estrada, um veículo à altura</div></td>
-            <td><div class="copy">Foto de estrada/frio/serrania. Gancho sazonal ligado a SUV e 4x4. Tom: aventura + segurança.</div></td>
+            <td><div class="tema">Início do Inverno</div></td>
+            <td><div class="chamada">"Qual carro você confia quando a estrada molha?" SUVs e 4x4 em destaque. Tom: segurança + conforto.</div></td>
           </tr>
         </tbody>
       </table>
@@ -621,10 +756,10 @@
     <div class="stories-box">
       <h4>Stories — Semana 3</h4>
       <div class="stories-list">
+        <div class="story-item">⚽ Stories ao vivo nos dias de jogo do Brasil</div>
+        <div class="story-item">Enquete Copa: "Brasil vai até onde?"</div>
         <div class="story-item">Dica de inverno: revisão antes do frio</div>
-        <div class="story-item">Enquete: "Vai viajar nas férias de julho?"</div>
-        <div class="story-item">CTA: "Conforto e segurança pra família — fala com a gente"</div>
-        <div class="story-item">Repost de depoimento de cliente</div>
+        <div class="story-item">Enquete: "Você viaja nas férias de julho?"</div>
       </div>
     </div>
   </div>
@@ -635,8 +770,8 @@
   <div class="semana">
     <div class="semana-header">
       <span class="semana-numero">Semana 4</span>
-      <span class="semana-titulo">São João &amp; Encerramento do mês</span>
-      <span class="semana-datas">22 – 30/06</span>
+      <span class="semana-titulo">São João &middot; Copa fase decisiva</span>
+      <span class="semana-datas">22 – 28/06</span>
     </div>
     <div class="tabela-wrap">
       <table>
@@ -646,50 +781,66 @@
             <th>Dia</th>
             <th>Formato</th>
             <th>Pilar</th>
-            <th>Tema & Chamada</th>
-            <th>Direção de copy</th>
+            <th>Tema</th>
+            <th>Chamada / Ideia</th>
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td class="col-data">22/06</td>
+            <td class="col-dia">Seg</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-vitrine">Vitrine</span></td>
+            <td><div class="tema">Vitrine da semana <span class="tag-alerta">⚠ Grazi</span></div></td>
+            <td><div class="chamada">"Semana nova. Estoque completo." Template de vitrine para o modelo que Grazi confirmar até 21/06.</div></td>
+          </tr>
           <tr>
             <td class="col-data">23/06</td>
             <td class="col-dia">Ter</td>
             <td><span class="badge badge-estatico">Estático</span></td>
             <td><span class="pilar pilar-vitrine">Vitrine</span></td>
-            <td><div class="tema">Destaque da semana — [conforme estoque]</div></td>
-            <td><div class="copy">Modelo em evidência com fotos de qualidade. Reforço de diferenciais: km, ano, revisão.</div></td>
+            <td><div class="tema">[Veículo a confirmar] <span class="tag-alerta">⚠ Grazi</span></div></td>
+            <td><div class="chamada">Modelo em evidência com fotos de qualidade. Diferenciais: km, ano, revisão, garantia. Confirmar até 20/06.</div></td>
           </tr>
           <tr>
             <td class="col-data">24/06</td>
-            <td class="col-dia">Ter</td>
+            <td class="col-dia">Qua</td>
             <td><span class="badge badge-estatico">Estático</span></td>
             <td><span class="pilar pilar-sazonalidade">Sazonalidade</span></td>
-            <td><div class="tema">São João — Que esse mês seja de novas conquistas</div></td>
-            <td><div class="copy">Post festivo leve, sem forçar venda. Mostrar personalidade da marca. Visual premium com cores quentes.</div></td>
+            <td><div class="tema">São João</div></td>
+            <td><div class="chamada">"Festa junina, fogão de lenha e o cheiro de milho no ar." Post de comunidade. Sem CTA de venda.</div></td>
           </tr>
           <tr>
             <td class="col-data">25/06</td>
             <td class="col-dia">Qui</td>
             <td><span class="badge badge-carrossel">Carrossel</span></td>
             <td><span class="pilar pilar-educativo">Educativo</span></td>
-            <td><div class="tema">Financiamento direto: o que você precisa saber</div></td>
-            <td><div class="copy">Como funciona, quais documentos, simulação simples. Finalizar com CTA para conversa no WhatsApp.</div></td>
+            <td><div class="tema">Financiamento direto</div></td>
+            <td><div class="chamada">6 slides. O que é, quais documentos, como funciona a simulação, taxa por perfil. Finaliza com CTA.</div></td>
+          </tr>
+          <tr class="row-copa">
+            <td class="col-data">26/06</td>
+            <td class="col-dia">Sex</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-copa">⚽ Copa</span></td>
+            <td><div class="tema">Brasil no mata-mata <span class="tag-alerta">⚠ confirmar fase</span></div></td>
+            <td><div class="chamada">"O Brasil avançou na Copa." Adaptar a fase (oitavas/quartas/semi). Se eliminado: substituir por vitrine.</div></td>
           </tr>
           <tr>
             <td class="col-data">27/06</td>
             <td class="col-dia">Sáb</td>
             <td><span class="badge badge-reels">Reels</span></td>
             <td><span class="pilar pilar-conversao">Conversão</span></td>
-            <td><div class="tema">Chegou novo no estoque — vem ver</div></td>
-            <td><div class="copy">Reels dos veículos que chegaram recentemente. Senso de novidade e exclusividade.</div></td>
+            <td><div class="tema">Chegou novo no estoque <span class="tag-alerta">⚠ Wenderson</span></div></td>
+            <td><div class="chamada">Revelação: câmera se aproxima do carro. Tour rápido. Ritmo mais acelerado. Confirmar veículo até 24/06.</div></td>
           </tr>
           <tr>
-            <td class="col-data">30/06</td>
-            <td class="col-dia">Ter</td>
+            <td class="col-data">28/06</td>
+            <td class="col-dia">Dom</td>
             <td><span class="badge badge-estatico">Estático</span></td>
-            <td><span class="pilar pilar-institucional">Institucional</span></td>
-            <td><div class="tema">Fechamento de junho — Mais um mês de conquistas</div></td>
-            <td><div class="copy">Post de encerramento com tom positivo. Pode incluir número de clientes atendidos no mês.</div></td>
+            <td><span class="pilar pilar-aspiracional">Aspiracional</span></td>
+            <td><div class="tema">Final de semana com o carro certo</div></td>
+            <td><div class="chamada">"Domingo de inverno em Pato Branco. Frio lá fora, carro aquecido, família junto." Tom emocional leve.</div></td>
           </tr>
         </tbody>
       </table>
@@ -697,10 +848,61 @@
     <div class="stories-box">
       <h4>Stories — Semana 4</h4>
       <div class="stories-list">
-        <div class="story-item">Enquete São João: "Festa ou casa?"</div>
+        <div class="story-item">Enquete São João: "Festa ou aproveitar em casa?"</div>
+        <div class="story-item">⚽ Repost Copa nos dias de jogo</div>
         <div class="story-item">Chamada: "Quanto vale seu carro na troca?"</div>
         <div class="story-item">Countdown: "Férias de julho chegando"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- SEMANA 5 -->
+  <!-- ══════════════════════════════════════════════ -->
+  <div class="semana">
+    <div class="semana-header">
+      <span class="semana-numero">Semana 5</span>
+      <span class="semana-titulo">Feriado &middot; Encerramento</span>
+      <span class="semana-datas">29 – 30/06</span>
+    </div>
+    <div class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Dia</th>
+            <th>Formato</th>
+            <th>Pilar</th>
+            <th>Tema</th>
+            <th>Chamada / Ideia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-data">29/06</td>
+            <td class="col-dia">Seg</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-sazonalidade">Sazonalidade</span></td>
+            <td><div class="tema">Feriado — São Pedro e São Paulo</div></td>
+            <td><div class="chamada">"Bom feriado, Pato Branco." Leve e institucional. Voltamos amanhã. Sem CTA de venda.</div></td>
+          </tr>
+          <tr>
+            <td class="col-data">30/06</td>
+            <td class="col-dia">Ter</td>
+            <td><span class="badge badge-estatico">Estático</span></td>
+            <td><span class="pilar pilar-institucional">Institucional</span></td>
+            <td><div class="tema">Fechamento de junho <span class="tag-alerta">⚠ Dalton/Grazi</span></div></td>
+            <td><div class="chamada">"[X] clientes levaram o carro que queriam." Confirmar número com Dalton até 29/06. Teaser de julho.</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stories-box">
+      <h4>Stories — Semana 5</h4>
+      <div class="stories-list">
         <div class="story-item">CTA direto: sticker WhatsApp "Fale com a Agvel"</div>
+        <div class="story-item">Repost do fechamento com agradecimento</div>
+        <div class="story-item">Teaser julho: "O que vem no próximo mês"</div>
       </div>
     </div>
   </div>
@@ -711,19 +913,27 @@
     <div class="obs-grid">
       <div class="obs-item">
         <h4>Tom de voz</h4>
-        <p>Sempre sério, premium e objetivo. Sem urgência falsa ou humor exagerado. Alinhado à reputação construída em 20 anos de mercado.</p>
+        <p>Sério, premium e objetivo. Sem urgência falsa ou humor forçado. Os posts de Copa podem ter tom mais celebratório, mas sem perder a identidade da marca.</p>
       </div>
       <div class="obs-item">
         <h4>Visual</h4>
-        <p>Fundo escuro + tipografia clean nos posts de produto. Paleta: preto #1D1D1B, branco #FFFFFF, vermelho #CC0000 para CTAs.</p>
+        <p>Fundo escuro com tipografia limpa para posts de produto. Paleta: preto #1D1D1B, branco #FFFFFF, vermelho #CC0000. Logo branco em fundos escuros, logo cromado em fundos claros.</p>
       </div>
       <div class="obs-item">
-        <h4>Estoque</h4>
-        <p>Alinhar posts de vitrine com o estoque real da semana. Grazi valida disponibilidade antes da produção de cada peça.</p>
+        <h4>Reels — Produção</h4>
+        <p>Golden hour sempre que possível. Carros escuros: filmar no showroom com iluminação de teto. Low angle em SUVs. Interior obrigatório: cockpit + bancos traseiros. Fachada Agvel em pelo menos 1 frame.</p>
       </div>
       <div class="obs-item">
-        <h4>Reels</h4>
-        <p>Definir veículo com o cliente com até 7 dias de antecedência. Gravação presencial no showroom em Pato Branco.</p>
+        <h4 class="copa-title">⚽ Copa do Mundo</h4>
+        <p>Confirmar datas dos jogos do Brasil na tabela FIFA e ajustar as linhas marcadas em verde. Se o Brasil for eliminado, substituir os posts de Copa restantes por vitrine ou institucional.</p>
+      </div>
+      <div class="obs-item">
+        <h4>Estoque e aprovação</h4>
+        <p>Posts marcados com ⚠ dependem de confirmação da Grazi. Reels precisam de definição do veículo com 7 dias de antecedência para o Wenderson filmar.</p>
+      </div>
+      <div class="obs-item">
+        <h4>Stories</h4>
+        <p>Template mais leve com símbolo Agvel e sticker de WhatsApp. Nos dias de jogo do Brasil: stories ao vivo ou repost de torcida. Priorizar enquetes, bastidores e CTA direto.</p>
       </div>
     </div>
   </div>
