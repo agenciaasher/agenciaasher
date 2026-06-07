@@ -1,7 +1,7 @@
 # CLAUDE.md — Memória Estratégica: Lançamentos Pagos
 
 > Arquivo de contexto para projetos de lançamento pago no mercado digital brasileiro.
-> Baseado em estudos de caso reais, frameworks testados e aplicação direta ao projeto Clincog.
+> Aplicável a qualquer cliente da agência. A seção 14 traz exemplo de aplicação ao projeto Clincog.
 
 ---
 
@@ -335,7 +335,7 @@ Se o próximo produto da esteira for também só "eu te ensino", a conversão ca
 
 ---
 
-## 14. APLICAÇÃO AO PROJETO CLINCOG
+## 14. EXEMPLO DE APLICAÇÃO — PROJETO CLINCOG
 
 ### Contexto do cliente
 - **Empresa:** Clincog Mais
@@ -447,4 +447,3 @@ A promessa: *"Você não precisa de mais anos de experiência. Precisa aprender 
 ---
 
 *Última atualização: Junho 2026*
-*Projeto: Clincog — Lançamento pago Clube Clincog / Método PCN*
