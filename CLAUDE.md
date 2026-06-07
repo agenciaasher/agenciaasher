@@ -66,6 +66,17 @@ Todo HTML de apresentação, strategy deck, plano ou documento que vai ser mostr
 
 Se por algum motivo um commit foi parar em outro branch, mover para o `main` antes de encerrar a sessão.
 
+## Copy e storytelling — memória estratégica
+
+Para qualquer trabalho de copy, criativo ou roteiro, consultar `.claude/skills/copy-storytelling.md`. Ela cobre:
+
+- Os 5 níveis de consciência do público
+- Marketing de premissas vs. marketing de promessas
+- Os 8 elementos do storytelling e a Jornada do Herói
+- Os 3 ingredientes de uma grande história (especificidade, reviver, significado)
+- Estrutura de roteiro de vídeo por fase do funil
+- Erros mais comuns de copy
+
 ## Lançamento pago — memória estratégica
 
 Para contexto sobre os 4 modelos de lançamento (Semente, Interno, Relâmpago, Pago), consultar `.claude/skills/modelos-lancamento.md`.
