@@ -3,36 +3,46 @@
 **Cliente:** Agvel Veículos  
 **Período:** 01 a 30 de junho de 2026  
 **Plataformas:** Instagram e Facebook  
-**Frequência:** 5 posts/semana no feed + stories diários
+**Frequência:** 1 post por dia no mínimo (30 posts) + stories diários
 
-> Placeholders `[XX.XXX km]`, `[versão]` e `[VEÍCULO]` precisam ser preenchidos com dados reais do estoque antes de publicar. Posts com ⚠️ dependem de confirmação da Grazi.
+> Placeholders `[XX.XXX km]`, `[versão]` e `[VEÍCULO]` precisam ser preenchidos com dados reais do estoque antes de publicar. Posts com ⚠️ dependem de confirmação da Grazi. Posts com ⚽ são da campanha Copa e precisam ser adaptados conforme a data real dos jogos do Brasil.
 
 ---
 
 ## Calendário do mês
 
-| Data | Dia | Formato | Pilar | Tema |
-|------|-----|---------|-------|------|
-| 02/06 | Ter | Estático | Vitrine | VW Tiguan 2024 |
-| 03/06 | Qua | Carrossel | Educativo | Seminovo ou 0km? |
-| 05/06 | Sex | Estático | Institucional | 20 anos de Agvel |
-| 06/06 | Sáb | Reels | Vitrine | Tour pelo showroom |
-| 07/06 | Dom | Estático | Conversão | Clientes de fora da cidade |
-| 09/06 | Ter | Estático | Vitrine | Fiat Pulse 2024 |
-| 10/06 | Qua | Carrossel | Educativo | Laudo cautelar |
-| 11/06 | Qui | Estático | Sazonalidade | Namorados (antecipação) |
-| 12/06 | Sex | Estático | Sazonalidade | Namorados (principal) |
-| 14/06 | Dom | Reels | Vitrine | VW T-Cross 2025 |
-| 16/06 | Ter | Estático | Vitrine | Toyota SW4 2021 |
-| 17/06 | Qua | Carrossel | Educativo | 5 pontos antes de comprar |
-| 18/06 | Qui | Estático | Vitrine | Chevrolet Spin 2023 |
-| 19/06 | Sex | Estático | Institucional | Garantia de 3 meses |
-| 21/06 | Dom | Estático | Sazonalidade | Início do Inverno |
-| 23/06 | Ter | Estático | Vitrine | [Veículo a confirmar] ⚠️ |
-| 24/06 | Qua | Estático | Sazonalidade | São João |
-| 25/06 | Qui | Carrossel | Educativo | Financiamento direto |
-| 27/06 | Sáb | Reels | Conversão | Estoque novo ⚠️ |
-| 30/06 | Ter | Estático | Institucional | Fechamento de junho |
+| Data | Dia | Formato | Pilar | Tema | Status |
+|------|-----|---------|-------|------|--------|
+| 01/06 | Seg | Estático | Vitrine | Abertura do mês | Ideia |
+| 02/06 | Ter | Estático | Vitrine | VW Tiguan 2024 | Copy pronta ⚠️ |
+| 03/06 | Qua | Carrossel | Educativo | Seminovo ou 0km? | Copy pronta |
+| 04/06 | Qui | Reels | Bastidores | Chegada de veículo no estoque | Ideia ⚠️ |
+| 05/06 | Sex | Estático | Institucional | 20 anos de Agvel | Copy pronta |
+| 06/06 | Sáb | Reels | Vitrine | Tour pelo showroom | Copy pronta ⚠️ |
+| 07/06 | Dom | Estático | Conversão | Clientes de fora de Pato Branco | Copy pronta |
+| 08/06 | Seg | Estático | Copa | Copa do Mundo começa em 3 dias | Ideia ⚽ |
+| 09/06 | Ter | Estático | Vitrine | Fiat Pulse 2024 | Copy pronta ⚠️ |
+| 10/06 | Qua | Carrossel | Educativo | Laudo cautelar | Copy pronta |
+| 11/06 | Qui | Estático | Copa | Copa do Mundo começa hoje | Ideia ⚽ |
+| 12/06 | Sex | Estático | Sazonalidade | Dia dos Namorados (principal) | Copy pronta |
+| 13/06 | Sáb | Estático | Sazonalidade | Santo Antônio | Ideia |
+| 14/06 | Dom | Reels | Vitrine | VW T-Cross 2025 | Copy pronta ⚠️ |
+| 15/06 | Seg | Estático | Copa | Jogo do Brasil (confirmar data) | Ideia ⚽ |
+| 16/06 | Ter | Estático | Vitrine | Toyota SW4 2021 | Copy pronta ⚠️ |
+| 17/06 | Qua | Carrossel | Educativo | 5 pontos antes de comprar | Copy pronta |
+| 18/06 | Qui | Estático | Vitrine | Chevrolet Spin 2023 | Copy pronta ⚠️ |
+| 19/06 | Sex | Estático | Institucional | Garantia de 3 meses | Copy pronta |
+| 20/06 | Sáb | Estático | Copa | Pós-jogo Brasil (se tiver vitória) | Ideia ⚽ |
+| 21/06 | Dom | Estático | Sazonalidade | Início do Inverno | Copy pronta |
+| 22/06 | Seg | Estático | Vitrine | Vitrine da semana | Ideia ⚠️ |
+| 23/06 | Ter | Estático | Vitrine | [Veículo a confirmar] | Ideia ⚠️ |
+| 24/06 | Qua | Estático | Sazonalidade | São João | Copy pronta |
+| 25/06 | Qui | Carrossel | Educativo | Financiamento direto | Copy pronta |
+| 26/06 | Sex | Estático | Copa | Copa fase mata-mata | Ideia ⚽ |
+| 27/06 | Sáb | Reels | Conversão | Estoque novo | Ideia ⚠️ |
+| 28/06 | Dom | Estático | Aspiracional | Final de semana + estoque | Ideia |
+| 29/06 | Seg | Estático | Sazonalidade | Feriado São Pedro e São Paulo | Ideia |
+| 30/06 | Ter | Estático | Institucional | Fechamento de junho | Copy pronta |
 
 ---
 
@@ -40,8 +50,10 @@
 
 | Data | Evento |
 |------|--------|
+| 11/06 (Qui) | Abertura da Copa do Mundo 2026 |
 | 12/06 (Sex) | Dia dos Namorados |
 | 13/06 (Sáb) | Dia de Santo Antônio |
+| 15, 20 e 25/06 | Janelas prováveis dos jogos do Brasil (confirmar com tabela FIFA) |
 | 21/06 (Dom) | Início do Inverno |
 | 24/06 (Qua) | Festa de São João |
 | 29/06 (Seg) | Feriado de São Pedro e São Paulo |
@@ -54,16 +66,195 @@
 **Institucional** — reputação, 20 anos, diferencial de documentação e garantia  
 **Educativo** — conteúdo que educa o comprador e posiciona a Agvel como referência  
 **Sazonalidade** — datas do mês trabalhadas com naturalidade, sem forçar venda  
-**Conversão** — CTA direto para WhatsApp ou visita ao showroom
+**Conversão** — CTA direto para WhatsApp ou visita ao showroom  
+**Copa** — campanha temática da Copa do Mundo 2026 (ver seção abaixo)  
+**Bastidores** — equipe, chegada de estoque, humanização da marca  
+**Aspiracional** — desejo antes do produto. O carro como parte de uma vida melhor
 
 ---
 
-## SEMANA 1 — 02 a 07/06
+## Campanha: Copa do Mundo 2026
+
+A Copa começa dia 11 de junho no estacionamento de meados dos EUA, Canadá e México. O Brasil vai jogar a fase de grupos em junho. É a maior oportunidade de engajamento do mês.
+
+**Conceito geral:** "Cada vitória do Brasil é uma razão a mais."  
+O carro é o pano de fundo, não o protagonista da Copa. A Agvel entra na conversa sem forçar, como marca que está junto da torcida.
+
+**Regras da campanha:**
+- Nunca inventar que "a Agvel está em promoção por causa da Copa" sem condição real
+- Usar a Copa como contexto emocional, não como pretexto de venda forçada
+- Nos dias de jogo, o conteúdo pode ser mais leve e celebratório
+- Se o Brasil perder, não postar o template de vitória (adaptar ou não postar o pós-jogo)
+
+---
+
+### Copa — Post de abertura (11/06)
+
+**Texto no criativo:**
+```
+Copa do Mundo 2026.
+Começa hoje.
+```
+
+**Legenda:**
+```
+A Copa do Mundo começa hoje.
+
+Por quatro anos, o Brasil esperou esse momento.
+E hoje é dia de torcer.
+
+Da equipe Agvel, boa Copa pra todo mundo.
+
+#AgvelVeiculos #Copa2026 #CopaDoMundo #VaiBrasil #PatoBranco
+```
+
+---
+
+### Copa — Teaser antes dos jogos do Brasil (post para 2-3 dias antes do jogo)
+
+**Texto no criativo:**
+```
+Faltam X dias para o Brasil.
+Você está pronto?
+```
+
+**Legenda:**
+```
+O Brasil entra em campo em [X] dias.
+
+Enquanto isso, o showroom da Agvel está aberto
+com boas opções para quem quer chegar ao jogo
+com estilo e sem preocupação.
+
+📲 WhatsApp na bio.
+
+#AgvelVeiculos #Copa2026 #VaiBrasil #SemiNovo #PatoBranco
+```
+
+---
+
+### Copa — Dia de jogo do Brasil
+
+**Texto no criativo:**
+```
+Hoje tem Brasil.
+```
+
+**Legenda:**
+```
+Hoje o Brasil joga.
+
+A gente vai estar torcendo junto.
+Mas antes do apito inicial: passa aqui no showroom.
+
+📲 WhatsApp na bio.
+
+#AgvelVeiculos #VaiBrasil #Copa2026 #BRASILnaCopa #PatoBranco
+```
+
+---
+
+### Copa — Pós-jogo de vitória (postar no dia seguinte)
+
+**Texto no criativo:**
+```
+Brasil ganhou.
+```
+
+**Legenda:**
+```
+Brasil ganhou.
+
+Esse tipo de dia merece ser comemorado do jeito certo.
+
+Você ainda não tem o carro que sempre quis?
+A Agvel está aqui.
+
+📲 WhatsApp na bio.
+
+#AgvelVeiculos #VaiBrasil #Copa2026 #BRASILnaCopa
+```
+
+---
+
+### Copa — Ângulo com SUV (usar numa semana de Copa)
+
+**Texto no criativo:**
+```
+Copa do Mundo.
+O estoque também está em campo.
+```
+
+**Legenda:**
+```
+Copa do Mundo pede o carro certo.
+
+SUV com espaço pra família. Multimídia pra quem vai de estrada.
+Ar-condicionado que aguenta a animação lá dentro.
+
+No estoque da Agvel tem opção pro torcedor que não abre mão de conforto.
+
+📲 Consulte no WhatsApp. Link na bio.
+
+#AgvelVeiculos #Copa2026 #SUV #SemiNovo #PatoBranco
+```
+
+---
+
+### Copa — Mata-mata / fase decisiva (usar na semana das oitavas em diante)
+
+**Texto no criativo:**
+```
+Brasil nas oitavas.
+[ou quartas / semifinal / final]
+```
+
+**Legenda:**
+```
+O Brasil avançou.
+
+E quem tem o carro certo vai acompanhar cada jogo
+sem se preocupar com nada.
+
+Ainda tem boa opção no estoque.
+📲 WhatsApp na bio.
+
+#AgvelVeiculos #Copa2026 #VaiBrasil #OitovasDeFinal
+```
+
+---
+
+## SEMANA 1 — 01 a 07/06
 **Tema:** Abertura do mês
 
 ---
 
-### 02/06 (Ter) | Estático | Vitrine
+### 01/06 (Seg) | Estático | Vitrine
+
+**Tema:** Abertura de junho
+
+**Texto no criativo:**
+```
+Junho chegou.
+O estoque também.
+```
+
+**Legenda:**
+```
+Junho começa aqui na Agvel com estoque completo e pronto para visita.
+
+Tiguan 2024. T-Cross 2025. Pulse 2024. Spin 2023. SW4 2021.
+
+Todos revisados, documentados e com garantia de 3 meses inclusa.
+
+📲 WhatsApp na bio.
+
+#AgvelVeiculos #Junho2026 #SemiNovo #PatoBranco #Estoque
+```
+
+---
+
+### 02/06 (Ter) | Estático | Vitrine ⚠️
 
 **Tema:** VW Tiguan 2024
 
@@ -90,7 +281,7 @@ Garantia de 3 meses inclusa. Documentação 100% regularizada. Financiamento dis
 
 ### 03/06 (Qua) | Carrossel | Educativo
 
-**Tema:** Seminovo ou 0km? O que faz mais sentido para você?
+**Tema:** Seminovo ou 0km?
 
 **Texto no criativo (slide 1):**
 ```
@@ -152,6 +343,33 @@ Swipe para entender a diferença.
 
 ---
 
+### 04/06 (Qui) | Reels | Bastidores ⚠️
+
+**Tema:** Chegada de veículo novo no estoque
+
+**Roteiro (Wenderson):**
+- Gravar a chegada real de um carro: descendo da carreta ou entrando no pátio
+- Mostrar o processo: posicionamento, abertura de porta, vistoria visual rápida
+- Fechar com o carro já no showroom pronto para ser visto
+- Trilha animada, sem apresentador
+
+**Legenda:**
+```
+Esse chegou ontem.
+
+Amanhã já vai estar pronto para ser seu.
+
+Toda chegada aqui na Agvel segue o mesmo processo:
+vistoria, laudo cautelar, documentação verificada.
+Só vai para o estoque quando está tudo certo.
+
+📲 WhatsApp na bio se quiser ser o primeiro a saber.
+
+#AgvelVeiculos #BastidoresAgvel #SemiNovo #PatoBranco
+```
+
+---
+
 ### 05/06 (Sex) | Estático | Institucional
 
 **Tema:** 20 anos de Agvel
@@ -179,7 +397,7 @@ completa antes de ir para o estoque. Você não descobre surpresa depois.
 
 ---
 
-### 06/06 (Sáb) | Reels | Vitrine
+### 06/06 (Sáb) | Reels | Vitrine ⚠️
 
 **Tema:** Tour pelo showroom
 
@@ -236,18 +454,45 @@ fotos, vídeo e todas as informações pelo WhatsApp.
 
 ### Stories — Semana 1
 - Enquete: "Você prefere SUV ou hatch?"
-- Bastidores: recebimento de veículo novo no estoque
+- Bastidores: recebimento de veículo no estoque
 - CTA: "Manda o modelo que você quer ver aqui"
 - Repost de produto com sticker de WhatsApp
 
 ---
 
-## SEMANA 2 — 09 a 14/06
-**Tema:** Produto em destaque | Dia dos Namorados
+## SEMANA 2 — 08 a 14/06
+**Tema:** Copa do Mundo começa | Dia dos Namorados
 
 ---
 
-### 09/06 (Ter) | Estático | Vitrine
+### 08/06 (Seg) | Estático | Copa ⚽
+
+**Tema:** Teaser: Copa começa em 3 dias
+
+**Texto no criativo:**
+```
+Copa do Mundo 2026.
+Faltam 3 dias.
+```
+
+**Legenda:**
+```
+Em 3 dias começa a Copa do Mundo.
+
+Maior evento do planeta. E o Brasil vai estar em campo.
+
+Pra quem vai acompanhar cada jogo com família e amigos:
+o showroom da Agvel está aberto com boas opções de SUV,
+espaço e conforto pra essa temporada.
+
+📲 WhatsApp na bio.
+
+#AgvelVeiculos #Copa2026 #CopaDoMundo #VaiBrasil #PatoBranco
+```
+
+---
+
+### 09/06 (Ter) | Estático | Vitrine ⚠️
 
 **Tema:** Fiat Pulse 2024
 
@@ -338,28 +583,26 @@ Swipe para entender o que ele avalia.
 
 ---
 
-### 11/06 (Qui) | Estático | Sazonalidade
+### 11/06 (Qui) | Estático | Copa ⚽
 
-**Tema:** Dia dos Namorados (antecipação)
+**Tema:** Copa do Mundo começa hoje
 
 **Texto no criativo:**
 ```
-Tem presente que só um de vocês usa.
-E tem presente que os dois vão curtir por anos.
+Copa do Mundo 2026.
+Começa hoje.
 ```
 
 **Legenda:**
 ```
-Amanhã é Dia dos Namorados.
+A Copa do Mundo começa hoje.
 
-Tem carro aqui que cabem os dois. Road trip, dia a dia com
-mais conforto, a cidade que vocês sempre quiseram conhecer.
+Por quatro anos, o Brasil esperou esse momento.
+E hoje é dia de torcer.
 
-Esse tipo de presente você lembra para sempre.
+Da equipe Agvel, boa Copa pra todo mundo.
 
-📲 Sem compromisso. Consulte no WhatsApp. Link na bio.
-
-#AgvelVeiculos #DiaDoNamorado #SemiNovo #PatoBranco
+#AgvelVeiculos #Copa2026 #CopaDoMundo #VaiBrasil #PatoBranco
 ```
 
 ---
@@ -385,14 +628,38 @@ Da equipe Agvel, pra você e quem você escolheu.
 
 ---
 
-### 14/06 (Dom) | Reels | Vitrine
+### 13/06 (Sáb) | Estático | Sazonalidade
+
+**Tema:** Dia de Santo Antônio
+
+**Texto no criativo:**
+```
+13 de junho.
+Dia de Santo Antônio.
+```
+
+**Legenda:**
+```
+Feliz dia de Santo Antônio, Pato Branco.
+
+O santo casamenteiro ajuda quem está procurando um par.
+Quando o assunto é o carro certo, a Agvel ajuda.
+
+📲 WhatsApp na bio.
+
+#AgvelVeiculos #SantoAntonio #PatoBranco #13DeJunho
+```
+
+---
+
+### 14/06 (Dom) | Reels | Vitrine ⚠️
 
 **Tema:** VW T-Cross 2025
 
 **Roteiro (Wenderson):**
 - Sem apresentador, trilha instrumental suave
 - Abertura: frontal do T-Cross com fachada Agvel ao fundo
-- Tour exterior: lateral, traseira 3/4, frontal 3/4 em walking shot baixo (câmera rente ao chão)
+- Tour exterior: lateral, traseira 3/4, frontal 3/4 em walking shot baixo
 - Interior: cockpit com painel digital, detalhe da central, bancos traseiros
 - Fechar na traseira com moldura Agvel na placa
 
@@ -411,19 +678,44 @@ tecnologia que você vai usar todo dia.
 ---
 
 ### Stories — Semana 2
-- Contagem regressiva para o Dia dos Namorados
+- Contagem regressiva para o Dia dos Namorados (11/06)
 - Enquete: "Qual presente você daria?" (carro, viagem, jantar)
+- Copa do Mundo: sticker de torcida nos stories no dia 11/06
 - Bastidores: vídeo curto mostrando inspeção de veículo
-- CTA financiamento: "Entrada + parcelas que cabem no bolso"
 
 ---
 
-## SEMANA 3 — 16 a 21/06
-**Tema:** Produto | Início do Inverno
+## SEMANA 3 — 15 a 21/06
+**Tema:** Jogos do Brasil | Início do Inverno
 
 ---
 
-### 16/06 (Ter) | Estático | Vitrine
+### 15/06 (Seg) | Estático | Copa ⚽
+
+**Tema:** Dia de jogo do Brasil (ou teaser se o jogo não for hoje)
+
+> Usar o template "Hoje tem Brasil" se o jogo for dia 15. Se não for, adaptar com "O Brasil joga em X dias."
+
+**Texto no criativo:**
+```
+Hoje tem Brasil.
+```
+
+**Legenda:**
+```
+Hoje o Brasil joga.
+
+A gente vai estar torcendo junto.
+Mas antes do apito inicial: passa aqui no showroom.
+
+📲 WhatsApp na bio.
+
+#AgvelVeiculos #VaiBrasil #Copa2026 #BRASILnaCopa #PatoBranco
+```
+
+---
+
+### 16/06 (Ter) | Estático | Vitrine ⚠️
 
 **Tema:** Toyota SW4 2021
 
@@ -529,7 +821,7 @@ Arrasta, salva e usa na próxima compra.
 
 ---
 
-### 18/06 (Qui) | Estático | Vitrine
+### 18/06 (Qui) | Estático | Vitrine ⚠️
 
 **Tema:** Chevrolet Spin 2023
 
@@ -582,6 +874,33 @@ a Agvel resolve. É assim que trabalhamos há 20 anos.
 
 ---
 
+### 20/06 (Sáb) | Estático | Copa ⚽
+
+**Tema:** Pós-jogo de vitória do Brasil (postar se Brasil venceu ontem ou hoje)
+
+> Se o Brasil não jogou ou perdeu, substituir por um post de vitrine do estoque.
+
+**Texto no criativo:**
+```
+Brasil ganhou.
+```
+
+**Legenda:**
+```
+Brasil ganhou.
+
+Esse tipo de dia merece ser comemorado do jeito certo.
+
+Você ainda não tem o carro que sempre quis?
+A Agvel está aqui.
+
+📲 WhatsApp na bio.
+
+#AgvelVeiculos #VaiBrasil #Copa2026 #BRASILnaCopa
+```
+
+---
+
 ### 21/06 (Dom) | Estático | Sazonalidade
 
 **Tema:** Início do Inverno
@@ -612,15 +931,39 @@ Quer saber qual do nosso estoque se encaixa no que você precisa?
 ---
 
 ### Stories — Semana 3
+- Stories ao vivo ou repost nos dias de jogo do Brasil
+- Enquete Copa: "Brasil vai até onde?" (oitavas / quartas / semi / campeão)
 - Dica de inverno: revisão antes do frio (fluidos, pneus, bateria)
 - Enquete: "Você viaja nas férias de julho?"
-- CTA: "Quer levar a família com conforto? Fala com a gente"
-- Repost de depoimento de cliente (se disponível)
 
 ---
 
-## SEMANA 4 — 23 a 30/06
-**Tema:** São João | Encerramento do mês
+## SEMANA 4 — 22 a 28/06
+**Tema:** São João | Copa fase decisiva | Encerramento
+
+---
+
+### 22/06 (Seg) | Estático | Vitrine ⚠️
+
+**Tema:** Vitrine da semana
+
+**Texto no criativo:**
+```
+[MODELO] [ANO]
+[Versão] · [XX.XXX] km
+```
+
+**Legenda:**
+```
+Semana nova. Estoque completo.
+
+[Modelo] [ano]. [XX.XXX] km. Versão [versão].
+Revisado, documentado e com garantia de 3 meses.
+
+📲 Consulte no WhatsApp. Link na bio.
+
+#AgvelVeiculos #SemiNovo #PatoBranco #Estoque
+```
 
 ---
 
@@ -742,6 +1085,31 @@ Arrasta para entender como funciona o financiamento aqui na Agvel.
 
 ---
 
+### 26/06 (Sex) | Estático | Copa ⚽
+
+**Tema:** Copa — fase mata-mata (oitavas, quartas ou semi dependendo do avanço do Brasil)
+
+**Texto no criativo:**
+```
+Brasil nas oitavas.
+[adaptar conforme a fase]
+```
+
+**Legenda:**
+```
+O Brasil avançou na Copa.
+
+E quem tem o carro certo vai acompanhar cada jogo
+sem se preocupar com nada.
+
+Ainda tem boa opção no estoque.
+📲 WhatsApp na bio.
+
+#AgvelVeiculos #Copa2026 #VaiBrasil #SemiNovo #PatoBranco
+```
+
+---
+
 ### 27/06 (Sáb) | Reels | Conversão ⚠️
 
 **Tema:** Chegou novo no estoque
@@ -765,6 +1133,69 @@ Se você estava esperando, o momento chegou.
 📲 Consulte no WhatsApp. Link na bio.
 
 #AgvelVeiculos #ChegouNaAgvel #SemiNovo #PatoBranco #Estoque
+```
+
+---
+
+### 28/06 (Dom) | Estático | Aspiracional
+
+**Tema:** Final de semana com o carro certo
+
+**Texto no criativo:**
+```
+Final de semana feito para isso.
+```
+
+**Legenda:**
+```
+Domingo de inverno em Pato Branco.
+
+Frio lá fora, carro aquecido, família junto.
+
+No estoque da Agvel tem opção para quem prioriza conforto,
+espaço ou um visual que chama atenção.
+
+📲 WhatsApp na bio.
+
+#AgvelVeiculos #Domingo #SemiNovo #PatoBranco #Inverno
+```
+
+---
+
+### Stories — Semana 4
+- Enquete São João: "Você vai na festa ou prefere aproveitar em casa?"
+- Repost Copa: torcida, jogo do Brasil
+- Chamada de avaliação de troca: "Quer saber quanto vale seu carro?"
+- Countdown férias de julho: "Já pensou no veículo para julho?"
+
+---
+
+## SEMANA 5 — 29 a 30/06
+**Tema:** Feriado | Encerramento do mês
+
+---
+
+### 29/06 (Seg) | Estático | Sazonalidade
+
+**Tema:** Feriado de São Pedro e São Paulo
+
+**Texto no criativo:**
+```
+São Pedro e São Paulo.
+Bom feriado, Pato Branco.
+```
+
+**Legenda:**
+```
+Feriado de São Pedro e São Paulo.
+
+Bom descanso pra quem está aproveitando o dia.
+E pra quem ainda não tem o carro dos sonhos:
+a gente retorna amanhã.
+
+📲 WhatsApp na bio.
+
+#AgvelVeiculos #Feriado #SaoPedro #PatoBranco #Junho2026
 ```
 
 ---
@@ -800,11 +1231,10 @@ Julho vem com estoque novo. Fique de olho.
 
 ---
 
-### Stories — Semana 4
-- Enquete São João: "Você vai na festa ou prefere aproveitar em casa?"
-- Chamada de avaliação de troca: "Quer saber quanto vale seu carro?"
-- Countdown férias de julho: "Já pensou no veículo para julho?"
-- CTA direto: sticker de WhatsApp com "Fale com a Agvel"
+### Stories — Semana 5
+- CTA direto: sticker de WhatsApp "Fale com a Agvel"
+- Repost do fechamento com agradecimento
+- Teaser de julho: "O que vem por aí no próximo mês"
 
 ---
 
@@ -812,11 +1242,12 @@ Julho vem com estoque novo. Fique de olho.
 
 | Formato | Quantidade |
 |---------|-----------|
-| Post estático | 12 |
-| Carrossel | 4 |
-| Reels | 3 |
-| Total feed | 19 |
-| Stories (sugestões) | 16 |
+| Post estático | 21 |
+| Carrossel | 5 |
+| Reels | 4 |
+| **Total feed** | **30** |
+| Posts Copa (dentro dos 30) | 6 |
+| Stories (sugestões) | 20+ |
 
 ---
 
@@ -824,38 +1255,48 @@ Julho vem com estoque novo. Fique de olho.
 
 | Data | Post | O que falta | Prazo | Responsável |
 |------|------|-------------|-------|-------------|
+| 01/06 | Abertura de junho | Nenhum | Pronto | Agência |
 | 02/06 | Tiguan 2024 | km, versão | 01/06 | Grazi |
-| 03/06 | Seminovo/0km | Pronto | - | Agência |
-| 05/06 | 20 anos | Pronto | - | Agência |
+| 03/06 | Seminovo/0km | Nenhum | Pronto | Agência |
+| 04/06 | Bastidores chegada | Carro real chegando para Wenderson filmar | 03/06 | Grazi + Wenderson |
+| 05/06 | 20 anos | Nenhum | Pronto | Agência |
 | 06/06 | Tour showroom | Veículos da semana para Wenderson | 05/06 | Grazi + Wenderson |
-| 07/06 | Clientes de fora | Pronto | - | Agência |
+| 07/06 | Clientes de fora | Nenhum | Pronto | Agência |
+| 08/06 | Copa teaser | Nenhum | Pronto | Agência |
 | 09/06 | Fiat Pulse | km, versão, motor, tamanho tela | 08/06 | Grazi |
-| 10/06 | Laudo cautelar | Pronto | - | Agência |
-| 11/06 | Namorados antec. | Pronto | - | Agência |
-| 12/06 | Namorados princ. | Pronto | - | Agência |
+| 10/06 | Laudo cautelar | Nenhum | Pronto | Agência |
+| 11/06 | Copa abertura | Nenhum | Pronto | Agência |
+| 12/06 | Namorados | Nenhum | Pronto | Agência |
+| 13/06 | Santo Antônio | Nenhum | Pronto | Agência |
 | 14/06 | T-Cross 2025 | km, confirmar filmagem | 13/06 | Grazi + Wenderson |
+| 15/06 | Copa dia de jogo | Confirmar se Brasil joga hoje | 14/06 | Agência |
 | 16/06 | SW4 2021 | km | 15/06 | Grazi |
-| 17/06 | 5 pontos | Pronto | - | Agência |
+| 17/06 | 5 pontos | Nenhum | Pronto | Agência |
 | 18/06 | Spin 2023 | km | 17/06 | Grazi |
-| 19/06 | Garantia | Pronto | - | Agência |
-| 21/06 | Início Inverno | Pronto | - | Agência |
-| 23/06 | [Veículo] | Modelo, km, destaques | 20/06 | Grazi |
-| 24/06 | São João | Pronto | - | Agência |
-| 25/06 | Financiamento | Pronto | - | Agência |
+| 19/06 | Garantia | Nenhum | Pronto | Agência |
+| 20/06 | Copa pós-jogo | Confirmar resultado do jogo | 19/06 | Agência |
+| 21/06 | Início Inverno | Nenhum | Pronto | Agência |
+| 22/06 | Vitrine semana | Modelo + km + destaques | 21/06 | Grazi |
+| 23/06 | [Veículo] | Modelo + km + destaques | 20/06 | Grazi |
+| 24/06 | São João | Nenhum | Pronto | Agência |
+| 25/06 | Financiamento | Nenhum | Pronto | Agência |
+| 26/06 | Copa mata-mata | Confirmar fase do Brasil | 25/06 | Agência |
 | 27/06 | Estoque novo | Veículo + confirmar filmagem | 24/06 | Grazi + Wenderson |
+| 28/06 | Final de semana | Nenhum | Pronto | Agência |
+| 29/06 | Feriado | Nenhum | Pronto | Agência |
 | 30/06 | Fechamento | Número de clientes do mês | 29/06 | Dalton ou Grazi |
 
 ---
 
 ## Observações de produção
 
-**Tom geral:** Sério, premium e objetivo. Sem urgência falsa, sem humor forçado. A Agvel tem 20 anos de reputação e o conteúdo precisa refletir isso.
+**Tom geral:** Sério, premium e objetivo. Sem urgência falsa, sem humor forçado. Os posts de Copa podem ter tom mais celebratório, mas sem perder a identidade da marca.
 
 **Visuais:**
 - Fundo escuro com tipografia limpa para posts de produto
 - Paleta: preto (#1D1D1B), branco (#FFFFFF), vermelho para CTAs (#CC0000)
+- Posts de Copa: pode usar o verde e amarelo com moderação, sempre mantendo o logo Agvel em destaque
 - Logo cromado em fundos claros, logo branco em fundos escuros
-- Nunca distorcer ou recolorir o logo
 
 **Reels:**
 - Golden hour sempre que possível (fim de tarde)
@@ -866,8 +1307,14 @@ Julho vem com estoque novo. Fique de olho.
 - Cortes diretos, sem transições elaboradas
 - Trilha instrumental no volume baixo para vídeos sem apresentador
 
+**Copa do Mundo:**
+- Confirmar datas dos jogos do Brasil na tabela FIFA e ajustar os posts marcados com ⚽
+- Templates de dia de jogo e pós-jogo já estão prontos, só adaptar a data
+- Se o Brasil for eliminado, substituir os posts de Copa restantes por vitrine ou institucional
+
 **Stories:**
 - Template mais leve com símbolo Agvel e sticker de WhatsApp
+- Nos dias de jogo do Brasil: stories ao vivo ou repost de torcida
 - Priorizar enquetes, bastidores e repost de produtos com CTA direto
 
 ---
