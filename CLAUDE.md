@@ -68,7 +68,9 @@ Se por algum motivo um commit foi parar em outro branch, mover para o `main` ant
 
 ## Lançamento pago — memória estratégica
 
-Toda conversa sobre lançamento pago (imersão, evento com ingresso, pit de produto) deve partir da skill `.claude/skills/lancamento-pago.md`. Ela contém:
+Para contexto sobre os 4 modelos de lançamento (Semente, Interno, Relâmpago, Pago), consultar `.claude/skills/modelos-lancamento.md`.
+
+Toda conversa sobre lançamento pago especificamente (imersão, evento com ingresso, pit de produto) deve partir da skill `.claude/skills/lancamento-pago.md`. Ela contém:
 
 - Estrutura completa do lançamento (lotes, order bumps, pit, down sell, carrinho)
 - Benchmarks de conversão por etapa
