@@ -1,4 +1,4 @@
-# Landing Page — Jornada PCN
+# Landing Page — Jornada Pense como Neuropsicólogo
 
 > Documento para validação e edição de textos. Cada seção tem o texto que aparece na página.
 > Para sugerir mudanças: use o modo comentário do Notion ou edite diretamente.
@@ -9,7 +9,7 @@
 
 | Campo | Conteúdo atual |
 |---|---|
-| Nome do evento | Jornada PCN |
+| Nome do evento | Jornada Pense como Neuropsicólogo |
 | Data | 04 de julho de 2026 |
 | Horário | 09h às 15h30 (Brasília) |
 | Formato | Online · Zoom |
@@ -56,7 +56,7 @@ Esses desafios fazem parte do seu dia a dia?
 ## Seção solução — "O que você vai aprender"
 
 **Título**
-Jornada PCN: Do Raciocínio Clínico ao Laudo de Excelência
+Jornada Pense como Neuropsicólogo: Do Raciocínio Clínico ao Laudo de Excelência
 
 **Subtítulo**
 Um dia intensivo ao vivo em que a Dra. Natalie ensina o Método PCN por meio de casos reais, demonstrando passo a passo o raciocínio neuropsicológico — do pedido da avaliação até a elaboração do laudo.
@@ -76,7 +76,7 @@ Um dia intensivo ao vivo em que a Dra. Natalie ensina o Método PCN por meio de 
 ## Antes e depois — "A diferença é clara"
 
 **Título**
-Antes e depois da Jornada PCN
+Antes e depois da Jornada Pense como Neuropsicólogo
 
 **Sem o método**
 
@@ -123,7 +123,7 @@ Nos primeiros anos de clínica, Natalie tinha a mesma dúvida que a maioria das 
 
 Doutora pela USP e Mestre pela FMUSP, percebeu que o problema não era falta de conhecimento. Era ausência de método. Criou o Método PCN para resolver exatamente isso. Hoje são mais de 2.000 profissionais formadas no Brasil.
 
-**Chips de credencial:** Doutora USP · Mestre FMUSP · Mackenzie · +5.000 alunos · 10+ anos de clínica
+**Chips de credencial:** Doutora USP · Mestre FMUSP · Mackenzie · +2.000 profissionais · 10+ anos de clínica
 
 ---
 
@@ -178,7 +178,7 @@ O preço sobe a cada fase. Quanto antes, melhor.
 **Título:** Garantia incondicional de 7 dias
 
 **Texto:**
-Se o conteúdo da Jornada PCN não fizer sentido para a sua prática, devolvemos 100% do valor. Sem perguntas. Sem formulários. O risco é todo nosso.
+Se o conteúdo da Jornada Pense como Neuropsicólogo não fizer sentido para a sua prática, devolvemos 100% do valor. Sem perguntas. Sem formulários. O risco é todo nosso.
 
 ---
 

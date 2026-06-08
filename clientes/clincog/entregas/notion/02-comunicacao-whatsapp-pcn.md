@@ -1,4 +1,4 @@
-# Comunicação WhatsApp — Jornada PCN
+# Comunicação WhatsApp — Jornada Pense como Neuropsicólogo
 
 > Scripts de WhatsApp para todas as fases do lançamento.
 > Lili, Ingrid e Yasmin respondem usando os roteiros desta página.
@@ -190,4 +190,4 @@ Público: quem assistiu 75%+ dos vídeos ou visitou a LP sem comprar. Aparece um
 
 **Copy do anúncio:**
 
-"Você visitou a Jornada PCN e ainda não comprou. A dúvida principal quase sempre é a mesma: será que realmente funciona? Toda profissional que participou tinha essa pergunta antes de entrar. O ingresso fecha [data]. A única forma de responder é estando lá."
+"Você visitou a Jornada Pense como Neuropsicólogo e ainda não comprou. A dúvida principal quase sempre é a mesma: será que realmente funciona? Toda profissional que participou tinha essa pergunta antes de entrar. O ingresso fecha [data]. A única forma de responder é estando lá."

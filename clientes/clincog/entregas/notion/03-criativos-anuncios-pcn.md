@@ -1,4 +1,4 @@
-# Criativos e Anúncios — Jornada PCN
+# Criativos e Anúncios — Jornada Pense como Neuropsicólogo
 
 > Este documento reúne todos os textos dos anúncios: imagens estáticas e roteiros de vídeo.
 > São 20 criativos estáticos e 20 roteiros de vídeo — usados em fases diferentes da campanha.
@@ -81,7 +81,7 @@ Formato: imagem com headline em destaque + subtítulo + botão de ação.
 ### EST 08 — Pertencimento · Retargeting
 **Headline:** Neuropsicologia solitária é a norma.
 **Subtítulo:** mas não precisa ser. A comunidade certa muda tudo.
-**CTA:** Conhecer a Jornada PCN
+**CTA:** Conhecer a Jornada Pense como Neuropsicólogo
 **Foto sugerida:** Grupo de profissionais, ambiente acolhedor
 
 ---
@@ -89,7 +89,7 @@ Formato: imagem com headline em destaque + subtítulo + botão de ação.
 ### EST 09 — Progressão · Fundo Frio
 **Headline:** Você estudou a teoria.
 **Subtítulo:** Já está na hora de dominar o raciocínio clínico.
-**CTA:** Entrar na Jornada PCN
+**CTA:** Entrar na Jornada Pense como Neuropsicólogo
 **Foto sugerida:** Mulher em transição: livros → prática clínica
 
 ---
@@ -121,16 +121,16 @@ Formato: imagem com headline em destaque + subtítulo + botão de ação.
 ### EST 13 — Credibilidade · Diferencial
 **Headline:** A Clincog não promete facilitar.
 **Subtítulo:** Promete te dar o método para você chegar mais longe.
-**CTA:** Conhecer a Jornada PCN
+**CTA:** Conhecer a Jornada Pense como Neuropsicólogo
 **Foto sugerida:** Dra. Natalie, postura de autoridade, sorriso sutil
 
 ---
 
 ### EST 14 — Prova Social · Conversão
-**Headline:** Mais de 5.000 profissionais de saúde já perceberam que o problema não era conhecimento.
+**Headline:** Mais de 2.000 profissionais de saúde já perceberam que o problema não era conhecimento.
 **Subtítulo:** Era método. E método se aprende.
 **CTA:** Quero Ser a Próxima
-**Foto sugerida:** Grid de rostos / comunidade de +5.000 profissionais
+**Foto sugerida:** Grid de rostos / comunidade de +2.000 profissionais
 
 ---
 
@@ -167,9 +167,9 @@ Formato: imagem com headline em destaque + subtítulo + botão de ação.
 ---
 
 ### EST 19 — Reativação · Frustração Anterior
-**Headline:** Daqui um ano, você vai agradecer por ter entrado na Jornada PCN.
+**Headline:** Daqui um ano, você vai agradecer por ter entrado na Jornada Pense como Neuropsicólogo.
 **Subtítulo:** Ou vai lamentar por não ter.
-**CTA:** Entrar na Jornada PCN
+**CTA:** Entrar na Jornada Pense como Neuropsicólogo
 **Foto sugerida:** Mulher pensativa, levemente frustrada
 
 ---
@@ -191,7 +191,7 @@ Formato: vídeo da Natalie ou voz sobre imagem. Cada roteiro tem gancho (0-3s), 
 ### V01 — Dor · Topo de Funil · 60s
 **Gancho:** Você coleta os dados. Analisa os testes. E na hora de escrever o raciocínio clínico, para. Essa trava tem um motivo específico.
 **Corpo:** Não é falta de conhecimento. É falta de um sistema para organizar o que você já sabe em uma narrativa clínica coerente.
-**CTA:** Entra na Jornada PCN e aprende a estrutura que faltava.
+**CTA:** Entra na Jornada Pense como Neuropsicólogo e aprende a estrutura que faltava.
 **Nota:** Tom direto. Afirmação como premissa. Pausa após a última frase do gancho.
 
 ---
@@ -233,7 +233,7 @@ Formato: vídeo da Natalie ou voz sobre imagem. Cada roteiro tem gancho (0-3s), 
 ---
 
 ### V08 — Prova Social · Conversão · 45s
-**Gancho:** Mais de 5.000 profissionais de saúde já transformaram sua prática com o Método PCN.
+**Gancho:** Mais de 2.000 profissionais de saúde já transformaram sua prática com o Método PCN.
 **Nota:** Inserir número real e depoimento específico. Quanto mais concreto, melhor.
 
 ---
@@ -252,7 +252,7 @@ Formato: vídeo da Natalie ou voz sobre imagem. Cada roteiro tem gancho (0-3s), 
 
 ### V11 — Quebra Objeção: Tempo · 60s
 **Gancho:** Você não precisa de uma semana de imersão para transformar sua prática. Precisa de um dia.
-**Corpo:** A Jornada PCN é um dia inteiro, ao vivo, online. Sem cancelar agenda.
+**Corpo:** A Jornada Pense como Neuropsicólogo é um dia inteiro, ao vivo, online. Sem cancelar agenda.
 **CTA:** O ingresso é R$ 67. O retorno começa no dia 26.
 **Nota:** Visual: agenda com 09h-17h marcado. Desmonta a objeção de tempo.
 
@@ -261,7 +261,7 @@ Formato: vídeo da Natalie ou voz sobre imagem. Cada roteiro tem gancho (0-3s), 
 ### V12 — Tapa na Cara · Direto · 65s
 **Gancho:** Desculpa a franqueza: descrever resultado de teste não é laudo neuropsicológico.
 **Corpo:** Laudo é raciocínio. É hipótese. É integração. É uma narrativa que explica quem é esse paciente.
-**CTA:** Para de fazer laudo no modo automático. Entra na Jornada PCN.
+**CTA:** Para de fazer laudo no modo automático. Entra na Jornada Pense como Neuropsicólogo.
 **Nota:** Tom firme, sem suavizar. Mostrar lado a lado: laudo com só pontuações vs com narrativa.
 
 ---
@@ -311,7 +311,7 @@ Formato: vídeo da Natalie ou voz sobre imagem. Cada roteiro tem gancho (0-3s), 
 ---
 
 ### V20 — Última Chamada · Urgência Máxima · 30s
-**Gancho:** Faltam poucos dias para a Jornada PCN. Se você está vendo isso agora, ainda dá tempo.
+**Gancho:** Faltam poucos dias para a Jornada Pense como Neuropsicólogo. Se você está vendo isso agora, ainda dá tempo.
 **Corpo:** 25 de junho, 09h às 15h30. Dra. Natalie ao vivo. Do raciocínio clínico ao laudo de excelência.
 **CTA:** Garanta agora. As vagas estão se esgotando.
 **Nota:** Últimos 3 dias APENAS. Ritmo rápido, cortes de 2s. Contador de horas na tela.
