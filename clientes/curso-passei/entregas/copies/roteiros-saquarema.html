@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roteiros de Anúncio — Turma Saquarema</title>
+  <title>Roteiros de Anúncio — Live Saquarema 18/06</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -44,6 +44,17 @@
     header p {
       font-size: 14px;
       color: #555;
+      margin-bottom: 4px;
+    }
+
+    .objetivo {
+      font-size: 13px;
+      color: #444;
+      background: #fff3cd;
+      border-left: 3px solid #e6a817;
+      padding: 10px 14px;
+      border-radius: 4px;
+      margin-top: 16px;
     }
 
     .meta-grid {
@@ -102,24 +113,18 @@
       flex-shrink: 0;
     }
 
-    .badge-frio   { background: #e8f0fe; color: #1a56db; }
-    .badge-quente { background: #fef3c7; color: #92400e; }
-    .badge-urgente{ background: #fee2e2; color: #991b1b; }
-    .badge-abertura{ background: #d1fae5; color: #065f46; }
+    .badge-frio    { background: #e8f0fe; color: #1a56db; }
+    .badge-quente  { background: #fef3c7; color: #92400e; }
+    .badge-urgente { background: #fee2e2; color: #991b1b; }
+    .badge-live    { background: #d1fae5; color: #065f46; }
 
     .quando {
       font-size: 12px;
       color: #666;
       margin-bottom: 20px;
-      display: flex;
-      gap: 6px;
-      align-items: center;
     }
 
-    .quando span {
-      font-weight: 600;
-      color: #333;
-    }
+    .quando span { font-weight: 600; color: #333; }
 
     .script-box {
       background: #fafaf8;
@@ -131,29 +136,22 @@
 
     .script-box p {
       font-size: 16px;
-      line-height: 1.8;
+      line-height: 1.9;
       color: #1a1a1a;
     }
 
-    .script-box p + p {
-      margin-top: 12px;
-    }
-
-    .script-box strong {
-      font-weight: 800;
-    }
+    .script-box p + p { margin-top: 12px; }
 
     .info-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 4px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
     }
 
     .info-item {
       background: #f4f4f0;
       border-radius: 8px;
-      padding: 12px 16px;
+      padding: 12px 14px;
     }
 
     .info-label {
@@ -171,6 +169,16 @@
       line-height: 1.4;
     }
 
+    .cta-pill {
+      display: inline-block;
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+
     .checklist {
       background: #fff;
       border-radius: 12px;
@@ -180,7 +188,7 @@
     }
 
     .checklist h2 {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 800;
       margin-bottom: 16px;
       text-transform: uppercase;
@@ -193,7 +201,7 @@
       gap: 10px;
       font-size: 14px;
       color: #333;
-      padding: 8px 0;
+      padding: 9px 0;
       border-bottom: 1px solid #f0f0f0;
     }
 
@@ -215,8 +223,8 @@
       color: #aaa;
     }
 
-    @media (max-width: 500px) {
-      .info-grid { grid-template-columns: 1fr; }
+    @media (max-width: 560px) {
+      .info-grid { grid-template-columns: 1fr 1fr; }
       .script-box p { font-size: 15px; }
       header h1 { font-size: 22px; }
     }
@@ -227,12 +235,15 @@
 
   <header>
     <div class="tag">Curso Passei &mdash; Agência Asher</div>
-    <h1>Roteiros de Anúncio<br>Turma Saquarema</h1>
-    <p>Lançamento 18/06/2026 &nbsp;&bull;&nbsp; Meta Ads &nbsp;&bull;&nbsp; Prof. Ramon Matos</p>
+    <h1>Roteiros de Anúncio<br>Live Saquarema &mdash; 18/06</h1>
+    <p>Meta Ads &nbsp;&bull;&nbsp; Prof. Ramon Matos &nbsp;&bull;&nbsp; CTA: Saiba mais &rarr; grupo</p>
+    <div class="objetivo">
+      Os anúncios levam para a live, não vendem o curso. A venda acontece durante o evento.
+    </div>
     <div class="meta-grid">
-      <span class="meta-pill">68 horas</span>
-      <span class="meta-pill">R$ 497</span>
-      <span class="meta-pill">Vídeo 15–30s</span>
+      <span class="meta-pill">Live YouTube</span>
+      <span class="meta-pill">18/06/2026</span>
+      <span class="meta-pill">Vídeo 15&ndash;25s</span>
       <span class="meta-pill">Ramon direto para câmera</span>
     </div>
   </header>
@@ -247,27 +258,29 @@
       <span class="badge badge-frio">Público frio</span>
     </div>
 
-    <div class="quando">Quando usar: <span>08 a 17/06</span> &nbsp;&bull;&nbsp; Interesses: magistério, concurso público, pedagogia</div>
+    <div class="quando">
+      Quando usar: <span>08 a 17/06</span> &nbsp;&bull;&nbsp; Interesses: magistério, concurso público, pedagogia
+    </div>
 
     <div class="script-box">
-      <p>Você dá aula todo dia.</p>
-      <p>Corrige prova, planeja aula, cuida de turma cheia.</p>
-      <p>E no final do ano ainda não sabe se o contrato vai renovar.</p>
-      <p>O concurso de professor em Saquarema resolve isso.<br>
-      68 horas focadas no que a banca cobra.<br>
-      Com quem aprovou mais de 3.000 professoras.</p>
-      <p>A turma abre no dia 18. R$ 497.<br>
-      Link na bio.</p>
+      <p>Você trabalha como professora temporária e ainda não sabe se o contrato renova no final do ano.</p>
+      <p>Dia 18 de junho, ao vivo no YouTube, vou mostrar como professoras com a mesma rotina que a sua estão passando no concurso de Saquarema.</p>
+      <p>É gratuito. As vagas no grupo são limitadas.</p>
+      <p>Clica em saiba mais e garante seu lugar.</p>
     </div>
 
     <div class="info-grid">
       <div class="info-item">
         <div class="info-label">Filmagem</div>
-        <div class="info-value">Ramon de frente. Fundo neutro ou sala de aula vazia. Tom sério e direto.</div>
+        <div class="info-value">Ramon de frente. Fundo neutro. Tom sério e direto.</div>
       </div>
       <div class="info-item">
-        <div class="info-label">Duração estimada</div>
-        <div class="info-value">~22 segundos</div>
+        <div class="info-label">CTA do anúncio</div>
+        <div class="info-value"><span class="cta-pill">Saiba mais</span></div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Duração</div>
+        <div class="info-value">~20 segundos</div>
       </div>
     </div>
   </div>
@@ -277,31 +290,34 @@
     <div class="roteiro-header">
       <div>
         <div class="roteiro-numero">Roteiro 02</div>
-        <div class="roteiro-titulo">Prova social</div>
+        <div class="roteiro-titulo">Antecipação</div>
       </div>
       <span class="badge badge-quente">Remarketing</span>
     </div>
 
-    <div class="quando">Quando usar: <span>11 a 17/06</span> &nbsp;&bull;&nbsp; Quem interagiu com o perfil ou viu conteúdo do Ramon</div>
+    <div class="quando">
+      Quando usar: <span>11 a 17/06</span> &nbsp;&bull;&nbsp; Quem interagiu com o perfil ou viu conteúdo do Ramon
+    </div>
 
     <div class="script-box">
-      <p>Em 8 anos, mais de 3.000 professoras aprovadas.</p>
-      <p>Não é coincidência.</p>
-      <p>O curso cobre o que a banca de Saquarema cobra.<br>
-      Não o que está no livro didático.</p>
-      <p>Quem aprende esse padrão leva vantagem na prova.</p>
-      <p>A turma abre dia 18. R$ 497. Vagas limitadas.<br>
-      Link na bio.</p>
+      <p>No dia 18, ao vivo no YouTube, vou mostrar o padrão exato de questões que a banca de Saquarema cobra.</p>
+      <p>O mesmo método que aprovou mais de 3.000 professoras.</p>
+      <p>Você sai da live sabendo exatamente o que estudar e o que ignorar.</p>
+      <p>Clica em saiba mais e entra no grupo.</p>
     </div>
 
     <div class="info-grid">
       <div class="info-item">
         <div class="info-label">Filmagem</div>
-        <div class="info-value">Ramon de frente, tom confiante. Pode inserir card "3.000+" sobreposto durante a fala.</div>
+        <div class="info-value">Ramon de frente, tom confiante. Card "18/06" sobreposto durante a fala.</div>
       </div>
       <div class="info-item">
-        <div class="info-label">Duração estimada</div>
-        <div class="info-value">~22 segundos</div>
+        <div class="info-label">CTA do anúncio</div>
+        <div class="info-value"><span class="cta-pill">Saiba mais</span></div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Duração</div>
+        <div class="info-value">~20 segundos</div>
       </div>
     </div>
   </div>
@@ -316,24 +332,29 @@
       <span class="badge badge-urgente">Últimos 3 dias</span>
     </div>
 
-    <div class="quando">Quando usar: <span>15, 16 e 17/06</span> &nbsp;&bull;&nbsp; Remarketing de quem acompanhou a semana</div>
+    <div class="quando">
+      Quando usar: <span>15, 16 e 17/06</span> &nbsp;&bull;&nbsp; Remarketing de quem acompanhou a semana
+    </div>
 
     <div class="script-box">
-      <p>A Turma Saquarema abre no dia 18.</p>
-      <p>Três dias.</p>
-      <p>68 horas. Banca certa. R$ 497. Vagas limitadas.</p>
-      <p>Se você acompanhou essa semana, você já sabe o que está em jogo.</p>
-      <p>Link na bio. Antes de fechar.</p>
+      <p>Faltam 3 dias para a live de Saquarema.</p>
+      <p>O grupo já está enchendo.</p>
+      <p>Se você vai prestar esse concurso, essa live é para você.</p>
+      <p>Clica em saiba mais antes de fechar.</p>
     </div>
 
     <div class="info-grid">
       <div class="info-item">
         <div class="info-label">Filmagem</div>
-        <div class="info-value">Enquadramento fechado no rosto. Tom direto, sem hesitação. Sem música.</div>
+        <div class="info-value">Enquadramento fechado no rosto. Tom direto, sem hesitação.</div>
       </div>
       <div class="info-item">
-        <div class="info-label">Duração estimada</div>
-        <div class="info-value">~18 segundos</div>
+        <div class="info-label">CTA do anúncio</div>
+        <div class="info-value"><span class="cta-pill">Saiba mais</span></div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Duração</div>
+        <div class="info-value">~15 segundos</div>
       </div>
     </div>
   </div>
@@ -343,28 +364,33 @@
     <div class="roteiro-header">
       <div>
         <div class="roteiro-numero">Roteiro 04</div>
-        <div class="roteiro-titulo">Abertura</div>
+        <div class="roteiro-titulo">Dia da live</div>
       </div>
-      <span class="badge badge-abertura">Dia 18/06</span>
+      <span class="badge badge-live">18/06</span>
     </div>
 
-    <div class="quando">Quando usar: <span>18/06</span> &nbsp;&bull;&nbsp; Subir nas primeiras horas após a abertura &nbsp;&bull;&nbsp; Remarketing geral</div>
+    <div class="quando">
+      Quando usar: <span>18/06 &mdash; manhã</span> &nbsp;&bull;&nbsp; Confirmar horário com Ramon e inserir antes de gravar
+    </div>
 
     <div class="script-box">
-      <p>Abriu.</p>
-      <p>A Turma Saquarema está aberta agora.</p>
-      <p>R$ 497. 68 horas. Vagas limitadas.</p>
-      <p>Quem ficou de olho essa semana, esse é o momento.</p>
-      <p>Link na bio.</p>
+      <p>Hoje é o dia.</p>
+      <p>A live de Saquarema começa às [hora] no YouTube.</p>
+      <p>Se você ainda não está no grupo, clica em saiba mais agora.</p>
+      <p>A gente te vê lá.</p>
     </div>
 
     <div class="info-grid">
       <div class="info-item">
         <div class="info-label">Filmagem</div>
-        <div class="info-value">Ramon de frente, enquadramento normal. Card "ABRIU" nos primeiros 2 segundos.</div>
+        <div class="info-value">Ramon de frente, tom animado. Subir cedo, antes da live.</div>
       </div>
       <div class="info-item">
-        <div class="info-label">Duração estimada</div>
+        <div class="info-label">CTA do anúncio</div>
+        <div class="info-value"><span class="cta-pill">Saiba mais</span></div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Duração</div>
         <div class="info-value">~15 segundos</div>
       </div>
     </div>
@@ -373,12 +399,12 @@
   <!-- CHECKLIST -->
   <div class="checklist">
     <h2>Checklist antes de subir</h2>
-    <div class="check-item"><div class="check-box"></div>Pixel Meta instalado e integrado à Hotmart</div>
-    <div class="check-item"><div class="check-box"></div>Audiências de remarketing configuradas (YouTube + Instagram)</div>
-    <div class="check-item"><div class="check-box"></div>Página de captura ativa antes do dia 08/06</div>
-    <div class="check-item"><div class="check-box"></div>Link na bio atualizado para a turma</div>
-    <div class="check-item"><div class="check-box"></div>Ramon aprovou os roteiros e gravou os vídeos</div>
-    <div class="check-item"><div class="check-box"></div>Criativos editados e aprovados — prazo: 07/06</div>
+    <div class="check-item"><div class="check-box"></div>Grupo criado (WhatsApp ou Telegram) com link funcional</div>
+    <div class="check-item"><div class="check-box"></div>Pixel Meta configurado no destino do "Saiba mais"</div>
+    <div class="check-item"><div class="check-box"></div>Audiências de remarketing ativas (YouTube + Instagram)</div>
+    <div class="check-item"><div class="check-box"></div>Link na bio atualizado para o grupo/evento</div>
+    <div class="check-item"><div class="check-box"></div>Ramon gravou os 4 vídeos &mdash; prazo: 07/06</div>
+    <div class="check-item"><div class="check-box"></div>Criativos editados e aprovados &mdash; prazo: 07/06</div>
   </div>
 
   <footer>
