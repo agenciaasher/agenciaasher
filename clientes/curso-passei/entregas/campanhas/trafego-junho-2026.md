@@ -171,6 +171,28 @@ Sem CTA de compra direto aqui. O papel é construir prova social para converter 
 
 ---
 
+### Campanha 4 — Captação Live Saquarema 18/06
+
+- **Objetivo:** Leads / Tráfego para grupo do evento
+- **Budget:** A confirmar com Ramon
+- **Período:** 08 a 17/06
+- **Segmentação geográfica:** Estado do Rio de Janeiro — não escalar para fora do RJ
+
+**Audiência fria (08-17/06):**
+- Localização: Estado do Rio de Janeiro
+- Idade: 22-45 anos, feminino
+- Interesses: magistério, concurso público, pedagogia, professor público
+
+**Audiência remarketing (11-17/06):**
+- Quem interagiu com @preparatoriopasseiconcursos ou @proframonmatos nos últimos 60 dias
+- Quem assistiu 30%+ de vídeos do Ramon no YouTube
+- Excluir: quem já está no grupo
+
+Os criativos específicos dessa campanha estão em `entregas/copies/criativos-live-saquarema-junho-2026.md` (10 criativos: 7 captação emocional + 3 antecipação).
+Os roteiros de vídeo estão em `entregas/campanhas/roteiros-anuncios-lancamento-saquarema-junho-2026.md`.
+
+---
+
 ## Formatos Criativos
 
 | Campanha | Formato | Estilo |

@@ -3,6 +3,7 @@
 
 **Objetivo:** Levar pessoas para o grupo e para a live do dia 18. A venda acontece no evento.
 **CTA de todos os criativos:** Saiba mais — destino: grupo do evento
+**Segmentação geográfica:** Estado do Rio de Janeiro
 **Sem menção de preço.** A live é gratuita.
 
 ---
@@ -14,7 +15,7 @@
 ### CE-01 — Contrato temporário
 
 **GANCHO:**
-Professora temporária no Brasil trabalha sem saber se tem turma no próximo ano.
+Professora temporária no Rio de Janeiro trabalha sem saber se tem turma no próximo ano.
 
 **CORPO:**
 Agosto chega. O contrato não renova. A escola avisa na última hora.
