@@ -1,106 +1,98 @@
 # Roteiros de Anúncio — Meta Ads
-## Turma Saquarema | Lançamento 18/06/2026
+## Turma Saquarema | Live YouTube 18/06/2026
 
-**Produto:** Turma Saquarema — 68h | R$ 497
+**Objetivo:** Levar pessoas para a live do dia 18. A venda acontece durante o evento.
 **Apresentador:** Prof. Ramon Matos
-**Formato:** Vídeo curto (15-30s) | Ramon direto para câmera
+**Formato:** Vídeo curto (15-25s) | Ramon direto para câmera
+**CTA do anúncio:** Saiba mais — destino: grupo do evento
 **Plataforma:** Meta Ads (Feed + Stories + Reels)
 
-Quatro roteiros alinhados com os atos do lançamento. O Ramon grava todos de uma vez — muda só o tom e o texto.
+Os anúncios não vendem o curso. Vendem a live.
 
 ---
 
 ## ROTEIRO 1 — Dor emocional
-**Quando usar:** 08 a 17/06 | Público frio (interesses: concurso público, magistério, pedagogia)
-**Criativo:** Criativo 1 do mapa de lançamento
+**Quando usar:** 08 a 17/06 | Público frio
+**Segmentação:** interesses em concurso público, magistério, pedagogia
 
 ---
 
-Você dá aula todo dia.
+Você trabalha como professora temporária e ainda não sabe se o contrato renova no final do ano.
 
-Corrige prova, planeja aula, cuida de turma cheia.
+Dia 18 de junho, ao vivo no YouTube, vou mostrar como professoras com a mesma rotina que a sua estão passando no concurso de Saquarema.
 
-E no final do ano ainda não sabe se o contrato vai renovar.
+É gratuito. As vagas no grupo são limitadas.
 
-O concurso de professor em Saquarema resolve isso.
-68 horas focadas no que a banca cobra.
-Com quem aprovou mais de 3.000 professoras.
-
-A turma abre no dia 18. R$ 497.
-Link na bio.
+Clica em saiba mais e garante seu lugar.
 
 ---
 
-**Filmagem:** Ramon de frente para câmera. Fundo neutro ou sala de aula vazia. Tom sério, direto, sem forçar emoção.
-**Duração estimada:** 22 segundos
+**Filmagem:** Ramon de frente, fundo neutro ou sala de aula vazia. Tom sério, direto, sem forçar emoção.
+**CTA do anúncio:** Saiba mais
+**Duração estimada:** 20 segundos
 
 ---
 
-## ROTEIRO 2 — Prova social
+## ROTEIRO 2 — Antecipação
 **Quando usar:** 11 a 17/06 | Remarketing de quem interagiu com o perfil ou viu conteúdo do Ramon
-**Criativo:** Criativo 2 do mapa de lançamento
 
 ---
 
-Em 8 anos, mais de 3.000 professoras aprovadas.
+No dia 18, ao vivo no YouTube, vou mostrar o padrão exato de questões que a banca de Saquarema cobra.
 
-Não é coincidência.
+O mesmo método que aprovou mais de 3.000 professoras.
 
-O curso cobre o que a banca de Saquarema cobra. Não o que está no livro didático.
-Quem aprende esse padrão leva vantagem na prova.
+Você sai da live sabendo exatamente o que estudar e o que ignorar.
 
-A turma abre dia 18. R$ 497. Vagas limitadas.
-Link na bio.
+Clica em saiba mais e entra no grupo.
 
 ---
 
-**Filmagem:** Ramon de frente, tom confiante. Pode inserir card sobreposto com "3.000+" durante a fala. Fundo limpo.
-**Duração estimada:** 22 segundos
+**Filmagem:** Ramon de frente, tom confiante. Pode inserir card com data "18/06" durante a fala.
+**CTA do anúncio:** Saiba mais
+**Duração estimada:** 20 segundos
 
 ---
 
 ## ROTEIRO 3 — Urgência
 **Quando usar:** 15, 16 e 17/06 | Remarketing de quem acompanhou a semana
-**Criativo:** Criativo 3 do mapa de lançamento
 
 ---
 
-A Turma Saquarema abre no dia 18.
+Faltam 3 dias para a live de Saquarema.
 
-Três dias.
+O grupo já está enchendo.
 
-68 horas. Banca certa. R$ 497. Vagas limitadas.
+Se você vai prestar esse concurso, essa live é para você.
 
-Se você acompanhou essa semana, você já sabe o que está em jogo.
-
-Link na bio. Antes de fechar.
+Clica em saiba mais antes de fechar.
 
 ---
 
-**Filmagem:** Enquadramento mais fechado no rosto do Ramon. Tom direto, sem hesitação. Sem música, sem efeito.
-**Duração estimada:** 18 segundos
+**Filmagem:** Enquadramento fechado no rosto. Tom direto, sem hesitação. Sem música.
+**CTA do anúncio:** Saiba mais
+**Duração estimada:** 15 segundos
 
 ---
 
-## ROTEIRO 4 — Abertura
-**Quando usar:** 18/06 | Subir nas primeiras horas após a abertura | Remarketing geral
-**Observação:** Definir com Ramon o horário de abertura (recomendação: 9h ou 19h) e gravar esse roteiro com a hora real
+## ROTEIRO 4 — Dia da live
+**Quando usar:** 18/06 | Manhã do evento
+**Observação:** Confirmar horário com Ramon e inserir antes de gravar
 
 ---
 
-Abriu.
+Hoje é o dia.
 
-A Turma Saquarema está aberta agora.
+A live de Saquarema começa às [hora] no YouTube.
 
-R$ 497. 68 horas. Vagas limitadas.
+Se você ainda não está no grupo, clica em saiba mais agora.
 
-Quem ficou de olho essa semana, esse é o momento.
-
-Link na bio.
+A gente te vê lá.
 
 ---
 
-**Filmagem:** Ramon de frente, enquadramento normal. Pode inserir card "ABRIU" nos primeiros 2 segundos. Rápido e direto.
+**Filmagem:** Ramon de frente, tom animado. Subir cedo, antes da live começar.
+**CTA do anúncio:** Saiba mais
 **Duração estimada:** 15 segundos
 
 ---
@@ -109,17 +101,17 @@ Link na bio.
 
 - Gravar todos os roteiros na mesma sessão. Muda só o texto e o tom.
 - Câmera do celular serve. Iluminação natural de frente (janela atrás da câmera, não atrás do Ramon).
-- Ramon fala olhando direto para a câmera, não para o texto. Ensaiar antes de gravar.
+- Ramon fala olhando direto para a câmera. Ensaiar antes de gravar.
 - Nenhum roteiro precisa de música, corte ou efeito. O rosto e a voz do Ramon são o criativo.
-- Gravações brutas enviadas para Annick editar. Prazo de entrega: até 07/06.
+- Prazo de entrega das gravações brutas para edição: até 07/06.
 
 ---
 
 ## Checklist antes de subir
 
-- [ ] Pixel Meta instalado no site e integrado à Hotmart
-- [ ] Audiências de remarketing configuradas (YouTube + Instagram)
-- [ ] Página de captura ativa antes do dia 08/06
-- [ ] Link na bio atualizado para a turma
-- [ ] Ramon aprovou os roteiros e gravou os vídeos
-- [ ] Criativos editados e aprovados
+- [ ] Grupo criado (WhatsApp ou Telegram) com link funcional
+- [ ] Pixel Meta configurado no destino do "Saiba mais"
+- [ ] Audiências de remarketing ativas (YouTube + Instagram)
+- [ ] Link na bio atualizado para o grupo/evento
+- [ ] Ramon gravou os 4 vídeos
+- [ ] Criativos editados e aprovados — prazo: 07/06
