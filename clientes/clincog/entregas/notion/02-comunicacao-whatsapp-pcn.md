@@ -20,7 +20,7 @@ Me chamo [nome]. Vou estar aqui até o dia do evento cuidando da comunicação d
 
 Você vai receber 3 mensagens aqui antes do dia [data]: um conteúdo da Natalie sobre o que esperar da imersão, uma dica de preparação e o link de acesso no dia anterior. Mais nada, sem spam.
 
-Dia [data], das 9h às 17h. A gente se encontra lá.
+Dia [data], das 9h às 15h30. A gente se encontra lá.
 
 ---
 
@@ -56,7 +56,7 @@ Enviadas via WhatsApp individual (não no grupo). Responsáveis: Lili, Ingrid e 
 
 Oi [nome], sua vaga na Imersão PCN está confirmada!
 
-A imersão acontece no dia [data], das 9h às 17h. O link de acesso chega aqui no WhatsApp um dia antes.
+A imersão acontece no dia [data], das 9h às 15h30. O link de acesso chega aqui no WhatsApp um dia antes.
 
 Enquanto isso, assiste esse vídeo da Natalie — ele explica de onde veio o método. [link vídeo 1]
 

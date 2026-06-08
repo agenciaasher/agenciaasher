@@ -96,9 +96,9 @@ Formato: imagem com headline em destaque + subtítulo + botão de ação.
 
 ### EST 10 — Urgência · Retargeting
 **Headline:** Não é insegurança. É ausência de método.
-**Subtítulo:** E isso tem data de encerramento: 25/06.
+**Subtítulo:** E isso tem data de encerramento: 04/07.
 **CTA:** Garantir Minha Vaga
-**Foto sugerida:** Calendário com 25/06 marcado ou ampulheta
+**Foto sugerida:** Calendário com 04/07 marcado ou ampulheta
 
 ---
 
@@ -143,7 +143,7 @@ Formato: imagem com headline em destaque + subtítulo + botão de ação.
 ---
 
 ### EST 16 — Urgência · Últimos 7 Dias
-**Headline:** 25/06 · 09h às 17h. Um dia intensivo ao vivo. O Método PCN na prática.
+**Headline:** 04/07 · 09h às 15h30. Um dia intensivo ao vivo. O Método PCN na prática.
 **Subtítulo:** R$ 67.
 **CTA:** Garantir Meu Ingresso
 **Nota:** Direto, factual. Para quem já conhece e só precisa do empurrão final.
@@ -160,7 +160,7 @@ Formato: imagem com headline em destaque + subtítulo + botão de ação.
 
 ### EST 18 — Projeção · Últimos 7 Dias
 **Headline:** Tem profissional que vai chegar na próxima avaliação igual. Tem quem vai chegar transformada.
-**Subtítulo:** 25/06 é onde isso muda.
+**Subtítulo:** 04/07 é onde isso muda.
 **CTA:** Escolher Ser Transformada
 **Foto sugerida:** Profissional antes/depois, segura
 
@@ -312,6 +312,6 @@ Formato: vídeo da Natalie ou voz sobre imagem. Cada roteiro tem gancho (0-3s), 
 
 ### V20 — Última Chamada · Urgência Máxima · 30s
 **Gancho:** Faltam poucos dias para a Jornada PCN. Se você está vendo isso agora, ainda dá tempo.
-**Corpo:** 25 de junho, 09h às 17h. Dra. Natalie ao vivo. Do raciocínio clínico ao laudo de excelência.
+**Corpo:** 25 de junho, 09h às 15h30. Dra. Natalie ao vivo. Do raciocínio clínico ao laudo de excelência.
 **CTA:** Garanta agora. As vagas estão se esgotando.
 **Nota:** Últimos 3 dias APENAS. Ritmo rápido, cortes de 2s. Contador de horas na tela.

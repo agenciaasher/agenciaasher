@@ -10,9 +10,9 @@
 | Campo | Conteúdo atual |
 |---|---|
 | Nome do evento | Jornada PCN |
-| Data | 25 de junho de 2026 |
-| Horário | 09h às 17h (Brasília) |
-| Formato | Online · Google Meet |
+| Data | 04 de julho de 2026 |
+| Horário | 09h às 15h30 (Brasília) |
+| Formato | Online · Zoom |
 | Instrutora principal | Dra. Natalie Banaskiwitz |
 
 ---
@@ -20,13 +20,13 @@
 ## Hero (primeira dobra — o que o visitante vê primeiro)
 
 **Etiqueta de topo**
-Imersão Online · 25 de Junho de 2026 · 09h às 17h
+Imersão Online · 04 de Julho de 2026 · 09h às 15h30
 
 **Título principal**
 Seus laudos vão mudar quando você aprender a pensar como neuropsicólogo.
 
 **Subtítulo**
-Um dia intensivo ao vivo com a Dra. Natalie Banaskiwitz. Você vai aprender o Método PCN em 4 blocos práticos e sair da imersão escrevendo laudos com raciocínio estruturado, confiança e autoridade.
+Um dia intensivo ao vivo com a Dra. Natalie Banaskiwitz. Você vai identificar os seus principais erros e sair da imersão escrevendo laudos com raciocínio estruturado, mais confiança e autoridade.
 
 **Botão de compra**
 Quero meu ingresso por R$ 67
@@ -41,14 +41,15 @@ Quero meu ingresso por R$ 67
 **Título da seção**
 Esses desafios fazem parte do seu dia a dia?
 
-**Cards de dor (6 itens)**
+**Cards de dor (7 itens)**
 
-1. Passa horas, às vezes madrugadas, tentando finalizar um laudo e trava no meio sem saber como integrar os resultados.
-2. Aplica os testes corretamente, mas sente dificuldade em transformar os dados em um diagnóstico sólido e coerente.
-3. Fica inseguro na hora de defender suas conclusões para médicos e encaminhadores.
-4. Sente que a neuropsicologia é uma prática solitária, sem com quem trocar casos ou crescer junto.
-5. Aceita receber menos do que merece porque não confia totalmente na qualidade do seu trabalho.
-6. Estuda muito, mas a teoria não se conecta naturalmente com o que acontece na clínica.
+1. Não fica à vontade quando um colega lê o seu laudo porque não confia totalmente na qualidade do seu trabalho.
+2. Passa horas, às vezes madrugadas, tentando finalizar um laudo e trava no meio sem saber como integrar os resultados.
+3. Tem dificuldade em selecionar os testes e interpretar os resultados quando encontra informações controversas.
+4. Fica inseguro na hora de defender suas conclusões para familiares, pacientes e encaminhadores.
+5. Sente que a neuropsicologia é uma prática solitária, sem ter com quem trocar casos ou crescer junto.
+6. Aceita receber menos do que merece por acreditar que a concorrência é melhor do que você.
+7. Estuda muito, mas a teoria não se conecta naturalmente com o que acontece na clínica.
 
 ---
 
@@ -58,16 +59,17 @@ Esses desafios fazem parte do seu dia a dia?
 Jornada PCN: Do Raciocínio Clínico ao Laudo de Excelência
 
 **Subtítulo**
-Um dia intensivo ao vivo onde a Dra. Natalie ensina o Método PCN em 4 blocos práticos, com casos reais de raciocínio clínico, do pedido de avaliação até o laudo final.
+Um dia intensivo ao vivo em que a Dra. Natalie ensina o Método PCN por meio de casos reais, demonstrando passo a passo o raciocínio neuropsicológico — do pedido da avaliação até a elaboração do laudo.
 
 **Lista de aprendizados**
 
-- Como estruturar hipóteses de funcionamento cognitivo antes de qualquer teste
-- Como conduzir uma anamnese compreensiva que orienta toda a avaliação
-- Como integrar observação clínica, testes e histórico num raciocínio coerente
+- Como conduzir uma anamnese que orienta toda a avaliação
+- Como estruturar hipóteses de funcionamento neuropsicológico antes de qualquer teste
+- Como selecionar os melhores testes sem aplicar o que não precisa
+- Como integrar histórico, testes e observação clínica num raciocínio coerente
 - Como escrever laudos fluidos, objetivos e valorizados pelos solicitantes
+- Como conduzir uma devolutiva esclarecedora
 - Como cobrar um valor justo com base na qualidade da sua entrega
-- Como criar hipóteses clínicas assertivas antes de escolher os instrumentos
 
 ---
 
@@ -83,7 +85,7 @@ Antes e depois da Jornada PCN
 - Neuropsicologia solitária, sem comunidade
 - Laudos extensos e pouco úteis
 - Recebe menos do que merece
-- O paciente traz a hipótese e você segue sem concluir
+- Durante a avaliação, só penso em diagnóstico
 
 **Com o Método PCN**
 
@@ -92,7 +94,7 @@ Antes e depois da Jornada PCN
 - Comunidade ativa para discutir casos
 - Laudos objetivos, valorizados pelos encaminhadores
 - Cobra um valor justo com confiança
-- Você cria as hipóteses, os testes só confirmam
+- Explico o funcionamento neuropsicológico do paciente
 
 ---
 
@@ -117,19 +119,20 @@ Esta Jornada é para você se...
 **Credenciais:** Criadora do Método PCN · Doutora USP
 
 **Texto da bio:**
-Nos primeiros anos de clínica, Natalie tinha a mesma dúvida que a maioria das neuropsicólogas nunca admite em voz alta: sabia aplicar os testes, mas não tinha uma estrutura clara para integrar os dados e escrever o raciocínio clínico com segurança.
+Nos primeiros anos de clínica, Natalie tinha a mesma dúvida que a maioria das neuropsicólogas nunca admite em voz alta: sabia aplicar os testes, mas não tinha uma estrutura clara para integrar os dados e escrever o laudo com segurança.
 
-Doutora pela USP e Mestre pela FMUSP, percebeu que o problema não era falta de conhecimento. Era ausência de método. Criou o Método PCN para resolver exatamente isso. Hoje são mais de 5.000 profissionais formadas no Brasil.
+Doutora pela USP e Mestre pela FMUSP, percebeu que o problema não era falta de conhecimento. Era ausência de método. Criou o Método PCN para resolver exatamente isso. Hoje são mais de 2.000 profissionais formadas no Brasil.
 
 **Chips de credencial:** Doutora USP · Mestre FMUSP · Mackenzie · +5.000 alunos · 10+ anos de clínica
 
 ---
 
 ### Dra. Mônica Kerr
-**Título/cargo:** Neuropsicóloga · Co-fundadora Clincog
+**Título/cargo:** Fonoaudióloga · Especialista em Neuropsicologia
+**Credenciais:** Criadora do Método PCN · Doutoranda USP
 
 **Texto da bio:**
-Especialista em Neuropsicologia e Fonoaudiologia clínica, Mônica atua na interface entre linguagem e cognição, trazendo uma visão interdisciplinar única para a avaliação neuropsicológica.
+Fonoaudióloga, especialista em Neuropsicologia, Mônica atua na interface entre linguagem e cognição, trazendo uma visão interdisciplinar única para a avaliação e reabilitação neuropsicológica.
 
 ---
 
@@ -156,7 +159,7 @@ O preço sobe a cada fase. Quanto antes, melhor.
 
 **O que está incluso**
 
-- Participação ao vivo no evento (Google Meet)
+- Participação ao vivo no evento (Zoom)
 - Acesso ao Grupo VIP de inscritos no WhatsApp
 - Material de apoio exclusivo da Dra. Natalie
 - Gravação disponível por 30 dias após o evento
@@ -185,24 +188,24 @@ Se o conteúdo da Jornada PCN não fizer sentido para a sua prática, devolvemos
 R: Sim. A gravação ficará disponível por 30 dias após o evento para você rever no seu tempo.
 
 **P: Preciso ter experiência prévia em neuropsicologia?**
-R: Qualquer profissional da saúde ou educação pode participar: psicólogos, neuropsicólogos, fonoaudiólogos, terapeutas ocupacionais, pedagogos e psicopedagogos.
+R: Qualquer profissional da saúde ou educação pode participar: psicólogos, neuropsicólogos, fonoaudiólogos, pedagogos, psicopedagogos e terapeutas ocupacionais.
 
 **P: Como vou acessar o evento?**
-R: O link do Google Meet será enviado por e-mail após a confirmação do pagamento.
+R: O link do Zoom será enviado no grupo de WhatsApp no dia do evento.
 
 **P: Posso parcelar?**
 R: Sim, em até 2x no cartão de crédito.
 
 **P: O que acontece depois do evento?**
-R: Durante a Jornada você terá a oportunidade de conhecer o Clube Clincog, uma comunidade com aulas semanais, supervisões, sessões científicas e suporte contínuo das Dras. Natalie e Mônica.
+R: Após o encerramento da Jornada, você terá acesso à gravação por 30 dias e poderá utilizar esse período para revisar o conteúdo e esclarecer dúvidas no grupo exclusivo de WhatsApp. Além disso, a Jornada também será uma oportunidade para conhecer o Clube Clincog, uma comunidade voltada ao aperfeiçoamento contínuo do raciocínio clínico, com aulas, supervisões e discussões científicas ao longo do ano.
 
 ---
 
 ## Rodapé final
 
-**Título:** Dia 25 de junho, sua forma de pensar neuropsicologia muda.
+**Título:** Dia 04 de julho, sua forma de pensar neuropsicologia muda.
 
-**Texto:** 25 de junho de 2026 · 09h às 17h · Online · Últimas vagas
+**Texto:** 04 de julho de 2026 · 09h às 15h30 · Online · Últimas vagas
 
 **Botão:** Garantir meu ingresso por R$ 67
 
