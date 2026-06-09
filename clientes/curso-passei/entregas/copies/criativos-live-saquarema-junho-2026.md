@@ -15,19 +15,21 @@
 ### CE-01 — Contrato temporário
 
 **GANCHO:**
-Professora temporária no Rio de Janeiro trabalha sem saber se tem turma no próximo ano.
+Professora temporária trabalha o ano inteiro sem saber se vai trabalhar no ano seguinte.
 
 **CORPO:**
-Agosto chega. O contrato não renova. A escola avisa na última hora.
+Você pode trabalhar o ano inteiro, dar aulas, ser reconhecida na escola e ainda assim não ter turma em agosto. O contrato acaba. A escola avisa na última hora. Começa tudo de novo.
 
-Isso não é descuido seu. É a realidade de quem ainda não tem o concurso.
+Professora efetiva não passa por isso. Contra-cheque fixo, FGTS acumulando, renda garantida em julho. A aprovação no concurso muda o regime inteiro.
 
-Uma aprovação muda o jogo: contra-cheque fixo, FGTS, 13º, férias garantidas.
+Essa aprovação tem um caminho específico. Saquarema tem uma banca. Essa banca tem um padrão que se repete todo edital. Quem aprende esse padrão chega preparada na prova. Quem estuda gramática genérica passa horas no que não vai cair.
 
-Dia 18 de junho, ao vivo no YouTube, vou mostrar o caminho para quem quer parar de depender de renovação de contrato.
+No dia 18, ao vivo no YouTube, vou mostrar como professoras com a sua rotina estão passando no concurso de Saquarema.
+
+Gratuito. As vagas no grupo são limitadas.
 
 **CTA:**
-Entre no grupo pelo link na bio e garanta seu acesso à live.
+Clica em saiba mais e garante seu lugar.
 
 ---
 
@@ -57,95 +59,109 @@ Clica em saiba mais e garante seu acesso.
 ### CE-03 — Anos de estudo sem resultado
 
 **GANCHO:**
-Dois anos estudando para concurso sem aprovação quase nunca é falta de dedicação.
+Professora que estuda para concurso há mais de um ano e não passa, na maioria dos casos, estudou gramática que não bate com o que a banca cobra.
 
 **CORPO:**
-A maioria estuda com material genérico que não bate com o que a banca cobra na prova.
+A maioria das candidatas que tenta concurso mais de uma vez estuda mais entre as tentativas. Mais horas, mais material, mais dedicação.
 
-Cada banca tem um padrão. Saquarema tem o dela.
+E ainda assim não passa.
 
-Quem aprende esse padrão sai na frente de quem decorou gramática o ano inteiro sem saber qual banca ia organizar.
+Cada banca tem um perfil de questões específico. Saquarema cobra padrões que se repetem todo edital. Candidata que aprende esses padrões estuda menos tempo e chega mais preparada do que quem passou dois anos com gramática geral sem conhecer esse perfil.
 
-Dia 18, ao vivo no YouTube, vou abrir esse padrão. Gratuito. Direto.
+Desde 2018, aprovei mais de 3.000 professoras. Uma parte delas já tinha tentado outros cursos antes. A diferença foi aprender o padrão da banca certa para o concurso certo.
+
+No dia 18, ao vivo no YouTube, vou mostrar esse padrão para o concurso de Saquarema.
+
+Gratuito. As vagas no grupo são limitadas.
 
 **CTA:**
-Link na bio. Garante seu lugar no grupo.
+Clica em saiba mais e garante seu lugar.
 
 ---
 
 ### CE-04 — Julho sem turma
 
 **GANCHO:**
-Julho de professora temporária tem um peso que professora efetiva nunca vai entender.
+Em julho, a escola fecha. A efetiva recebe. A temporária espera.
 
 **CORPO:**
-Você passa o ano inteiro dedicada. Julho chega. O contrato não renova.
+Espera o contrato renovar. Espera a escola ligar. Espera saber se tem turma em agosto.
 
-Começa tudo de novo: processo seletivo, escola nova, turma nova.
+Esse ciclo termina com a aprovação no concurso. Professora efetiva em Saquarema tem renda garantida em julho, contra-cheque fixo, FGTS acumulando. A diferença entre as duas situações é uma aprovação.
 
-O concurso público resolve isso de uma vez. Contra-cheque fixo, FGTS acumulando, e nunca mais o medo de agosto.
+Essa aprovação tem um caminho específico. A banca de Saquarema cobra padrões que se repetem todo edital. Quem aprende esses padrões estuda o que cai e ignora o que não cai. Professoras com a sua rotina que passaram no concurso de Saquarema usaram esse mapa.
 
-No dia 18, vou mostrar ao vivo o que professoras com a sua rotina estão fazendo para passar no concurso de Saquarema.
+No dia 18, ao vivo no YouTube, vou mostrar esse mapa.
+
+Gratuito. As vagas no grupo são limitadas.
 
 **CTA:**
-Clica em saiba mais e entra no grupo da live.
+Clica em saiba mais e garante seu lugar.
 
 ---
 
 ### CE-05 — Instabilidade financeira
 
 **GANCHO:**
-Salário que varia todo mês não paga dívida que vence todo mês.
+Enquanto você recebe por aula dada e fica sem renda no recesso, a efetiva ao lado recebe o mesmo salário fixo todo mês do ano.
 
 **CORPO:**
-Professora temporária recebe por aula dada. No recesso, recebe menos. Em agosto, pode não receber nada.
+Em janeiro, você recebe mais porque tem mais aulas. Em julho, o recesso reduz. Em agosto, o contrato pode não renovar.
 
-Planejamento financeiro não resolve renda instável. O concurso resolve.
+Planejar com renda que muda todo mês é quase impossível. Guardar dinheiro quando não sabe quanto vai receber em agosto, mais ainda.
 
-Professora efetiva em Saquarema tem piso fixo, FGTS acumulando, e sabe quanto vai receber em dezembro.
+Professora efetiva em Saquarema recebe o mesmo valor todo mês, o ano inteiro. FGTS acumulando. 13º garantido. Férias com terço.
 
-Dia 18, ao vivo, vou mostrar o caminho. Gratuito.
+A aprovação no concurso muda esse quadro inteiro. Essa aprovação tem um caminho específico: a banca de Saquarema cobra padrões que se repetem todo edital.
+
+No dia 18, ao vivo no YouTube, vou mostrar quais são esses padrões e como estudar para eles com o tempo que você tem.
+
+Gratuito. As vagas no grupo são limitadas.
 
 **CTA:**
-Entre no grupo. Link na bio.
+Clica em saiba mais e entra no grupo.
 
 ---
 
 ### CE-06 — Colega que passou
 
 **GANCHO:**
-Sua colega de faculdade passou no concurso no ano passado. A formação das duas é a mesma.
+Sua colega de faculdade passou no concurso de Saquarema. Vocês tiveram a mesma formação. A mesma cidade. O mesmo perfil de candidata.
 
 **CORPO:**
-Saber o que a banca cobra é o que separa quem passa de quem não passa.
+O que foi diferente foi o que ela estudou.
 
-Aprovei mais de 3.000 professoras desde 2018. A maioria com a mesma rotina que a sua.
+A banca de Saquarema tem um padrão de questões que se repete todo edital. Quem aprende esse padrão chega na prova sabendo para onde cada hora de estudo foi. Quem estuda gramática geral sem conhecer a banca chega sem esse mapa.
 
-No dia 18, ao vivo no YouTube, vou mostrar o que essas professoras fizeram diferente.
+Desde 2018, aprovei mais de 3.000 professoras. Uma parte já tinha tentado com outros materiais antes. O que mudou foi aprender o padrão da banca certa.
 
-A live é gratuita. O grupo tem vagas limitadas.
+No dia 18, ao vivo no YouTube, vou mostrar o padrão da banca de Saquarema. O que ela cobra, o que você pode ignorar e como usar o tempo que você tem.
+
+Gratuito. As vagas no grupo são limitadas.
 
 **CTA:**
-Clica em saiba mais e garante seu lugar no grupo.
+Clica em saiba mais e garante seu lugar.
 
 ---
 
 ### CE-07 — Merecimento
 
 **GANCHO:**
-Você tem formação, tem experiência em sala, tem dedicação. Falta o número do concurso.
+Você tem Pós Graduação, anos de sala de aula e mais dedicação do que a maioria. Nada disso te dá a estabilidade de uma efetiva.
 
 **CORPO:**
-Professoras temporárias muitas vezes ensinam melhor do que efetivas com anos de carreira.
+O concurso de Saquarema avalia o domínio do padrão de questões que a banca cobra. Currículo, anos de sala de aula e dedicação não entram no gabarito.
 
-A diferença entre as duas não é competência. É uma prova.
+Professoras com Pós Graduação e anos de experiência ficam fora enquanto candidatas com menos currículo passam. Quem passa conhece o padrão de questões que a banca de Saquarema cobra naquele edital.
 
-Saquarema abre concurso. A banca tem um padrão. Quem aprende esse padrão passa.
+Quem aprende esse padrão estuda o que cai e ignora o que a banca nunca cobrou. Quem usa material genérico passa horas em conteúdo que não vai aparecer na prova.
 
-Dia 18, ao vivo no YouTube, vou ensinar esse padrão de graça. As vagas no grupo são limitadas.
+No dia 18, ao vivo no YouTube, vou mostrar esse padrão. Como professoras com a sua formação e rotina estão passando no concurso de Saquarema.
+
+Gratuito. As vagas no grupo são limitadas.
 
 **CTA:**
-Link na bio. Garante sua vaga.
+Clica em saiba mais e garante seu lugar.
 
 ---
 
@@ -156,16 +172,20 @@ Link na bio. Garante sua vaga.
 ### ANT-01 — O que será revelado na live
 
 **GANCHO:**
-No dia 18, ao vivo, vou abrir o padrão exato de questões que a banca de Saquarema cobra.
+A banca de Saquarema usa os mesmos padrões de questão em todo edital. A maioria das candidatas não sabe quais são.
 
 **CORPO:**
-Não é aula genérica de gramática.
+No dia 18, ao vivo no YouTube, vou abrir esse padrão.
 
-São os temas, os formatos de questão e os pontos que aparecem toda vez que Saquarema abre concurso.
+Os temas que aparecem em todo edital de Saquarema. O formato de questão que essa banca prefere. O que você pode ignorar com segurança porque essa banca nunca cobrou.
 
-Com esse mapa, você para de estudar o que não vai cair e começa a focar no que vai.
+Com esse mapa, você para de estudar às cegas. Passa a usar o tempo que tem no que a banca de Saquarema vai colocar na prova, não no que outros concursos cobrariam.
 
-A live é gratuita. O grupo já está enchendo.
+Desde 2018, aprovei mais de 3.000 professoras usando exatamente esse método. A maioria chegou na prova sabendo para onde cada hora de estudo tinha ido.
+
+Você sai da live com um plano: o que estudar com prioridade, o que pode ignorar e quanto tempo você precisa com esse foco.
+
+Gratuito. Uma vez. As vagas no grupo são limitadas.
 
 **CTA:**
 Clica em saiba mais e garante seu acesso.
@@ -175,38 +195,38 @@ Clica em saiba mais e garante seu acesso.
 ### ANT-02 — Prova social + promessa
 
 **GANCHO:**
-3.000 professoras aprovadas em 8 anos. Na live do dia 18, vou abrir o método ao vivo.
+3.000 professoras aprovadas desde 2018. Em Saquarema, Araruama, Nova Iguaçu, Volta Redonda. O que todas fizeram diferente cabe numa live de graça.
 
 **CORPO:**
-3.000 aprovações com o mesmo método: o curso cobre o português da banca, não o do livro.
+Cada uma dessas aprovações tinha um ponto em comum: chegou na prova sabendo o que a banca específica daquele concurso cobrava. O padrão de questões, os temas recorrentes, o que aparece em todo edital e o que nunca aparece.
 
-Cada concurso tem um perfil de questões. Cada banca tem uma forma de cobrar.
+Na live do dia 18, ao vivo no YouTube, vou mostrar esse método para o concurso de Saquarema. Os padrões de questão que a banca repete em todo edital. O que estudar com prioridade, o que pode ignorar e como distribuir o tempo de estudo que você tem.
 
-Na live de Saquarema, vou abrir esse perfil ao vivo. Você sai sabendo exatamente o que estudar.
+Quem já tentou concurso antes sem passar vai entender exatamente o que estava faltando e como corrigir isso antes de agosto.
 
-Gratuito. Uma vez. Vagas no grupo são limitadas.
+Gratuito. Uma vez. As vagas no grupo são limitadas.
 
 **CTA:**
-Entre no grupo pelo link na bio.
+Clica em saiba mais e entra agora.
 
 ---
 
 ### ANT-03 — Exclusividade do grupo
 
 **GANCHO:**
-Quem entrar no grupo antes do dia 18 recebe o material de estudo com antecedência.
+Preparei um resumo dos padrões de questão que a banca de Saquarema cobra. Quem está no grupo recebe antes da live. Quem não está não recebe.
 
 **CORPO:**
-Preparei um resumo dos principais pontos que a banca de Saquarema cobra.
+O material cobre os temas que a banca de Saquarema repete em todo edital: os formatos de questão que ela prefere, os conteúdos que aparecem toda vez e o que você pode ignorar com segurança sem comprometer nenhum ponto.
 
-Quem está no grupo recebe antes da live. Quem não está, não recebe.
+Quem está no grupo recebe esse material antes da live do dia 18. Quem está de fora fica sem.
 
-A live do dia 18 é gratuita. O grupo é o acesso.
+Na live, vou mostrar o método que aprovou mais de 3.000 professoras desde 2018. Quem chega com o material em mãos entra um passo à frente das candidatas que chegam sem.
 
-Vagas limitadas.
+A live é gratuita. O grupo é o acesso. As vagas são limitadas.
 
 **CTA:**
-Clica em saiba mais e entra agora.
+Clica em saiba mais e entra agora antes de fechar.
 
 ---
 
@@ -218,7 +238,9 @@ Clica em saiba mais e entra agora.
 - Zero perguntas no gancho: OK
 - Zero emojis: OK
 - Zero urgencia falsa: OK (vagas limitadas reais, live gratuita real)
-- Dado concreto presente: OK (3.000 aprovacoes, 8 anos, Saquarema especifico)
+- Dado concreto presente: OK (3.000 aprovacoes, 8 anos, Saquarema especifico, R$ valores, FGTS, 13o)
 - Especificidade presente: OK (banca, concurso, municipio, datas)
 - Zero preco mencionado: OK
 - Cada criativo tem angulo genuinamente diferente: OK
+- Ganchos com susto real: OK (contradicao, dado concreto, urgencia competitiva)
+- Duracao 60-90 segundos: OK
