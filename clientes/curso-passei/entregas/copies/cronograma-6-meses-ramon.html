@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cronograma 6 Meses — Ramon Matos | Curso Passei</title>
+  <style>
+    :root {
+      --azul: #0D2B5E;
+      --verde: #00C896;
+      --branco: #FFFFFF;
+      --fundo: #F4F6FA;
+      --texto: #222;
+      --cinza: #666;
+      --borda: #E0E6EF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--fundo); color: var(--texto); line-height: 1.6; }
+
+    /* HEADER */
+    .header { background: var(--azul); color: var(--branco); padding: 52px 40px 44px; }
+    .header-inner { max-width: 1000px; margin: 0 auto; }
+    .eyebrow { background: var(--verde); color: var(--azul); display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; margin-bottom: 18px; }
+    .header h1 { font-size: 36px; font-weight: 900; line-height: 1.15; margin-bottom: 12px; }
+    .header h1 em { font-style: normal; color: var(--verde); }
+    .header p { font-size: 16px; opacity: 0.75; max-width: 540px; }
+    .header-stats { display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
+    .stat { display: flex; flex-direction: column; gap: 2px; }
+    .stat-num { font-size: 28px; font-weight: 900; color: var(--verde); line-height: 1; }
+    .stat-label { font-size: 12px; opacity: 0.65; }
+
+    /* PAGE */
+    .page { max-width: 1000px; margin: 0 auto; padding: 48px 40px 80px; }
+    @media (max-width: 600px) { .header { padding: 32px 20px; } .header h1 { font-size: 26px; } .page { padding: 28px 20px 60px; } }
+
+    /* SECTION */
+    .section { margin-bottom: 56px; }
+    .section-eyebrow { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: var(--verde); margin-bottom: 6px; }
+    .section-title { font-size: 22px; font-weight: 800; color: var(--azul); margin-bottom: 6px; }
+    .section-sub { font-size: 14px; color: var(--cinza); margin-bottom: 24px; }
+    hr { border: none; border-top: 1px solid var(--borda); margin: 52px 0; }
+
+    /* DATA INSIGHTS */
+    .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .insight-card { background: var(--azul); color: var(--branco); border-radius: 14px; padding: 24px; }
+    .insight-num { font-size: 38px; font-weight: 900; color: var(--verde); line-height: 1; margin-bottom: 6px; }
+    .insight-label { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+    .insight-text { font-size: 13px; opacity: 0.75; line-height: 1.55; }
+
+    /* GAPS */
+    .gaps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+    .gap-card { background: var(--branco); border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--verde); box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+    .gap-banca { font-size: 18px; font-weight: 900; color: var(--azul); margin-bottom: 4px; }
+    .gap-stat { font-size: 13px; color: var(--cinza); margin-bottom: 10px; }
+    .gap-stat strong { color: var(--azul); }
+    .gap-action { font-size: 13px; color: #333; line-height: 1.5; }
+
+    /* SERIES */
+    .series-list { display: flex; flex-direction: column; gap: 12px; }
+    .serie-row { background: var(--branco); border-radius: 12px; padding: 18px 22px; display: flex; gap: 16px; align-items: flex-start; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .serie-num { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: var(--azul); color: var(--branco); font-size: 15px; font-weight: 900; display: flex; align-items: center; justify-content: center; }
+    .serie-body { flex: 1; }
+    .serie-name { font-size: 15px; font-weight: 800; color: var(--azul); margin-bottom: 3px; }
+    .serie-desc { font-size: 13px; color: #444; line-height: 1.55; margin-bottom: 6px; }
+    .serie-example { font-size: 12px; color: var(--cinza); font-style: italic; background: var(--fundo); padding: 6px 10px; border-radius: 6px; }
+    .serie-freq { font-size: 11px; font-weight: 700; color: var(--verde); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 8px; }
+
+    /* MONTH CARDS */
+    .months-grid { display: flex; flex-direction: column; gap: 28px; }
+
+    .month-card { background: var(--branco); border-radius: 16px; overflow: hidden; box-shadow: 0 1px 5px rgba(0,0,0,0.06); }
+    .month-header { padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .month-header.jun { background: #0D2B5E; }
+    .month-header.jul { background: #1E3A8A; }
+    .month-header.ago { background: #1D4ED8; }
+    .month-header.set { background: #0369A1; }
+    .month-header.out { background: #065F46; }
+    .month-header.nov { background: #7C2D12; }
+
+    .month-name { font-size: 22px; font-weight: 900; color: var(--branco); }
+    .month-theme { font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 2px; }
+    .month-badge { background: var(--verde); color: var(--azul); font-size: 11px; font-weight: 800; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.8px; white-space: nowrap; }
+
+    .month-body { padding: 24px 28px; }
+
+    .month-insight { background: var(--fundo); border-left: 3px solid var(--verde); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 13px; color: #333; margin-bottom: 20px; line-height: 1.55; }
+    .month-insight strong { color: var(--azul); }
+
+    /* WEEK GRID inside month */
+    .week-row { margin-bottom: 20px; }
+    .week-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--cinza); margin-bottom: 8px; }
+    .week-days { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+    @media (max-width: 700px) { .week-days { grid-template-columns: repeat(2, 1fr); } }
+
+    .day-mini { background: var(--fundo); border-radius: 10px; padding: 10px 12px; }
+    .day-mini-name { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--cinza); margin-bottom: 5px; }
+    .day-mini-items { display: flex; flex-direction: column; gap: 4px; }
+    .tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .tag-ig { background: #E0E7FF; color: #3730A3; }
+    .tag-tt { background: #F3E8FF; color: #6B21A8; }
+    .tag-yt { background: #FEE2E2; color: #991B1B; }
+    .day-mini-text { font-size: 12px; color: #333; line-height: 1.4; }
+
+    /* CONTENT IDEAS */
+    .ideas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-top: 16px; }
+    .idea-item { background: var(--fundo); border-radius: 8px; padding: 10px 14px; font-size: 12px; color: #333; line-height: 1.45; border-left: 3px solid var(--azul); }
+    .idea-item.verde-border { border-left-color: var(--verde); }
+    .idea-item.roxo-border { border-left-color: #7C3AED; }
+
+    .ideas-title { font-size: 13px; font-weight: 700; color: var(--azul); margin-bottom: 2px; }
+    .ideas-sub { font-size: 11px; color: var(--cinza); }
+
+    /* KEY DATE */
+    .key-dates { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .key-date { background: var(--azul); color: var(--branco); font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px; }
+    .key-date.verde-bg { background: var(--verde); color: var(--azul); }
+
+    /* PLATFORM NOTES */
+    .platforms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 600px) { .platforms-grid { grid-template-columns: 1fr; } }
+    .platform-card { background: var(--branco); border-radius: 14px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+    .platform-header { padding: 16px 20px; }
+    .platform-header.ig { background: #E0E7FF; }
+    .platform-header.tt { background: #F3E8FF; }
+    .platform-title { font-size: 16px; font-weight: 900; color: var(--azul); }
+    .platform-body { padding: 16px 20px; }
+    .platform-body ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .platform-body ul li { font-size: 13px; color: #333; padding-left: 16px; position: relative; line-height: 1.5; }
+    .platform-body ul li::before { content: "→"; position: absolute; left: 0; color: var(--verde); font-weight: 700; }
+
+    /* FOOTER */
+    .footer { background: var(--azul); color: var(--branco); text-align: center; padding: 28px; font-size: 13px; opacity: 0.85; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="eyebrow">Curso Passei — Jun/Nov 2026</div>
+    <h1>Cronograma de <em>6 meses</em></h1>
+    <p>Instagram, TikTok e YouTube. Mínimo 1 post por dia em cada plataforma. Baseado em dados reais de busca no nicho.</p>
+    <div class="header-stats">
+      <div class="stat"><span class="stat-num">360+</span><span class="stat-label">Posts planejados</span></div>
+      <div class="stat"><span class="stat-num">72+</span><span class="stat-label">Vídeos YouTube</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label">Gaps de mercado identificados</span></div>
+      <div class="stat"><span class="stat-num">6</span><span class="stat-label">Séries fixas de conteúdo</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- DADOS -->
+  <div class="section">
+    <div class="section-eyebrow">O que os dados mostram</div>
+    <div class="section-title">3 números que guiam esse plano</div>
+    <div class="section-sub">Tirados da pesquisa de views dos últimos 12 meses no YouTube.</div>
+    <div class="insights-grid">
+      <div class="insight-card">
+        <div class="insight-num">2,97M</div>
+        <div class="insight-label">"É isso que cai de Português em concurso público"</div>
+        <div class="insight-text">O vídeo mais visto do nicho de magistério em 12 meses. O formato "o que cai em Português" tem demanda enorme e o Ramon é o mais qualificado para fazer isso por banca específica — o que nenhum outro canal faz.</div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-num">883K</div>
+        <div class="insight-label">"Quanto ganha um professor do ensino médio no estado? #shorts"</div>
+        <div class="insight-text">Um Short simples sobre salário de professor bateu 883 mil views. Esse formato — curto, provocador, sobre salário — é viral no nicho e quase nenhum preparatório usa. Oportunidade aberta.</div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-num">0</div>
+        <div class="insight-label">Vídeos sobre concurso de Araruama com tração nos últimos 12 meses</div>
+        <div class="insight-text">Araruama é prioridade no público do Passei e não tem um único vídeo concorrente com views. O Ramon entra aqui e vira referência absoluta sem disputa.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- GAPS -->
+  <div class="section">
+    <div class="section-eyebrow">Oportunidades imediatas</div>
+    <div class="section-title">3 gaps que o Ramon preenche primeiro</div>
+    <div class="section-sub">Bancas e municípios com pouquíssima ou zero concorrência no YouTube.</div>
+    <div class="gaps-grid">
+      <div class="gap-card">
+        <div class="gap-banca">Araruama</div>
+        <div class="gap-stat"><strong>0 vídeos</strong> com tração nos últimos 12 meses</div>
+        <div class="gap-action">Nenhum canal está lá. O primeiro vídeo publicado sobre o concurso de Araruama vai dominar a busca por meses sem esforço.</div>
+      </div>
+      <div class="gap-card">
+        <div class="gap-banca">Banca IAN</div>
+        <div class="gap-stat"><strong>1 vídeo</strong> com tração — 5.831 views, canal pequeno</div>
+        <div class="gap-action">A IAN organiza concursos para Belford Roxo, Três Rios e outros municípios do RJ. Sem conteúdo relevante no YouTube. Ramon conhece essa banca melhor que ninguém.</div>
+      </div>
+      <div class="gap-card">
+        <div class="gap-banca">Banca COSEAC</div>
+        <div class="gap-stat"><strong>1 vídeo</strong> com tração — Estratégia Concursos, não é magistério</div>
+        <div class="gap-action">O único vídeo ranqueado é de assistente administrativo, não professor. Existe espaço aberto para conteúdo específico de magistério para COSEAC.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- SÉRIES -->
+  <div class="section">
+    <div class="section-eyebrow">Sistema de conteúdo</div>
+    <div class="section-title">6 séries que o Ramon repete todo mês</div>
+    <div class="section-sub">Cada post do mês se encaixa em uma dessas séries. Sem precisar inventar do zero toda semana.</div>
+    <div class="series-list">
+
+      <div class="serie-row">
+        <div class="serie-num">1</div>
+        <div class="serie-body">
+          <div class="serie-name">O que cai em Português — [Banca]</div>
+          <div class="serie-desc">O formato mais validado do nicho inteiro. 2,97M de views no maior vídeo da categoria. Ramon faz um vídeo por banca: Consulplan, IAN, COSEAC. Cada vídeo tem vida útil longa porque o conteúdo não envelhece.</div>
+          <div class="serie-example">"É isso que cai em Português na Consulplan" · "O que a IAN sempre cobra em Português" · "COSEAC: o padrão de questões de Português"</div>
+          <div class="serie-freq">YouTube (longo) + corte para Reels/TikTok — 1x por semana</div>
+        </div>
+      </div>
+
+      <div class="serie-row">
+        <div class="serie-num">2</div>
+        <div class="serie-body">
+          <div class="serie-name">Questão ao vivo — [Banca] [60 segundos]</div>
+          <div class="serie-desc">Ramon resolve uma questão real de prova em 60 segundos. Direto ao ponto. Esse formato tem alto salvamento e compartilhamento porque é útil na hora.</div>
+          <div class="serie-example">"Questão de concordância verbal — Consulplan 2025" · "IAN: como essa banca cobra interpretação de texto"</div>
+          <div class="serie-freq">Reels + TikTok — 3x por semana</div>
+        </div>
+      </div>
+
+      <div class="serie-row">
+        <div class="serie-num">3</div>
+        <div class="serie-body">
+          <div class="serie-name">Quanto ganha professor em [estado/município] — Shorts</div>
+          <div class="serie-desc">883K views validam esse formato. Short provocador sobre salário de professor concursado. Serve para atrair quem ainda está decidindo prestar concurso e para engajar quem já está no nicho.</div>
+          <div class="serie-example">"Quanto ganha professor concursado no RJ em 2026?" · "Salário de professor em Saquarema: R$ X — vale a pena?" · "Professor temporário vs efetivo: a diferença no bolso"</div>
+          <div class="serie-freq">Reels/TikTok curto (15–30s) — 1x por semana</div>
+        </div>
+      </div>
+
+      <div class="serie-row">
+        <div class="serie-num">4</div>
+        <div class="serie-body">
+          <div class="serie-name">Tudo sobre o concurso de [município]</div>
+          <div class="serie-desc">Quando sai edital, Ramon publica em menos de 24h. Quando não tem edital, faz o vídeo antecipando. Araruama e outros municípios sem concorrência no YouTube são prioridade.</div>
+          <div class="serie-example">"Concurso de Araruama 2026: tudo que você precisa saber" · "Concurso de Nova Iguaçu para professor: edital, banca e o que estudar"</div>
+          <div class="serie-freq">YouTube + Reels — toda vez que sair edital + 2x por mês antecipando</div>
+        </div>
+      </div>
+
+      <div class="serie-row">
+        <div class="serie-num">5</div>
+        <div class="serie-body">
+          <div class="serie-name">Aprovada — [nome] passou em [município]</div>
+          <div class="serie-desc">Depoimento de aluna aprovada publicado em até 48h do resultado. Esse conteúdo converte porque o público se identifica com a história e confia no método.</div>
+          <div class="serie-example">"Ela trabalhava, tinha dois filhos e estudava 1h por dia. Passou em Saquarema." · "3.000ª aprovação do Passei: quem é a professora efetiva mais nova da série?"</div>
+          <div class="serie-freq">Reels + TikTok — 1x por semana ou quando tiver resultado</div>
+        </div>
+      </div>
+
+      <div class="serie-row">
+        <div class="serie-num">6</div>
+        <div class="serie-body">
+          <div class="serie-name">Cronograma para o concurso de [município/banca]</div>
+          <div class="serie-desc">Os vídeos de cronograma mais vistos do nicho têm entre 3 e 8 anos. Ninguém está fazendo conteúdo recente sobre isso. Ramon entra com cronograma específico por concurso e domina essa busca.</div>
+          <div class="serie-example">"Cronograma de estudos para o concurso de Araruama — do zero em 8 semanas" · "Como estudar para a Consulplan em 30 dias tendo 1h por dia"</div>
+          <div class="serie-freq">YouTube + carrossel no feed — 2x por mês</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- CALENDAR -->
+  <div class="section">
+    <div class="section-eyebrow">Plano mês a mês</div>
+    <div class="section-title">Junho a Novembro de 2026</div>
+    <div class="section-sub">Cada mês tem um foco. A grade semanal mostra o que vai em cada plataforma por dia.</div>
+
+    <div class="months-grid">
+
+      <!-- JUNHO -->
+      <div class="month-card">
+        <div class="month-header jun">
+          <div>
+            <div class="month-name">Junho 2026</div>
+            <div class="month-theme">IAN, COSEAC e Araruama — entrar nos gaps antes de todo mundo</div>
+          </div>
+          <div class="month-badge">Gaps abertos</div>
+        </div>
+        <div class="month-body">
+          <div class="month-insight">
+            <strong>Por que esse foco:</strong> IAN tem 1 vídeo concorrente. COSEAC tem 1. Araruama tem 0. Se o Ramon publicar agora, chega primeiro nesses espaços e o algoritmo do YouTube vai distribuir o conteúdo por meses sem disputa.
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 1 — IAN: entrando no gap</div>
+            <div class="week-days">
+              <div class="day-mini">
+                <div class="day-mini-name">Seg</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Reel: "Você conhece a banca IAN? O que ela cobra em Português"</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Ter</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Questão ao vivo: interpretação de texto padrão IAN</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Qua</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span><span class="tag tag-yt">YT</span></div>
+                  <div class="day-mini-text">Aula: "O que a IAN cobra em Português — guia completo" + corte para Reels</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Qui</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Reel: "Quanto ganha professor concursado no RJ em 2026?" (Shorts)</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Sex</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Aprovação de aluna + CTA para o curso da IAN</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 2 — COSEAC: o segundo gap</div>
+            <div class="week-days">
+              <div class="day-mini">
+                <div class="day-mini-name">Seg</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Reel: "COSEAC: o que essa banca cobra que todo mundo ignora"</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Ter</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Questão ao vivo: questão de gramática padrão COSEAC</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Qua</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span><span class="tag tag-yt">YT</span></div>
+                  <div class="day-mini-text">Aula: "COSEAC em Português — resolução comentada de 10 questões" + corte</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Qui</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Carrossel feed: "IAN vs COSEAC: o que muda em Português"</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Sex</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Reel: "Salário de professor efetivo via COSEAC: quanto dá?" (Shorts)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 3 — Araruama: entrar em primeiro lugar</div>
+            <div class="week-days">
+              <div class="day-mini">
+                <div class="day-mini-name">Seg</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span><span class="tag tag-yt">YT</span></div>
+                  <div class="day-mini-text">Aula: "Tudo sobre o concurso de Araruama para professor — banca, edital, o que estudar"</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Ter</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Corte da aula de segunda para Reel</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Qua</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Questão ao vivo: questão de português dos últimos concursos da região de Araruama</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Qui</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Reel: "Cronograma de 8 semanas para o concurso de Araruama"</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Sex</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Aprovação + motivação: "Araruama já aprovou alunas do Passei"</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 4 — Meio do ano: balanço e urgência do 2º semestre</div>
+            <div class="week-days">
+              <div class="day-mini">
+                <div class="day-mini-name">Seg</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span><span class="tag tag-yt">YT</span></div>
+                  <div class="day-mini-text">Aula: "Os concursos de magistério do 2º semestre no RJ — o que esperar"</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Ter</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Reel: "Metade do ano foi. Você deixou passar algum concurso?"</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Qua</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Questão ao vivo: tema que mais cai no 2º semestre</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Qui</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Shorts: "Quanto ganha professor efetivo vs temporário — a diferença real"</div>
+                </div>
+              </div>
+              <div class="day-mini">
+                <div class="day-mini-name">Sex</div>
+                <div class="day-mini-items">
+                  <div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div>
+                  <div class="day-mini-text">Carrossel: "O que estudar agora para estar pronto em agosto"</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="key-dates">
+            <span class="key-date">12/jun — Dia dos Namorados: ângulo leve</span>
+            <span class="key-date verde-bg">Publicar Araruama antes de qualquer concorrente</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- JULHO -->
+      <div class="month-card">
+        <div class="month-header jul">
+          <div>
+            <div class="month-name">Julho 2026</div>
+            <div class="month-theme">Férias que aprovam — tempo livre vira vantagem no estudo</div>
+          </div>
+          <div class="month-badge">Férias + Método</div>
+        </div>
+        <div class="month-body">
+          <div class="month-insight">
+            <strong>Por que esse foco:</strong> Professores temporários têm mais tempo livre em julho. É o momento em que o público estuda mais. Conteúdo de cronograma e método tem tração alta agora — e os vídeos antigos do nicho (3,3M views) ainda dominam porque ninguém fez nada recente.
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 1 — Cronograma de estudos (formato validado, gap recente)</div>
+            <div class="week-days">
+              <div class="day-mini"><div class="day-mini-name">Seg</div><div class="day-mini-items"><div><span class="tag tag-yt">YT</span><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aula: "Cronograma do zero para concurso de professor — 8 semanas, 1h por dia"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Ter</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Corte da aula: "A primeira coisa que você estuda no cronograma"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qua</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Questão ao vivo: Consulplan — prova de agosto está chegando</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qui</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Reel: "Suas férias podem ser o que falta para passar"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Sex</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Shorts: "O que acontece com o salário depois que você vira efetivo"</div></div></div>
+            </div>
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 2 — Consulplan: o concorrente mais forte, mas vale a pena entrar</div>
+            <div class="week-days">
+              <div class="day-mini"><div class="day-mini-name">Seg</div><div class="day-mini-items"><div><span class="tag tag-yt">YT</span><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aula: "O que mais cai em Português na Consulplan — padrão das últimas provas"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Ter</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Questão ao vivo: questão real de concordância verbal Consulplan</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qua</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Reel: "Como a Consulplan diferencia quem vai passar de quem vai reprovar"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qui</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Carrossel: "Consulplan vs IAN vs COSEAC — o que muda em Português"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Sex</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aprovação: aluna aprovada em concurso Consulplan</div></div></div>
+            </div>
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 3 — Saquarema: reforçar onde o Ramon já é #1</div>
+            <div class="week-days">
+              <div class="day-mini"><div class="day-mini-name">Seg</div><div class="day-mini-items"><div><span class="tag tag-yt">YT</span><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aula: "Cronograma de estudos para o concurso de Saquarema 2026"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Ter</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Questão ao vivo: questão das últimas provas de Saquarema</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qua</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Reel: "Por que tanta gente presta concurso em Saquarema?"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qui</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Shorts: "Salário de professor efetivo em Saquarema — quanto dá?"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Sex</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aprovação: aprovada no concurso de Saquarema</div></div></div>
+            </div>
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 4 — Aquecimento para agosto (o mês mais forte do ano)</div>
+            <div class="week-days">
+              <div class="day-mini"><div class="day-mini-name">Seg</div><div class="day-mini-items"><div><span class="tag tag-yt">YT</span><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aula: "Os concursos de magistério que devem abrir em agosto — e como se preparar"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Ter</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Reel: "Agosto é o mês mais forte de concursos. Faltam X semanas."</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qua</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Questão ao vivo: tema recorrente nas bancas do 2º semestre</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qui</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Carrossel: "O que estudar agora para chegar pronto em agosto"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Sex</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Shorts: "1 hora de estudo por dia em julho já basta?"</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AGOSTO -->
+      <div class="month-card">
+        <div class="month-header ago">
+          <div>
+            <div class="month-name">Agosto 2026</div>
+            <div class="month-theme">Pico do ano — editais, urgência e conversão máxima</div>
+          </div>
+          <div class="month-badge">Maior mês do ano</div>
+        </div>
+        <div class="month-body">
+          <div class="month-insight">
+            <strong>Por que esse foco:</strong> Agosto é historicamente o mês com mais editais de magistério no RJ. Todo post desse mês tem urgência real. A cada edital publicado, Ramon reage em menos de 24h. Esse timing é mais valioso que qualquer produção elaborada.
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Regra de agosto: reagir a editais em menos de 24h</div>
+            <div class="week-days">
+              <div class="day-mini"><div class="day-mini-name">Seg</div><div class="day-mini-items"><div><span class="tag tag-yt">YT</span><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aula: "Saiu edital de [município] — o que estudar" (publicar no mesmo dia)</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Ter</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Questão ao vivo da banca do edital recente</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qua</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Reel: "Inscrições fecham em X dias — você está pronto?"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qui</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Carrossel: cronograma de estudos para o concurso específico aberto</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Sex</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aprovação de aluna no concurso mais recente + CTA para o curso</div></div></div>
+            </div>
+          </div>
+
+          <div class="ideas-grid">
+            <div class="idea-item"><div class="ideas-title">Dia dos Pais (2º domingo)</div><div class="ideas-sub">Ângulo: "O pai que virou professor efetivo"</div></div>
+            <div class="idea-item verde-border"><div class="ideas-title">SEEDUC/SME-RJ (se abrir)</div><div class="ideas-sub">Se abrir, é o maior concurso do ano. Máxima ativação em menos de 6h</div></div>
+            <div class="idea-item"><div class="ideas-title">Revisão de véspera</div><div class="ideas-sub">Para cada prova que cair em agosto: live de revisão no YouTube na véspera</div></div>
+            <div class="idea-item roxo-border"><div class="ideas-title">Gabarito extraoficial</div><div class="ideas-sub">Publicar o gabarito de Português logo após a prova — 42K views validados</div></div>
+          </div>
+
+          <div class="key-dates">
+            <span class="key-date verde-bg">Reagir a todo edital em menos de 24h</span>
+            <span class="key-date">Dia dos Pais — 2º domingo</span>
+            <span class="key-date">Live de véspera para cada prova</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SETEMBRO -->
+      <div class="month-card">
+        <div class="month-header set">
+          <div>
+            <div class="month-name">Setembro 2026</div>
+            <div class="month-theme">Técnica e resultado — como acertar mais sem estudar mais</div>
+          </div>
+          <div class="month-badge">Método</div>
+        </div>
+        <div class="month-body">
+          <div class="month-insight">
+            <strong>Por que esse foco:</strong> Após o pico de editais em agosto, o público que não passou ainda está estudando para novas provas. O vídeo "Segredo p/ acertar 90% das questões" teve 153K views. Conteúdo de técnica tem alta retenção e gera autoridade.
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 1 — Técnica de questão (153K views validados)</div>
+            <div class="week-days">
+              <div class="day-mini"><div class="day-mini-name">Seg</div><div class="day-mini-items"><div><span class="tag tag-yt">YT</span><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aula: "Como acertar questões de Português que você nunca estudou"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Ter</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Questão ao vivo: demonstrando a técnica na prática</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qua</div><div class="day-mini-items"><div><span class="tag tag-yt">YT</span><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aula: "Interpretação de texto passo a passo — do jeito que a banca quer"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qui</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Reel: "Por que você erra questões que você sabe a resposta"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Sex</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Shorts: "Salário de professor vale mais por horas trabalhadas que muita profissão"</div></div></div>
+            </div>
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 2 — Gabarito comentado das provas de agosto</div>
+            <div class="week-days">
+              <div class="day-mini"><div class="day-mini-name">Seg</div><div class="day-mini-items"><div><span class="tag tag-yt">YT</span><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aula: "Correção completa de Português — prova de [município] agosto 2026"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Ter</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Reel: questão mais difícil da prova resolvida em 60 segundos</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qua</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aprovação: aluna que fez a prova e passou — resultado publicado</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qui</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Carrossel: "O que caiu em Português nessa prova e o que estudar para a próxima"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Sex</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Reel: "Você errou isso na prova? Olha o que aconteceu"</div></div></div>
+            </div>
+          </div>
+
+          <div class="key-dates">
+            <span class="key-date">Publicar gabarito de cada prova em menos de 24h</span>
+            <span class="key-date verde-bg">Resultado de concurso = publicar aprovações imediatamente</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUTUBRO -->
+      <div class="month-card">
+        <div class="month-header out">
+          <div>
+            <div class="month-name">Outubro 2026</div>
+            <div class="month-theme">Dia do Professor — a maior data do nicho</div>
+          </div>
+          <div class="month-badge">15/out — Data mais importante</div>
+        </div>
+        <div class="month-body">
+          <div class="month-insight">
+            <strong>Por que esse foco:</strong> 15 de outubro é para o nicho de magistério o que o Black Friday é para o e-commerce. Toda a semana do dia do professor é campanha de identidade, prova social e conversão. Começar a aquecer no dia 1º.
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 1 a 2 — Aquecimento: identidade de professor</div>
+            <div class="week-days">
+              <div class="day-mini"><div class="day-mini-name">Seg</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Reel: "Por que ser professor efetivo muda tudo — não é só o salário"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Ter</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aprovação + história: professora que virou efetiva após anos como temporária</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qua</div><div class="day-mini-items"><div><span class="tag tag-yt">YT</span><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aula + Reel: "O que separa quem passa de quem reprova no concurso de professor"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qui</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Shorts: "Quanto ganha uma professora efetiva vs temporária — a diferença real"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Sex</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Carrossel: "3.000 aprovações — o que esses professores tinham em comum"</div></div></div>
+            </div>
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 3 — Semana do Professor (13 a 15/out)</div>
+            <div class="week-days">
+              <div class="day-mini"><div class="day-mini-name">Seg 13</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Série de aprovações: uma aprovada por dia até o dia 15</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Ter 14</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span><span class="tag tag-yt">YT</span></div><div class="day-mini-text">Ramon: bastidor do Passei — trajetória, missão, o que move o projeto</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qua 15</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Dia do Professor: "Você merece ser efetivo." Condição especial em todos os cursos</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qui 16</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Continua a campanha: último dia da condição especial</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Sex 17</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Encerramento: "Obrigado. As aprovações de vocês são o que move o Passei."</div></div></div>
+            </div>
+          </div>
+
+          <div class="key-dates">
+            <span class="key-date verde-bg">15/out — Dia do Professor: campanha principal do ano</span>
+            <span class="key-date">Dia das Crianças — 12/out: ângulo para professor de infantil</span>
+            <span class="key-date">Semana 13–17/out: série diária de aprovações</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOVEMBRO -->
+      <div class="month-card">
+        <div class="month-header nov">
+          <div>
+            <div class="month-name">Novembro 2026</div>
+            <div class="month-theme">Black Friday e salário — maior mês comercial do ano</div>
+          </div>
+          <div class="month-badge">Black Friday</div>
+        </div>
+        <div class="month-body">
+          <div class="month-insight">
+            <strong>Por que esse foco:</strong> Black Friday é o maior evento de vendas do ano para cursos online. No nicho de magistério o timing é perfeito: o público acabou de passar pela emoção do Dia do Professor e os editais do 2º semestre já são realidade. Conteúdo de salário em Shorts tem 883K views validados — usar como aquecimento.
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semanas 1 a 3 — Aquecimento com salário e resultado</div>
+            <div class="week-days">
+              <div class="day-mini"><div class="day-mini-name">Seg</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Shorts semanais: "Salário de professor em [estado] — quanto dá na prática?"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Ter</div><div class="day-mini-items"><div><span class="tag tag-yt">YT</span><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aula: "O que estudar para os concursos que abrem em janeiro 2027"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qua</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aprovações do 2º semestre: série de resultados acumulados</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qui</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Questão ao vivo: Consulplan, IAN ou banca com concurso aberto</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Sex</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Reel: "Falta 1 semana para a Black Friday do Passei"</div></div></div>
+            </div>
+          </div>
+
+          <div class="week-row">
+            <div class="week-label">Semana 4 — Black Friday (última semana de novembro)</div>
+            <div class="week-days">
+              <div class="day-mini"><div class="day-mini-name">Seg</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">"Black Friday começa amanhã — todos os cursos do Passei com desconto"</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Ter</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Destaque do dia: curso específico com maior desconto</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qua</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Aprovação + CTA: "Ela comprou na Black Friday do ano passado. Passou esse ano."</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Qui BF</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Black Friday: stories de contagem + posts de oferta do dia. 2x no feed.</div></div></div>
+              <div class="day-mini"><div class="day-mini-name">Sex</div><div class="day-mini-items"><div><span class="tag tag-ig">IG</span><span class="tag tag-tt">TT</span></div><div class="day-mini-text">Último dia: urgência real. "Essa oferta acaba hoje à meia-noite."</div></div></div>
+            </div>
+          </div>
+
+          <div class="key-dates">
+            <span class="key-date verde-bg">Black Friday — última quinta/sexta de novembro</span>
+            <span class="key-date">Black Week: destaque diferente por dia</span>
+            <span class="key-date">13º salário: "Invista seu 13º na aprovação"</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- PLATFORM NOTES -->
+  <div class="section">
+    <div class="section-eyebrow">Plataformas</div>
+    <div class="section-title">Como distribuir entre Instagram e TikTok</div>
+    <div class="section-sub">A maioria do conteúdo é o mesmo vídeo. O que muda é a legenda, a hashtag e alguns detalhes de formato.</div>
+    <div class="platforms-grid">
+      <div class="platform-card">
+        <div class="platform-header ig">
+          <div class="platform-title">Instagram (Feed + Reels)</div>
+        </div>
+        <div class="platform-body">
+          <ul>
+            <li>Reels de 30 a 60 segundos performam melhor no nicho.</li>
+            <li>Carrossel no feed: conteúdo que gera salvamento (comparação de bancas, cronograma, o que cai).</li>
+            <li>Legenda mais longa — o público do Instagram lê mais.</li>
+            <li>Hashtags de banca e município: #concursoconsulplan #magistério #saquarema.</li>
+            <li>Stories todo dia: divulgar o post + CTA direto para o curso.</li>
+            <li>Destaques: "Aprovações", "Bancas", "Cursos".</li>
+          </ul>
+        </div>
+      </div>
+      <div class="platform-card">
+        <div class="platform-header tt">
+          <div class="platform-title">TikTok</div>
+        </div>
+        <div class="platform-body">
+          <ul>
+            <li>Mesmo vídeo do Instagram Reel — adaptar legenda e hashtag.</li>
+            <li>O nicho de magistério no TikTok está quase vazio. Entrar agora custa menos.</li>
+            <li>Conteúdo que funciona especialmente no TikTok: Shorts de salário e questão ao vivo.</li>
+            <li>Hashtagss específicas do TikTok: #concursopublico #professoraconcursada #magistério.</li>
+            <li>Legenda mais curta que no Instagram — TikTok valoriza o vídeo, não o texto.</li>
+            <li>Publicar nos mesmos dias do Instagram para manter consistência.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  Agência Asher · Curso Preparatório Passei · Cronograma Jun–Nov 2026
+</div>
+
+</body>
+</html>
