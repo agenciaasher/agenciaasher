@@ -34,16 +34,22 @@ Entre no grupo pelo link na bio e garanta seu acesso à live.
 ### CE-02 — Mãe professora
 
 **GANCHO:**
-Você ensina dezenas de crianças por dia e ainda estuda para passar no concurso.
+Estudar 1 hora por dia, com filho em casa, depois de um dia inteiro de aula dada, é uma dedicação que quem não vive não entende.
 
 **CORPO:**
-A rotina é pesada. O trabalho consome. Os filhos pedem atenção.
+Você não tem o dia livre para se dedicar ao concurso. Tem uma janela pequena, entre o trabalho e a casa, e usa ela.
 
-Mesmo assim você não desistiu da aprovação.
+O esforço está mais do que provado.
 
-O que falta quase nunca é esforço. É saber exatamente o que estudar para a banca certa, sem desperdiçar as poucas horas que você tem.
+O que falta, quase sempre, é saber o que estudar nessas horas. A maioria estuda Português genérico, o mesmo material que não muda de um concurso para outro. E continua não passando, sem entender por quê.
 
-No dia 18, ao vivo, vou mostrar isso. Uma aula gratuita, focada no concurso de Saquarema.
+Cada banca tem um perfil. Saquarema tem o dela. Os temas que aparecem toda vez. O tipo de questão que ela usa. O que você pode ignorar com segurança.
+
+Quem aprende esse perfil para de estudar o que não vai cair e coloca as poucas horas que tem no que decide aprovação.
+
+No dia 18, ao vivo no YouTube, vou mostrar exatamente esse padrão. Gratuito, direto, focado na banca de Saquarema.
+
+Você sai sabendo onde colocar o tempo que tem.
 
 **CTA:**
 Clica em saiba mais e entra no grupo.
