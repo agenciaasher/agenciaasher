@@ -21,6 +21,21 @@ Consulte também:
 
 ---
 
+## Referências obrigatórias de copy
+
+Todo anúncio gerado por esta skill deve ser modelado segundo os três pilares abaixo. Antes de escrever uma linha, internalizar esses princípios.
+
+**Eugene Schwartz — Nível de consciência e intensidade do desejo**
+O desejo já existe no público. A copy não cria desejo: ela o canaliza. Antes de escrever, identifique o nível de consciência do público-alvo (inconsciente do problema, consciente do problema, consciente da solução, consciente do produto, ou completamente ciente). O gancho e o corpo mudam completamente dependendo desse nível. Intensidade emocional construída em camadas, não jogada de uma vez.
+
+**David Ogilvy — Pesquisa de público antes da escrita**
+Pesquise o público mais do que qualquer outra coisa. Ogilvy pesquisava semanas antes de escrever uma linha. Para cada anúncio, responda: o que essa pessoa pensa quando acorda, o que teme, o que deseja e o que já tentou antes de você. A copy específica supera a genérica sempre. Use dados reais, situações concretas, palavras que o público usa, não as que o anunciante prefere.
+
+**Aristóteles — Ethos, Pathos, Logos**
+Todo anúncio eficaz equilibra os três. Ethos (credibilidade do emissor) abre a porta. Pathos (emoção ativada pela situação do público) prende a atenção. Logos (argumento lógico com dado concreto) justifica a decisão. Falta de ethos: a pessoa não confia. Falta de pathos: a pessoa não se importa. Falta de logos: a pessoa não decide. Os três precisam estar presentes.
+
+---
+
 ## Fluxo
 
 ### 1. Coleta (pergunte o que faltar)
@@ -57,10 +72,18 @@ Para cada plataforma solicitada, entregue:
 
 ```
 GANCHO (primeira linha, até 125 caracteres):
-{Frase que para o scroll. Sem pergunta. Sem exclamação. Afirmação direta com dado concreto ou provocação.}
+O gancho é o momento em que a pessoa para de scrollar. É um choque. Uma afirmação que ela não esperava,
+que ativa curiosidade intensa ou medo imediato sobre algo que ela já sente mas nunca ouviu nomeado com
+precisão. O gancho preenche a atenção: a pessoa para o que está fazendo porque aquela frase atingiu algo
+real nela. Para construir esse choque, conheça o público a fundo (use o briefing e os dados de pesquisa):
+qual a maior dor não dita, o maior medo silencioso, a situação mais específica da rotina desse público.
+Sem pergunta. Sem exclamação. Afirmação direta com dado concreto ou provocação que nomeia o que o público
+vive mas não sabe como dizer.
 
-CORPO (3 a 5 linhas):
-{Desenvolvimento do argumento. Cena real, causa do problema, virada. Light Copy: ensina ou avisa, não vende.}
+CORPO (palavras suficientes para 60 a 90 segundos de leitura em voz alta):
+Não poupar palavras. O corpo precisa ter densidade para prender quem parou pelo gancho e levá-lo até o CTA.
+Desenvolvimento em camadas: cena real que o público reconhece, causa do problema (a que ninguém fala), virada
+ou revelação, consequência concreta. Light Copy: ensina ou avisa, não vende.
 
 CTA:
 {Frase de transição + ação clara. Ex: "Veja como funciona. Link na bio." ou "Fale com a gente no WhatsApp."}
@@ -135,6 +158,9 @@ Apresente todas as variações organizadas por plataforma. Pergunte:
 ## Regras
 
 - Gancho nunca começa com pergunta. Sempre afirmação.
+- Gancho é construído a partir do público, não do produto. Sem conhecer o nível de consciência e a dor real do público, o gancho não funciona.
+- Corpo do anúncio deve ter palavras suficientes para 60 a 90 segundos de leitura em voz alta. Não poupar palavras. Anúncio raso não converte.
+- Ao corrigir, ajustar ou revisar um criativo, manter a densidade e a extensão originais. Reduzir o corpo sem instrução explícita do usuário é proibido. Corrigir não significa encurtar.
 - Nunca mencionar preço no anúncio de topo de funil.
 - Anúncio de fundo pode ter preço e condição.
 - Urgência só se for real (data, estoque, vagas). Urgência falsa é proibida.

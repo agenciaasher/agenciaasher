@@ -382,8 +382,11 @@ Não só no CPL ou na palestra. Em todo lugar, todo dia.
 
 ```
 GANCHO (0-3 segundos)
-→ Para o scroll. Pergunta, provocação ou afirmação contra-intuitiva.
-→ NUNCA comece com "Olá, tudo bem?" ou apresentação.
+→ O choque que faz a pessoa parar de scrollar. Afirmação que nomeia a dor real com precisão ou provocação
+   contra-intuitiva. Nunca começa com pergunta. A pessoa para o que está fazendo porque aquela frase
+   atingiu algo que ela vive mas nunca ouviu nomeado assim. Modelar: Eugene Schwartz (nível de consciência),
+   David Ogilvy (pesquisa do público), Aristóteles (pathos que ativa, logos que sustenta).
+→ NUNCA comece com "Olá, tudo bem?", apresentação ou "Você sabia que...?"
 
 CONFLITO / IDENTIFICAÇÃO (3-30 segundos)
 → A pessoa se vê na situação descrita.

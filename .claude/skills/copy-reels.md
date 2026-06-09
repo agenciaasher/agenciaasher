@@ -14,6 +14,9 @@ Gera roteiro completo de reels para Instagram. Cada roteiro tem gancho nos prime
 
 Consulte o briefing em `clientes/<nome>/projeto.md` e a sazonalidade em `clientes/<nome>/sazonalidade.md`.
 
+**Referências obrigatórias de copy para esta skill:**
+Modelar Eugene Schwartz (nível de consciência + desejo já existe no público), David Ogilvy (pesquise o público antes de escrever qualquer linha), Aristóteles (ethos, pathos e logos presentes em todo roteiro). Ver detalhamento completo em `copy-anuncio.md`.
+
 **Agvel Veículos:**
 - Formatos que funcionam: walk-around de veículo, comparativo (modelo A vs B), bastidores da loja, dica rápida de carro, depoimento de cliente
 - Tom: sério e objetivo, mas acessível. Pode ter personalidade sem perder credibilidade.
@@ -56,11 +59,16 @@ Estrutura obrigatória:
 ---
 
 ## GANCHO (0-3s)
-[A frase ou cena que para o scroll. Regras:]
+[O momento em que a pessoa para de scrollar. É um choque: uma afirmação ou cena que a pessoa
+não esperava, que ativa curiosidade intensa ou medo imediato sobre algo que ela já vive mas
+nunca viu nomeado com precisão. A pessoa para o que está fazendo porque aquela frase atingiu
+algo real nela. Para criar esse choque, conheça o público (use briefing e pesquisa): qual a
+maior dor não dita, o maior medo silencioso, a situação mais específica da rotina desse público.
+Regras:]
 - Afirmação impactante, nunca pergunta
-- Dado concreto ou provocação direta
+- Dado concreto ou provocação que nomeia a dor real do público com precisão
 - Máximo 2 linhas faladas (ou 5 palavras na tela)
-- O espectador precisa pensar "como assim?" ou "isso é comigo"
+- Critério: a pessoa para o scroll e pensa "isso sou eu" ou "como assim?"
 
 Texto: "{frase do gancho}"
 Visual: {o que aparece na tela / o que a pessoa faz}
@@ -142,9 +150,11 @@ Antes de entregar, verifique:
 ## Regras
 
 - O gancho decide tudo. Se o gancho não funcionar, o resto não importa.
+- O gancho é construído a partir do público, não do assunto. Sem conhecer a dor real e o nível de consciência do público, o gancho não funciona.
 - Nunca começar reels com "Você sabia que...?" ou "Nesse vídeo eu vou te ensinar...". Isso é o anti-gancho.
 - Ganchos que funcionam: afirmação contra-intuitiva, dado surpreendente, cena do cotidiano, provocação direta, "isso aqui" + mostrar objeto.
-- Duração ideal para engajamento: 30-60s. Menos de 15s não entrega valor. Mais de 90s perde atenção.
+- Roteiro deve ter palavras e cenas suficientes para 60 a 90 segundos. Não poupar palavras. Roteiro raso não prende.
+- Ao corrigir, ajustar ou revisar um roteiro, manter a densidade e a extensão originais. Reduzir sem instrução explícita do usuário é proibido.
 - Um reels = uma ideia. Não tentar ensinar 5 coisas em 30 segundos.
 - Corte a cada 3-5 segundos mantém atenção (indicar no visual do roteiro).
 - Texto na tela reforça, não substitui. Se a pessoa assistir no mudo, precisa entender pelo texto.
