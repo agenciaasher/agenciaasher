@@ -31,25 +31,41 @@ Preparatório para concursos públicos com foco em magistério (professor públi
 - Meta principal: Converter público gratuito (YouTube/Instagram) em compradores + upsell para produtos de ticket mais alto
 
 ## Público
-Pessoas que prestam ou querem prestar concursos públicos, principalmente para cargos de professor (magistério) em prefeituras e estados do RJ e Brasil. Perfil: 25-45 anos, maioria mulheres, baixa/média renda, estudam em paralelo ao trabalho.
+Mulheres, 25-45 anos, casadas, com 1 filho ou mais. Professoras temporárias no RJ — sem estabilidade, sem FGTS, renda de R$ 1.500 a R$ 3.600/mês. Pós Graduação ou Superior. Estudam 1-2h/dia em paralelo ao trabalho e aos filhos.
+
+**Renda como contexto de copy:** professora efetiva em Saquarema ganha em média R$ 2.758/mês com estabilidade total. Temporária ganha menos, sem FGTS, sem progressão, pode não receber em julho. A aprovação no concurso não é aspiração — é necessidade financeira real.
 
 ## Tom de voz
 Direto, motivador e acessível. Ramon é o professor que "fala a língua do aluno" — sem enrolação, foca no que cai na prova. Conteúdo gratuito abundante no YouTube cria autoridade.
 
 ## Pesquisa de Público (Mai/Jun 2026) — dados confirmados
 
-- **90%+ mulheres**, maioria Pós Graduação, estudam há +1 ano, 1-2h/dia
+- **90%+ mulheres**, casadas, 1 filho ou mais, maioria Pós Graduação, estudam há +1 ano, 1-2h/dia
 - **Obstáculos:** falta de tempo (#1), cansaço do trabalho, filhos
 - **Concursos mais citados:** Saquarema + Araruama (eixo principal), depois Volta Redonda, Nova Iguaçu, Santo Antônio de Pádua
 - **Discovery:** Instagram (#1) → YouTube (#2) → Indicação (#3)
 - **95%+ aceitam materiais gratuitos** — base receptiva para nutrição
 - **Maioria toparia grupo estruturado** — valida produto de assinatura/comunidade
+- **Maioria já tentou outros cursos** — não é estreante, já frustrou com material genérico
+- **Maior medo na prova:** não dominar a banca específica (não é falta de Português geral)
+
+## Gatilhos que disparam a busca por ajuda
+
+1. Saiu o edital — urgência imediata
+2. A colega passou — comparação social ("o que ela sabe que eu não sei?")
+3. O contrato não renovou — julho sem renda, instabilidade bate
+
+## Nível de consciência por segmento
+
+- **Público quente (RJ):** já conhece o Ramon. Basta urgência + especificidade da banca.
+- **Público frio (expansão):** não conhece o Ramon. Entrar pela dor, o Ramon aparece como prova — não como argumento de abertura.
 
 ## Ângulos de copy validados pela pesquisa
 
 - "Método para quem estuda 1 hora por dia"
 - "Para mães que não abrem mão da aprovação"
 - "O concurso de [Saquarema/Araruama] está chegando — você está pronto?"
+- "Já tentou estudar sozinha e não passou — o problema não é você, é o material"
 
 ## Regras obrigatórias
 1. Sempre consultar `sazonalidade.md` antes de gerar campanha ou conteúdo

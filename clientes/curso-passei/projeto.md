@@ -60,26 +60,47 @@ O aluno passa no concurso público e conquista estabilidade financeira. Para o p
 ## Público-Alvo
 
 ### Perfil principal
-- Pessoas que prestam concursos para professor público (magistério municipal/estadual)
-- Mulheres, 25-45 anos, professoras informais ou estudantes de pedagogia
-- Baixa/média renda, estudam em paralelo ao trabalho
-- Região Sudeste com concentração no RJ, mas alcance nacional online
+- Mulheres, 25-45 anos, casadas, com 1 filho ou mais
+- Professoras temporárias (designadas/contratadas) — sem estabilidade, sem FGTS, 13º proporcional
+- Pós Graduação ou Superior completo na maioria
+- Renda: R$ 1.500 a R$ 3.600/mês dependendo do município e carga horária (rede estadual SEEDUC: R$ 2.190-3.650; Saquarema: média R$ 2.758; Araruama: ~R$ 2.209)
+- Estudam em paralelo ao trabalho e aos filhos — 1-2 horas por dia, muitas vezes menos de 1 hora
+- Geo: Estado do Rio de Janeiro — Saquarema e Araruama como eixo principal
 
 ### Perfil secundário
 - Qualquer candidato a concurso público que precise de Português
 - Foco em bancas populares do RJ: IAN, Consulplan, COSEAC-UFF, FGV
 
+### Gatilhos que disparam a busca por ajuda
+1. **Saiu o edital** — urgência imediata, a janela de preparação abre
+2. **A colega passou** — comparação social, "o que ela sabe que eu não sei?"
+3. **O contrato não renovou** — julho/agosto sem renda, realidade da instabilidade bate forte
+
 ### Dores principais
-- Português é o maior eliminatório nos concursos — medo de reprovação por língua
-- Estudam sozinhos sem saber o que de fato cai na prova da banca específica
-- Perdem tempo com conteúdo genérico que não está no edital
-- Frustração com aprovações que nunca chegam
-- Dificuldade financeira para investir em cursos caros
+- Não domina a banca específica — sabe Português geral, mas não sabe o que Saquarema/Araruama cobra
+- Já tentou outros cursos ou estudou sozinha — a maioria já tentou, não é estreante
+- Português elimina — medo concreto de reprovar por língua
+- Perde horas com conteúdo genérico que não bate com o edital
+- Frustração acumulada: anos de estudo, sem aprovação, contrato renovando (ou não)
+- Renda instável — recesso = menos ou zero. Agosto pode não ter nada
+
+### O que a efetivação representa em números
+| Item | Temporária | Efetiva |
+|------|-----------|---------|
+| Salário (Saquarema/média RJ) | R$ 1.500-3.600 | R$ 5.130+ (piso 2026) |
+| Estabilidade | Não | Sim |
+| FGTS | Não | Sim |
+| 13º | Proporcional | Integral |
+| Progressão de carreira | Não | Sim |
+| Renda em julho | Incerta | Garantida |
+
+Esse quadro é um argumento concreto para copy. A aprovação vale mais do que o custo de qualquer curso.
 
 ### Desejos
-- Aprovação e estabilidade (carteira assinada, FGTS, aposentadoria)
-- Reconhecimento profissional como professor efetivo
-- Estudar de forma eficiente sem perder muito tempo
+- Aprovação e estabilidade: contra-cheque fixo, FGTS acumulando, renda garantida em julho
+- Sair da dependência de renovação de contrato
+- Ser reconhecida como professora efetiva, não designada
+- Estudar de forma eficiente — sem desperdiçar as poucas horas disponíveis
 
 ---
 
@@ -107,9 +128,22 @@ Os concursos mais citados foram **Saquarema** e **Araruama** (eixo principal). T
 
 1. **Falta de tempo** (enorme maioria)
 2. Cansaço do trabalho
-3. Rotina com filhos
+3. Rotina com filhos (casadas com 1 filho ou mais — perfil confirmado)
 
 > **Implicação:** Comunicação deve atacar exatamente esses pontos. "Método para quem tem pouco tempo", "Estude 1 hora por dia e passe no concurso", "Para mães que não abrem mão da aprovação."
+
+### Nível de consciência do público
+
+- **Público quente (RJ):** Ramon é bem conhecido. Já assistiu conteúdo no YouTube ou Instagram. Basta urgência e especificidade de banca para converter.
+- **Público frio (expansão):** Concurseiros de magistério do RJ que ainda não conhecem o Ramon. Precisam de gancho que valide a dor e apresente o Ramon como solução específica — não genérica.
+
+Para público frio: entrar pela dor (instabilidade, banca específica), não pelo Ramon. O Ramon aparece como prova, não como argumento de abertura.
+
+### Comportamento de compra
+
+- A maioria já tentou outros cursos ou estudou sozinha antes de chegar ao Ramon
+- Não é estreante — já passou por frustração com material genérico
+- Principal objeção: "já tentei e não adiantou" → resposta: Ramon ensina o português da banca, não o português do livro
 
 ### Como descobriram o Curso Passei
 
