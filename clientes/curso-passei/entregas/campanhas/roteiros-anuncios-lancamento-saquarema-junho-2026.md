@@ -17,17 +17,19 @@ Os anúncios não vendem o curso. Vendem a live.
 
 ---
 
-Você é professora temporária e não sabe se o contrato renova no final do ano.
+No Rio de Janeiro, professora temporária pode ganhar mais de R$ 2.000 a menos por mês do que efetiva com a mesma formação. Em julho, pode não receber nada.
 
-Agosto chega. A escola avisa na última hora. Começa tudo de novo: processo seletivo, escola nova, turma nova.
+Essa é a realidade de quem ainda não tem o concurso.
 
-Professora efetiva em Saquarema não passa por isso. Contra-cheque fixo todo mês. FGTS acumulando. Décimo terceiro garantido. Em julho, quando a escola fecha, o salário continua.
+Professora efetiva tem contra-cheque fixo, FGTS acumulando, 13º integral. Em julho, quando a escola fecha, o salário continua.
 
-Você pode ser uma professora melhor do que muitas efetivas com anos de carreira. A diferença entre as duas é uma prova.
+Você pode ensinar melhor do que muitas efetivas com anos de carreira. A diferença entre as duas é uma prova.
 
-E essa prova tem um caminho específico. Saquarema tem uma banca. Essa banca tem um padrão. Quem aprende esse padrão passa. Quem estuda Português genérico fica na lista de espera.
+Se você já tentou estudar para concurso antes e não passou, quase sempre a causa é a mesma: material que não bate com o que a banca cobra.
 
-No dia 18, ao vivo no YouTube, vou mostrar esse caminho. Como professoras com a mesma rotina que a sua estão passando no concurso de Saquarema.
+A banca de Saquarema tem um padrão que se repete todo edital. Quem aprende esse padrão estuda menos tempo e chega mais preparada.
+
+No dia 18, ao vivo no YouTube, vou mostrar esse caminho.
 
 Gratuito. As vagas no grupo são limitadas.
 
@@ -46,17 +48,17 @@ Clica em saiba mais e garante seu lugar.
 
 ---
 
-No dia 18, ao vivo no YouTube, vou abrir o padrão exato de questões que a banca de Saquarema cobra.
+Quem passou no último concurso de Saquarema chegou na prova sabendo quais padrões a banca cobra. Quem não sabia ficou na lista de espera.
 
-A maioria dos materiais ensina gramática geral. O que vou mostrar na live é diferente: o mapa do que a banca de Saquarema coloca toda vez que abre concurso.
+No dia 18, ao vivo no YouTube, vou mostrar esse padrão.
 
-Os temas que aparecem em todo edital. O formato de questão que ela prefere. O que quase nunca cai e onde a maioria das candidatas perde horas estudando à toa.
+O que vou abrir na live é o mapa do que a banca de Saquarema coloca toda vez que abre concurso. Os temas que aparecem em todo edital. O formato de questão que ela prefere. O que você pode ignorar com segurança.
 
-Quem estuda para Saquarema sem conhecer esse mapa passa tempo no que não vai cair. Quem aprende o mapa estuda a metade e chega mais preparada.
+Com esse mapa, você para de estudar às cegas e passa a estudar o que decide aprovação.
 
-Desde 2018, aprovei mais de 3.000 professoras usando exatamente esse método.
+Desde 2018, aprovei mais de 3.000 professoras usando exatamente esse método. A maioria chegou na prova sabendo para onde cada hora de estudo tinha ido.
 
-Você sai da live com um plano concreto: o que estudar, o que pode ignorar e quanto tempo você precisa para chegar preparada.
+Você sai da live com um plano: o que estudar, o que pode cortar e quanto tempo você precisa.
 
 Gratuito. Uma vez. As vagas no grupo são limitadas.
 
