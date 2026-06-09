@@ -11,7 +11,6 @@
     --roxo: #7B2D8E;
     --roxo-escuro: #5C1A6E;
     --menta: #A8E6CF;
-    --azul-claro: #8BC4E0;
     --branco: #FFFFFF;
     --cinza-texto: #333333;
     --cinza-leve: #F7F4F9;
@@ -27,24 +26,14 @@
     line-height: 1.6;
   }
 
-  /* PRINT */
   @media print {
     .no-print { display: none; }
-    body { background: #fff; }
     .copy-card { break-inside: avoid; page-break-inside: avoid; }
-    .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .tag { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .headline-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .cta-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .header, .tag, .headline-box, .cta-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
 
-  .wrapper {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 40px 32px 64px;
-  }
+  .wrapper { max-width: 860px; margin: 0 auto; padding: 40px 32px 64px; }
 
-  /* HEADER */
   .header {
     background: var(--roxo);
     color: var(--branco);
@@ -54,64 +43,45 @@
     position: relative;
     overflow: hidden;
   }
-
   .header::after {
     content: '';
     position: absolute;
-    right: -40px;
-    top: -40px;
-    width: 220px;
-    height: 220px;
+    right: -40px; top: -40px;
+    width: 220px; height: 220px;
     border-radius: 50%;
-    background: rgba(168, 230, 207, 0.12);
+    background: rgba(168,230,207,0.12);
   }
-
-  .header-tag {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--menta);
-    margin-bottom: 10px;
-  }
-
-  .header h1 {
-    font-size: 28px;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 8px;
-  }
-
+  .header-tag { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--menta); margin-bottom: 10px; }
+  .header h1 { font-size: 28px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
   .header h1 span { color: var(--menta); }
+  .header-sub { font-size: 14px; color: rgba(255,255,255,0.65); margin-bottom: 28px; }
+  .header-meta { display: flex; gap: 32px; flex-wrap: wrap; }
+  .meta-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 2px; }
+  .meta-value { font-size: 14px; font-weight: 600; color: var(--branco); }
 
-  .header-sub {
-    font-size: 14px;
-    color: rgba(255,255,255,0.65);
+  .lote-banner {
+    background: linear-gradient(90deg, #1a6e3a, #27a25a);
+    border-radius: 10px;
+    padding: 14px 24px;
     margin-bottom: 28px;
-  }
-
-  .header-meta {
     display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
   }
-
-  .meta-item { }
-  .meta-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+  .lote-badge {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.45);
-    margin-bottom: 2px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
   }
-  .meta-value {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--branco);
-  }
+  .lote-text { font-size: 14px; font-weight: 600; color: #fff; }
+  .lote-preco { margin-left: auto; font-size: 22px; font-weight: 900; color: #fff; white-space: nowrap; }
 
-  /* INSTRUCOES */
   .instrucoes {
     background: var(--cinza-leve);
     border: 1px solid var(--borda);
@@ -123,31 +93,17 @@
     color: #555;
     line-height: 1.7;
   }
-
   .instrucoes strong { color: var(--roxo); }
+  .instrucoes ul { margin-top: 8px; padding-left: 18px; }
+  .instrucoes ul li { margin-bottom: 4px; }
 
-  .instrucoes ul {
-    margin-top: 8px;
-    padding-left: 18px;
-  }
+  .copies-grid { display: flex; flex-direction: column; gap: 28px; }
 
-  .instrucoes ul li {
-    margin-bottom: 4px;
-  }
-
-  /* COPIES GRID */
-  .copies-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-  }
-
-  /* COPY CARD */
   .copy-card {
     border: 1px solid var(--borda);
     border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(123, 45, 142, 0.06);
+    box-shadow: 0 2px 12px rgba(123,45,142,0.06);
   }
 
   .card-header {
@@ -158,138 +114,62 @@
     gap: 12px;
     border-bottom: 1px solid var(--borda);
   }
-
   .copy-num {
-    width: 36px;
-    height: 36px;
+    width: 36px; height: 36px;
     background: var(--roxo);
     color: var(--branco);
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    font-weight: 800;
-    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 800; flex-shrink: 0;
   }
-
-  .copy-titulo {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--cinza-texto);
-  }
-
+  .copy-titulo { font-size: 14px; font-weight: 700; color: var(--cinza-texto); }
   .tag {
     margin-left: auto;
-    background: rgba(123, 45, 142, 0.1);
+    background: rgba(123,45,142,0.1);
     color: var(--roxo-escuro);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 20px;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 20px;
+  }
+  .nivel {
+    font-size: 10px; color: #999;
+    margin-left: 8px;
   }
 
-  .card-body {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+  .card-body { padding: 24px; display: flex; flex-direction: column; gap: 16px; }
 
   .field-label {
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--roxo);
-    margin-bottom: 6px;
+    font-size: 9px; font-weight: 800;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--roxo); margin-bottom: 6px;
   }
 
-  /* HEADLINE BOX */
   .headline-box {
     background: var(--roxo);
     color: var(--branco);
     border-radius: 10px;
     padding: 18px 22px;
   }
+  .headline-box .field-label { color: var(--menta); margin-bottom: 8px; }
+  .headline-text { font-size: 16px; font-weight: 700; line-height: 1.4; color: var(--branco); }
 
-  .headline-box .field-label {
-    color: var(--menta);
-    margin-bottom: 8px;
-  }
-
-  .headline-text {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.4;
-    color: var(--branco);
-  }
-
-  /* TEXTO ANUNCIO */
   .texto-box {
     background: var(--branco);
     border: 1px solid var(--borda);
     border-radius: 10px;
     padding: 18px 22px;
   }
+  .texto-content { font-size: 14px; line-height: 1.75; color: var(--cinza-texto); white-space: pre-line; }
 
-  .texto-content {
-    font-size: 14px;
-    line-height: 1.75;
-    color: var(--cinza-texto);
-    white-space: pre-line;
-  }
-
-  /* CTA BOX */
   .cta-box {
     background: var(--menta);
     border-radius: 10px;
     padding: 14px 22px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; align-items: center; gap: 10px;
   }
+  .cta-box .field-label { color: var(--roxo-escuro); margin-bottom: 0; min-width: 32px; }
+  .cta-text { font-size: 14px; font-weight: 700; color: var(--roxo-escuro); }
 
-  .cta-box .field-label {
-    color: var(--roxo-escuro);
-    margin-bottom: 0;
-    min-width: 32px;
-  }
-
-  .cta-text {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--roxo-escuro);
-  }
-
-  /* DIVIDER */
-  .section-divider {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 16px 0 4px;
-  }
-
-  .section-divider span {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #bbb;
-    white-space: nowrap;
-  }
-
-  .section-divider::before,
-  .section-divider::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--borda);
-  }
-
-  /* FOOTER */
   .doc-footer {
     margin-top: 48px;
     padding-top: 24px;
@@ -300,262 +180,234 @@
     font-size: 12px;
     color: #aaa;
   }
-
   .doc-footer strong { color: var(--roxo); }
 
-  /* PRINT BUTTON */
   .print-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--roxo);
-    color: var(--branco);
-    border: none;
-    border-radius: 10px;
-    padding: 12px 24px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-bottom: 32px;
-    font-family: inherit;
-    transition: background 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--roxo); color: var(--branco);
+    border: none; border-radius: 10px;
+    padding: 12px 24px; font-size: 14px; font-weight: 600;
+    cursor: pointer; margin-bottom: 32px;
+    font-family: inherit; transition: background 0.2s;
   }
-
   .print-btn:hover { background: var(--roxo-escuro); }
-
 </style>
 </head>
 <body>
-
 <div class="wrapper">
 
-  <button class="print-btn no-print" onclick="window.print()">
-    Imprimir / Salvar como PDF
-  </button>
+  <button class="print-btn no-print" onclick="window.print()">Imprimir / Salvar como PDF</button>
 
-  <!-- HEADER -->
   <div class="header">
     <div class="header-tag">Agência Asher · Clincog</div>
     <h1>Copies Criativos Estáticos<br><span>Jornada PCN</span></h1>
-    <div class="header-sub">7 modelos para prospecção fria · Meta Ads · Feed</div>
+    <div class="header-sub">7 modelos para prospecção · Meta Ads · Feed 1:1</div>
     <div class="header-meta">
-      <div class="meta-item">
-        <div class="meta-label">Produto</div>
-        <div class="meta-value">Jornada PCN</div>
+      <div>
+        <div class="meta-label">Evento</div>
+        <div class="meta-value">04 de Julho de 2026</div>
       </div>
-      <div class="meta-item">
-        <div class="meta-label">Objetivo</div>
-        <div class="meta-value">Prospecção (Fundo Frio)</div>
+      <div>
+        <div class="meta-label">Horário</div>
+        <div class="meta-value">09h às 15h30</div>
       </div>
-      <div class="meta-item">
+      <div>
         <div class="meta-label">Formato</div>
-        <div class="meta-value">Estático Feed 1:1</div>
+        <div class="meta-value">Online · Zoom</div>
       </div>
-      <div class="meta-item">
-        <div class="meta-label">Data</div>
-        <div class="meta-value">Junho/2026</div>
+      <div>
+        <div class="meta-label">Objetivo</div>
+        <div class="meta-value">Venda de Ingresso</div>
       </div>
     </div>
   </div>
 
-  <!-- INSTRUCOES -->
+  <div class="lote-banner">
+    <div class="lote-badge">Lote 1 · Early Bird</div>
+    <div class="lote-text">Preço atual em vigor — usar em todos os criativos</div>
+    <div class="lote-preco">R$ 47</div>
+  </div>
+
   <div class="instrucoes">
-    <strong>Para o time de criação:</strong> cada card abaixo contém os três elementos do criativo.
+    <strong>Para o time de criação:</strong> cada card contém os três elementos do criativo.
     <ul>
       <li><strong>Headline da imagem</strong> — texto que entra no layout da arte</li>
       <li><strong>Texto do anúncio</strong> — copy que vai no campo de texto do Meta Ads, acima da imagem</li>
       <li><strong>CTA</strong> — texto do botão de chamada para ação</li>
     </ul>
-    Todos os modelos são para público frio. Não altere o texto do anúncio sem aprovação da copy.
+    Não alterar data, horário ou preço sem aprovação. Lote 1 vige até próximo aviso.
   </div>
 
-  <!-- COPIES -->
   <div class="copies-grid">
 
-    <!-- COPY 01 -->
     <div class="copy-card">
       <div class="card-header">
         <div class="copy-num">01</div>
-        <div class="copy-titulo">Laudo Travado</div>
+        <div class="copy-titulo">Premissa + Evento</div>
+        <span class="nivel">Nível 2 · Fundo Frio</span>
+        <div class="tag">Premissa</div>
+      </div>
+      <div class="card-body">
+        <div class="headline-box">
+          <div class="field-label">Headline da Imagem</div>
+          <div class="headline-text">A formação ensina o que avaliar. Ninguém ensina como pensar.</div>
+        </div>
+        <div class="texto-box">
+          <div class="field-label">Texto do Anúncio</div>
+          <div class="texto-content">Essa lacuna tem solução. Jornada PCN — ao vivo, 04/07, das 9h às 15h30. Lote 1: R$ 47.</div>
+        </div>
+        <div class="cta-box">
+          <div class="field-label">CTA</div>
+          <div class="cta-text">Garantir meu ingresso</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copy-card">
+      <div class="card-header">
+        <div class="copy-num">02</div>
+        <div class="copy-titulo">Dor Específica + Solução</div>
+        <span class="nivel">Nível 2 · Fundo Frio</span>
         <div class="tag">Dor</div>
       </div>
       <div class="card-body">
         <div class="headline-box">
           <div class="field-label">Headline da Imagem</div>
-          <div class="headline-text">Você sabe aplicar os testes. Mas trava na hora do laudo.</div>
+          <div class="headline-text">O laudo trava porque falta estrutura, não conhecimento.</div>
         </div>
         <div class="texto-box">
           <div class="field-label">Texto do Anúncio</div>
-          <div class="texto-content">O problema não está no teste. Está em conectar os dados em um raciocínio clínico real.
-
-Descubra como mudar isso. Link na bio.</div>
+          <div class="texto-content">Em uma imersão ao vivo você aprende o método que organiza o raciocínio clínico do caso ao laudo. 04/07 · R$ 47.</div>
         </div>
         <div class="cta-box">
           <div class="field-label">CTA</div>
-          <div class="cta-text">Descubra como mudar isso</div>
+          <div class="cta-text">Quero participar</div>
         </div>
       </div>
     </div>
 
-    <!-- COPY 02 -->
     <div class="copy-card">
       <div class="card-header">
-        <div class="copy-num">02</div>
-        <div class="copy-titulo">Mais Diploma Não Resolve</div>
-        <div class="tag">Crença</div>
+        <div class="copy-num">03</div>
+        <div class="copy-titulo">Urgência de Lote</div>
+        <span class="nivel">Nível 3–4 · Morno</span>
+        <div class="tag">Urgência</div>
       </div>
       <div class="card-body">
         <div class="headline-box">
           <div class="field-label">Headline da Imagem</div>
-          <div class="headline-text">Mais cursos não vão resolver o seu laudo.</div>
+          <div class="headline-text">Lote 1 por R$ 47. No dia 04/07 isso muda.</div>
         </div>
         <div class="texto-box">
           <div class="field-label">Texto do Anúncio</div>
-          <div class="texto-content">O que diferencia um laudo clínico de um relatório de pontuações não é formação. É método de raciocínio.
-
-Entenda a diferença. Link na bio.</div>
+          <div class="texto-content">Jornada PCN · Imersão ao vivo com a Dra. Natalie Banaskiwitz · 04 de julho, das 9h às 15h30.</div>
         </div>
         <div class="cta-box">
           <div class="field-label">CTA</div>
-          <div class="cta-text">Entenda a diferença</div>
+          <div class="cta-text">Garantir antes do lote virar</div>
         </div>
       </div>
     </div>
 
-    <!-- COPY 03 -->
     <div class="copy-card">
       <div class="card-header">
-        <div class="copy-num">03</div>
-        <div class="copy-titulo">Dois Tipos de Profissional</div>
+        <div class="copy-num">04</div>
+        <div class="copy-titulo">Identidade Profissional</div>
+        <span class="nivel">Nível 3 · Fundo Frio</span>
         <div class="tag">Identidade</div>
       </div>
       <div class="card-body">
         <div class="headline-box">
           <div class="field-label">Headline da Imagem</div>
-          <div class="headline-text">Tem quem descreve resultados. Tem quem explica o paciente.</div>
+          <div class="headline-text">A profissional que os encaminhadores ligam primeiro tem método, não só diplomas.</div>
         </div>
         <div class="texto-box">
           <div class="field-label">Texto do Anúncio</div>
-          <div class="texto-content">Os encaminhadores percebem a diferença. Os pacientes também sentem.
-
-Qual laudo você entrega hoje. Link na bio.</div>
+          <div class="texto-content">Aprenda esse método numa imersão de um dia. Jornada PCN — 04/07 · das 9h às 15h30 · R$ 47.</div>
         </div>
         <div class="cta-box">
           <div class="field-label">CTA</div>
-          <div class="cta-text">Qual laudo você entrega hoje</div>
+          <div class="cta-text">Quero ser essa profissional</div>
         </div>
       </div>
     </div>
 
-    <!-- COPY 04 -->
-    <div class="copy-card">
-      <div class="card-header">
-        <div class="copy-num">04</div>
-        <div class="copy-titulo">Responsabilidade com o Paciente</div>
-        <div class="tag">Responsabilidade</div>
-      </div>
-      <div class="card-body">
-        <div class="headline-box">
-          <div class="field-label">Headline da Imagem</div>
-          <div class="headline-text">Cada laudo seu decide algo na vida de alguém.</div>
-        </div>
-        <div class="texto-box">
-          <div class="field-label">Texto do Anúncio</div>
-          <div class="texto-content">Escola especial. Diagnóstico. Tratamento. Essas decisões passam pelo que você escreve.
-
-Veja como elevar o nível do que você entrega. Link na bio.</div>
-        </div>
-        <div class="cta-box">
-          <div class="field-label">CTA</div>
-          <div class="cta-text">Veja como elevar o nível</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- COPY 05 -->
     <div class="copy-card">
       <div class="card-header">
         <div class="copy-num">05</div>
-        <div class="copy-titulo">Teoria vs. Prática</div>
-        <div class="tag">Progressão</div>
+        <div class="copy-titulo">Storytelling Curto</div>
+        <span class="nivel">Nível 2–3 · Fundo Frio</span>
+        <div class="tag">Story</div>
       </div>
       <div class="card-body">
         <div class="headline-box">
           <div class="field-label">Headline da Imagem</div>
-          <div class="headline-text">A faculdade ensinou os testes. Ninguém te ensinou a pensar clinicamente.</div>
+          <div class="headline-text">Ela tinha pós, especialização e 5 anos de clínica. O laudo ainda travava.</div>
         </div>
         <div class="texto-box">
           <div class="field-label">Texto do Anúncio</div>
-          <div class="texto-content">Essa é a lacuna que a maioria das neuropsicólogas carrega sozinha por anos.
-
-Tem como resolver em uma noite. Link na bio.</div>
+          <div class="texto-content">O que mudou foi aprender a estruturar o raciocínio clínico. Jornada PCN — 04/07 · R$ 47 no Lote 1.</div>
         </div>
         <div class="cta-box">
           <div class="field-label">CTA</div>
-          <div class="cta-text">Tem como resolver em uma noite</div>
+          <div class="cta-text">Quero saber como</div>
         </div>
       </div>
     </div>
 
-    <!-- COPY 06 -->
     <div class="copy-card">
       <div class="card-header">
         <div class="copy-num">06</div>
-        <div class="copy-titulo">Método, Não Dom</div>
-        <div class="tag">Autoridade</div>
+        <div class="copy-titulo">Contra-intuitivo</div>
+        <span class="nivel">Nível 2–3 · Fundo Frio</span>
+        <div class="tag">Crença</div>
       </div>
       <div class="card-body">
         <div class="headline-box">
           <div class="field-label">Headline da Imagem</div>
-          <div class="headline-text">Laudo bom não é dom. É estrutura.</div>
+          <div class="headline-text">Você não precisa de mais experiência. Precisa aprender a pensar do jeito certo.</div>
         </div>
         <div class="texto-box">
           <div class="field-label">Texto do Anúncio</div>
-          <div class="texto-content">Profissionais que escrevem laudos claros e clínicos aprenderam uma forma específica de organizar o raciocínio.
-
-Veja como funciona. Link na bio.</div>
+          <div class="texto-content">Raciocínio clínico estruturado não vem de anos de prática. Vem de método. Jornada PCN — 04/07 · R$ 47.</div>
         </div>
         <div class="cta-box">
           <div class="field-label">CTA</div>
-          <div class="cta-text">Veja como funciona</div>
+          <div class="cta-text">Quero aprender o método</div>
         </div>
       </div>
     </div>
 
-    <!-- COPY 07 -->
     <div class="copy-card">
       <div class="card-header">
         <div class="copy-num">07</div>
-        <div class="copy-titulo">Esgotamento</div>
-        <div class="tag">Dor</div>
+        <div class="copy-titulo">Contraste de Valor</div>
+        <span class="nivel">Nível 4 · Remarketing</span>
+        <div class="tag">Valor</div>
       </div>
       <div class="card-body">
         <div class="headline-box">
           <div class="field-label">Headline da Imagem</div>
-          <div class="headline-text">Por que o laudo cansa mais do que a avaliação inteira.</div>
+          <div class="headline-text">Uma imersão com a Dra. Natalie vale mais do que meses tentando sozinha.</div>
         </div>
         <div class="texto-box">
           <div class="field-label">Texto do Anúncio</div>
-          <div class="texto-content">Não é falta de tempo. É ausência de um método que conecte os dados antes de escrever.
-
-Entenda o que muda quando isso muda. Link na bio.</div>
+          <div class="texto-content">Jornada PCN · Ao vivo · 04/07 das 9h às 15h30 · Lote 1: R$ 47. Vagas limitadas.</div>
         </div>
         <div class="cta-box">
           <div class="field-label">CTA</div>
-          <div class="cta-text">Entenda o que muda quando isso muda</div>
+          <div class="cta-text">Garantir ingresso agora</div>
         </div>
       </div>
     </div>
 
   </div>
 
-  <!-- FOOTER -->
   <div class="doc-footer">
-    <span><strong>Agência Asher</strong> · Clincog · Jornada PCN · Junho/2026</span>
-    <span>7 copies · Prospecção · Meta Ads Feed</span>
+    <span><strong>Agência Asher</strong> · Clincog · Jornada PCN · Julho/2026</span>
+    <span>7 copies · Lote 1 R$47 · Meta Ads Feed</span>
   </div>
 
 </div>
-
 </body>
 </html>
