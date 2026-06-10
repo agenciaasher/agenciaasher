@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Aprovação de Criativos — Jornada Pense como Neuropsicólogo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #F4F3F0;
+      color: #1A0A30;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ── CAPA ─────────────────────────────────── */
+    .cover {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #1A0A30;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20mm 18mm;
+      page-break-after: always;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(123,45,142,0.4) 0%, transparent 70%);
+      top: -60px;
+      right: -60px;
+    }
+
+    .cover::after {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(168,230,207,0.15) 0%, transparent 70%);
+      bottom: 80px;
+      left: 30px;
+    }
+
+    .cover-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cover-logo-dot {
+      width: 36px;
+      height: 36px;
+      background: #7B2D8E;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cover-logo-dot svg { width: 20px; height: 20px; }
+
+    .cover-logo-text {
+      font-size: 13px;
+      font-weight: 700;
+      color: #A8E6CF;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .cover-main { position: relative; z-index: 1; }
+
+    .cover-tag {
+      display: inline-block;
+      background: rgba(123,45,142,0.35);
+      border: 1px solid rgba(123,45,142,0.6);
+      color: #A8E6CF;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .cover-title {
+      font-size: 38px;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .cover-title span { color: #A8E6CF; }
+
+    .cover-subtitle {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+      max-width: 340px;
+    }
+
+    .cover-divider {
+      width: 48px;
+      height: 3px;
+      background: #7B2D8E;
+      margin: 28px 0;
+    }
+
+    .cover-meta {
+      display: flex;
+      gap: 32px;
+    }
+
+    .cover-meta-item { }
+
+    .cover-meta-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 4px;
+    }
+
+    .cover-meta-value {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .cover-footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cover-footer-left {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .cover-footer-right {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(168,230,207,0.5);
+    }
+
+    /* ── PÁGINA DE CRIATIVO ───────────────────── */
+    .creative-page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      page-break-after: always;
+      border-top: 4px solid #7B2D8E;
+    }
+
+    .page-header {
+      background: #1A0A30;
+      padding: 12px 18mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .page-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .creative-number {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .creative-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .type-badge {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: rgba(168,230,207,0.15);
+      color: #A8E6CF;
+      border: 1px solid rgba(168,230,207,0.3);
+    }
+
+    .page-body {
+      flex: 1;
+      display: flex;
+      gap: 0;
+    }
+
+    /* ── COLUNA IMAGEM ────────────────────────── */
+    .col-image {
+      width: 88mm;
+      min-height: 210mm;
+      background: #F4F3F0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      border-right: 1px solid #E8E5E0;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      aspect-ratio: 9/16;
+      max-height: 180mm;
+      background: #EAE8E5;
+      border: 2px dashed #C8C4BD;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #999;
+    }
+
+    .image-placeholder svg { opacity: 0.4; }
+
+    .image-placeholder-label {
+      font-size: 10px;
+      font-weight: 500;
+      color: #AAA;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .image-format {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #BBB;
+      margin-top: 4px;
+    }
+
+    /* ── COLUNA COPY ──────────────────────────── */
+    .col-copy {
+      flex: 1;
+      padding: 20px 18mm 20px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .copy-section { }
+
+    .copy-label {
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #7B2D8E;
+      margin-bottom: 5px;
+    }
+
+    .copy-text {
+      font-size: 13px;
+      font-weight: 500;
+      color: #1A0A30;
+      line-height: 1.55;
+    }
+
+    .copy-text strong {
+      font-weight: 700;
+    }
+
+    .copy-cta {
+      font-size: 12px;
+      font-weight: 700;
+      color: #7B2D8E;
+      background: rgba(123,45,142,0.06);
+      border: 1px solid rgba(123,45,142,0.2);
+      border-radius: 6px;
+      padding: 8px 12px;
+      display: inline-block;
+    }
+
+    .copy-divider {
+      height: 1px;
+      background: #F0EDE8;
+    }
+
+    /* Nota de atenção */
+    .copy-alert {
+      background: #FFF8E1;
+      border: 1px solid #F5C842;
+      border-left: 3px solid #F5C842;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 11px;
+      color: #7A6000;
+      line-height: 1.5;
+    }
+
+    .copy-alert strong { font-weight: 700; }
+
+    /* Fase */
+    .phase-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 600;
+      color: #666;
+      background: #F4F3F0;
+      border-radius: 20px;
+      padding: 4px 10px;
+      margin-right: 6px;
+    }
+
+    .phase-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .phase-dot.topo { background: #A8E6CF; }
+    .phase-dot.meio { background: #F5C842; }
+    .phase-dot.fundo { background: #7B2D8E; }
+    .phase-dot.retargeting { background: #FF6B6B; }
+
+    /* ── SEÇÃO DE APROVAÇÃO ───────────────────── */
+    .approval-section {
+      border-top: 1px solid #F0EDE8;
+      padding: 14px 18mm 14px 20px;
+      background: #FAFAFA;
+    }
+
+    .approval-label {
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 10px;
+    }
+
+    .approval-options {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .approval-opt {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 11px;
+      font-weight: 500;
+      color: #444;
+    }
+
+    .approval-box {
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid #CCC;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .approval-opt.aprovado .approval-box { border-color: #50C878; }
+    .approval-opt.revisar .approval-box { border-color: #F5C842; }
+    .approval-opt.refazer .approval-box { border-color: #FF6B6B; }
+
+    .approval-notes-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #BBB;
+      margin-bottom: 4px;
+    }
+
+    .approval-notes-line {
+      height: 18px;
+      border-bottom: 1px solid #E8E5E0;
+      margin-bottom: 6px;
+    }
+
+    /* ── RODAPÉ DA PÁGINA ─────────────────────── */
+    .page-footer {
+      background: #1A0A30;
+      padding: 8px 18mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .page-footer-left {
+      font-size: 9px;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.5px;
+    }
+
+    .page-footer-right {
+      font-size: 9px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ── PRINT ────────────────────────────────── */
+    @media print {
+      body { background: white; }
+      .cover, .creative-page { margin: 0; }
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media screen {
+      body { padding: 20px 0; }
+      .cover, .creative-page { margin: 0 auto 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.12); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     CAPA
+═══════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-logo">
+    <div class="cover-logo-dot">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C7.58 2 4 5.58 4 10c0 2.76 1.4 5.19 3.52 6.68L8 21l4-2 4 2 .48-4.32C18.6 15.19 20 12.76 20 10c0-4.42-3.58-8-8-8z" fill="rgba(168,230,207,0.8)"/>
+        <path d="M9 10.5c.83 0 1.5-.67 1.5-1.5S9.83 7.5 9 7.5 7.5 8.17 7.5 9s.67 1.5 1.5 1.5zM15 10.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zM8 12.5s.5 2 4 2 4-2 4-2" stroke="rgba(26,10,48,0.6)" stroke-width="1" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="cover-logo-text">Clincog</span>
+  </div>
+
+  <div class="cover-main">
+    <div class="cover-tag">Para aprovação</div>
+    <h1 class="cover-title">Criativos<br><span>para aprovação</span></h1>
+    <p class="cover-subtitle">5 peças para a campanha de lançamento. Revise o copy, marque sua avaliação e devolva com observações.</p>
+    <div class="cover-divider"></div>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <div class="cover-meta-label">Evento</div>
+        <div class="cover-meta-value">Jornada Pense como Neuropsicólogo</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="cover-meta-label">Data</div>
+        <div class="cover-meta-value">04 de julho de 2026</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="cover-meta-label">Peças</div>
+        <div class="cover-meta-value">5 criativos (Story 9:16)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <span class="cover-footer-left">Agência Asher · Campanha Clincog · Junho 2026</span>
+    <span class="cover-footer-right">Confidencial</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     CRIATIVO 01 — Pare de escrever no escuro
+═══════════════════════════════════════════════ -->
+<div class="creative-page">
+  <div class="page-header">
+    <div class="page-header-left">
+      <span class="creative-number">Criativo 01 · EST 17</span>
+      <span class="creative-name">Pare de escrever no escuro</span>
+    </div>
+    <span class="type-badge">Metáfora Visual · Fundo Frio</span>
+  </div>
+
+  <div class="page-body">
+    <div class="col-image">
+      <div class="image-placeholder">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#AAA" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="#AAA"/><path d="M3 15l5-5 4 4 3-3 6 6" stroke="#AAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="image-placeholder-label">Inserir imagem<br>do criativo</span>
+        <span class="image-format">Story 9:16 · 1080×1920px</span>
+      </div>
+    </div>
+
+    <div class="col-copy">
+      <div>
+        <span class="phase-tag"><span class="phase-dot fundo"></span>Fundo Frio</span>
+        <span class="phase-tag"><span class="phase-dot meio"></span>Aquecimento</span>
+      </div>
+
+      <div class="copy-section">
+        <div class="copy-label">Headline</div>
+        <div class="copy-text"><strong>Pare de escrever seu laudo no escuro.</strong></div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Subtítulo</div>
+        <div class="copy-text">O Método PCN é a estrutura que faltava.</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Elementos visuais</div>
+        <div class="copy-text">Fundo roxo escuro · Abajur/lâmpada iluminando o método · Split-screen: lado escuro × lado claro com o nome do método em destaque</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Chamada para ação</div>
+        <div class="copy-cta">Conheça o Método → Clique em Saiba Mais</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Observação de produção</div>
+        <div class="copy-text" style="color:#666; font-size:11px;">Metáfora visual forte. A lâmpada ilumina diretamente o nome do método. Alta identificação para quem já conhece a Clincog mas ainda não converteu.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="approval-section">
+    <div class="approval-label">Avaliação</div>
+    <div class="approval-options">
+      <div class="approval-opt aprovado"><div class="approval-box"></div> Aprovado</div>
+      <div class="approval-opt revisar"><div class="approval-box"></div> Revisar copy</div>
+      <div class="approval-opt refazer"><div class="approval-box"></div> Revisar visual</div>
+    </div>
+    <div class="approval-notes-label">Observações</div>
+    <div class="approval-notes-line"></div>
+    <div class="approval-notes-line"></div>
+  </div>
+
+  <div class="page-footer">
+    <span class="page-footer-left">Jornada Pense como Neuropsicólogo · Campanha de Lançamento</span>
+    <span class="page-footer-right">1 de 5</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     CRIATIVO 02 — Um dia ao vivo
+═══════════════════════════════════════════════ -->
+<div class="creative-page">
+  <div class="page-header">
+    <div class="page-header-left">
+      <span class="creative-number">Criativo 02 · EST 07</span>
+      <span class="creative-name">Um dia ao vivo</span>
+    </div>
+    <span class="type-badge">Autoridade · Público Quente</span>
+  </div>
+
+  <div class="page-body">
+    <div class="col-image">
+      <div class="image-placeholder">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#AAA" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="#AAA"/><path d="M3 15l5-5 4 4 3-3 6 6" stroke="#AAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="image-placeholder-label">Inserir imagem<br>do criativo</span>
+        <span class="image-format">Story 9:16 · 1080×1920px</span>
+      </div>
+    </div>
+
+    <div class="col-copy">
+      <div>
+        <span class="phase-tag"><span class="phase-dot topo"></span>Público Quente</span>
+        <span class="phase-tag"><span class="phase-dot fundo"></span>Conversão</span>
+      </div>
+
+      <div class="copy-section">
+        <div class="copy-label">Headline</div>
+        <div class="copy-text"><strong>Um dia ao vivo com a Dra. Natalie Banaskiwitz.</strong><br>Um método para o resto da sua carreira.</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Elementos visuais</div>
+        <div class="copy-text">Foto real da Dra. Natalie · Badge "Pensar como Neuropsicólogo" no topo · Estilo: post de feed/social com card branco simulando publicação</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Chamada para ação</div>
+        <div class="copy-cta">👉 Toque em "Saiba Mais" e garanta sua vaga</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Observação de produção</div>
+        <div class="copy-text" style="color:#666; font-size:11px;">Usar foto oficial da Dra. Natalie (autoridade). Formato de post social cria familiaridade. Indicado para quem já seguiu o perfil mas ainda não comprou.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="approval-section">
+    <div class="approval-label">Avaliação</div>
+    <div class="approval-options">
+      <div class="approval-opt aprovado"><div class="approval-box"></div> Aprovado</div>
+      <div class="approval-opt revisar"><div class="approval-box"></div> Revisar copy</div>
+      <div class="approval-opt refazer"><div class="approval-box"></div> Revisar visual</div>
+    </div>
+    <div class="approval-notes-label">Observações</div>
+    <div class="approval-notes-line"></div>
+    <div class="approval-notes-line"></div>
+  </div>
+
+  <div class="page-footer">
+    <span class="page-footer-left">Jornada Pense como Neuropsicólogo · Campanha de Lançamento</span>
+    <span class="page-footer-right">2 de 5</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     CRIATIVO 03 — Calendário de data
+═══════════════════════════════════════════════ -->
+<div class="creative-page">
+  <div class="page-header">
+    <div class="page-header-left">
+      <span class="creative-number">Criativo 03 · EST 16</span>
+      <span class="creative-name">Calendário — anúncio de data</span>
+    </div>
+    <span class="type-badge">Urgência · Últimos dias</span>
+  </div>
+
+  <div class="page-body">
+    <div class="col-image">
+      <div class="image-placeholder">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#AAA" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="#AAA"/><path d="M3 15l5-5 4 4 3-3 6 6" stroke="#AAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="image-placeholder-label">Inserir imagem<br>do criativo</span>
+        <span class="image-format">Story 9:16 · 1080×1920px</span>
+      </div>
+    </div>
+
+    <div class="col-copy">
+      <div>
+        <span class="phase-tag"><span class="phase-dot meio"></span>Abertura de vendas</span>
+        <span class="phase-tag"><span class="phase-dot retargeting"></span>Data</span>
+      </div>
+
+      <div class="copy-section">
+        <div class="copy-label">Headline</div>
+        <div class="copy-text"><strong>Imersão Pense como Neuropsicólogo</strong></div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Subtítulo</div>
+        <div class="copy-text">Com a Dra. Natalie Banaskiwitz<br><strong>04 de Julho · Sexta-feira</strong></div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Elementos visuais</div>
+        <div class="copy-text">Grid de calendário (04, 05, 06, 07/07) · Data 04 em destaque · Foto polaroid da Dra. Natalie · Post-it "Não esquecer!"</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Chamada para ação</div>
+        <div class="copy-cta">Clique em Saiba Mais</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Observação de produção</div>
+        <div class="copy-text" style="color:#666; font-size:11px;">Criativo factual e direto. Funciona melhor na fase de abertura de vendas quando a data já é o principal argumento. Indicado para quem já conhece o evento.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="approval-section">
+    <div class="approval-label">Avaliação</div>
+    <div class="approval-options">
+      <div class="approval-opt aprovado"><div class="approval-box"></div> Aprovado</div>
+      <div class="approval-opt revisar"><div class="approval-box"></div> Revisar copy</div>
+      <div class="approval-opt refazer"><div class="approval-box"></div> Revisar visual</div>
+    </div>
+    <div class="approval-notes-label">Observações</div>
+    <div class="approval-notes-line"></div>
+    <div class="approval-notes-line"></div>
+  </div>
+
+  <div class="page-footer">
+    <span class="page-footer-left">Jornada Pense como Neuropsicólogo · Campanha de Lançamento</span>
+    <span class="page-footer-right">3 de 5</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     CRIATIVO 04 — Cérebro / Formação vs Método
+═══════════════════════════════════════════════ -->
+<div class="creative-page">
+  <div class="page-header">
+    <div class="page-header-left">
+      <span class="creative-number">Criativo 04</span>
+      <span class="creative-name">A formação ensina o que avaliar</span>
+    </div>
+    <span class="type-badge">Quebra de Crença · Topo de Funil</span>
+  </div>
+
+  <div class="page-body">
+    <div class="col-image">
+      <div class="image-placeholder">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#AAA" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="#AAA"/><path d="M3 15l5-5 4 4 3-3 6 6" stroke="#AAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="image-placeholder-label">Inserir imagem<br>do criativo</span>
+        <span class="image-format">Story 9:16 · 1080×1920px</span>
+      </div>
+    </div>
+
+    <div class="col-copy">
+      <div>
+        <span class="phase-tag"><span class="phase-dot topo"></span>Topo de Funil</span>
+        <span class="phase-tag"><span class="phase-dot fundo"></span>Fundo Frio</span>
+      </div>
+
+      <div class="copy-section">
+        <div class="copy-label">Headline</div>
+        <div class="copy-text"><strong>A formação ensina o que Avaliar.</strong><br>Ninguém ensina como pensar.</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Subtítulo / Corpo</div>
+        <div class="copy-text">Essa lacuna tem solução. Jornada Pense como Neuropsicólogo, ao vivo, 04/07 das 9h às 15h30. Lote 1: R$ 47.</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Elementos visuais</div>
+        <div class="copy-text">Fundo azul-teal · Cérebro rosa com papéis voando · Badge "Pensar como Neuropsicólogo" no canto</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Chamada para ação</div>
+        <div class="copy-cta">Clique em Saiba Mais</div>
+      </div>
+
+      <div class="copy-alert">
+        <strong>⚠ Atenção — revisão necessária:</strong> O corpo do texto na peça atual ainda menciona "Jornada PCN". O nome correto é <strong>"Jornada Pense como Neuropsicólogo"</strong>. Favor corrigir antes de publicar.
+      </div>
+    </div>
+  </div>
+
+  <div class="approval-section">
+    <div class="approval-label">Avaliação</div>
+    <div class="approval-options">
+      <div class="approval-opt aprovado"><div class="approval-box"></div> Aprovado</div>
+      <div class="approval-opt revisar"><div class="approval-box"></div> Revisar copy</div>
+      <div class="approval-opt refazer"><div class="approval-box"></div> Revisar visual</div>
+    </div>
+    <div class="approval-notes-label">Observações</div>
+    <div class="approval-notes-line"></div>
+    <div class="approval-notes-line"></div>
+  </div>
+
+  <div class="page-footer">
+    <span class="page-footer-left">Jornada Pense como Neuropsicólogo · Campanha de Lançamento</span>
+    <span class="page-footer-right">4 de 5</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     CRIATIVO 05 — Não é insegurança
+═══════════════════════════════════════════════ -->
+<div class="creative-page">
+  <div class="page-header">
+    <div class="page-header-left">
+      <span class="creative-number">Criativo 05 · EST 10</span>
+      <span class="creative-name">Não é insegurança</span>
+    </div>
+    <span class="type-badge">Quebra de Crença · Meio de Funil</span>
+  </div>
+
+  <div class="page-body">
+    <div class="col-image">
+      <div class="image-placeholder">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#AAA" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="#AAA"/><path d="M3 15l5-5 4 4 3-3 6 6" stroke="#AAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="image-placeholder-label">Inserir imagem<br>do criativo</span>
+        <span class="image-format">Story 9:16 · 1080×1920px</span>
+      </div>
+    </div>
+
+    <div class="col-copy">
+      <div>
+        <span class="phase-tag"><span class="phase-dot meio"></span>Meio de Funil</span>
+        <span class="phase-tag"><span class="phase-dot retargeting"></span>Retargeting</span>
+      </div>
+
+      <div class="copy-section">
+        <div class="copy-label">Headline</div>
+        <div class="copy-text"><strong>Não é insegurança.</strong><br>É ausência de método.</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Card ingresso (visual)</div>
+        <div class="copy-text">Um evento para quem quer dominar o raciocínio clínico e os laudos.<br>
+        <strong>04 de Julho · 09h às 15h30 · Online</strong></div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Elementos visuais</div>
+        <div class="copy-text">Foto da Dra. Natalie estendendo a mão para o espectador · Fundo xadrez roxo · Card visual de ingresso com dados do evento na parte inferior</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Chamada para ação</div>
+        <div class="copy-cta">Clique em Saiba Mais</div>
+      </div>
+
+      <div class="copy-divider"></div>
+
+      <div class="copy-section">
+        <div class="copy-label">Observação de produção</div>
+        <div class="copy-text" style="color:#666; font-size:11px;">Premissa forte e irrefutável no headline. A Natalie estendendo a mão cria conexão direta. O ingresso no rodapé ancora o preço sem fazer disso o foco principal. Ideal para retargeting de quem visitou a LP.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="approval-section">
+    <div class="approval-label">Avaliação</div>
+    <div class="approval-options">
+      <div class="approval-opt aprovado"><div class="approval-box"></div> Aprovado</div>
+      <div class="approval-opt revisar"><div class="approval-box"></div> Revisar copy</div>
+      <div class="approval-opt refazer"><div class="approval-box"></div> Revisar visual</div>
+    </div>
+    <div class="approval-notes-label">Observações</div>
+    <div class="approval-notes-line"></div>
+    <div class="approval-notes-line"></div>
+  </div>
+
+  <div class="page-footer">
+    <span class="page-footer-left">Jornada Pense como Neuropsicólogo · Campanha de Lançamento</span>
+    <span class="page-footer-right">5 de 5</span>
+  </div>
+</div>
+
+</body>
+</html>
