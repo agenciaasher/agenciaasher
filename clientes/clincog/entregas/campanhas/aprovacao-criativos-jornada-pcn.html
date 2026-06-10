@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clincog — Aprovação de Criativos | Jornada PCN</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  :root {
+    --roxo: #5B2D8E;
+    --roxo-claro: #7B4DB0;
+    --roxo-bg: #F3EEF9;
+    --teal: #00C9B1;
+    --amarelo: #F5C842;
+    --azul: #0B1E3D;
+    --branco: #FFFFFF;
+    --cinza: #F7F7F9;
+    --cinza-borda: #E5E5EC;
+    --texto: #1A1A2E;
+    --texto-dim: #6B6B8A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #F0EDF6;
+    color: var(--texto);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── CAPA ── */
+  .capa {
+    background: linear-gradient(135deg, #3B1A6E 0%, #5B2D8E 50%, #7B4DB0 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 40px;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .capa::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .capa-logo {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: var(--teal);
+    text-transform: uppercase;
+    margin-bottom: 48px;
+    position: relative;
+  }
+
+  .capa-titulo {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--branco);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .capa-titulo span { color: var(--teal); }
+
+  .capa-subtitulo {
+    font-size: 18px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 48px;
+    font-weight: 400;
+    position: relative;
+  }
+
+  .capa-info {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    position: relative;
+  }
+
+  .capa-info-item {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 16px 24px;
+    text-align: center;
+  }
+
+  .capa-info-num {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--teal);
+    line-height: 1;
+  }
+
+  .capa-info-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  .capa-footer {
+    position: absolute;
+    bottom: 32px;
+    left: 0; right: 0;
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 1px;
+  }
+
+  /* ── INSTRUCOES ── */
+  .instrucoes {
+    background: var(--branco);
+    margin: 40px auto;
+    max-width: 860px;
+    border-radius: 16px;
+    padding: 36px 40px;
+    border: 1px solid var(--cinza-borda);
+    box-shadow: 0 4px 24px rgba(91,45,142,0.08);
+  }
+
+  .instrucoes h2 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--roxo);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .instrucoes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .instrucao-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--cinza);
+    border-radius: 10px;
+  }
+
+  .instrucao-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--roxo-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .instrucao-text {
+    font-size: 13px;
+    color: var(--texto-dim);
+    line-height: 1.5;
+  }
+
+  .instrucao-text strong { color: var(--texto); }
+
+  /* ── CRIATIVO ── */
+  .criativo-page {
+    page-break-before: always;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .criativo-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--cinza-borda);
+  }
+
+  .criativo-num {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--roxo);
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .criativo-meta { flex: 1; }
+
+  .criativo-tipo {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--roxo);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+  }
+
+  .criativo-nome {
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--texto);
+  }
+
+  .tag-row {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+
+  .tag-funil { background: rgba(91,45,142,0.1); color: var(--roxo); border: 1px solid rgba(91,45,142,0.2); }
+  .tag-urgencia { background: rgba(245,200,66,0.15); color: #A07800; border: 1px solid rgba(245,200,66,0.3); }
+  .tag-emocional { background: rgba(232,123,138,0.1); color: #9B3048; border: 1px solid rgba(232,123,138,0.25); }
+  .tag-autoridade { background: rgba(0,201,177,0.1); color: #007A6C; border: 1px solid rgba(0,201,177,0.25); }
+
+  .criativo-body {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  /* FRAME IMAGEM */
+  .criativo-frame {
+    background: linear-gradient(135deg, #3B1A6E, #5B2D8E);
+    border-radius: 16px;
+    aspect-ratio: 9/16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border: 2px dashed rgba(255,255,255,0.2);
+  }
+
+  .criativo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+  }
+
+  .frame-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .frame-placeholder-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.1);
+    border: 2px dashed rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .frame-placeholder-text {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* DETALHES */
+  .criativo-detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .detalhe-bloco {
+    background: var(--branco);
+    border-radius: 12px;
+    padding: 18px 20px;
+    border: 1px solid var(--cinza-borda);
+  }
+
+  .detalhe-label {
+    font-size: 9px;
+    font-weight: 800;
+    color: var(--roxo);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .detalhe-value {
+    font-size: 14px;
+    color: var(--texto);
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  .detalhe-value.headline {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .cta-badge {
+    display: inline-block;
+    background: var(--roxo);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 7px 18px;
+    border-radius: 22px;
+    margin-top: 4px;
+  }
+
+  .nota-bloco {
+    background: #FFFBF0;
+    border: 1px solid rgba(245,200,66,0.3);
+    border-left: 3px solid var(--amarelo);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 12px;
+    color: #6B5600;
+    line-height: 1.5;
+  }
+
+  /* APROVAÇÃO */
+  .aprovacao-bloco {
+    background: var(--cinza);
+    border: 2px solid var(--cinza-borda);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 4px;
+  }
+
+  .aprovacao-titulo {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--texto-dim);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+  }
+
+  .aprovacao-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .aprovacao-opcao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--branco);
+    border-radius: 8px;
+    border: 1.5px solid var(--cinza-borda);
+    cursor: pointer;
+  }
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--cinza-borda);
+    flex-shrink: 0;
+  }
+
+  .aprovacao-opcao.aprovado .checkbox { border-color: #22C55E; background: #22C55E; }
+  .aprovacao-opcao.ajustar .checkbox { border-color: var(--amarelo); background: var(--amarelo); }
+  .aprovacao-opcao.reprovar .checkbox { border-color: #EF4444; background: #EF4444; }
+
+  .aprovacao-opcao-texto {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--texto);
+  }
+
+  .aprovacao-opcao-sub {
+    font-size: 11px;
+    color: var(--texto-dim);
+    font-weight: 400;
+  }
+
+  .campo-feedback {
+    margin-top: 12px;
+    background: var(--branco);
+    border: 1.5px solid var(--cinza-borda);
+    border-radius: 8px;
+    padding: 12px 14px;
+    min-height: 54px;
+  }
+
+  .campo-feedback-label {
+    font-size: 10px;
+    color: var(--texto-dim);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  .campo-feedback-linha {
+    border: none;
+    border-bottom: 1px solid var(--cinza-borda);
+    width: 100%;
+    display: block;
+    height: 20px;
+    margin-bottom: 6px;
+  }
+
+  /* RODAPÉ DO CRIATIVO */
+  .criativo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--cinza-borda);
+    font-size: 11px;
+    color: var(--texto-dim);
+  }
+
+  /* ── PÁGINA DE ASSINATURA ── */
+  .pagina-assinatura {
+    page-break-before: always;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 40px;
+  }
+
+  .assinatura-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .assinatura-header h2 {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--roxo);
+    margin-bottom: 8px;
+  }
+
+  .assinatura-header p {
+    color: var(--texto-dim);
+    font-size: 14px;
+  }
+
+  .resumo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background: var(--branco);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--cinza-borda);
+  }
+
+  .resumo-table th {
+    background: var(--roxo);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 16px;
+    text-align: left;
+  }
+
+  .resumo-table td {
+    padding: 12px 16px;
+    font-size: 13px;
+    border-bottom: 1px solid var(--cinza-borda);
+    vertical-align: middle;
+  }
+
+  .resumo-table tr:last-child td { border-bottom: none; }
+  .resumo-table tr:nth-child(even) td { background: var(--cinza); }
+
+  .status-box {
+    width: 80px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1.5px solid var(--cinza-borda);
+    display: inline-block;
+  }
+
+  .linha-assinatura {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .assinatura-campo {
+    border-top: 1.5px solid var(--texto);
+    padding-top: 10px;
+  }
+
+  .assinatura-campo .nome {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--texto);
+  }
+
+  .assinatura-campo .cargo {
+    font-size: 11px;
+    color: var(--texto-dim);
+    margin-top: 2px;
+  }
+
+  .assinatura-campo .data-label {
+    font-size: 10px;
+    color: var(--texto-dim);
+    margin-top: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .data-linha {
+    border: none;
+    border-bottom: 1px solid var(--cinza-borda);
+    width: 120px;
+    display: inline-block;
+    height: 18px;
+    margin-top: 4px;
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: white; }
+    .criativo-page, .pagina-assinatura, .instrucoes { box-shadow: none; }
+    .capa { min-height: 297mm; }
+    .criativo-page { page-break-inside: avoid; }
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<div class="capa">
+  <div class="capa-logo">Agência Asher × Clincog</div>
+  <h1 class="capa-titulo">Aprovação de<br><span>Criativos</span></h1>
+  <p class="capa-subtitulo">Jornada Pense como Neuropsicólogo · Campanha de Lançamento</p>
+  <div class="capa-info">
+    <div class="capa-info-item">
+      <div class="capa-info-num">5</div>
+      <div class="capa-info-label">Criativos</div>
+    </div>
+    <div class="capa-info-item">
+      <div class="capa-info-num">04/07</div>
+      <div class="capa-info-label">Evento</div>
+    </div>
+    <div class="capa-info-item">
+      <div class="capa-info-num">Stories</div>
+      <div class="capa-info-label">Formato</div>
+    </div>
+  </div>
+  <div class="capa-footer">Confidencial · Agência Asher · Junho 2026</div>
+</div>
+
+<!-- INSTRUÇÕES -->
+<div class="instrucoes" style="page-break-before: always; margin-top: 60px;">
+  <h2>Como aprovar</h2>
+  <div class="instrucoes-grid">
+    <div class="instrucao-item">
+      <div class="instrucao-icon">✅</div>
+      <div class="instrucao-text"><strong>Aprovado:</strong> criativo vai para produção final e veiculação conforme planejado.</div>
+    </div>
+    <div class="instrucao-item">
+      <div class="instrucao-icon">✏️</div>
+      <div class="instrucao-text"><strong>Ajustar:</strong> marque o que precisa mudar no campo de feedback. Retornamos com a revisão.</div>
+    </div>
+    <div class="instrucao-item">
+      <div class="instrucao-icon">❌</div>
+      <div class="instrucao-text"><strong>Reprovar:</strong> criativo não segue. Descreva o motivo para que possamos propor uma nova direção.</div>
+    </div>
+    <div class="instrucao-item">
+      <div class="instrucao-icon">📅</div>
+      <div class="instrucao-text"><strong>Prazo:</strong> precisamos da aprovação com 48h de antecedência para subir os anúncios no prazo.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     CRIATIVO 01
+══════════════════════════════ -->
+<div class="criativo-page">
+  <div style="background: white; border-radius: 20px; padding: 32px; border: 1px solid #E5E5EC; box-shadow: 0 4px 24px rgba(91,45,142,0.07);">
+
+    <div class="criativo-header">
+      <div class="criativo-num">01</div>
+      <div class="criativo-meta">
+        <div class="criativo-tipo">Metáfora Visual</div>
+        <div class="criativo-nome">Pare de escrever laudo no escuro</div>
+      </div>
+      <div class="tag-row">
+        <span class="tag tag-funil">Fundo Frio</span>
+        <span class="tag tag-funil">Topo</span>
+      </div>
+    </div>
+
+    <div class="criativo-body">
+      <div class="criativo-frame">
+        <div class="frame-placeholder">
+          <div class="frame-placeholder-icon">🖼️</div>
+          <div class="frame-placeholder-text">Inserir imagem<br>Criativo 01</div>
+        </div>
+      </div>
+
+      <div class="criativo-detalhes">
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">Headline</div>
+          <div class="detalhe-value headline">Pare de escrever seu laudo no escuro. O Método PCN é a estrutura que faltava.</div>
+        </div>
+
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">CTA</div>
+          <span class="cta-badge">Conheça o Método</span>
+        </div>
+
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">Conceito Visual</div>
+          <div class="detalhe-value">Abajur/luminária vintage iluminando o nome do método. Fundo roxo escuro. Contraste escuridão vs luz como metáfora do método.</div>
+        </div>
+
+        <div class="nota-bloco">
+          💡 Criativo de impacto para topo de funil. A metáfora visual funciona antes de ler o texto.
+        </div>
+
+        <div class="aprovacao-bloco">
+          <div class="aprovacao-titulo">Decisão do cliente</div>
+          <div class="aprovacao-opcoes">
+            <div class="aprovacao-opcao aprovado">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Aprovado</div>
+                <div class="aprovacao-opcao-sub">Seguir para veiculação</div>
+              </div>
+            </div>
+            <div class="aprovacao-opcao ajustar">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Ajustar</div>
+                <div class="aprovacao-opcao-sub">Descrever o que muda abaixo</div>
+              </div>
+            </div>
+            <div class="aprovacao-opcao reprovar">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Reprovar</div>
+                <div class="aprovacao-opcao-sub">Indicar motivo abaixo</div>
+              </div>
+            </div>
+          </div>
+          <div class="campo-feedback" style="margin-top: 14px;">
+            <div class="campo-feedback-label">Feedback / observações</div>
+            <span class="campo-feedback-linha"></span>
+            <span class="campo-feedback-linha"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="criativo-footer">
+      <span>Clincog · Jornada PCN · Jun/Jul 2026</span>
+      <span>Criativo 01 de 05</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     CRIATIVO 02
+══════════════════════════════ -->
+<div class="criativo-page">
+  <div style="background: white; border-radius: 20px; padding: 32px; border: 1px solid #E5E5EC; box-shadow: 0 4px 24px rgba(91,45,142,0.07);">
+
+    <div class="criativo-header">
+      <div class="criativo-num">02</div>
+      <div class="criativo-meta">
+        <div class="criativo-tipo">Autoridade · Foto Real</div>
+        <div class="criativo-nome">Um dia com a Dra. Natalie</div>
+      </div>
+      <div class="tag-row">
+        <span class="tag tag-autoridade">Público Quente</span>
+        <span class="tag tag-autoridade">Autoridade</span>
+      </div>
+    </div>
+
+    <div class="criativo-body">
+      <div class="criativo-frame">
+        <div class="frame-placeholder">
+          <div class="frame-placeholder-icon">🖼️</div>
+          <div class="frame-placeholder-text">Inserir imagem<br>Criativo 02</div>
+        </div>
+      </div>
+
+      <div class="criativo-detalhes">
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">Headline</div>
+          <div class="detalhe-value headline">Um dia ao vivo com a Dra. Natalie Banaskiwitz. Um método para o resto da sua carreira.</div>
+        </div>
+
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">CTA</div>
+          <span class="cta-badge">Toque em "Saiba Mais" e garanta sua vaga</span>
+        </div>
+
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">Conceito Visual</div>
+          <div class="detalhe-value">Foto real da Dra. Natalie com fundo roxo. Copy em formato de post/tweet com verificação azul. Máxima autoridade e prova social.</div>
+        </div>
+
+        <div class="nota-bloco">
+          💡 Criativo de autoridade máxima. A foto real da Dra. Natalie é o diferencial desse formato.
+        </div>
+
+        <div class="aprovacao-bloco">
+          <div class="aprovacao-titulo">Decisão do cliente</div>
+          <div class="aprovacao-opcoes">
+            <div class="aprovacao-opcao aprovado">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Aprovado</div>
+                <div class="aprovacao-opcao-sub">Seguir para veiculação</div>
+              </div>
+            </div>
+            <div class="aprovacao-opcao ajustar">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Ajustar</div>
+                <div class="aprovacao-opcao-sub">Descrever o que muda abaixo</div>
+              </div>
+            </div>
+            <div class="aprovacao-opcao reprovar">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Reprovar</div>
+                <div class="aprovacao-opcao-sub">Indicar motivo abaixo</div>
+              </div>
+            </div>
+          </div>
+          <div class="campo-feedback" style="margin-top: 14px;">
+            <div class="campo-feedback-label">Feedback / observações</div>
+            <span class="campo-feedback-linha"></span>
+            <span class="campo-feedback-linha"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="criativo-footer">
+      <span>Clincog · Jornada PCN · Jun/Jul 2026</span>
+      <span>Criativo 02 de 05</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     CRIATIVO 03
+══════════════════════════════ -->
+<div class="criativo-page">
+  <div style="background: white; border-radius: 20px; padding: 32px; border: 1px solid #E5E5EC; box-shadow: 0 4px 24px rgba(91,45,142,0.07);">
+
+    <div class="criativo-header">
+      <div class="criativo-num">03</div>
+      <div class="criativo-meta">
+        <div class="criativo-tipo">Data / Evento</div>
+        <div class="criativo-nome">Lembrete — 04 de Julho</div>
+      </div>
+      <div class="tag-row">
+        <span class="tag tag-urgencia">Urgência</span>
+        <span class="tag tag-urgencia">Últimos Dias</span>
+      </div>
+    </div>
+
+    <div class="criativo-body">
+      <div class="criativo-frame">
+        <div class="frame-placeholder">
+          <div class="frame-placeholder-icon">🖼️</div>
+          <div class="frame-placeholder-text">Inserir imagem<br>Criativo 03</div>
+        </div>
+      </div>
+
+      <div class="criativo-detalhes">
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">Headline</div>
+          <div class="detalhe-value headline">Imersão Pensar como Neuropsicólogo com a Doutora Natalie Banaskiwitz · 04 de Julho · Sexta</div>
+        </div>
+
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">CTA</div>
+          <span class="cta-badge">Clique em Saiba Mais</span>
+        </div>
+
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">Conceito Visual</div>
+          <div class="detalhe-value">Grid de calendário com 04/07 em destaque. Post-it "Não esquecer!". Foto Polaroid da Dra. Natalie. Fundo lilás. Tom de lembrete orgânico.</div>
+        </div>
+
+        <div class="nota-bloco">
+          💡 Formato de lembrete gera salvamentos e compartilhamentos. Ideal para fase de urgência.
+        </div>
+
+        <div class="aprovacao-bloco">
+          <div class="aprovacao-titulo">Decisão do cliente</div>
+          <div class="aprovacao-opcoes">
+            <div class="aprovacao-opcao aprovado">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Aprovado</div>
+                <div class="aprovacao-opcao-sub">Seguir para veiculação</div>
+              </div>
+            </div>
+            <div class="aprovacao-opcao ajustar">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Ajustar</div>
+                <div class="aprovacao-opcao-sub">Descrever o que muda abaixo</div>
+              </div>
+            </div>
+            <div class="aprovacao-opcao reprovar">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Reprovar</div>
+                <div class="aprovacao-opcao-sub">Indicar motivo abaixo</div>
+              </div>
+            </div>
+          </div>
+          <div class="campo-feedback" style="margin-top: 14px;">
+            <div class="campo-feedback-label">Feedback / observações</div>
+            <span class="campo-feedback-linha"></span>
+            <span class="campo-feedback-linha"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="criativo-footer">
+      <span>Clincog · Jornada PCN · Jun/Jul 2026</span>
+      <span>Criativo 03 de 05</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     CRIATIVO 04
+══════════════════════════════ -->
+<div class="criativo-page">
+  <div style="background: white; border-radius: 20px; padding: 32px; border: 1px solid #E5E5EC; box-shadow: 0 4px 24px rgba(91,45,142,0.07);">
+
+    <div class="criativo-header">
+      <div class="criativo-num">04</div>
+      <div class="criativo-meta">
+        <div class="criativo-tipo">Crença · Metáfora (Cérebro)</div>
+        <div class="criativo-nome">A formação ensina o que avaliar</div>
+      </div>
+      <div class="tag-row">
+        <span class="tag tag-funil">Fundo Frio</span>
+        <span class="tag tag-funil">Topo</span>
+      </div>
+    </div>
+
+    <div class="criativo-body">
+      <div class="criativo-frame">
+        <div class="frame-placeholder">
+          <div class="frame-placeholder-icon">🖼️</div>
+          <div class="frame-placeholder-text">Inserir imagem<br>Criativo 04</div>
+        </div>
+      </div>
+
+      <div class="criativo-detalhes">
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">Headline</div>
+          <div class="detalhe-value headline">A formação ensina o que Avaliar. Ninguém ensina como pensar.</div>
+        </div>
+
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">Subtexto</div>
+          <div class="detalhe-value">Essa lacuna tem solução. Jornada PCN ao vivo, 04/07 das 9h às 15h30.</div>
+        </div>
+
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">CTA</div>
+          <span class="cta-badge">Clique em Saiba Mais</span>
+        </div>
+
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">Conceito Visual</div>
+          <div class="detalhe-value">Cérebro rosa em destaque com papéis/laudos saindo da parte superior. Fundo azul teal. Contraste visual forte entre documento (avaliar) e cérebro (pensar).</div>
+        </div>
+
+        <div class="nota-bloco">
+          💡 Criativo surreal de alto impacto. Cérebro como metáfora do raciocínio clínico que falta na formação tradicional.
+        </div>
+
+        <div class="aprovacao-bloco">
+          <div class="aprovacao-titulo">Decisão do cliente</div>
+          <div class="aprovacao-opcoes">
+            <div class="aprovacao-opcao aprovado">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Aprovado</div>
+                <div class="aprovacao-opcao-sub">Seguir para veiculação</div>
+              </div>
+            </div>
+            <div class="aprovacao-opcao ajustar">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Ajustar</div>
+                <div class="aprovacao-opcao-sub">Descrever o que muda abaixo</div>
+              </div>
+            </div>
+            <div class="aprovacao-opcao reprovar">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Reprovar</div>
+                <div class="aprovacao-opcao-sub">Indicar motivo abaixo</div>
+              </div>
+            </div>
+          </div>
+          <div class="campo-feedback" style="margin-top: 14px;">
+            <div class="campo-feedback-label">Feedback / observações</div>
+            <span class="campo-feedback-linha"></span>
+            <span class="campo-feedback-linha"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="criativo-footer">
+      <span>Clincog · Jornada PCN · Jun/Jul 2026</span>
+      <span>Criativo 04 de 05</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     CRIATIVO 05
+══════════════════════════════ -->
+<div class="criativo-page">
+  <div style="background: white; border-radius: 20px; padding: 32px; border: 1px solid #E5E5EC; box-shadow: 0 4px 24px rgba(91,45,142,0.07);">
+
+    <div class="criativo-header">
+      <div class="criativo-num">05</div>
+      <div class="criativo-meta">
+        <div class="criativo-tipo">Urgência · Reframe</div>
+        <div class="criativo-nome">Não é insegurança, é ausência de método</div>
+      </div>
+      <div class="tag-row">
+        <span class="tag tag-urgencia">Retargeting</span>
+        <span class="tag tag-urgencia">Urgência</span>
+      </div>
+    </div>
+
+    <div class="criativo-body">
+      <div class="criativo-frame">
+        <div class="frame-placeholder">
+          <div class="frame-placeholder-icon">🖼️</div>
+          <div class="frame-placeholder-text">Inserir imagem<br>Criativo 05</div>
+        </div>
+      </div>
+
+      <div class="criativo-detalhes">
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">Headline</div>
+          <div class="detalhe-value headline">Não é insegurança. É ausência de método.</div>
+        </div>
+
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">Elemento Visual Extra</div>
+          <div class="detalhe-value">Ingresso físico "Pensar como Neuropsicólogo · PCN · 04 de Julho · 09h às 15:30 · Online" com destaque amarelo.</div>
+        </div>
+
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">CTA</div>
+          <span class="cta-badge">Clique em Saiba Mais</span>
+        </div>
+
+        <div class="detalhe-bloco">
+          <div class="detalhe-label">Conceito Visual</div>
+          <div class="detalhe-value">Foto real Dra. Natalie se estendendo para a câmera, postura de convite. Ingresso no rodapé como prova concreta do evento. Fundo lilás dramático.</div>
+        </div>
+
+        <div class="nota-bloco">
+          💡 Reframe poderoso para retargeting. Remove a barreira emocional da insegurança e oferece a solução objetiva.
+        </div>
+
+        <div class="aprovacao-bloco">
+          <div class="aprovacao-titulo">Decisão do cliente</div>
+          <div class="aprovacao-opcoes">
+            <div class="aprovacao-opcao aprovado">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Aprovado</div>
+                <div class="aprovacao-opcao-sub">Seguir para veiculação</div>
+              </div>
+            </div>
+            <div class="aprovacao-opcao ajustar">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Ajustar</div>
+                <div class="aprovacao-opcao-sub">Descrever o que muda abaixo</div>
+              </div>
+            </div>
+            <div class="aprovacao-opcao reprovar">
+              <div class="checkbox"></div>
+              <div>
+                <div class="aprovacao-opcao-texto">Reprovar</div>
+                <div class="aprovacao-opcao-sub">Indicar motivo abaixo</div>
+              </div>
+            </div>
+          </div>
+          <div class="campo-feedback" style="margin-top: 14px;">
+            <div class="campo-feedback-label">Feedback / observações</div>
+            <span class="campo-feedback-linha"></span>
+            <span class="campo-feedback-linha"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="criativo-footer">
+      <span>Clincog · Jornada PCN · Jun/Jul 2026</span>
+      <span>Criativo 05 de 05</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     PÁGINA DE ASSINATURA
+══════════════════════════════ -->
+<div class="pagina-assinatura">
+  <div style="background: white; border-radius: 20px; padding: 48px; border: 1px solid #E5E5EC; box-shadow: 0 4px 24px rgba(91,45,142,0.07);">
+
+    <div class="assinatura-header">
+      <h2>Resumo de Aprovação</h2>
+      <p>Confirme o status de cada criativo antes de assinar</p>
+    </div>
+
+    <table class="resumo-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Criativo</th>
+          <th>Tipo</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>01</strong></td>
+          <td>Pare de escrever laudo no escuro</td>
+          <td>Metáfora Visual</td>
+          <td><span class="status-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>02</strong></td>
+          <td>Um dia com a Dra. Natalie</td>
+          <td>Autoridade</td>
+          <td><span class="status-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>03</strong></td>
+          <td>Lembrete — 04 de Julho</td>
+          <td>Data / Evento</td>
+          <td><span class="status-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>04</strong></td>
+          <td>A formação ensina o que avaliar</td>
+          <td>Crença / Cérebro</td>
+          <td><span class="status-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>05</strong></td>
+          <td>Não é insegurança, é ausência de método</td>
+          <td>Urgência</td>
+          <td><span class="status-box"></span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="linha-assinatura">
+      <div class="assinatura-campo">
+        <div class="nome">Responsável Clincog</div>
+        <div class="cargo">Aprovação do cliente</div>
+        <div class="data-label">Data</div>
+        <span class="data-linha"></span>
+      </div>
+      <div class="assinatura-campo">
+        <div class="nome">Agência Asher</div>
+        <div class="cargo">Responsável pela campanha</div>
+        <div class="data-label">Data</div>
+        <span class="data-linha"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
