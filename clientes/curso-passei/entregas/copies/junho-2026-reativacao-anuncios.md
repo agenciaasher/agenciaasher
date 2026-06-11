@@ -124,17 +124,17 @@ Escolha seu concurso no link da bio
 
 ## Checklist de revisão
 
-- Zero travessoes no corpo dos anuncios: OK (retirei o traco da variacao A no corpo)
-- Zero exclamacoes: OK
-- Zero "Nao e X. E Y.": OK
+- Zero travessões no corpo dos anúncios: OK (retirei o traço da variação A no corpo)
+- Zero exclamações: OK
+- Zero "Não é X. É Y.": OK
 - Zero perguntas no gancho do feed: OK
 - Zero emojis: OK
-- Zero urgencia falsa: OK (concursos reais e recorrentes, sem datas inventadas)
-- Promessas com dado concreto: OK (3.000+ aprovacoes, 8 anos, bancas especificas)
+- Zero urgência falsa: OK (concursos reais e recorrentes, sem datas inventadas)
+- Promessas com dado concreto: OK (3.000+ aprovações, 8 anos, bancas específicas)
 - Especificidade presente: OK (IAN, Consulplan, COSEAC, Saquarema, Araruama)
-- Copy tem tese: OK (metodo explicado em cada variacao)
+- Copy tem tese: OK (método explicado em cada variação)
 
-Revisao concluida. 1 ajuste aplicado (angulo B: removido paralelismo negativo e reescrito como afirmacao direta).
+Revisão concluída. 1 ajuste aplicado (ângulo B: removido paralelismo negativo e reescrito como afirmação direta).
 
 ---
 

@@ -60,7 +60,7 @@ sem pagar pela prancheta de ninguém.
 *Slide 4:*
 ```
 A diferença está na procedência.
-Semi-novo de revenda séria tem histórico, garantia e
+Seminovo de revenda séria tem histórico, garantia e
 documentação regularizada.
 Comprar de particular é diferente. E o risco é seu.
 ```

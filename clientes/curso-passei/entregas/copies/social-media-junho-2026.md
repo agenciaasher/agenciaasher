@@ -431,9 +431,9 @@ Ela não tinha tempo sobrando. Tinha método.
 
 Parabéns, [nome]. Você merecia essa aprovação.
 
-Se você quer a mesma resultado, o curso dela está no link na bio.
+Se você quer o mesmo resultado, o curso dela está no link na bio.
 
-`#aprovada #magisterio #concursopublico #professoraefetiva #metodopasqsei`
+`#aprovada #magisterio #concursopublico #professoraefetiva #metodopassei`
 
 ---
 
